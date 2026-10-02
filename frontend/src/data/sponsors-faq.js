@@ -1,0 +1,36 @@
+// Auto-generated from sponsors.html — do not hand-edit.
+export const faqItems = [
+  {
+    "q": "Why should my company sponsor Trading Expo Africa?",
+    "a": "You get two days in front of Africa&#x27;s trading community — traders, brokers, investors and fintech decision-makers in one concentrated audience. Sponsors get premium branding, stage visibility, lead generation and direct access to buyers. If your customers trade or invest, there is no more efficient room to be in."
+  },
+  {
+    "q": "What sponsorship tiers are available?",
+    "a": "Tiers include Title, Platinum, Gold and Silver sponsorships, plus specialty packages such as the awards night, networking lounge, lanyards and registration area. Each tier scales branding, stage time, booth presence and delegate passes. The sponsors page outlines each tier — the partnerships team can also build a custom package around your goals."
+  },
+  {
+    "q": "How many people will see my brand as a sponsor?",
+    "a": "Your brand reaches on-site visitors over two days, plus speakers, exhibitors and the wider audience following event coverage online. Sponsors also appear in pre-event marketing — the website, email campaigns and announcements — multiplying exposure well beyond the two event days."
+  },
+  {
+    "q": "Can I sponsor the awards night?",
+    "a": "Yes — the awards night is one of the most prestigious sponsorship opportunities at the expo. Awards sponsors get naming visibility, on-stage presence during the ceremony and premium branding in front of speakers, VIPs and industry leaders. Because inventory is very limited, discuss awards-night options with the partnerships team early."
+  },
+  {
+    "q": "What is included in a sponsorship package?",
+    "a": "Packages typically combine logo branding across the venue and digital channels, stage mentions, an exhibitor booth or premium placement, delegate passes for your team, lead-retrieval options and inclusion in official marketing. Higher tiers add keynote slots, awards-night visibility and exclusive lounge or networking sponsorships. Exact inclusions are confirmed in your agreement."
+  },
+  {
+    "q": "How do I become a sponsor?",
+    "a": "Review the tiers on the sponsors page, then contact the partnerships team through the contact page or the sponsor enquiry form. They will discuss your objectives, recommend the right tier and prepare a proposal. Once you confirm, your brand is added to sponsor communications and the exhibitor portal onboarding begins for booth logistics."
+  },
+  {
+    "q": "Can sponsorship packages be customized?",
+    "a": "Yes. While the standard tiers give you a starting point, the partnerships team regularly builds custom packages — mixing stage time, branding placements, booth size, awards-night elements and digital promotion to match your budget and goals. Share what success looks like for you and they will design around it."
+  },
+  {
+    "q": "Is there a deadline for sponsorship bookings?",
+    "a": "There is no single deadline, but premium inventory — Title tier, awards night and high-visibility placements — sells first and branding production needs lead time. Booking early also maximizes your pre-event marketing exposure. If you have a specific tier in mind, talk to the partnerships team now to check availability."
+  }
+];
+export const faqSchema = "{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Why should my company sponsor Trading Expo Africa?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"You get two days in front of Africa's trading community — traders, brokers, investors and fintech decision-makers in one concentrated audience. Sponsors get premium branding, stage visibility, lead generation and direct access to buyers. If your customers trade or invest, there is no more efficient room to be in.\"}}, {\"@type\": \"Question\", \"name\": \"What sponsorship tiers are available?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Tiers include Title, Platinum, Gold and Silver sponsorships, plus specialty packages such as the awards night, networking lounge, lanyards and registration area. Each tier scales branding, stage time, booth presence and delegate passes. The sponsors page outlines each tier — the partnerships team can also build a custom package around your goals.\"}}, {\"@type\": \"Question\", \"name\": \"How many people will see my brand as a sponsor?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Your brand reaches on-site visitors over two days, plus speakers, exhibitors and the wider audience following event coverage online. Sponsors also appear in pre-event marketing — the website, email campaigns and announcements — multiplying exposure well beyond the two event days.\"}}, {\"@type\": \"Question\", \"name\": \"Can I sponsor the awards night?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes — the awards night is one of the most prestigious sponsorship opportunities at the expo. Awards sponsors get naming visibility, on-stage presence during the ceremony and premium branding in front of speakers, VIPs and industry leaders. Because inventory is very limited, discuss awards-night options with the partnerships team early.\"}}, {\"@type\": \"Question\", \"name\": \"What is included in a sponsorship package?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Packages typically combine logo branding across the venue and digital channels, stage mentions, an exhibitor booth or premium placement, delegate passes for your team, lead-retrieval options and inclusion in official marketing. Higher tiers add keynote slots, awards-night visibility and exclusive lounge or networking sponsorships. Exact inclusions are confirmed in your agreement.\"}}, {\"@type\": \"Question\", \"name\": \"How do I become a sponsor?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Review the tiers on the sponsors page, then contact the partnerships team through the contact page or the sponsor enquiry form. They will discuss your objectives, recommend the right tier and prepare a proposal. Once you confirm, your brand is added to sponsor communications and the exhibitor portal onboarding begins for booth logistics.\"}}, {\"@type\": \"Question\", \"name\": \"Can sponsorship packages be customized?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. While the standard tiers give you a starting point, the partnerships team regularly builds custom packages — mixing stage time, branding placements, booth size, awards-night elements and digital promotion to match your budget and goals. Share what success looks like for you and they will design around it.\"}}, {\"@type\": \"Question\", \"name\": \"Is there a deadline for sponsorship bookings?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"There is no single deadline, but premium inventory — Title tier, awards night and high-visibility placements — sells first and branding production needs lead time. Booking early also maximizes your pre-event marketing exposure. If you have a specific tier in mind, talk to the partnerships team now to check availability.\"}}]}";

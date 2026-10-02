@@ -1,0 +1,462 @@
+[
+  {
+    "slug": "retail-trading-losses-truth",
+    "title": "The Brutal Truth About Retail Trading Losses",
+    "category": "Africa focus",
+    "img": "expo-main-stage.webp",
+    "read": "6 min read",
+    "date": "Sep 26, 2026",
+    "excerpt": "Regulator studies put hard numbers on retail trading losses. The details — who loses, why, and what costs do — are what serious traders should sit with.",
+    "file": "blog/retail-trading-losses-truth.html"
+  },
+  {
+    "slug": "comparing-brokers-at-a-trading-expo",
+    "title": "What to Look for When Comparing Brokers at a Trading Expo",
+    "category": "Expo & Events Guide",
+    "img": "hero-expo.webp",
+    "read": "6 min read",
+    "date": "Sep 25, 2026",
+    "excerpt": "Meet brokers face-to-face at a trading expo and know exactly what to compare: regulation, full fee structures, platforms, support, product range — and the red flags to walk away from.",
+    "file": "blog/comparing-brokers-at-a-trading-expo.html"
+  },
+  {
+    "slug": "opening-brokerage-account-at-expo",
+    "title": "Should You Open a Brokerage Account at a Trading Expo? A Practical Checklist",
+    "category": "Expo & Events Guide",
+    "img": "brand-rollup.webp",
+    "read": "6 min read",
+    "date": "Sep 25, 2026",
+    "excerpt": "Expo-only brokerage offers can be genuinely good — or expensive traps. How to evaluate sign-up deals, what documents to carry, and the checklist to run before you hand over KYC at the booth.",
+    "file": "blog/opening-brokerage-account-at-expo.html"
+  },
+  {
+    "slug": "post-expo-follow-up-guide",
+    "title": "After the Expo: How to Turn Contacts, Notes and Ideas Into Trading Results",
+    "category": "Expo & Events Guide",
+    "img": "brand-signage.webp",
+    "read": "6 min read",
+    "date": "Sep 25, 2026",
+    "excerpt": "The expo ends but the value starts now: a follow-up system for organising your notes, testing new ideas safely, following up with contacts and brokers, and reviewing what the event earned you.",
+    "file": "blog/post-expo-follow-up-guide.html"
+  },
+  {
+    "slug": "what-to-expect-trading-expo-africa",
+    "title": "What to Expect at Trading Expo Africa",
+    "category": "Event guide",
+    "img": "expo-floor.webp",
+    "read": "7 min read",
+    "date": "Sep 25, 2026",
+    "excerpt": "Your first-timer's briefing for 19–20 February 2027 at Emperors Palace.",
+    "file": "blog/what-to-expect-trading-expo-africa.html"
+  },
+  {
+    "slug": "exhibitor-guide-trading-expo-africa",
+    "title": "Exhibitor Guide: Trading Expo Africa",
+    "category": "For exhibitors",
+    "img": "booth-demo.webp",
+    "read": "7 min read",
+    "date": "Sep 25, 2026",
+    "excerpt": "Booth options, logistics and the playbook for making the exhibition floor pay.",
+    "file": "blog/exhibitor-guide-trading-expo-africa.html"
+  },
+  {
+    "slug": "top-reasons-attend-trading-expo-africa",
+    "title": "Top Reasons to Attend Trading Expo Africa",
+    "category": "Visitors",
+    "img": "networking-lounge.webp",
+    "read": "6 min read",
+    "date": "Sep 25, 2026",
+    "excerpt": "Why Africa's traders are heading to Johannesburg on 19–20 February 2027.",
+    "file": "blog/top-reasons-attend-trading-expo-africa.html"
+  },
+  {
+    "slug": "how-to-verify-broker-regulation",
+    "file": "blog/how-to-verify-broker-regulation.html",
+    "title": "How to Verify Your Broker Is Properly Regulated",
+    "category": "Forex Trading Africa",
+    "img": "expo-grand-hall.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Every scam broker counts on you not checking. The fastest due-diligence step in trading — verify the licence first."
+  },
+  {
+    "slug": "forex-scams-red-flags",
+    "file": "blog/forex-scams-red-flags.html",
+    "title": "Forex Scams: Red Flags Every Trader Must Know",
+    "category": "Forex Trading Africa",
+    "img": "conference-panel.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Scam brokers all run the same playbook. Learn the red flags before you deposit a cent."
+  },
+  {
+    "slug": "forex-vs-equity-trading",
+    "file": "blog/forex-vs-equity-trading.html",
+    "title": "Forex vs Equity Trading: Which Fits You?",
+    "category": "Forex Trading Africa",
+    "img": "keynote-stage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Forex or equities? An honest comparison of hours, leverage, costs and lifestyle fit."
+  },
+  {
+    "slug": "cbdcs-vs-crypto-guide",
+    "file": "blog/cbdcs-vs-crypto-guide.html",
+    "title": "CBDCs vs Crypto: What Traders Should Know",
+    "category": "Crypto & Regulation",
+    "img": "expo-vip-lounge.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Central banks are building digital currencies. How CBDCs differ from crypto — and why traders should pay attention."
+  },
+  {
+    "slug": "crypto-trading-safety-checklist",
+    "file": "blog/crypto-trading-safety-checklist.html",
+    "title": "Crypto Trading Safety Checklist",
+    "category": "Crypto & Regulation",
+    "img": "booth-demo.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Ten rules that protect your crypto funds — from exchange choice to backup discipline."
+  },
+  {
+    "slug": "stablecoins-explained",
+    "file": "blog/stablecoins-explained.html",
+    "title": "Stablecoins Explained: What Traders Should Know",
+    "category": "Crypto & Regulation",
+    "img": "expo-grand-hall.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "The dollar-pegged tokens at the heart of crypto trading — how they work and where the risks hide."
+  },
+  {
+    "slug": "price-action-trading-guide-beginners",
+    "file": "blog/price-action-trading-guide-beginners.html",
+    "title": "Price Action Trading: The Beginner's Guide to Reading Charts Without Indicators",
+    "category": "Trading Strategies",
+    "img": "expo-main-stage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Strip the indicators away and the chart still speaks. How to read price action — structure, candles and levels — from scratch."
+  },
+  {
+    "slug": "swing-trading-strategy-guide",
+    "file": "blog/swing-trading-strategy-guide.html",
+    "title": "Swing Trading Strategy Guide: Capturing Multi-Day Moves",
+    "category": "Trading Strategies",
+    "img": "hero-expo.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "How to capture multi-day moves: timeframe selection, entry setups and risk rules for swing traders."
+  },
+  {
+    "slug": "intraday-trading-strategy-guide",
+    "file": "blog/intraday-trading-strategy-guide.html",
+    "title": "Intraday Trading Strategy Guide: What Actually Works (and What Doesn't)",
+    "category": "Trading Strategies",
+    "img": "brand-rollup.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "An honest intraday guide: the statistics are brutal, the costs are real, and only a disciplined minority survives. What separates them."
+  },
+  {
+    "slug": "candlestick-patterns-traders-guide",
+    "file": "blog/candlestick-patterns-traders-guide.html",
+    "title": "Candlestick Patterns: The 12 Patterns Traders Actually Use",
+    "category": "Trading Strategies",
+    "img": "brand-signage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Forget memorising 50 pattern names. Twelve candlestick patterns, what they reveal about buyers vs sellers, and why location beats shape."
+  },
+  {
+    "slug": "support-resistance-trading-guide",
+    "file": "blog/support-resistance-trading-guide.html",
+    "title": "Support and Resistance Trading: Drawing Levels That Actually Hold",
+    "category": "Trading Strategies",
+    "img": "brand-badge.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Support and resistance are zones, not lines. How to find the levels that matter, trade role reversals, and avoid the drawing mistakes beginners make."
+  },
+  {
+    "slug": "moving-averages-trading-strategy",
+    "file": "blog/moving-averages-trading-strategy.html",
+    "title": "Moving Averages Trading Strategy: SMAs, EMAs and How Pros Use Them",
+    "category": "Trading Strategies",
+    "img": "expo-floor.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Moving averages are the most used — and most misused — indicator in trading. How professionals actually deploy SMAs and EMAs."
+  },
+  {
+    "slug": "scalping-strategy-pros-cons",
+    "file": "blog/scalping-strategy-pros-cons.html",
+    "title": "Scalping Strategy: The Honest Pros and Cons for Retail Traders",
+    "category": "Trading Strategies",
+    "img": "expo-main-stage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Dozens of trades, tiny profits, zero overnight risk — scalping's appeal is obvious and its difficulty underestimated. The unvarnished truth."
+  },
+  {
+    "slug": "position-sizing-trading-guide",
+    "file": "blog/position-sizing-trading-guide.html",
+    "title": "Position Sizing in Trading: The Math That Matters More Than Strategy",
+    "category": "Trading Strategies",
+    "img": "trading-tech.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Strategy picks entries; position sizing decides survival. The fixed-fractional method, the 1% rule, and the maths of staying in the game."
+  },
+  {
+    "slug": "risk-management-trading-complete-guide",
+    "file": "blog/risk-management-trading-complete-guide.html",
+    "title": "Risk Management in Trading: The Complete Guide (2026)",
+    "category": "Risk Management",
+    "img": "expo-networking.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Risk management is the entire game: R-multiples, portfolio heat, correlation traps and drawdown rules — the complete framework in one guide."
+  },
+  {
+    "slug": "trading-psychology-master-emotions",
+    "file": "blog/trading-psychology-master-emotions.html",
+    "title": "Trading Psychology: Mastering Fear, Greed and Revenge Trading",
+    "category": "Risk Management",
+    "img": "expo-floor-aerial.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "The market is not your enemy — your amygdala is. Practical psychology for FOMO, revenge trading, loss aversion and the overconfidence trap."
+  },
+  {
+    "slug": "stop-loss-guide-placement-mistakes",
+    "file": "blog/stop-loss-guide-placement-mistakes.html",
+    "title": "Stop-Loss Guide: Where to Place It and 5 Mistakes That Guarantee Losses",
+    "category": "Risk Management",
+    "img": "expo-grand-hall.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "A stop-loss placed by hope is just a delayed bigger loss. Structure-based placement, the ATR method, and the five mistakes to eliminate."
+  },
+  {
+    "slug": "diversifying-trading-portfolio",
+    "file": "blog/diversifying-trading-portfolio.html",
+    "title": "Diversifying a Trading Portfolio: Beyond 'Don't Put All Eggs in One Basket'",
+    "category": "Risk Management",
+    "img": "conference-panel.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Real diversification is about uncorrelated return drivers, not just owning many stocks. How traders should actually spread risk."
+  },
+  {
+    "slug": "trading-journal-guide-improve-results",
+    "file": "blog/trading-journal-guide-improve-results.html",
+    "title": "Trading Journal Guide: How Documenting Trades Transforms Results",
+    "category": "Risk Management",
+    "img": "keynote-stage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "The journal is where amateurs become professionals: what to log, how to review in R-multiples, and the weekly process that compounds skill."
+  },
+  {
+    "slug": "algo-trading-retail-traders-guide",
+    "file": "blog/algo-trading-retail-traders-guide.html",
+    "title": "Algo Trading: A Retail Trader's Guide for 2026",
+    "category": "Fintech Trends",
+    "img": "expo-networking.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Algorithms now dominate market volumes — but what can a retail trader realistically do? APIs, regulations, costs and honest expectations."
+  },
+  {
+    "slug": "ai-tools-traders-2026",
+    "file": "blog/ai-tools-traders-2026.html",
+    "title": "AI Tools for Traders in 2026: What's Useful vs What's Hype",
+    "category": "Fintech Trends",
+    "img": "networking-lounge.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "AI can research, screen and analyse — but should it pick your trades? Separating genuinely useful AI trading tools from expensive hype."
+  },
+  {
+    "slug": "mobile-trading-apps-guide",
+    "file": "blog/mobile-trading-apps-guide.html",
+    "title": "Mobile Trading Apps: A 2026 Guide",
+    "category": "Fintech Trends",
+    "img": "expo-vip-lounge.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "What separates a good trading app from a dangerous one: execution, order types, charting and security."
+  },
+  {
+    "slug": "copy-trading-risks",
+    "file": "blog/copy-trading-risks.html",
+    "title": "Copy Trading: Risks Every Follower Must Understand",
+    "category": "Fintech Trends",
+    "img": "booth-demo.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Mirroring another trader's positions sounds easy. The risks most followers discover too late."
+  },
+  {
+    "slug": "prop-trading-firms-explained",
+    "file": "blog/prop-trading-firms-explained.html",
+    "title": "Prop Trading Firms Explained",
+    "category": "Fintech Trends",
+    "img": "brand-booth.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Pay a fee, pass a challenge, trade firm capital. How prop firms really work — and how to spot the bad ones."
+  },
+  {
+    "slug": "trading-technology-trends-2027",
+    "file": "blog/trading-technology-trends-2027.html",
+    "title": "Trading Technology Trends 2027: What's Next for Traders",
+    "category": "Fintech Trends",
+    "img": "expo-grand-hall.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "From AI copilots to API-first brokers: the technology shifts reshaping retail trading in 2027, and a practical filter for what deserves your attention."
+  },
+  {
+    "slug": "why-attend-trading-expo-events",
+    "file": "blog/why-attend-trading-expo-events.html",
+    "title": "Why Attend a Trading Expo? 8 Benefits You Can't Get Online",
+    "category": "Expo & Events Guide",
+    "img": "expo-floor.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Webinars teach; expos transform. Eight things that only happen when 10,000 traders, exhibitors and speakers share one venue."
+  },
+  {
+    "slug": "how-to-prepare-trading-expo-africa",
+    "file": "blog/how-to-prepare-trading-expo-africa.html",
+    "title": "How to Prepare for Trading Expo Africa",
+    "category": "Expo & Events Guide",
+    "img": "hero-expo.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Tickets, travel, agenda planning — the preparation checklist that pays off."
+  },
+  {
+    "slug": "first-time-expo-visitor-mistakes",
+    "file": "blog/first-time-expo-visitor-mistakes.html",
+    "title": "9 Mistakes First-Time Expo Visitors Make (and How to Avoid Them)",
+    "category": "Expo & Events Guide",
+    "img": "brand-rollup.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Collecting brochures is not a strategy. The nine classic first-timer mistakes — and the simple fixes that turn two days into real results."
+  },
+  {
+    "slug": "networking-tips-trading-events",
+    "file": "blog/networking-tips-trading-events.html",
+    "title": "Networking at Trading Events: How to Build Relationships That Matter",
+    "category": "Expo & Events Guide",
+    "img": "brand-signage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Trading is lonely; networks compound. How to start conversations, be memorable for the right reasons, and turn contacts into lasting relationships."
+  },
+  {
+    "slug": "trading-expo-africa-awards",
+    "file": "blog/trading-expo-africa-awards.html",
+    "title": "Trading Expo Africa Awards: The Complete Guide",
+    "category": "Expo & Events Guide",
+    "img": "brand-badge.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Categories, nominations, judging criteria and the gala night — your complete awards guide."
+  },
+  {
+    "slug": "expo-vs-online-trading-education",
+    "file": "blog/expo-vs-online-trading-education.html",
+    "title": "Expo vs Online Trading Education: Why You Need Both",
+    "category": "Expo & Events Guide",
+    "img": "expo-floor.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Online learning is unmatched for knowledge; expos are unmatched for judgement. How to combine both into a complete trading education."
+  },
+  {
+    "slug": "trading-expo-africa-conference-guide",
+    "file": "blog/trading-expo-africa-conference-guide.html",
+    "title": "Trading Expo Africa Conference Guide",
+    "category": "Expo & Events Guide",
+    "img": "expo-main-stage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Stages, session formats and speakers — how to plan your conference two days."
+  },
+  {
+    "slug": "how-to-start-trading-2026",
+    "file": "blog/how-to-start-trading-2026.html",
+    "title": "How to Start Trading in 2026: A Step-by-Step Beginner's Guide",
+    "category": "Beginner Education",
+    "img": "trading-tech.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "A complete beginner's roadmap: account, broker, platform, first strategy and the risk rules that keep you alive."
+  },
+  {
+    "slug": "trading-vs-investing-difference",
+    "file": "blog/trading-vs-investing-difference.html",
+    "title": "Trading vs Investing: What's the Difference and Which Suits You?",
+    "category": "Beginner Education",
+    "img": "conference-panel.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Traders rent price moves; investors own businesses. The real differences — timeframe, analysis, taxes, temperament — and choosing your path."
+  },
+  {
+    "slug": "leverage-trading-explained-risks",
+    "file": "blog/leverage-trading-explained-risks.html",
+    "title": "Leverage in Trading Explained: The Double-Edged Sword",
+    "category": "Beginner Education",
+    "img": "expo-grand-hall.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Leverage multiplies outcomes — including the bad ones. How margin leverage works, the maths of ruin, and five rules for surviving it."
+  },
+  {
+    "slug": "trading-glossary-essential-terms",
+    "file": "blog/trading-glossary-essential-terms.html",
+    "title": "Trading Glossary: 40 Essential Terms Every Beginner Must Know",
+    "category": "Beginner Education",
+    "img": "conference-panel.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Bid-ask, slippage, margin, derivatives — the 40 terms that unlock every trading conversation, explained plainly with Indian-market context."
+  },
+  {
+    "slug": "paper-trading-practice-guide",
+    "file": "blog/paper-trading-practice-guide.html",
+    "title": "Paper Trading: How to Practise Trading Without Losing Money",
+    "category": "Beginner Education",
+    "img": "keynote-stage.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Paper trading builds skill without tuition fees — if done honestly. How to practise so the lessons actually transfer to live markets."
+  },
+  {
+    "slug": "capital-needed-start-trading",
+    "file": "blog/capital-needed-start-trading.html",
+    "title": "How Much Capital Do You Need to Start Trading?",
+    "category": "Beginner Education",
+    "img": "expo-networking.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "The honest maths of starting capital — minimums by market and why underfunded accounts die first."
+  },
+  {
+    "slug": "free-trading-education-resources",
+    "file": "blog/free-trading-education-resources.html",
+    "title": "Learn Trading for Free: The Best No-Cost Resources for Beginners",
+    "category": "Beginner Education",
+    "img": "networking-lounge.webp",
+    "read": "3 min read",
+    "date": "Sep 24, 2026",
+    "excerpt": "Quality trading education does not have to cost anything — but free content has traps. The genuinely valuable free resources, and the red flags."
+  }
+]
