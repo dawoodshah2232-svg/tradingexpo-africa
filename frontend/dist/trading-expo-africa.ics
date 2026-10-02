@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ProFX Media//Trading Expo Africa 2027//EN
+BEGIN:VEVENT
+UID:trading-expo-africa-2027@profxmedia
+DTSTAMP:20261002T100000Z
+DTSTART:20270219T070000Z
+DTEND:20270220T160000Z
+SUMMARY:Trading Expo Africa 2027
+LOCATION:Emperors Palace\, Centre Court\, 64 Jones Road\, Kempton Park\, Johannesburg\, South Africa
+DESCRIPTION:Africa's premier online trading\, fintech & financial markets exhibition. Live trading contest\, exhibitors\, keynotes\, networking. Organizer: ProFX Media FZ-LLC.
+URL:https://dawoodshah2232-svg.github.io/tradingexpo-africa/
+END:VEVENT
+END:VCALENDAR

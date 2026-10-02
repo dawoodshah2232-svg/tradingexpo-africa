@@ -1075,3 +1075,23 @@ html[data-theme="light"] .mkt-ticker { background: #0B1F3B; }
   [data-parallax], [data-parallax-img] { transform: none !important; }
   .grad { animation: none; }
 }
+/* ---------- Sticky mobile ticket CTA ---------- */
+.sticky-cta { display: none; }
+@media (max-width: 640px) {
+  .sticky-cta {
+    display: block;
+    position: fixed;
+    left: 12px; right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    z-index: 70;
+  }
+  .sticky-cta .btn {
+    width: 100%;
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 200, 83, 0.35);
+  }
+}
+
+/* Keep the back-to-top button clear of the sticky mobile ticket bar. */
+@media (max-width: 640px) {
+  .to-top { bottom: calc(76px + env(safe-area-inset-bottom)); right: 16px; }
+}

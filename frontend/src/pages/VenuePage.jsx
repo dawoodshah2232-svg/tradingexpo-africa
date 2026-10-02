@@ -8,6 +8,15 @@ export default function VenuePage() {
   const ab = useAssetBase();
   const { open, view } = useLightbox();
   const floorplanSrc = ab + 'img/floor-plan-concept.webp';
+  const VENUE_PHOTOS = [
+    { src: 'img/venue/venue-1.webp', alt: 'Emperors Palace hotel facade and horse fountain at night', caption: 'The palace, lit up at night' },
+    { src: 'img/venue/venue-6.webp', alt: 'Horse fountain and convention entrance at Emperors Palace by day', caption: 'Grand entrance & fountain, by day' },
+    { src: 'img/venue/venue-3.webp', alt: 'Aerial view of Emperors Palace resort with long pool and palms', caption: 'The resort from above' },
+    { src: 'img/venue/venue-4.webp', alt: 'Fountain of the Emperors and casino drive at night', caption: 'Fountain of the Emperors, at night' },
+    { src: 'img/venue/venue-2.webp', alt: 'Close-up of the horse fountain with the palace facade behind', caption: 'The iconic horse fountain' },
+    { src: 'img/venue/venue-5.webp', alt: 'Stained-glass dome interior at Emperors Palace', caption: 'Inside the resort' },
+  ];
+  const lbItems = VENUE_PHOTOS.map((v) => ({ src: ab + v.src, alt: v.alt, caption: v.caption }));
 
   return (
     <>
@@ -17,6 +26,21 @@ export default function VenuePage() {
             <Reveal className="eyebrow">Venue</Reveal>
             <Reveal as="h1">Emperors Palace.<br /><span className="grad">Johannesburg.</span></Reveal>
             <Reveal className="section-lead">19–20 February 2027 · Centre Court, Emperors Palace, 64 Jones Road, Kempton Park, Johannesburg, 1620, South Africa.</Reveal>
+          </div>
+        </section>
+
+        <section className="section section-alt">
+          <div className="container">
+            <Reveal as="h2" className="section-title">The venue <span className="grad">in photos.</span></Reveal>
+            <Reveal className="section-lead">Real photography of Emperors Palace — the resort hosting Trading Expo Africa 2027. Tap any photo to view it full size.</Reveal>
+            <div className="gallery-page" style={{ marginTop: '34px' }}>
+              {VENUE_PHOTOS.map((p, i) => (
+                <figure className="g-item" key={p.src} onClick={() => open(lbItems, i)}>
+                  <img src={ab + p.src} alt={p.alt} loading="lazy" />
+                  <figcaption>{p.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 

@@ -80,6 +80,9 @@ export default function HomePage() {
               <a href="exhibit.html" className="btn btn-glass btn-lg">Become an Exhibitor</a>
             </div>
             <Countdown />
+            <p className="fine center" data-hero style={{ marginTop: '14px' }}>
+              <a href="trading-expo-africa.ics" download style={{ color: '#9aa3ad', textDecoration: 'underline' }}>Add to calendar (.ics)</a>
+            </p>
           </div>
           <a className="scroll-cue" href="#manifesto" aria-label="Scroll down"><span></span></a>
         </section>

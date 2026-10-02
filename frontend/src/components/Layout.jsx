@@ -135,8 +135,16 @@ function Footer({ linkBase }) {
   );
 }
 
-function ScrollProgress() {
-  useEffect(() => {
+/* Sticky bottom ticket bar — mobile only (desktop keeps the nav CTA). */
+function StickyCta({ linkBase }) {
+  return (
+    <div className="sticky-cta" role="complementary" aria-label="Book tickets">
+      <a href={linkBase + 'tickets.html'} className="btn btn-primary">Book Tickets · 19–20 Feb 2027</a>
+    </div>
+  );
+}
+
+function ScrollProgress() {  useEffect(() => {
     const bar = document.createElement('div');
     bar.className = 'scroll-progress';
     bar.setAttribute('aria-hidden', 'true');
@@ -205,6 +213,7 @@ export default function Layout({ page, assetBase = 'assets/', linkBase = '', man
         <div id="siteHeader"><Header page={page} linkBase={linkBase} /></div>
         {children}
         <div id="siteFooter"><Footer linkBase={linkBase} /></div>
+        <StickyCta linkBase={linkBase} />
         <ScrollProgress />
         <BackToTop />
         <AnchorOffset />
