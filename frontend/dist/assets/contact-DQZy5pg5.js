@@ -1,4 +1,4 @@
-import{u as r,j as e,c,L as l}from"./styles-DBbnN1LL.js";import{R as s}from"./ui-Ch9Yo4Ha.js";function o(a){a.preventDefault();const n=new FormData(a.target),i=encodeURIComponent("Trading Expo Africa enquiry — "+n.get("interest")),t=encodeURIComponent("Name: "+n.get("name")+`
+import{u as r,j as e,c,L as l}from"./styles-DBw9IQpF.js";import{R as s}from"./ui-Bi_3FGYe.js";function o(a){a.preventDefault();const n=new FormData(a.target),i=encodeURIComponent("Trading Expo Africa enquiry — "+n.get("interest")),t=encodeURIComponent("Name: "+n.get("name")+`
 Email: `+n.get("email")+`
 Interested in: `+n.get("interest")+`
 

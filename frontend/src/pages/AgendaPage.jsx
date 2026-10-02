@@ -58,7 +58,7 @@ export default function AgendaPage() {
               <Reveal className="africa-card"><strong>Live leaderboard</strong><span>Follow every trade in real time on the big screens</span></Reveal>
               <Reveal className="africa-card"><strong>Winners crowned on stage</strong><span>Finalists trade live; winners announced at the expo</span></Reveal>
             </div>
-            <Reveal as="p" className="fine center" style={{ marginTop: '20px' }}>Full contest rules, entry details and prizes to be announced.</Reveal>
+            <Reveal as="p" className="fine center" style={{ marginTop: '20px' }}>The contest is open to all ticket holders — entries open at the expo.</Reveal>
           </div>
         </section>
 

@@ -13,6 +13,7 @@ const uid = () => 'c' + Date.now().toString(36) + Math.random().toString(36).sli
 const TABS = [
   ['speakers', 'Speakers'],
   ['sponsors', 'Sponsors'],
+  ['mediaPartners', 'Media Partners'],
   ['gallery', 'Gallery'],
   ['site', 'Site text'],
   ['publish', 'Publish'],
@@ -69,6 +70,7 @@ export default function ContentAdmin() {
       const merged = {
         speakers: Array.isArray(draft.speakers) ? draft.speakers : (pub.speakers || []),
         sponsors: Array.isArray(draft.sponsors) ? draft.sponsors : (pub.sponsors || []),
+        mediaPartners: Array.isArray(draft.mediaPartners) ? draft.mediaPartners : (pub.mediaPartners || []),
         gallery: Array.isArray(draft.gallery) ? draft.gallery : (pub.gallery || []),
         site: { ...(pub.site || {}), ...(draft.site || {}) },
       };
@@ -101,10 +103,11 @@ export default function ContentAdmin() {
 
   const addSpeaker = () => set({ speakers: [...doc.speakers, { id: uid(), name: '', title: '', company: '', photo: '' }] });
   const addSponsor = () => set({ sponsors: [...doc.sponsors, { id: uid(), brand: '', tier: 'Gold', logo: '', url: '' }] });
+  const addMediaPartner = () => set({ mediaPartners: [...(doc.mediaPartners || []), { id: uid(), brand: '', logo: '', url: '' }] });
   const addGallery = () => set({ gallery: [...doc.gallery, { id: uid(), src: '', caption: '', cat: 'expo' }] });
 
   const saveDraft = () => {
-    saveOverrides({ speakers: doc.speakers, sponsors: doc.sponsors, gallery: doc.gallery, site: doc.site });
+    saveOverrides({ speakers: doc.speakers, sponsors: doc.sponsors, mediaPartners: doc.mediaPartners || [], gallery: doc.gallery, site: doc.site });
     setMsg({ ok: true, t: 'Draft saved in this browser. The live site preview updates immediately; publish to make it permanent.' });
   };
   const discardDraft = () => {
@@ -138,6 +141,7 @@ export default function ContentAdmin() {
         site: doc.site,
         speakers: clean(doc.speakers),
         sponsors: clean(doc.sponsors),
+        mediaPartners: clean(doc.mediaPartners || []),
         gallery: clean(doc.gallery),
       };
       await ghPut(CONTENT_REPO_PATH, JSON.stringify(payload, null, 2), false, 'content: update via admin portal', tk);
@@ -152,7 +156,7 @@ export default function ContentAdmin() {
 
   if (!doc) return <div className="card"><p>Loading website content…</p></div>;
 
-  const counts = { speakers: doc.speakers.length, sponsors: doc.sponsors.length, gallery: doc.gallery.length };
+  const counts = { speakers: doc.speakers.length, sponsors: doc.sponsors.length, mediaPartners: (doc.mediaPartners || []).length, gallery: doc.gallery.length };
 
   return (
     <div>
@@ -215,6 +219,28 @@ export default function ContentAdmin() {
             </div>
           ))}
           {!doc.sponsors.length && <p className="card-sub">No sponsors yet — add the first one above.</p>}
+        </div>
+      )}
+
+      {tab === 'mediaPartners' && (
+        <div className="card">
+          <div className="ca-head"><h4>Media Partners</h4><button className="btn btn-sm btn-primary" onClick={addMediaPartner}>+ Add media partner</button></div>
+          {(doc.mediaPartners || []).map((m) => (
+            <div className="ca-item" key={m.id}>
+              <Img item={m} />
+              <div className="ca-fields">
+                <input value={m.brand} placeholder="Brand name" onChange={(e) => updItem('mediaPartners', m.id, { brand: e.target.value })} />
+                <input value={m.url} placeholder="Website URL (optional)" onChange={(e) => updItem('mediaPartners', m.id, { url: e.target.value })} />
+                <label className="ca-file">Upload logo <input type="file" accept="image/*" hidden onChange={(e) => onPickImage('mediaPartners', m.id, 'logo', 'media', e.target.files[0])} /></label>
+              </div>
+              <div className="ca-ops">
+                <button className="btn btn-sm btn-ghost" onClick={() => moveItem('mediaPartners', m.id, -1)}>↑</button>
+                <button className="btn btn-sm btn-ghost" onClick={() => moveItem('mediaPartners', m.id, 1)}>↓</button>
+                <button className="btn btn-sm btn-danger" onClick={() => delItem('mediaPartners', m.id)}>Remove</button>
+              </div>
+            </div>
+          ))}
+          {!(doc.mediaPartners || []).length && <p className="card-sub">No media partners yet — add the first one above.</p>}
         </div>
       )}
 

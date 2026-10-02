@@ -4,16 +4,16 @@ import { Reveal, MarketTicker } from '../components/ui.jsx';
 import { useAssetBase } from '../lib/theme.jsx';
 
 const OPTIONS = [
-  { name: 'Trader Pass', price: 0, priceHtml: 'TBA <em>pricing to be announced</em>',
+  { name: 'Trader Pass', price: 0, priceHtml: 'Free <em>reservation — pay nothing today</em>',
     desc: '2-day exhibition access · booths · demos · networking areas · digital badge' },
-  { name: 'Pro Trader Pass', price: 0, tag: 'Most popular', priceHtml: 'TBA <em>pricing to be announced</em>',
+  { name: 'Pro Trader Pass', price: 0, tag: 'Most popular', priceHtml: 'Free <em>reservation — pay nothing today</em>',
     desc: 'Everything in Trader, plus full conference access · priority seating · fast-track entry' },
-  { name: 'VIP Pass', price: 0, priceHtml: 'TBA <em>pricing to be announced</em>',
+  { name: 'VIP Pass', price: 0, priceHtml: 'Free <em>reservation — pay nothing today</em>',
     desc: 'Everything in Pro, plus VIP lounge · reserved seating · exclusive networking' },
 ];
 
 const FAQS = [
-  ['How do I book a ticket for Trading Expo Africa?', 'Choose your pass — Trader, Pro Trader or VIP — on the tickets page, fill in your name and email, and complete the booking. You will receive a confirmation email with your ticket and a booking reference. You can also re-download your ticket anytime from the ticket holder portal. Pricing is yet to be announced — reserving now costs nothing.'],
+  ['How do I book a ticket for Trading Expo Africa?', 'Choose your pass — Trader, Pro Trader or VIP — on the tickets page, fill in your name and email, and complete the booking. You will receive a confirmation email with your ticket and a booking reference. You can also re-download your ticket anytime from the ticket holder portal. Reserving now costs nothing — our team confirms pricing with you before any payment.'],
   ['What is the difference between Trader, Pro Trader and VIP passes?', 'The Trader pass gives you full access to the exhibition floor, exhibitor booths and networking areas. Pro Trader adds the two-day conference program, panels and workshops. VIP adds everything in Pro Trader plus the premium lounge, front-row seating, exclusive networking sessions and priority entry. Pick the pass that matches how deep you want to go.'],
   ['How will I receive my ticket after booking?', 'After you complete your booking, your ticket is emailed to you automatically with your booking reference and a downloadable ticket. You can also log in to the ticket holder portal anytime to view, re-download or print your ticket. Keep your booking reference handy — you will need it for entry and support.'],
   ['Can I transfer my ticket to someone else?', 'Yes, tickets can be transferred to another person before the event. Contact the support team or use the ticket holder portal to update the attendee name on your booking. The new attendee will need a valid ID matching the updated name at entry. Transfers are free — just make sure the details are correct.'],
@@ -31,7 +31,7 @@ export default function TicketsPage() {
         <div className="container">
           <Reveal className="eyebrow">Tickets</Reveal>
           <Reveal as="h1">Book your pass.</Reveal>
-          <Reveal className="section-lead">Ticket pricing will be announced soon — reserve your pass in under a minute. No payment taken today; our team will confirm pricing and payment with you.</Reveal>
+          <Reveal className="section-lead">Reserve your pass in under a minute. No payment taken today — our team confirms pricing with you before anything is charged.</Reveal>
         </div>
       </section>
 
@@ -52,7 +52,7 @@ export default function TicketsPage() {
             <div className="lucky-glow" aria-hidden="true"></div>
             <div>
               <strong>Live trading contest — staged by an Official Guinness World Records™ Holder</strong>
-              <span>Contest participation details and entry will be announced. All ticket holders will be notified when entries open.</span>
+              <span>The contest is open to ticket holders — entries open at the expo.</span>
             </div>
           </Reveal>
           <Reveal className="lucky-strip" style={{ marginTop: '16px' }}>

@@ -43,6 +43,26 @@ export function SpeakersSection() {
 }
 
 
+
+export function SpeakerMarquee() {
+  const ab = useAssetBase();
+  const speakers = useContentList('speakers');
+  if (!speakers.length) return null;
+  const loop = [...speakers, ...speakers];
+  const img = (sp) => ab + asset(sp.photo).replace(/^assets\//, '');
+  return (
+    <div className="spk-marquee" aria-label="Featured speakers">
+      <div className="spk-track">
+        {loop.map((sp, i) => sp.photo && (
+          <span className="spk-face" key={(sp.id || i) + '-' + i} title={sp.name}>
+            <img src={img(sp)} alt={sp.name} loading="lazy" />
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function SpeakersTeaser() {
   const ab = useAssetBase();
   const speakers = useContentList('speakers').slice(0, 6);
@@ -65,6 +85,33 @@ export function SpeakersTeaser() {
           ))}
         </div>
         <Reveal className="center" style={{ marginTop: '36px' }}><a href="speakers.html" className="btn btn-ghost btn-lg">Meet all speakers</a></Reveal>
+      </div>
+    </section>
+  );
+}
+
+
+export function MediaPartners() {
+  const ab = useAssetBase();
+  const partners = useContentList('mediaPartners');
+  if (!partners.length) return null;
+  const img = (logo) => ab + asset(logo).replace(/^assets\//, '');
+  return (
+    <section className="section" id="media-partners">
+      <div className="container">
+        <Reveal as="p" className="eyebrow">Media partners</Reveal>
+        <Reveal as="h2" className="section-title">In the <span className="grad">headlines.</span></Reveal>
+        <div className="logo-wall media-wall">
+          {partners.map((m, i) => (
+            <Reveal key={m.id || i} className="logo-tile real" delay={Math.min(i * 0.04, 0.3)}>
+              {m.url ? (
+                <a href={m.url} target="_blank" rel="noopener sponsored" aria-label={m.brand}><img src={img(m.logo)} alt={m.brand + ' logo'} loading="lazy" /></a>
+              ) : (
+                <img src={img(m.logo)} alt={m.brand + ' logo'} loading="lazy" />
+              )}
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -101,7 +148,7 @@ export function SponsorsWall() {
           </>
         ) : (
           <>
-            <Reveal as="p" className="section-lead">Partner announcements coming soon — reserve your place early.</Reveal>
+            <Reveal as="p" className="section-lead">Proud partners from across the ProFX community.</Reveal>
             <div className="logo-wall" aria-label="Sponsor placeholders">
               {['Title Sponsor', 'Platinum', 'Gold', 'Silver', 'Media Partner', 'Media Partner'].map((tier, i) => (
                 <Reveal key={i} className="logo-tile" delay={i * 0.06}><span>Your Logo</span><em>{tier}</em></Reveal>
