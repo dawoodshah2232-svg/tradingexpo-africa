@@ -6,6 +6,7 @@ const NAV_LINKS = [
   ['tickets.html', 'tickets', 'Tickets'],
   ['exhibit.html', 'exhibit', 'Exhibit'],
   ['agenda.html', 'agenda', 'Agenda'],
+  ['speakers.html', 'speakers', 'Speakers'],
   ['venue.html', 'venue', 'Venue'],
   ['gallery.html', 'gallery', 'Gallery'],
   ['sponsors.html', 'sponsors', 'Sponsors'],
@@ -103,7 +104,7 @@ function Footer({ linkBase }) {
           </div>
           <nav className="footer-col" aria-label="Event">
             <h4>Event</h4>
-            <a href={linkBase + "index.html"}>Home</a><a href={linkBase + "agenda.html"}>Agenda</a><a href={linkBase + "venue.html"}>Venue</a>
+            <a href={linkBase + "index.html"}>Home</a><a href={linkBase + "agenda.html"}>Agenda</a><a href={linkBase + "speakers.html"}>Speakers</a><a href={linkBase + "venue.html"}>Venue</a>
             <a href={linkBase + "gallery.html"}>Gallery</a><a href={linkBase + "awards.html"}>Awards</a><a href={linkBase + "tickets.html"}>Tickets</a>
             <a href={linkBase + "faq.html"}>FAQ</a><a href={linkBase + "blog.html"}>Blog</a>
           </nav>

@@ -49,7 +49,20 @@ export default function AgendaPage() {
           </div>
         </section>
 
-        <section className="section section-alt">
+        <section className="section section-alt" id="contest">
+          <div className="container narrow">
+            <Reveal className="center"><span className="gwr-badge">Official Guinness World Records™ Holder</span></Reveal>
+            <Reveal as="h2" className="section-title">How the contest <span className="grad">works.</span></Reveal>
+            <div className="africa-cards">
+              <Reveal className="africa-card"><strong>Entries open to attendees</strong><span>Expo ticket holders can enter the live trading contest</span></Reveal>
+              <Reveal className="africa-card"><strong>Live leaderboard</strong><span>Follow every trade in real time on the big screens</span></Reveal>
+              <Reveal className="africa-card"><strong>Winners crowned on stage</strong><span>Finalists trade live; winners announced at the expo</span></Reveal>
+            </div>
+            <Reveal as="p" className="fine center" style={{ marginTop: '20px' }}>Full contest rules, entry details and prizes to be announced.</Reveal>
+          </div>
+        </section>
+
+        <section className="section">
           <div className="container">
             <div className="grid-3">
               <Reveal className="info-card"><h3>Main Stage</h3><p>Keynotes and headline panels — full conference access with Pro &amp; VIP passes.</p></Reveal>

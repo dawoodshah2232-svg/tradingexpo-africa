@@ -174,9 +174,11 @@ html[data-theme="light"] .icon-sun { display: block; }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center; padding: calc(var(--nav-h) + 40px) 0 90px; }
-.hero-bg { position: absolute; inset: -12% 0; background: url("./assets/img/expo-grand-hall.webp") center 40% / cover no-repeat; will-change: transform; }
-.hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,10,20,0.52) 0%, rgba(4,10,20,0.22) 45%, var(--bg) 98%); }
-html[data-theme="light"] .hero-shade { background: linear-gradient(180deg, rgba(244,248,250,0.58) 0%, rgba(244,248,250,0.32) 45%, var(--bg) 98%); }
+.hero-bg { position: absolute; inset: -12% 0; background: url("./assets/img/profx/profx-26.webp") center 40% / cover no-repeat; will-change: transform; }
+/* Cinematic fade — dark in both themes, melting into the page at the bottom */
+.hero-shade { position: absolute; inset: 0; background:
+  radial-gradient(120% 90% at 50% 30%, transparent 40%, rgba(2,8,16,0.35) 100%),
+  linear-gradient(180deg, rgba(2,8,16,0.66) 0%, rgba(2,8,16,0.28) 42%, rgba(2,8,16,0.58) 76%, var(--bg) 100%); }
 .hero-inner { position: relative; z-index: 2; max-width: 1000px; padding: 0 28px; }
 .hero-badge { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; padding: 11px 24px; border-radius: 980px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); color: #fff; margin-bottom: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
 html[data-theme="light"] .hero-badge { border-color: var(--border); background: var(--card); color: var(--text); }
@@ -195,14 +197,10 @@ html[data-theme="light"] .t-word { color: var(--logo-navy); text-shadow: 0 10px 
 .e-word i:last-child { background: linear-gradient(90deg, #00C853, transparent); }
 .ht-sub { margin-top: 22px; }
 .africa-tag { font-size: clamp(0.95rem, 2.4vw, 1.3rem); font-weight: 700; letter-spacing: 0.5em; text-indent: 0.5em; color: #fff; opacity: 0.85; }
-html[data-theme="light"] .africa-tag { color: var(--muted); }
 
 .hero-tagline { font-family: var(--font-display); font-size: clamp(1.2rem, 2.8vw, 1.7rem); font-weight: 700; letter-spacing: -0.015em; margin-bottom: 16px; color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,0.5); }
-html[data-theme="light"] .hero-tagline { color: var(--text); text-shadow: none; }
 .hero-sub { color: rgba(255,255,255,0.82); font-size: clamp(1rem, 2vw, 1.2rem); max-width: 660px; margin: 0 auto 40px; text-shadow: 0 2px 16px rgba(0,0,0,0.5); }
-html[data-theme="light"] .hero-sub { color: var(--muted); text-shadow: none; }
 .hero-sub strong { color: #fff; }
-html[data-theme="light"] .hero-sub strong { color: var(--text); }
 .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
 
 .countdown { display: inline-flex; align-items: center; gap: 16px; padding: 20px 34px; border-radius: 24px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
@@ -807,8 +805,6 @@ label.check input { width: 20px; height: 20px; accent-color: var(--logo-green); 
 .group-banner p { color: var(--muted); line-height: 1.65; max-width: 560px; }
 
 /* ---------- light-mode hero clarity ---------- */
-html[data-theme="light"] .hero-title { color: #0B1F3B; text-shadow: none; }
-html[data-theme="light"] .hero-sub { color: #33475f; text-shadow: none; }
 html[data-theme="light"] .cd-cell { background: rgba(255,255,255,0.75); border-color: rgba(0,0,0,0.08); }
 html[data-theme="light"] .cd-num { color: #0B1F3B; }
 html[data-theme="light"] .cd-label { color: #5b6b7f; }

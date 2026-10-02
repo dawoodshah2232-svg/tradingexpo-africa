@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // Multi-page app: every top-level page keeps its exact URL (tickets.html, …).
 // Blog articles keep /blog/<slug>.html via generated shells.
 const pages = [
-  'index', 'tickets', 'exhibit', 'agenda', 'venue', 'gallery',
+  'index', 'tickets', 'exhibit', 'agenda', 'speakers', 'venue', 'gallery',
   'sponsors', 'awards', 'blog', 'faq', 'contact', 'portal',
   'privacy', 'terms',
 ];

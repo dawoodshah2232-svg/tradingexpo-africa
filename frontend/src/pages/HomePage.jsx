@@ -1,19 +1,7 @@
 import React from 'react';
-import { Reveal, CountUp, Countdown, MarketTicker, ParallaxImg, ParallaxLayer } from '../components/ui.jsx';
-import { GalleryTrack } from '../components/Gallery.jsx';
-import { SpeakersSection, SponsorsWall } from '../components/Showcase.jsx';
+import { Reveal, CountUp, Countdown, ParallaxLayer } from '../components/ui.jsx';
+import { SpeakersTeaser, SponsorsWall } from '../components/Showcase.jsx';
 import { useAssetBase } from '../lib/theme.jsx';
-
-const GALLERY = [
-  { img: 'img/expo-grand-hall.webp', alt: 'Grand exhibition hall', top: 'The Grand Hall', bottom: 'Traders and brands under one roof' },
-  { img: 'img/expo-main-stage.webp', alt: 'Main stage keynote', top: 'Main Stage', bottom: 'Keynotes that set the agenda' },
-  { img: 'img/expo-floor-aerial.webp', alt: 'Exhibition floor aerial view', top: 'The Floor', bottom: 'Brands, live and hands-on' },
-  { img: 'img/expo-registration.webp', alt: 'Registration area', top: 'Welcome', bottom: 'Fast-track entry for pass holders' },
-  { img: 'img/expo-networking.webp', alt: 'Networking lounge', top: 'The Lounge', bottom: 'Where deals get started' },
-  { img: 'img/expo-vip-lounge.webp', alt: 'VIP lounge', top: 'VIP', bottom: 'An experience above it all' },
-  { img: 'img/johannesburg-night.webp', alt: 'Johannesburg skyline at sunset with the Hillbrow Tower', top: 'Host City', bottom: 'Johannesburg, South Africa' },
-  { img: 'img/brand-lockup.webp', alt: 'Trading Expo official brand identity', top: 'The Identity', bottom: 'Traders · Brokers · Technology' },
-];
 
 const STATS = [
   { tba: true, label: 'Expected Visitors' },
@@ -32,14 +20,6 @@ const TICKETS = [
   { h: 'Trader Pass', amount: 'TBA', was: 'Pricing to be announced', desc: '2-day exhibition access, booths, demos & networking areas.', featured: false },
   { h: 'Pro Trader Pass', amount: 'TBA', was: 'Pricing to be announced', desc: 'Full 2-day conference access, priority seating & fast-track entry.', featured: true },
   { h: 'VIP Pass', amount: 'TBA', was: 'Pricing to be announced', desc: 'VIP lounge, reserved seating & exclusive networking sessions.', featured: false },
-];
-
-const FAQ_TEASER = [
-  { q: 'When is Trading Expo Africa?', a: '19 and 20 February 2027, at Emperors Palace in Johannesburg, South Africa.', open: true },
-  { q: 'How much are tickets?', a: 'Ticket pricing is yet to be announced. Check back soon or follow our announcements — early-bird passes will be limited.' },
-  { q: 'Can my company exhibit?', a: 'Yes — booths and sponsorships are available to approved companies. Reserve your space on the Exhibit page.' },
-  { q: 'Is there an exhibitor portal?', a: 'Yes. After reserving, log in to the Exhibitor Portal with your booking reference to manage tickets, team badges and branding uploads.' },
-  { q: 'Are tickets refundable?', a: 'Tickets are generally non-refundable except where required by law or stated in the official terms.' },
 ];
 
 const AEO_FAQ = [
@@ -85,27 +65,7 @@ export default function HomePage() {
               <a href="trading-expo-africa.ics" download style={{ color: '#9aa3ad', textDecoration: 'underline' }}>Add to calendar (.ics)</a>
             </p>
           </div>
-          <a className="scroll-cue" href="#manifesto" aria-label="Scroll down"><span></span></a>
-        </section>
-
-        {/* ============ MARKET TICKER (sample snapshot) ============ */}
-        <MarketTicker />
-
-        {/* ============ MARQUEE ============ */}
-        <div className="marquee" aria-hidden="true">
-          <div className="marquee-track">
-            <span>Traders</span><span>Brokers</span><span>Technology</span><span>Forex</span><span>Crypto</span><span>Fintech</span><span>Stocks</span><span>Derivatives</span><span>AI Trading</span><span>Networking</span>
-            <span>Traders</span><span>Brokers</span><span>Technology</span><span>Forex</span><span>Crypto</span><span>Fintech</span><span>Stocks</span><span>Derivatives</span><span>AI Trading</span><span>Networking</span>
-          </div>
-        </div>
-
-        {/* ============ MANIFESTO ============ */}
-        <section className="manifesto" id="manifesto">
-          <div className="container narrow">
-            <Reveal as="p" className="eyebrow">The gathering</Reveal>
-            <Reveal as="p" className="manifesto-text">Africa's trading community is rising — and this is where it meets. Two days of exhibitions, conferences and deal-making at Emperors Palace, Johannesburg.</Reveal>
-            <Reveal className="center"><a href="venue.html" className="btn btn-ghost">Why Johannesburg</a></Reveal>
-          </div>
+          <a className="scroll-cue" href="#experience" aria-label="Scroll down"><span></span></a>
         </section>
 
         {/* ============ STATS ============ */}
@@ -121,24 +81,6 @@ export default function HomePage() {
                 </Reveal>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ============ ABOUT SNAPSHOT ============ */}
-        <section className="section" id="about">
-          <div className="container">
-            <div className="split-head">
-              <div>
-                <Reveal as="p" className="eyebrow">About the event</Reveal>
-                <Reveal as="h2" className="section-title">Where Africa's Traders<br />Meet the <span className="grad">World.</span></Reveal>
-              </div>
-              <Reveal as="p" className="split-lead">A two-day exhibition and conference connecting Africa's trading community with global brokers, fintech innovators and trading technology.</Reveal>
-            </div>
-            <Reveal as="figure" className="banner">
-              <ParallaxImg src={ab + 'img/expo-grand-hall.webp'} alt="Grand exhibition hall at Trading Expo Africa" loading="lazy" data-parallax-img />
-              <figcaption>The exhibition floor — live demos, real conversations</figcaption>
-            </Reveal>
-            <Reveal className="center"><a href="exhibit.html" className="btn btn-primary btn-lg">Exhibit With Us</a></Reveal>
           </div>
         </section>
 
@@ -158,70 +100,23 @@ export default function HomePage() {
             <Reveal className="center"><a href="agenda.html" className="btn btn-ghost btn-lg">Explore the Agenda</a></Reveal>
           </div>
         </section>
-
         {/* ============ TRADING CONTEST ============ */}
         <section className="section contest-band" id="contest">
-          <div className="container">
-            <Reveal className="center"><span className="gwr-badge">Official Guinness World Records™ Holder</span></Reveal>
+          <div className="container narrow">
+            <Reveal className="center"><span className="gwr-badge">Official Guinness World Records&trade; Holder</span></Reveal>
             <Reveal as="h2" className="section-title">The Trading <span className="grad">Contest.</span></Reveal>
-            <Reveal as="p" className="section-lead">A live trading contest across both expo days — 19–20 February 2027. Real traders compete live on stage while ProFX Media FZ-LLC, the Official Guinness World Records™ Holder for "Most participants in a trading competition", brings the competition to Africa.</Reveal>
+            <Reveal as="p" className="section-lead">A live trading contest across both expo days &mdash; 19&ndash;20 February 2027. Real traders compete live on stage while ProFX Media FZ-LLC, the Official Guinness World Records&trade; Holder for &ldquo;Most participants in a trading competition&rdquo;, brings the competition to Africa.</Reveal>
             <Reveal as="figure" className="banner">
               <img src={ab + 'img/profx/profx-02.webp'} alt="Traders competing live in the ProFX League contest arena at ProFX Expo Dubai 2025" loading="lazy" />
-              <figcaption>The ProFX League arena — ProFX Expo Dubai 2025</figcaption>
-            </Reveal>
-            <Reveal className="africa-cards">
-              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-26.webp'} alt="The ProFX League contest arena with its LED tower at ProFX Expo" loading="lazy" /></div><div className="ac-body"><strong>Live on stage</strong><span>Real traders, real markets, real-time leaderboards</span></div></div>
-              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-21.webp'} alt="Traders competing live at desks in the ProFX League arena" loading="lazy" /></div><div className="ac-body"><strong>Both days</strong><span>Qualifiers and finals across 19–20 February</span></div></div>
-              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-24.webp'} alt="Attendees networking on the expo floor between branded booths" loading="lazy" /></div><div className="ac-body"><strong>Open to attendees</strong><span>Full contest rules and entry details to be announced</span></div></div>
+              <figcaption>The ProFX League arena &mdash; ProFX Expo Dubai 2025</figcaption>
             </Reveal>
             <Reveal className="center" style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="tickets.html" className="btn btn-primary btn-lg">Join the contest</a>
-              <a href="#contest-rules" className="btn btn-glass btn-lg">How it works</a>
+              <a href="agenda.html#contest" className="btn btn-glass btn-lg">How it works</a>
             </Reveal>
             <Reveal className="center" style={{ marginTop: '18px' }}>
-              <a href="http://www.guinnessworldrecords.com/world-records/774828-most-participants-in-a-trading-competition" target="_blank" rel="noopener" className="fine" style={{ color: '#9aa3ad' }}>Verified on Guinness World Records™ ↗</a>
+              <a href="http://www.guinnessworldrecords.com/world-records/774828-most-participants-in-a-trading-competition" target="_blank" rel="noopener" className="fine" style={{ color: '#9aa3ad' }}>Verified on Guinness World Records&trade; &#8599;</a>
             </Reveal>
-          </div>
-        </section>
-
-        {/* ============ CONTEST RULES TEASER ============ */}
-        <section className="section" id="contest-rules">
-          <div className="container narrow">
-            <Reveal as="p" className="eyebrow">Contest rules</Reveal>
-            <Reveal as="h2" className="section-title">How it <span className="grad">works.</span></Reveal>
-            <Reveal className="africa-cards">
-              <div className="africa-card"><strong>Entries open to attendees</strong><span>Expo ticket holders can enter the live trading contest</span></div>
-              <div className="africa-card"><strong>Live leaderboard</strong><span>Follow every trade in real time on the big screens</span></div>
-              <div className="africa-card"><strong>Winners crowned on stage</strong><span>Finalists trade live; winners announced at the expo</span></div>
-            </Reveal>
-            <Reveal as="p" className="fine center">Full contest rules, entry details and prizes to be announced.</Reveal>
-          </div>
-        </section>
-
-        {/* ============ MORE THAN AN EXPO ============ */}
-        <section className="section section-alt" id="activities">
-          <div className="container">
-            <Reveal as="p" className="eyebrow">Activities</Reveal>
-            <Reveal as="h2" className="section-title">More than an <span className="grad">expo.</span></Reveal>
-            <Reveal className="africa-cards">
-              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-27.webp'} alt="Broker booths and crowds on the ProFX Expo exhibition floor" loading="lazy" /></div><div className="ac-body"><strong>Exhibitors</strong><span>Brokers, fintech companies and trading platforms demoing live</span></div></div>
-              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-21.webp'} alt="Live trading contest in progress at a ProFX event" loading="lazy" /></div><div className="ac-body"><strong>Live trading</strong><span>Watch real strategies play out on real markets</span></div></div>
-              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-24.webp'} alt="Traders meeting and networking across the expo floor" loading="lazy" /></div><div className="ac-body"><strong>Meetups</strong><span>Trader meetups and community sessions across both days</span></div></div>
-              <div className="africa-card"><strong>Influencers</strong><span>Meet the educators and creators shaping African trading</span></div>
-              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-31.webp'} alt="Award being presented on stage at the ProFX Awards" loading="lazy" /></div><div className="ac-body"><strong>And more</strong><span>Workshops, networking lounges and the awards night</span></div></div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ============ CAPE TOWN STRIP ============ */}
-        <section className="section capetown-strip">
-          <div className="container">
-            <Reveal as="figure" className="banner" style={{ marginBottom: '26px' }}>
-              <img src={ab + 'img/profx/profx-30.webp'} alt="ProFX Awards Dubai 2025 red carpet with official sponsor wall" loading="lazy" />
-              <figcaption>ProFX Awards Dubai 2025 — the community celebrates</figcaption>
-            </Reveal>
-            <Reveal as="p" className="section-lead center" style={{ margin: 0 }}>Fresh off our Cape Town edition — trading contest champions were crowned. <strong>Johannesburg goes bigger.</strong></Reveal>
-            <Reveal className="center" style={{ marginTop: '18px' }}><a href="agenda.html" className="btn btn-ghost btn-lg">See what's coming</a></Reveal>
           </div>
         </section>
 
@@ -252,61 +147,24 @@ export default function HomePage() {
             </Reveal>
           </div>
         </section>
-
-        {/* ============ GALLERY PREVIEW ============ */}
-        <section className="gallery-sec" id="gallery">
+        {/* ============ VENUE TEASER ============ */}
+        <section className="section" id="venue">
           <div className="container">
-            <Reveal as="p" className="eyebrow">Inside the expo</Reveal>
-            <Reveal as="h2" className="section-title">A glimpse of the <span className="grad">experience.</span></Reveal>
-            <Reveal as="p" className="section-lead">Concept imagery — the world we're building for February 2027.</Reveal>
-          </div>
-          <GalleryTrack
-            items={GALLERY.map((g) => ({ src: ab + g.img, alt: g.alt, top: g.top, bottom: g.bottom }))}
-            navClassName="container gallery-nav"
-            navExtra={<a href="gallery.html" className="btn btn-ghost" style={{ marginLeft: 12 }}>Open Full Gallery</a>}
-          />
-        </section>
-
-        {/* ============ JOHANNESBURG SPOTLIGHT ============ */}
-        <section className="section" id="johannesburg">
-          <div className="container">
-            <Reveal as="p" className="eyebrow">Why Johannesburg</Reveal>
-            <Reveal as="h2" className="section-title">Africa's financial<br />gateway <span className="grad">city.</span></Reveal>
+            <Reveal as="p" className="eyebrow">The venue</Reveal>
+            <Reveal as="h2" className="section-title">Emperors Palace, <span className="grad">Johannesburg.</span></Reveal>
             <Reveal as="figure" className="banner">
-              <ParallaxImg src={ab + 'img/johannesburg-skyline.webp'} alt="Johannesburg skyline — Africa's financial gateway city" loading="lazy" data-parallax-img />
-              <figcaption>Johannesburg — Africa's financial gateway city</figcaption>
-            </Reveal>
-            <Reveal className="africa-cards">
-              <div className="africa-card"><strong>Financial hub</strong><span>Johannesburg anchors the continent's deepest capital markets</span></div>
-              <div className="africa-card"><strong>High-growth</strong><span>Rapidly expanding retail trading participation</span></div>
-              <div className="africa-card"><strong>Connected</strong><span>Direct access to traders across Africa and beyond</span></div>
+              <img src={ab + 'img/venue/venue-1.webp'} alt="Emperors Palace — Centre Court, Johannesburg" loading="lazy" />
+              <figcaption>Centre Court &mdash; 19&ndash;20 February 2027</figcaption>
             </Reveal>
             <Reveal className="center"><a href="venue.html" className="btn btn-ghost btn-lg">Venue &amp; Floor Plan</a></Reveal>
           </div>
         </section>
 
-        {/* ============ SPEAKERS ============ */}
-        <SpeakersSection />
+        {/* ============ SPEAKERS TEASER ============ */}
+        <SpeakersTeaser />
 
         {/* ============ SPONSORS STRIP ============ */}
         <SponsorsWall />
-
-        {/* ============ FAQ TEASER ============ */}
-        <section className="section" id="faq">
-          <div className="container narrow">
-            <Reveal as="p" className="eyebrow">FAQ</Reveal>
-            <Reveal as="h2" className="section-title">Questions, answered.</Reveal>
-            <div className="faq">
-              {FAQ_TEASER.map((f, i) => (
-                <Reveal as="details" key={i} className="faq-item" open={f.open || undefined}>
-                  <summary>{f.q}</summary>
-                  <p>{f.a}</p>
-                </Reveal>
-              ))}
-            </div>
-            <Reveal className="center"><a href="faq.html" className="btn btn-ghost">All FAQs</a></Reveal>
-          </div>
-        </section>
 
         {/* ============ FINAL CTA ============ */}
         <section className="final-cta" id="contact">

@@ -6,7 +6,7 @@ import { useAssetBase } from '../lib/theme.jsx';
 /* Speakers + sponsors, driven by src/data/content.json (editable from
    Portal → Website Content). Listens for cross-tab draft saves. */
 
-function useContentList(key) {
+export function useContentList(key) {
   const [items, setItems] = useState(() => getContent()[key] || []);
   useEffect(() => {
     const refresh = () => setItems(getContent()[key] || []);
@@ -37,6 +37,34 @@ export function SpeakersSection() {
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+
+export function SpeakersTeaser() {
+  const ab = useAssetBase();
+  const speakers = useContentList('speakers').slice(0, 6);
+  if (!speakers.length) return null;
+  return (
+    <section className="section" id="speakers">
+      <div className="container">
+        <Reveal as="p" className="eyebrow">Speakers</Reveal>
+        <Reveal as="h2" className="section-title">Learn from <span className="grad">the best.</span></Reveal>
+        <Reveal as="p" className="section-lead">Traders, founders and market experts from across the ProFX community.</Reveal>
+        <div className="speaker-grid">
+          {speakers.map((sp, i) => (
+            <Reveal as="article" className="speaker-card" key={sp.id || i} delay={Math.min(i * 0.05, 0.3)}>
+              <div className="speaker-photo">
+                {sp.photo ? <img src={ab + asset(sp.photo).replace(/^assets\//, '')} alt={sp.name} loading="lazy" /> : <span className="speaker-initial">{(sp.name || '?').charAt(0)}</span>}
+              </div>
+              <h3>{sp.name}</h3>
+              <p>{[sp.title, sp.company].filter(Boolean).join(' \u00b7 ')}</p>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal className="center" style={{ marginTop: '36px' }}><a href="speakers.html" className="btn btn-ghost btn-lg">Meet all speakers</a></Reveal>
       </div>
     </section>
   );
