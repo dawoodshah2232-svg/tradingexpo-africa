@@ -8,7 +8,8 @@ MARK="$REPO/.last-deployed-main"
 cd "$REPO" || exit 0
 
 # Only operate when tracked files are clean; never clobber uncommitted work.
-if [ -n "$(git status --porcelain --untracked-files=no)" ]; then exit 0; fi
+# The watermark file is managed by this script, so ignore its own changes.
+if [ -n "$(git status --porcelain --untracked-files=no -- . ':!.last-deployed-main')" ]; then exit 0; fi
 
 git fetch origin main -q || exit 0
 REMOTE="$(git rev-parse origin/main)"
