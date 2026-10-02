@@ -5,6 +5,7 @@ import {
   seedDemoIfEmpty as seedDemo,
 } from '../lib/api.js';
 import { useAssetBase } from '../lib/theme.jsx';
+import ContentAdmin from '../components/ContentAdmin.jsx';
 
 const SESSION_KEY = 'tea_portal_session';
 
@@ -36,6 +37,7 @@ const NAV = {
     ['bookings', 'Bookings', '🎫'],
     ['reports', 'Reports', '📈'],
     ['announcements', 'Announcements', '📣'],
+    ['content', 'Website Content', '🖼️'],
     ['settings', 'Settings', '⚙️'],
   ],
   exhibitor: [
@@ -61,6 +63,7 @@ const VIEW_TITLE = {
   bookings: ['Bookings', 'All ticket and exhibitor reservations.'],
   reports: ['Reports', 'Bookings, revenue and trends.'],
   announcements: ['Announcements', 'Publish updates to portal users.'],
+  content: ['Website Content', 'Speakers, sponsors, photos and site text — publish straight to the live site.'],
   settings: ['Settings', 'Portal configuration and data tools.'],
   company: ['Company Profile', 'Your exhibitor directory listing.'],
   booth: ['Booth Details', 'Requirements for the operations team.'],
@@ -1429,6 +1432,7 @@ export default function PortalPage() {
       if (view === 'bookings') return <AdminBookings ctx={ctx} />;
       if (view === 'reports') return <AdminReports ctx={ctx} />;
       if (view === 'announcements') return <AdminAnns ctx={ctx} />;
+      if (view === 'content') return <ContentAdmin />;
       if (view === 'settings') return <AdminSettings ctx={ctx} />;
       return <AdminDashboard ctx={ctx} />;
     }

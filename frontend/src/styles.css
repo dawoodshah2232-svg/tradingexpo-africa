@@ -1095,3 +1095,51 @@ html[data-theme="light"] .mkt-ticker { background: #0B1F3B; }
 @media (max-width: 640px) {
   .to-top { bottom: calc(76px + env(safe-area-inset-bottom)); right: 16px; }
 }
+
+/* ---------- Mobile-first tightening (90% of visitors are on phones) ---------- */
+@media (max-width: 640px) {
+  .section { padding: 52px 0; }
+  .manifesto { padding: 48px 0 40px; }
+  .stats-band { padding: 28px 0 44px; }
+  .final-cta { padding: 64px 0 72px; }
+  .gallery-sec { padding: 52px 0 44px; }
+  .footer { padding: 48px 0 130px; }
+  .page-hero { padding-top: calc(var(--nav-h) + 36px); padding-bottom: 44px; }
+  .hero { padding-bottom: 64px; }
+  .section-title { margin-bottom: 14px; }
+  .section-lead { margin-bottom: 26px; }
+  /* comfortable touch targets in the mobile nav drawer */
+  .nav-links.mobile-open a { padding: 15px 0; min-height: 52px; display: flex; align-items: center; }
+  /* keep content clear of the sticky ticket bar */
+  .sticky-cta ~ .footer, #siteFooter { margin-bottom: 0; }
+}
+
+/* ---------- Speakers ---------- */
+.speaker-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; }
+.speaker-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; text-align: center; padding-bottom: 20px; }
+.speaker-photo { aspect-ratio: 1/1; background: #111; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.speaker-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.speaker-initial { font-size: 3rem; font-weight: 800; color: var(--muted); }
+.speaker-card h3 { margin: 16px 12px 4px; font-size: 1.05rem; }
+.speaker-card p { margin: 0 12px; font-size: 0.85rem; color: var(--muted); }
+.logo-tile.tier-title { grid-column: span 3; }
+.logo-tile.tier-title img { max-height: 72px; }
+@media (max-width: 900px) {
+  .speaker-grid { grid-template-columns: repeat(2, 1fr); }
+  .logo-tile.tier-title { grid-column: span 2; }
+}
+@media (max-width: 640px) {
+  .logo-wall { grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 26px 0; }
+  .logo-tile { padding: 24px 10px; }
+  .logo-tile.tier-title { grid-column: span 2; }
+}
+
+/* ---------- Photo cards (expo imagery, not text-only) ---------- */
+.africa-card.has-photo { padding: 0; overflow: hidden; }
+.africa-card.has-photo .ac-img { height: 190px; overflow: hidden; }
+.africa-card.has-photo .ac-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+.africa-card.has-photo:hover .ac-img img { transform: scale(1.06); }
+.africa-card.has-photo .ac-body { padding: 24px 26px 28px; }
+@media (max-width: 640px) {
+  .africa-card.has-photo .ac-img { height: 170px; }
+}

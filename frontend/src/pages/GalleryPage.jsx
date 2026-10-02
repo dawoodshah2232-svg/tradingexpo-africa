@@ -2,6 +2,7 @@ import React from 'react';
 import { Reveal } from '../components/ui.jsx';
 import { GalleryGrid } from '../components/Gallery.jsx';
 import { useAssetBase } from '../lib/theme.jsx';
+import { getContent } from '../lib/content.js';
 
 const ITEMS = [
   { f: 'expo-grand-hall.webp', alt: 'Grand exhibition hall with hundreds of attendees', caption: 'The Grand Hall', cat: 'exhibition' },
@@ -42,7 +43,11 @@ const ITEMS = [
 
 export default function GalleryPage() {
   const ab = useAssetBase();
-  const items = ITEMS.map((it) => ({ ...it, src: ab + 'img/' + it.f }));
+  // Content-managed gallery (Portal → Website Content); falls back to the
+  // built-in set until the admin publishes.
+  const managed = getContent().gallery || [];
+  const items = (managed.length ? managed : ITEMS.map((it) => ({ src: 'img/' + it.f, alt: it.alt, caption: it.caption, cat: it.cat })))
+    .map((it) => ({ ...it, src: ab + String(it.src).replace(/^assets\//, '') }));
   return (
     <main>
       <section className="page-hero">

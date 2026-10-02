@@ -1,6 +1,7 @@
 import React from 'react';
 import { Reveal, CountUp, Countdown, MarketTicker, ParallaxImg, ParallaxLayer } from '../components/ui.jsx';
 import { GalleryTrack } from '../components/Gallery.jsx';
+import { SpeakersSection, SponsorsWall } from '../components/Showcase.jsx';
 import { useAssetBase } from '../lib/theme.jsx';
 
 const GALLERY = [
@@ -169,9 +170,9 @@ export default function HomePage() {
               <figcaption>The ProFX League arena — ProFX Expo Dubai 2025</figcaption>
             </Reveal>
             <Reveal className="africa-cards">
-              <div className="africa-card"><strong>Live on stage</strong><span>Real traders, real markets, real-time leaderboards</span></div>
-              <div className="africa-card"><strong>Both days</strong><span>Qualifiers and finals across 19–20 February</span></div>
-              <div className="africa-card"><strong>Open to attendees</strong><span>Full contest rules and entry details to be announced</span></div>
+              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-26.webp'} alt="The ProFX League contest arena with its LED tower at ProFX Expo" loading="lazy" /></div><div className="ac-body"><strong>Live on stage</strong><span>Real traders, real markets, real-time leaderboards</span></div></div>
+              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-21.webp'} alt="Traders competing live at desks in the ProFX League arena" loading="lazy" /></div><div className="ac-body"><strong>Both days</strong><span>Qualifiers and finals across 19–20 February</span></div></div>
+              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-24.webp'} alt="Attendees networking on the expo floor between branded booths" loading="lazy" /></div><div className="ac-body"><strong>Open to attendees</strong><span>Full contest rules and entry details to be announced</span></div></div>
             </Reveal>
             <Reveal className="center" style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="tickets.html" className="btn btn-primary btn-lg">Join the contest</a>
@@ -203,11 +204,11 @@ export default function HomePage() {
             <Reveal as="p" className="eyebrow">Activities</Reveal>
             <Reveal as="h2" className="section-title">More than an <span className="grad">expo.</span></Reveal>
             <Reveal className="africa-cards">
-              <div className="africa-card"><strong>Exhibitors</strong><span>Brokers, fintech companies and trading platforms demoing live</span></div>
-              <div className="africa-card"><strong>Live trading</strong><span>Watch real strategies play out on real markets</span></div>
-              <div className="africa-card"><strong>Meetups</strong><span>Trader meetups and community sessions across both days</span></div>
+              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-27.webp'} alt="Broker booths and crowds on the ProFX Expo exhibition floor" loading="lazy" /></div><div className="ac-body"><strong>Exhibitors</strong><span>Brokers, fintech companies and trading platforms demoing live</span></div></div>
+              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-21.webp'} alt="Live trading contest in progress at a ProFX event" loading="lazy" /></div><div className="ac-body"><strong>Live trading</strong><span>Watch real strategies play out on real markets</span></div></div>
+              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-24.webp'} alt="Traders meeting and networking across the expo floor" loading="lazy" /></div><div className="ac-body"><strong>Meetups</strong><span>Trader meetups and community sessions across both days</span></div></div>
               <div className="africa-card"><strong>Influencers</strong><span>Meet the educators and creators shaping African trading</span></div>
-              <div className="africa-card"><strong>And more</strong><span>Workshops, networking lounges and the awards night</span></div>
+              <div className="africa-card has-photo"><div className="ac-img"><img src={ab + 'img/profx/profx-31.webp'} alt="Award being presented on stage at the ProFX Awards" loading="lazy" /></div><div className="ac-body"><strong>And more</strong><span>Workshops, networking lounges and the awards night</span></div></div>
             </Reveal>
           </div>
         </section>
@@ -215,6 +216,10 @@ export default function HomePage() {
         {/* ============ CAPE TOWN STRIP ============ */}
         <section className="section capetown-strip">
           <div className="container">
+            <Reveal as="figure" className="banner" style={{ marginBottom: '26px' }}>
+              <img src={ab + 'img/profx/profx-30.webp'} alt="ProFX Awards Dubai 2025 red carpet with official sponsor wall" loading="lazy" />
+              <figcaption>ProFX Awards Dubai 2025 — the community celebrates</figcaption>
+            </Reveal>
             <Reveal as="p" className="section-lead center" style={{ margin: 0 }}>Fresh off our Cape Town edition — trading contest champions were crowned. <strong>Johannesburg goes bigger.</strong></Reveal>
             <Reveal className="center" style={{ marginTop: '18px' }}><a href="agenda.html" className="btn btn-ghost btn-lg">See what's coming</a></Reveal>
           </div>
@@ -280,20 +285,11 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ============ SPEAKERS ============ */}
+        <SpeakersSection />
+
         {/* ============ SPONSORS STRIP ============ */}
-        <section className="section section-alt" id="sponsors">
-          <div className="container">
-            <Reveal as="p" className="eyebrow">Sponsors &amp; partners</Reveal>
-            <Reveal as="h2" className="section-title">Your brand, <span className="grad">centre stage.</span></Reveal>
-            <Reveal as="p" className="section-lead">Partner announcements coming soon — reserve your place early.</Reveal>
-            <div className="logo-wall" aria-label="Sponsor placeholders">
-              {['Title Sponsor', 'Platinum', 'Gold', 'Silver', 'Media Partner', 'Media Partner'].map((tier, i) => (
-                <Reveal key={i} className="logo-tile" delay={i * 0.06}><span>Your Logo</span><em>{tier}</em></Reveal>
-              ))}
-            </div>
-            <Reveal className="center"><a href="sponsors.html" className="btn btn-primary btn-lg">Become a Sponsor</a></Reveal>
-          </div>
-        </section>
+        <SponsorsWall />
 
         {/* ============ FAQ TEASER ============ */}
         <section className="section" id="faq">
