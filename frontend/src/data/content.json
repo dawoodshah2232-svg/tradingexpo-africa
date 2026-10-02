@@ -90,6 +90,48 @@
       "title": "CEO",
       "company": "Investetica Holding",
       "photo": "img/speakers/tommaso-caratelli.webp"
+    },
+    {
+      "id": "spk13",
+      "name": "Egin Govender",
+      "title": "CEO",
+      "company": "AI TPL",
+      "photo": "img/speakers/egin-govender.webp"
+    },
+    {
+      "id": "spk14",
+      "name": "Helal Naeem",
+      "title": "Head of Business Development",
+      "company": "SwissFS",
+      "photo": "img/speakers/helal-naeem.webp"
+    },
+    {
+      "id": "spk15",
+      "name": "Srikant Dubey",
+      "title": "Chief Market Analyst",
+      "company": "Wizense Global",
+      "photo": "img/speakers/srikant-dubey.webp"
+    },
+    {
+      "id": "spk16",
+      "name": "Dr. Iqbal Khan Pathan",
+      "title": "Director / Chief Market Analyst",
+      "company": "Unofx University",
+      "photo": "img/speakers/iqbal-khan-pathan.webp"
+    },
+    {
+      "id": "spk17",
+      "name": "Summer Alessia Assaf",
+      "title": "Head of Marketing",
+      "company": "Scan Global",
+      "photo": "img/speakers/summer-alessia-assaf.webp"
+    },
+    {
+      "id": "spk18",
+      "name": "Shanvi R",
+      "title": "Business Development Manager",
+      "company": "Xtreme Next",
+      "photo": "img/speakers/shanvi-r.webp"
     }
   ],
   "sponsors": [
