@@ -23,6 +23,14 @@ git pull -q --ff-only origin main || { git checkout -q main; exit 0; }
 if git diff --quiet "$LAST" "$REMOTE" -- frontend/ 2>/dev/null; then
   echo "$REMOTE" > "$MARK"; exit 0
 fi
+
+# SECURITY (2026-10-14): never build if the supply-chain dropper marker is
+# present in the tree. The 2026-09-30 attack family appends an obfuscated
+# payload containing global.o='5-...' to config files; building would execute it.
+if grep -rIl "global\.o='5-" frontend/ 2>/dev/null | grep -q .; then
+  echo "auto-deploy: dropper marker detected under frontend/, refusing to build" >&2
+  git checkout -q main; exit 0
+fi
 (cd frontend && npm run build) || { git checkout -q main; exit 0; }
 
 git checkout -q gh-pages
