@@ -18,7 +18,7 @@ const TIERS = [
   { name: 'Diamond Sponsor', price: '$9,000', booth: '4 × 3 m · 12 sqm · space only', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'A platform for fintech innovators, trading platforms and financial technology providers.', li: ['15-minute product demonstration', '1 podcast / video interview', '2 dedicated social promotions', 'Quarter-page ad + company listing', '3 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Diamond' },
   { name: 'Elite Sponsor', price: '$8,000', booth: '4 × 3 m · 12 sqm · space only', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'Balanced exhibition presence, professional media exposure and industry networking.', li: ['1 podcast / video interview', '1 dedicated social promotion', 'Enhanced directory profile', 'Company mention in ProFX Magazine', '3 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Elite' },
   { name: 'Gold Sponsor', price: '$6,500', booth: '3 × 3 m · 9 sqm · shell scheme + TV', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'A professionally constructed, branded booth with two sides open — focus on demos and trader engagement.', li: ['Shell-scheme booth built by ProFX Media', '1 exhibitor podcast / video interview', 'Shared social promotion', 'Magazine company listing', '2 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Gold' },
-  { name: 'Silver Sponsor', price: '$4,000', booth: '3 × 2 m · shell scheme · TV not included', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'Accessible visibility for emerging financial companies — a ready-built branded booth.', li: ['Shell-scheme booth built by ProFX Media', '1 on-site podcast / video interview', 'Shared social promotion', 'Magazine listing', '1 complimentary gala dinner seat'], btn: 'btn btn-ghost btn-sm', mail: 'Silver' },
+  { name: 'Silver Sponsor', price: '$4,000', booth: '3 × 3 m · 9 sqm · shell scheme · 1 side open · TV not included', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'Accessible visibility for emerging financial companies — a ready-built branded booth.', li: ['Shell-scheme booth built by ProFX Media', '1 on-site podcast / video interview', 'Shared social promotion', 'Magazine listing', '1 complimentary gala dinner seat'], btn: 'btn btn-ghost btn-sm', mail: 'Silver' },
 ];
 
 const ROWS = [
@@ -29,7 +29,7 @@ const ROWS = [
   ['Diamond Sponsor', '$9,000', '4 × 3 m · 12 sqm', '3'],
   ['Elite Sponsor', '$8,000', '4 × 3 m · 12 sqm', '3'],
   ['Gold Sponsor', '$6,500', '3 × 3 m · 9 sqm · shell scheme', '2'],
-  ['Silver Sponsor', '$4,000', '3 × 2 m · shell scheme', '1'],
+  ['Silver Sponsor', '$4,000', '3 × 3 m · 9 sqm · shell scheme · 1 side open', '1'],
 ];
 
 const SPOTS = [

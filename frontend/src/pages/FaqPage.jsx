@@ -79,7 +79,7 @@ const EXHIBITORS = [
   },
   {
     q: 'What booth sizes are available?',
-    a: <>Sponsor booths 5 × 3 m and 4 × 3 m (space only, custom build by sponsor); Gold 3 × 3 m and Silver 3 × 2 m shell-scheme booths. <a href="exhibit.html#booths">See options →</a></>,
+    a: <>Sponsor booths 5 × 3 m and 4 × 3 m (space only, custom build by sponsor); Gold 3 × 3 m and Silver 3 × 3 m shell-scheme booths. <a href="exhibit.html#booths">See options →</a></>,
   },
   {
     q: 'What sponsorship tiers exist?',

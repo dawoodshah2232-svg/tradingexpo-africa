@@ -11,7 +11,7 @@ const OPTIONS = [
     desc: 'Diamond / Elite footprint · custom build by sponsor' },
   { name: 'Gold booth 3×3 m (shell scheme)', price: 0, priceHtml: 'Request pricing',
     desc: 'Shell scheme · 2 sides open · TV included · organiser-built branding' },
-  { name: 'Silver booth 3×2 m (shell scheme)', price: 0, priceHtml: 'Request pricing',
+  { name: 'Silver booth 3×3 m (shell scheme)', price: 0, priceHtml: 'Request pricing',
     desc: 'Shell scheme · 1 side open · TV not included · organiser-built branding' },
 ];
 
@@ -87,7 +87,7 @@ export default function ExhibitPage() {
               ['Sponsor booth 5×3 m', 'Space only, custom build — Title, Official, Exclusive and Regional footprints.', false],
               ['Sponsor booth 4×3 m', 'Space only, custom build — Diamond and Elite footprints.', false],
               ['Gold booth 3×3 m', 'Organiser-built branded shell scheme, two sides open, TV included.', true],
-              ['Silver booth 3×2 m', 'Organiser-built branded shell scheme, one side open, TV not included.', false],
+              ['Silver booth 3×3 m', 'Organiser-built branded shell scheme, one side open, TV not included.', false],
             ].map(([h, p, featured], i) => (
               <Reveal as="article" className={'ticket' + (featured ? ' ticket-featured' : '')} delay={i * 80} key={h}>
                 {featured && <span className="flag">Popular</span>}
@@ -113,7 +113,7 @@ export default function ExhibitPage() {
             />
             <figcaption>Concept floor plan — tap to view full size</figcaption>
           </Reveal>
-          <Reveal className="section-lead" style={{ marginTop: '18px' }}>Booth &amp; screen sizes from the sponsorship brochure — sponsor booths 5 × 3 m and 4 × 3 m (space only, custom build by sponsor); Gold 3 × 3 m and Silver 3 × 2 m shell-scheme booths. On-site screens: Speaker LED 6 × 2.5 m, side LED screens 1.5 × 2.5 m, LED exposure walls 2.5 × 3 m, backdrop / media wall 3.3 × 2.3 m.</Reveal>
+          <Reveal className="section-lead" style={{ marginTop: '18px' }}>Booth &amp; screen sizes from the sponsorship brochure — sponsor booths 5 × 3 m and 4 × 3 m (space only, custom build by sponsor); Gold 3 × 3 m and Silver 3 × 3 m shell-scheme booths. On-site screens: Speaker LED 6 × 2.5 m, side LED screens 1.5 × 2.5 m, LED exposure walls 2.5 × 3 m, backdrop / media wall 3.3 × 2.3 m.</Reveal>
         </div>
       </section>
 
