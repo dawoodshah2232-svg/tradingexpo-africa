@@ -1,4 +1,4 @@
-# Trading Expo Johannesburg
+# Traders Expo Johannesburg
 
 Africa's premier online trading, fintech & financial markets exhibition — Johannesburg edition.
 

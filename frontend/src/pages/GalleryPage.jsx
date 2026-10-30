@@ -35,7 +35,7 @@ const ITEMS = [
   { f: 'profx/profx-16.webp', alt: 'Registration check-in desk at ProFX Awards Dubai 2025', caption: 'Check-in — Dubai 2025', cat: 'profx' },
   { f: 'profx/profx-19.webp', alt: 'Winners with trophies at ProFX Awards Dubai 2025', caption: 'Winners table — Dubai 2025', cat: 'profx' },
   { f: 'profx/profx-20.webp', alt: 'Guest capturing the gala night at ProFX Awards Dubai 2025', caption: 'Nights to remember — Dubai 2025', cat: 'profx' },
-  { f: 'brand-lockup.webp', alt: 'Trading Expo official brand identity', caption: 'The Identity — Traders · Brokers · Technology', cat: 'brand' },
+  { f: 'profx/profx-13.webp', alt: 'ProFX media wall at the Dubai 2025 awards', caption: 'Media wall — ProFX Awards Dubai 2025', cat: 'profx' },
   { f: 'brand-booth.webp', alt: 'Official booth design', caption: 'Booth design — the official look', cat: 'brand' },
   { f: 'brand-signage.webp', alt: 'Official expo signage', caption: 'Signage — find your way', cat: 'brand' },
   { f: 'brand-rollup.webp', alt: 'Official rollup banner design', caption: 'Brand in the wild', cat: 'brand' },

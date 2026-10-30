@@ -13,7 +13,7 @@ const OPTIONS = [
 ];
 
 const FAQS = [
-  ['How do I book a ticket for Trading Expo Johannesburg?', 'Choose your pass — Trader, Pro Trader or VIP — on the tickets page, fill in your name and email, and complete the booking. You will receive a confirmation email with your ticket and a booking reference. You can also re-download your ticket anytime from the ticket holder portal. Registering now collects no payment — pricing will be confirmed with you before anything is charged.'],
+  ['How do I book a ticket for Traders Expo Johannesburg?', 'Choose your pass — Trader, Pro Trader or VIP — on the tickets page, fill in your name and email, and complete the booking. You will receive a confirmation email with your ticket and a booking reference. You can also re-download your ticket anytime from the ticket holder portal. Registering now collects no payment — pricing will be confirmed with you before anything is charged.'],
   ['What is the difference between Trader, Pro Trader and VIP passes?', 'The Trader pass gives you full access to the exhibition floor, exhibitor booths and networking areas. Pro Trader adds the two-day conference program, panels and workshops. VIP adds everything in Pro Trader plus the premium lounge, front-row seating, exclusive networking sessions and priority entry. Pick the pass that matches how deep you want to go.'],
   ['How will I receive my ticket after booking?', 'After you complete your booking, your ticket is emailed to you automatically with your booking reference and a downloadable ticket. You can also log in to the ticket holder portal anytime to view, re-download or print your ticket. Keep your booking reference handy — you will need it for entry and support.'],
   ['Can I transfer my ticket to someone else?', 'Yes, tickets can be transferred to another person before the event. Contact the support team or use the ticket holder portal to update the attendee name on your booking. The new attendee will need a valid ID matching the updated name at entry. Transfers are free — just make sure the details are correct.'],
@@ -27,7 +27,7 @@ export default function TicketsPage() {
   const ab = useAssetBase();
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/expo-registration.webp')` }}>
+      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-16.webp')` }}>
         <div className="container">
           <Reveal className="eyebrow">Tickets</Reveal>
           <Reveal as="h1">Book your pass.</Reveal>

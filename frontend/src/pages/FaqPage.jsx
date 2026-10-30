@@ -31,13 +31,13 @@ function FaqGroup({ items }) {
 
 const GENERAL = [
   {
-    q: 'When and where is Trading Expo Johannesburg?',
+    q: 'When and where is Traders Expo Johannesburg?',
     a: <>19–20 February 2027, at Emperors Palace, Johannesburg, South Africa. <a href="venue.html">See the venue →</a>.</>,
     open: true,
   },
   {
     q: 'Who organises the event?',
-    a: 'Trading Expo Johannesburg is organised by ProFX Media FZ-LLC.',
+    a: 'Traders Expo Johannesburg is organised by ProFX Media FZ-LLC.',
   },
   {
     q: 'Who should attend?',
@@ -121,7 +121,7 @@ export default function FaqPage() {
   const ab = useAssetBase();
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/trading-tech.webp')` }}>
+      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-03.webp')` }}>
         <div className="container">
           <Reveal as="p" className="eyebrow">FAQ</Reveal>
           <Reveal as="h1">Questions,<br /><span className="grad">answered.</span></Reveal>

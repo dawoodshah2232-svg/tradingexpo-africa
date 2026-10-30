@@ -16,7 +16,7 @@ const OPTIONS = [
 ];
 
 const FAQS = [
-  ['How do I exhibit at Trading Expo Johannesburg?', 'Head to the exhibit page and submit a booth reservation with your company details and preferred booth size. The team will confirm pricing, hold your space and share the exhibitor pack. After confirmation you get exhibitor portal access to manage your profile, team badges, branding uploads and readiness checklist.'],
+  ['How do I exhibit at Traders Expo Johannesburg?', 'Head to the exhibit page and submit a booth reservation with your company details and preferred booth size. The team will confirm pricing, hold your space and share the exhibitor pack. After confirmation you get exhibitor portal access to manage your profile, team badges, branding uploads and readiness checklist.'],
   ['How many exhibitors will be at the expo?', 'The expo floor hosts exhibitors across trading, fintech, brokerage, payments, technology and education. Exhibitors get sustained footfall and face time with serious buyers over two days. Booth space is limited to keep the floor curated — reserving early gives you the best choice of location.'],
   ['What is included with an exhibitor booth?', 'Every booth package includes your floor space, shell scheme or custom-build options, standard furniture, power supply, Wi-Fi, exhibitor badges for your team and a listing in the official exhibitor directory. Premium packages add branding placements, stage mentions and lead-retrieval options. Full inclusions are detailed in the exhibitor pack after you reserve.'],
   ['Can I choose my booth location on the floor?', 'Yes — booth locations are allocated on a first-come, first-served basis, so early reservations get first pick. You can share your preferences — near the entrance, main stage or networking lounge — when you reserve, and the floor team will do its best to match them. A concept floor plan is available on the exhibit page.'],
@@ -45,10 +45,10 @@ const EXHIBIT_FIELDS = (
 export default function ExhibitPage() {
   const ab = useAssetBase();
   const { open, view } = useLightbox();
-  const fpSrc = ab + 'img/floor-plan-concept.webp';
+  const fpSrc = ab + 'img/profx/profx-01.webp';
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/brand-booth.webp')` }}>
+      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-27.webp')` }}>
         <div className="container">
           <Reveal className="eyebrow">Exhibit</Reveal>
           <Reveal as="h1">Put your brand in front of<br /><span className="grad">Africa's trading community.</span></Reveal>
@@ -104,14 +104,14 @@ export default function ExhibitPage() {
         <div className="container narrow">
           <Reveal className="eyebrow">Floor plan</Reveal>
           <Reveal as="h2" className="section-title">The expo <span className="grad">floor.</span></Reveal>
-          <Reveal className="section-lead">Concept layout — exhibition hall, main stage, lounges, registration and food court. Final layout follows venue confirmation.</Reveal>
+          <Reveal className="section-lead">Inside a real ProFX expo hall. The final Johannesburg floor layout follows venue confirmation.</Reveal>
           <Reveal as="figure" className="banner">
             <img
-              src={fpSrc} alt="Concept floor plan blueprint of Trading Expo Johannesburg"
+              src={fpSrc} alt="Real ProFX expo hall"
               loading="lazy" id="floorplanImg" style={{ cursor: 'zoom-in' }}
-              onClick={() => open([{ src: fpSrc, alt: 'Concept floor plan blueprint of Trading Expo Johannesburg', caption: 'Concept floor plan — Trading Expo Johannesburg' }], 0)}
+              onClick={() => open([{ src: fpSrc, alt: 'Real ProFX expo hall', caption: 'Real ProFX expo hall — tap to view full size' }], 0)}
             />
-            <figcaption>Concept floor plan — tap to view full size</figcaption>
+            <figcaption>Real ProFX expo hall — tap to view full size</figcaption>
           </Reveal>
           <Reveal className="section-lead" style={{ marginTop: '18px' }}>Booth &amp; screen sizes from the sponsorship brochure — sponsor booths 5 × 3 m and 4 × 3 m (space only, custom build by sponsor); Gold 3 × 3 m and Silver 3 × 3 m shell-scheme booths. On-site screens: Speaker LED 6 × 2.5 m, side LED screens 1.5 × 2.5 m, LED exposure walls 2.5 × 3 m, backdrop / media wall 3.3 × 2.3 m.</Reveal>
         </div>

@@ -404,7 +404,7 @@ body.loaded [data-hero]:nth-of-type(1) { animation-delay: 0.05s; }
 
 /* ---------- Final CTA ---------- */
 .final-cta { position: relative; overflow: hidden; text-align: center; padding: 160px 0; background: #020202; }
-.final-bg { position: absolute; inset: -15% 0; background: url("./assets/img/hero-expo.webp") center / cover no-repeat; opacity: 0.5; will-change: transform; }
+.final-bg { position: absolute; inset: -15% 0; background: url("./assets/img/profx/profx-26.webp") center / cover no-repeat; opacity: 0.5; will-change: transform; }
 .final-shade { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 45%, transparent 20%, #020202 85%); }
 .final-cta .container { position: relative; z-index: 2; }
 .final-title { font-family: var(--font-display); font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin: 20px 0 36px; color: #fff; }
@@ -483,7 +483,7 @@ body.loaded [data-hero]:nth-of-type(1) { animation-delay: 0.05s; }
 
 /* ---------- Official logo ---------- */
 .nav .logo { flex-shrink: 0; }
-.nav-logo { height: 38px; width: auto; max-width: none; border-radius: 9px; box-shadow: 0 4px 18px rgba(0,0,0,0.35); display: block; }
+.nav-logo { height: 50px; width: auto; max-width: none; border-radius: 9px; box-shadow: 0 4px 18px rgba(0,0,0,0.35); display: block; }
 .footer-logo { height: 66px; width: auto; border-radius: 13px; box-shadow: 0 8px 28px rgba(0,0,0,0.35); display: block; }
 .pre-logo-img { width: min(360px, 72vw); height: auto; border-radius: 14px; box-shadow: 0 20px 80px rgba(0,200,83,0.25); animation: preZoom 1.1s cubic-bezier(0.22,1,0.36,1) both; }
 @keyframes preZoom { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
@@ -945,7 +945,7 @@ html[data-theme="light"] .mkt-ticker { background: #0B1F3B; }
 
 /* ---------- Sponsors page (premium) ---------- */
 .spon-hero { position: relative; overflow: hidden; padding: calc(var(--nav-h) + 110px) 0 120px; text-align: center; background: #04090c; color: #fff; }
-.spon-hero-bg { position: absolute; inset: 0; background: url("./assets/img/expo-grand-hall.webp") center / cover no-repeat; opacity: 0.38; animation: sponPan 26s ease-in-out infinite alternate; }
+.spon-hero-bg { position: absolute; inset: 0; background: url("./assets/img/profx/profx-01.webp") center / cover no-repeat; opacity: 0.38; animation: sponPan 26s ease-in-out infinite alternate; }
 @keyframes sponPan { from { transform: scale(1) translateY(0); } to { transform: scale(1.12) translateY(-22px); } }
 .spon-hero-shade { position: absolute; inset: 0; background: radial-gradient(ellipse 75% 60% at 50% 38%, rgba(0,0,0,0.05) 0%, rgba(4,9,12,0.75) 78%), linear-gradient(180deg, rgba(4,9,12,0.55), rgba(4,9,12,0.1) 45%, rgba(4,9,12,0.82)); }
 .spon-hero .container { position: relative; z-index: 2; }
@@ -988,7 +988,7 @@ html[data-theme="light"] .mkt-ticker { background: #0B1F3B; }
 .spot-tag { position: absolute; top: 20px; right: 20px; font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 12px; border-radius: 999px; background: rgba(0,200,83,0.1); border: 1px solid rgba(0,200,83,0.45); color: var(--logo-green); }
 /* ---------- Awards page ---------- */
 .award-hero { position: relative; overflow: hidden; padding: calc(var(--nav-h) + 110px) 0 120px; text-align: center; background: #060503; color: #fff; }
-.award-hero-bg { position: absolute; inset: 0; background: url("./assets/img/keynote-stage.webp") center / cover no-repeat; opacity: 0.4; animation: sponPan 26s ease-in-out infinite alternate; }
+.award-hero-bg { position: absolute; inset: 0; background: url("./assets/img/profx/profx-09.webp") center / cover no-repeat; opacity: 0.4; animation: sponPan 26s ease-in-out infinite alternate; }
 .award-hero-shade { position: absolute; inset: 0; background: radial-gradient(ellipse 75% 60% at 50% 38%, rgba(0,0,0,0.05) 0%, rgba(6,5,3,0.78) 78%), linear-gradient(180deg, rgba(6,5,3,0.55), rgba(6,5,3,0.1) 45%, rgba(6,5,3,0.85)); }
 .award-hero .container { position: relative; z-index: 2; }
 .award-hero .eyebrow { color: #ffd77d; }

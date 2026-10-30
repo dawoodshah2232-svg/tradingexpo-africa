@@ -1,4 +1,4 @@
-// API client for the Trading Expo Johannesburg Laravel backend.
+// API client for the Traders Expo Johannesburg Laravel backend.
 //
 // Behaviour contract:
 //  - When the Laravel API is reachable (cPanel production, or local dev with

@@ -49,8 +49,8 @@ const CRITERIA = [
 
 const FAQS = [
   {
-    q: 'When are the Trading Expo Johannesburg Awards held?',
-    a: 'The awards gala night takes place on the evening of Day 1 — 19 February 2027 — at Emperors Palace, Johannesburg, alongside Trading Expo Johannesburg.',
+    q: 'When are the Traders Expo Johannesburg Awards held?',
+    a: 'The awards gala night takes place on the evening of Day 1 — 19 February 2027 — at Emperors Palace, Johannesburg, alongside Traders Expo Johannesburg.',
   },
   {
     q: 'How can my company be nominated?',
@@ -79,9 +79,9 @@ export default function AwardsPage() {
         <div className="award-hero-shade" aria-hidden="true"></div>
         <div className="container">
           <Reveal className="trophy" aria-hidden="true">🏆</Reveal>
-          <Reveal as="p" className="eyebrow">Awards · Trading Expo Johannesburg</Reveal>
+          <Reveal as="p" className="eyebrow">Awards · Traders Expo Johannesburg</Reveal>
           <Reveal as="h1">The night Africa&apos;s trading<br /><span className="grad">industry takes the stage.</span></Reveal>
-          <Reveal as="p" className="section-lead">The Trading Expo Johannesburg Awards celebrate the brokers, platforms, innovators and educators raising the bar for millions of African traders.</Reveal>
+          <Reveal as="p" className="section-lead">The Traders Expo Johannesburg Awards celebrate the brokers, platforms, innovators and educators raising the bar for millions of African traders.</Reveal>
           <Reveal className="spon-hero-ctas">
             <a className="btn btn-primary btn-lg" href={NOMINATE_MAILTO}>Register Interest to Nominate</a>
             <a className="btn btn-light btn-lg" href="#categories">View Categories</a>
@@ -96,13 +96,13 @@ export default function AwardsPage() {
           <Reveal as="h2" className="section-title">Recognising the best of <span className="grad">African trading.</span></Reveal>
           <div className="split">
             <Reveal>
-              <p className="section-lead" style={{ margin: '0 0 16px' }}>Africa&apos;s trading community is exploding — millions of new traders entering forex, crypto, equities and derivatives every year. The Trading Expo Johannesburg Awards exist to honour the companies and people building that future.</p>
+              <p className="section-lead" style={{ margin: '0 0 16px' }}>Africa&apos;s trading community is exploding — millions of new traders entering forex, crypto, equities and derivatives every year. The Traders Expo Johannesburg Awards exist to honour the companies and people building that future.</p>
               <p className="section-lead" style={{ margin: 0 }}>An independent panel of industry experts judges every entry against published criteria. No pay-to-win, no popularity contest — just excellence, recognised.</p>
             </Reveal>
             <div className="africa-cards">
               <Reveal className="africa-card"><strong>Independent judging</strong><span>A panel of industry experts scores every entry against transparent, published criteria.</span></Reveal>
               <Reveal className="africa-card"><strong>Industry-wide recognition</strong><span>Winners announced live on stage at the gala night, in front of the industry&apos;s leaders.</span></Reveal>
-              <Reveal className="africa-card"><strong>Year-round visibility</strong><span>Winners and finalists featured across Trading Expo Johannesburg&apos;s media channels and partner coverage.</span></Reveal>
+              <Reveal className="africa-card"><strong>Year-round visibility</strong><span>Winners and finalists featured across Traders Expo Johannesburg&apos;s media channels and partner coverage.</span></Reveal>
             </div>
           </div>
         </div>

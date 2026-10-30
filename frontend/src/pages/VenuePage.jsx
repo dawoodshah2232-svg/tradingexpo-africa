@@ -7,7 +7,7 @@ import { faqItems, faqSchema } from '../data/venue-faq.js';
 export default function VenuePage() {
   const ab = useAssetBase();
   const { open, view } = useLightbox();
-  const floorplanSrc = ab + 'img/floor-plan-concept.webp';
+  const floorplanSrc = ab + 'img/profx/profx-01.webp';
   const VENUE_PHOTOS = [
     { src: 'img/venue/venue-1.webp', alt: 'Emperors Palace hotel facade and horse fountain at night', caption: 'The palace, lit up at night' },
     { src: 'img/venue/venue-6.webp', alt: 'Horse fountain and convention entrance at Emperors Palace by day', caption: 'Grand entrance & fountain, by day' },
@@ -32,7 +32,7 @@ export default function VenuePage() {
         <section className="section section-alt">
           <div className="container">
             <Reveal as="h2" className="section-title">The venue <span className="grad">in photos.</span></Reveal>
-            <Reveal className="section-lead">Real photography of Emperors Palace — the resort hosting Trading Expo Johannesburg 2027. Tap any photo to view it full size.</Reveal>
+            <Reveal className="section-lead">Real photography of Emperors Palace — the resort hosting Traders Expo Johannesburg 2027. Tap any photo to view it full size.</Reveal>
             <div className="gallery-page" style={{ marginTop: '34px' }}>
               {VENUE_PHOTOS.map((p, i) => (
                 <figure className="g-item" key={p.src} onClick={() => open(lbItems, i)}>
@@ -82,7 +82,7 @@ export default function VenuePage() {
             <Reveal className="eyebrow">Why Johannesburg</Reveal>
             <Reveal as="h2" className="section-title">A market on the <span className="grad">move.</span></Reveal>
             <Reveal as="figure" className="banner">
-              <ParallaxImg src={ab + 'img/johannesburg-skyline.webp'} alt="Johannesburg skyline, South Africa" loading="lazy" />
+              <ParallaxImg src={ab + 'img/emperors-palace-entrance.webp'} alt="Johannesburg skyline, South Africa" loading="lazy" />
               <figcaption>Johannesburg — one of the world's most dynamic trading markets</figcaption>
             </Reveal>
             <Reveal className="africa-cards">
@@ -98,17 +98,17 @@ export default function VenuePage() {
           <div className="container narrow">
             <Reveal className="eyebrow">Floor plan</Reveal>
             <Reveal as="h2" className="section-title">Explore the <span className="grad">layout.</span></Reveal>
-            <Reveal className="section-lead">Concept layout — exhibition hall, main stage, lounges, registration and food court.</Reveal>
+            <Reveal className="section-lead">Inside a real ProFX expo hall. The final Johannesburg floor layout follows venue confirmation.</Reveal>
             <Reveal as="figure" className="banner">
               <img
                 src={floorplanSrc}
-                alt="Concept floor plan blueprint"
+                alt="Real ProFX expo hall"
                 loading="lazy"
                 id="floorplanImg"
                 style={{ cursor: 'zoom-in' }}
-                onClick={() => open([{ src: floorplanSrc, alt: 'Concept floor plan blueprint', caption: 'Concept floor plan — tap to view full size' }], 0)}
+                onClick={() => open([{ src: floorplanSrc, alt: 'Real ProFX expo hall', caption: 'Real ProFX expo hall — tap to view full size' }], 0)}
               />
-              <figcaption>Concept floor plan — tap to view full size</figcaption>
+              <figcaption>Real ProFX expo hall — tap to view full size</figcaption>
             </Reveal>
           </div>
         </section>

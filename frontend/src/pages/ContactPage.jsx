@@ -7,7 +7,7 @@ import { useAssetBase } from '../lib/theme.jsx';
 function onEnquirySubmit(e) {
   e.preventDefault();
   const d = new FormData(e.target);
-  const subject = encodeURIComponent('Trading Expo Johannesburg enquiry — ' + d.get('interest'));
+  const subject = encodeURIComponent('Traders Expo Johannesburg enquiry — ' + d.get('interest'));
   const body = encodeURIComponent(
     'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') +
     '\nInterested in: ' + d.get('interest') +
@@ -25,7 +25,7 @@ export default function ContactPage() {
   const ab = useAssetBase();
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/expo-networking.webp')` }}>
+      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-19.webp')` }}>
         <div className="container">
           <Reveal as="p" className="eyebrow">Contact</Reveal>
           <Reveal as="h1">Talk to the <span className="grad">team.</span></Reveal>

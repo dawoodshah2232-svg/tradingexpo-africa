@@ -27,7 +27,7 @@ export default function PrivacyPage() {
         <div className="container">
           <Reveal className="eyebrow">Legal</Reveal>
           <Reveal as="h1">Privacy <span className="grad">Policy.</span></Reveal>
-          <Reveal className="section-lead">How Trading Expo Johannesburg collects, uses and protects your information. Organised by ProFX Media FZ-LLC.</Reveal>
+          <Reveal className="section-lead">How Traders Expo Johannesburg collects, uses and protects your information. Organised by ProFX Media FZ-LLC.</Reveal>
         </div>
       </section>
       <section className="section">

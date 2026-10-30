@@ -55,7 +55,7 @@ export default function SponsorsPage() {
           <div className="spon-hero-bg" aria-hidden="true"></div>
           <div className="spon-hero-shade" aria-hidden="true"></div>
           <div className="container">
-            <Reveal className="eyebrow">Sponsorships · Trading Expo Johannesburg</Reveal>
+            <Reveal className="eyebrow">Sponsorships · Traders Expo Johannesburg</Reveal>
             <Reveal as="h1">Put your brand at the heart of<br /><span className="grad">Africa's trading movement.</span></Reveal>
             <Reveal className="section-lead">Two days at Emperors Palace, Johannesburg. The stage where Africa's trading industry comes to decide what happens next. Packages from $4,000.</Reveal>
             <Reveal className="spon-hero-ctas">
@@ -78,7 +78,7 @@ export default function SponsorsPage() {
             <Reveal as="h2" className="section-title">Be seen where <span className="grad">decisions get made.</span></Reveal>
             <div className="split">
               <Reveal>
-                <p className="section-lead" style={{ margin: '0 0 16px' }}>Trading Expo Johannesburg gathers Africa\'s trading ecosystem under one roof — brokers, fintech platforms, educators, institutional players and active traders.</p>
+                <p className="section-lead" style={{ margin: '0 0 16px' }}>Traders Expo Johannesburg gathers Africa\'s trading ecosystem under one roof — brokers, fintech platforms, educators, institutional players and active traders.</p>
                 <p className="section-lead" style={{ margin: 0 }}>Sponsors get what money alone can't buy elsewhere: face time with the community that trades every day, on the stage everyone in the industry is watching.</p>
               </Reveal>
               <div className="africa-cards">

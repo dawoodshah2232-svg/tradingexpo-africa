@@ -209,105 +209,105 @@
   "gallery": [
     {
       "id": "g01",
-      "src": "img/expo-grand-hall.webp",
+      "src": "img/profx/profx-01.webp",
       "alt": "Grand exhibition hall with hundreds of attendees",
       "caption": "The Grand Hall",
       "cat": "exhibition"
     },
     {
       "id": "g02",
-      "src": "img/expo-floor-aerial.webp",
+      "src": "img/profx/profx-21.webp",
       "alt": "Aerial view of the exhibition floor",
       "caption": "The Floor",
       "cat": "exhibition"
     },
     {
       "id": "g03",
-      "src": "img/expo-registration.webp",
+      "src": "img/profx/profx-16.webp",
       "alt": "Registration area with badge queues",
       "caption": "Welcome — fast-track entry",
       "cat": "exhibition"
     },
     {
       "id": "g04",
-      "src": "img/booth-demo.webp",
+      "src": "img/profx/profx-24.webp",
       "alt": "Live booth demonstration",
       "caption": "Live demos on the floor",
       "cat": "exhibition"
     },
     {
       "id": "g05",
-      "src": "img/expo-main-stage.webp",
+      "src": "img/profx/profx-07.webp",
       "alt": "Main stage keynote with giant LED screen",
       "caption": "Main Stage — keynotes",
       "cat": "conference"
     },
     {
       "id": "g06",
-      "src": "img/conference-panel.webp",
+      "src": "img/profx/profx-02.webp",
       "alt": "Conference panel discussion",
       "caption": "Panels — industry voices",
       "cat": "conference"
     },
     {
       "id": "g07",
-      "src": "img/keynote-stage.webp",
+      "src": "img/profx/profx-09.webp",
       "alt": "Keynote speaker on stage",
       "caption": "Keynotes — ideas that move markets",
       "cat": "conference"
     },
     {
       "id": "g08",
-      "src": "img/trading-tech.webp",
+      "src": "img/profx/profx-03.webp",
       "alt": "Trading technology showcase",
       "caption": "Technology showcase",
       "cat": "conference"
     },
     {
       "id": "g09",
-      "src": "img/expo-networking.webp",
+      "src": "img/profx/profx-19.webp",
       "alt": "Professionals networking at the expo lounge",
       "caption": "The Lounge — where deals start",
       "cat": "networking"
     },
     {
       "id": "g10",
-      "src": "img/expo-vip-lounge.webp",
+      "src": "img/profx/profx-11.webp",
       "alt": "VIP lounge with city views",
       "caption": "VIP — an experience above it all",
       "cat": "networking"
     },
     {
       "id": "g11",
-      "src": "img/networking-lounge.webp",
+      "src": "img/profx/profx-24.webp",
       "alt": "Networking lounge",
       "caption": "Connections that compound",
       "cat": "networking"
     },
     {
       "id": "g12",
-      "src": "img/johannesburg-night.webp",
+      "src": "img/emperors-palace-entrance.webp",
       "alt": "Johannesburg skyline at sunset with the Hillbrow Tower",
       "caption": "Host city — Johannesburg",
       "cat": "venue"
     },
     {
       "id": "g13",
-      "src": "img/johannesburg-skyline.webp",
+      "src": "img/emperors-palace-entrance.webp",
       "alt": "Johannesburg central business district aerial view",
       "caption": "Johannesburg — Africa's financial hub",
       "cat": "venue"
     },
     {
       "id": "g14",
-      "src": "img/expo-networking.webp",
+      "src": "img/profx/profx-19.webp",
       "alt": "Trading professionals in discussion",
       "caption": "Africa's traders — mobile-first, ambitious",
       "cat": "venue"
     },
     {
       "id": "g15",
-      "src": "img/expo-registration.webp",
+      "src": "img/profx/profx-16.webp",
       "alt": "Welcome to the expo",
       "caption": "Emperors Palace — 19–20 February 2027",
       "cat": "venue"
@@ -419,28 +419,28 @@
     },
     {
       "id": "g31",
-      "src": "img/brand-lockup.webp",
-      "alt": "Trading Expo official brand identity",
+      "src": "img/profx/profx-13.webp",
+      "alt": "Traders Expo official brand identity",
       "caption": "The Identity — Traders · Brokers · Technology",
       "cat": "brand"
     },
     {
       "id": "g32",
-      "src": "img/brand-booth.webp",
+      "src": "img/profx/profx-27.webp",
       "alt": "Official booth design",
       "caption": "Booth design — the official look",
       "cat": "brand"
     },
     {
       "id": "g33",
-      "src": "img/brand-signage.webp",
+      "src": "img/profx/profx-23.webp",
       "alt": "Official expo signage",
       "caption": "Signage — find your way",
       "cat": "brand"
     },
     {
       "id": "g34",
-      "src": "img/brand-rollup.webp",
+      "src": "img/profx/profx-27.webp",
       "alt": "Official rollup banner design",
       "caption": "Brand in the wild",
       "cat": "brand"

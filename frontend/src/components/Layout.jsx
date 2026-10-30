@@ -50,8 +50,8 @@ function Header({ page, linkBase }) {
   return (
     <header className={'nav' + (scrolled ? ' scrolled' : '')} id="nav">
       <div className="nav-inner">
-        <a className="logo" href={linkBase + "index.html"} aria-label="Trading Expo Johannesburg — home">
-          <img className="nav-logo theme-logo" src={ab + logo} alt="Trading Expo Johannesburg" />
+        <a className="logo" href={linkBase + "index.html"} aria-label="Traders Expo Johannesburg — home">
+          <img className="nav-logo theme-logo" src={ab + logo} alt="Traders Expo Johannesburg" />
         </a>
         <nav className={'nav-links' + (menuOpen ? ' mobile-open' : '')} id="navLinks" aria-label="Primary">
           {NAV_LINKS.map(([href, key, label]) => (
@@ -97,8 +97,8 @@ function Footer({ linkBase }) {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a className="logo" href={linkBase + "index.html"} aria-label="Trading Expo Johannesburg — home">
-              <img className="footer-logo theme-logo" src={ab + logo} alt="Trading Expo Johannesburg" />
+            <a className="logo" href={linkBase + "index.html"} aria-label="Traders Expo Johannesburg — home">
+              <img className="footer-logo theme-logo" src={ab + logo} alt="Traders Expo Johannesburg" />
             </a>
             <p>Africa's premier online trading, fintech &amp; financial markets exhibition.<br />19–20 February 2027.</p>
           </div>
@@ -115,7 +115,7 @@ function Footer({ linkBase }) {
           </nav>
           <div className="footer-col">
             <h4>Event Info</h4>
-            <p className="footer-meta">19–20 February 2027 · Emperors Palace, Johannesburg<br />thetradersexpo.com<br />Organizer: ProFX Media FZ-LLC</p>
+            <p className="footer-meta">19–20 February 2027 · Emperors Palace, Johannesburg<br />thetradersexpo.com<br />Organizer: ProFX Media FZ-LLC<br />Media &amp; sponsorship: <a href="tel:+971588845033">+971 58 884 5033</a> · <a href="mailto:info@profxmedia.com">info@profxmedia.com</a></p>
             <button className="theme-toggle theme-toggle-footer" id="themeToggleFooter" aria-label="Toggle light mode" onClick={toggle}>
               <SunIcon /><MoonIcon />
               <span id="themeLabel">{theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>
@@ -123,7 +123,7 @@ function Footer({ linkBase }) {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2027 Trading Expo Johannesburg. All rights reserved.</span>
+          <span>© 2027 Traders Expo Johannesburg. All rights reserved.</span>
           <span>Organizer: ProFX Media FZ-LLC</span>
           <span className="footer-legal">
             <a href={linkBase + "privacy.html"}>Privacy Policy</a>
