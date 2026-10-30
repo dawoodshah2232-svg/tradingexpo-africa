@@ -23,7 +23,7 @@ export default function PostPage({ slug }) {
         <p className="eyebrow">Blog &middot; {post.category}</p>
         <h1>{post.title}</h1>
         <div className="txi-byline">
-          <span><strong>Trading Expo Africa editorial team</strong></span>
+          <span><strong>Trading Expo Johannesburg editorial team</strong></span>
           <span>&middot;</span>
           <span>{post.bylineDate || post.date}</span>
           <span>&middot;</span>

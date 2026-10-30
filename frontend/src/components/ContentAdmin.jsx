@@ -18,7 +18,7 @@ const TABS = [
   ['site', 'Site text'],
   ['publish', 'Publish'],
 ];
-const TIERS = ['Title Sponsor', 'Platinum', 'Gold', 'Silver', 'Bronze', 'Media Partner'];
+const TIERS = ['Title Sponsor', 'Official Sponsor', 'Exclusive Sponsor', 'Regional Sponsor', 'Diamond Sponsor', 'Elite Sponsor', 'Gold', 'Silver', 'Platinum', 'Bronze', 'Media Partner'];
 const CATS = ['exhibition', 'conference', 'networking', 'venue', 'profx', 'brand'];
 
 const fileToDataUrl = (file) => new Promise((res, rej) => {

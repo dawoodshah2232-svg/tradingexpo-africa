@@ -21,7 +21,7 @@ const DAY2 = [
   { time: '11:30', title: 'Panel: Regulation & trust', text: 'Building safe, transparent markets for retail traders.', tag: 'Panel' },
   { time: '13:00', title: 'Networking lunch', text: 'Final day meetings and partnership conversations.', tag: 'Network' },
   { time: '14:30', title: 'Live trading contest', text: 'Trade live on stage — staged by ProFX Media FZ-LLC, an Official Guinness World Records™ Holder for \u2018Most participants in a trading competition\u2019.', tag: 'Live' },
-  { time: '16:00', title: 'Closing keynote & lucky draw', text: 'Final insights, then the lucky draw for all ticket holders.', tag: 'Finale', tagClass: 'key' },
+  { time: '16:00', title: 'Closing keynote', text: 'Final insights and farewell from the stage.', tag: 'Finale', tagClass: 'key' },
   { time: '17:30', title: 'Farewell networking', text: 'Closing reception and goodbyes — until next year.', tag: 'Network' },
 ];
 

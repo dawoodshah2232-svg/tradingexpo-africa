@@ -117,7 +117,7 @@ export function MediaPartners() {
   );
 }
 
-const TIER_ORDER = ['Title Sponsor', 'Platinum', 'Gold', 'Silver', 'Bronze', 'Media Partner'];
+const TIER_ORDER = ['Title Sponsor', 'Official Sponsor', 'Exclusive Sponsor', 'Regional Sponsor', 'Diamond Sponsor', 'Elite Sponsor', 'Gold', 'Silver', 'Platinum', 'Bronze', 'Media Partner'];
 
 export function SponsorsWall() {
   const ab = useAssetBase();
@@ -130,7 +130,7 @@ export function SponsorsWall() {
         <Reveal as="h2" className="section-title">Your brand, <span className="grad">centre stage.</span></Reveal>
         {sponsors.length ? (
           <>
-            <Reveal as="p" className="section-lead">Proudly backed by the brands powering the trading world.</Reveal>
+            <Reveal as="p" className="section-lead">Past ProFX partner brands — the companies that have backed ProFX events. Johannesburg 2027 sponsorships are open now.</Reveal>
             <div className="logo-wall">
               {[...sponsors]
                 .sort((a, b) => TIER_ORDER.indexOf(a.tier) - TIER_ORDER.indexOf(b.tier))
@@ -150,7 +150,7 @@ export function SponsorsWall() {
           <>
             <Reveal as="p" className="section-lead">Proud partners from across the ProFX community.</Reveal>
             <div className="logo-wall" aria-label="Sponsor placeholders">
-              {['Title Sponsor', 'Platinum', 'Gold', 'Silver', 'Media Partner', 'Media Partner'].map((tier, i) => (
+              {['Title Sponsor', 'Official Sponsor', 'Exclusive Sponsor', 'Regional Sponsor', 'Diamond Sponsor', 'Elite Sponsor'].map((tier, i) => (
                 <Reveal key={i} className="logo-tile" delay={i * 0.06}><span>Your Logo</span><em>{tier}</em></Reveal>
               ))}
             </div>

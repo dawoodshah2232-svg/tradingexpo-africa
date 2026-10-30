@@ -1,4 +1,4 @@
-// API client for the Trading Expo Africa Laravel backend.
+// API client for the Trading Expo Johannesburg Laravel backend.
 //
 // Behaviour contract:
 //  - When the Laravel API is reachable (cPanel production, or local dev with
@@ -298,8 +298,8 @@ export function seedDemoIfEmpty() {
         body: 'Ticket pricing will be announced soon. Reserve your pass now — no payment taken today. Share the expo with your trading community.' },
       { id: 'a2', title: 'Exhibitor manual & booth allocation', audience: 'exhibitor', at: now,
         body: 'The exhibitor manual with setup timings, freight and branding guidelines will be published here. Complete your company profile and team details so we can prepare your badges.' },
-      { id: 'a3', title: 'Lucky draw on Day 2', audience: 'ticket', at: now,
-        body: 'Every ticket is automatically entered into the Trading Expo lucky draw on Day 2. Be in the hall to win.' },
+      { id: 'a3', title: 'Live trading contest — both days', audience: 'ticket', at: now,
+        body: 'A live trading contest runs across both expo days. Full contest rules, entry details and prizes will be announced closer to the event.' },
     ]);
   }
 }

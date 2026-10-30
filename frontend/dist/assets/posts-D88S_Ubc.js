@@ -6,7 +6,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -45,26 +45,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "AI Tools for Traders in 2026: What's Useful vs What's Hype",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/ai-tools-traders-2026.html"
+      "item": "https://thetradersexpo.com/blog/ai-tools-traders-2026.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/networking-lounge.webp" alt="AI Tools for Traders in 2026: What's Useful vs What's Hype" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Every trading product now claims 'AI-powered' status, from charting platforms to Telegram signal bots. Beneath the marketing, artificial intelligence genuinely helps traders in specific ways — and is genuinely dangerous in others. Knowing the difference saves money and accounts.</p>
 <p>A clear-eyed tour of AI in trading as it stands in 2026.</p>
@@ -81,7 +81,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Most traders use AI poorly — vague questions yielding confident-sounding mush — when precise prompting extracts genuine value. The framework: assign a role ('you are a financial analyst summarising for an experienced trader'), specify the task narrowly ('list the three key risks in this earnings call transcript, with quotes'), demand structure ('respond as a table: risk, evidence, implication'), and always request uncertainty ('flag what you cannot determine from this text'). For strategy work, ask the AI to critique rather than create: 'here is my trading plan — attack its assumptions' produces more useful output than 'give me a profitable strategy.'</p>
 <p>Crucially, verify everything material: LLMs hallucinate figures, misattribute quotes and invent citations with calm confidence. Treat AI output as a junior analyst's draft — fast, useful, and requiring review — never as a verified source. Never paste sensitive data (account numbers, API keys, personal holdings) into prompts; assume chat contents are retained and reviewed. And keep a human in every decision loop that moves money: AI summarises the annual report, you decide the position size. Used with this discipline, LLMs become the highest-leverage research tool available to retail traders — a tireless analyst that works at the speed of your curiosity.</p>
 <h2>AI in trading: a 2027 conference theme</h2>
-<p>AI's real role in markets — from institutional quant to retail copilots — will be debated by speakers at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027.</p>
+<p>AI's real role in markets — from institutional quant to retail copilots — will be debated by speakers at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027.</p>
 <p>Hear practitioners separate signal from hype on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -91,7 +91,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -103,7 +103,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -115,7 +115,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -154,26 +154,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Algo Trading: A Retail Trader's Guide for 2026",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/algo-trading-retail-traders-guide.html"
+      "item": "https://thetradersexpo.com/blog/algo-trading-retail-traders-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-networking.webp" alt="Algo Trading: A Retail Trader's Guide for 2026" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Algorithmic trading executes the majority of exchange volumes in developed markets, and algo ecosystems have matured rapidly — retail API offerings, strategy marketplaces and evolving regulatory oversight. For retail traders, the question is practical: what slice of this is actually accessible and useful?</p>
 <p>Here is an honest map of retail algo trading in 2026.</p>
@@ -190,7 +190,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Overfitting — tuning a strategy until it perfectly describes historical noise — is the silent killer of retail algos. The symptoms: spectacular backtest equity curves, dozens of optimised parameters, and live performance that immediately disappoints. The mechanism is statistical: with enough parameters, any strategy can be curve-fit to any historical dataset, capturing randomness that will never repeat. A strategy with fifteen tuned filters that made 200% in backtest has learned the past, not the future. Professionals defend against this with out-of-sample testing (optimise on one period, validate on untouched data), walk-forward analysis, and a strong preference for simple strategies with few parameters and clear economic logic.</p>
 <p>Apply the robustness checklist before deploying capital: does the strategy work across multiple instruments and time periods, or only one cherry-picked window? Does performance survive realistic costs, slippage and the bid-ask spread? Does removing any single parameter destroy the edge (fragility) or merely dent it (robustness)? Start with paper trading the algo for at least a month — live data has a way of humbling backtests. And size the first deployment small enough that a complete failure is tuition, not trauma. In algo trading, humility is not a virtue; it is a risk control.</p>
 <h2>Algo tech at the 2027 expo</h2>
-<p>Trading technology — including algo platforms, APIs and automation tools — is a major theme at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027), with exhibitors demonstrating their offerings.</p>
+<p>Trading technology — including algo platforms, APIs and automation tools — is a major theme at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027), with exhibitors demonstrating their offerings.</p>
 <p>Compare platforms hands-on at the <a href="../exhibit.html">exhibition</a> and attend fintech sessions on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -200,7 +200,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -212,7 +212,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -224,7 +224,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -263,26 +263,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Candlestick Patterns: The 12 Patterns Traders Actually Use",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/candlestick-patterns-traders-guide.html"
+      "item": "https://thetradersexpo.com/blog/candlestick-patterns-traders-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/brand-signage.webp" alt="Candlestick Patterns: The 12 Patterns Traders Actually Use" loading="lazy" width="990" height="233">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Candlestick charts encode four data points per period — open, high, low, close — into a visual language of momentum and rejection. Somewhere along the way, trading education turned that language into a vocabulary test of fifty pattern names. That misses the point.</p>
 <p>Here are the twelve patterns professionals actually watch, and more importantly, how to read them in context.</p>
@@ -300,7 +300,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Beware the classic backtesting traps: hindsight bias (the pattern looks obvious when you already know what happened — cover the right side of the chart), survivorship bias (delisted stocks vanish from datasets, flattering results), and overfitting (adding five filters until 20 perfect historical trades remain — a curve-fit fantasy). The honest question is not 'did this pattern work historically?' but 'would I have taken every one of these signals in real time, with real emotions?' Paper-trade the pattern for a month after backtesting to answer that. Verified patterns become tools; unverified ones remain decorations.</p>
 <h2>Patterns are the alphabet, not the literature</h2>
 <p>No pattern works in isolation. Combine candlestick reading with market structure and key levels — the subjects of our <a href="price-action-trading-guide-beginners.html">price action guide</a> and <a href="support-resistance-trading-guide.html">support/resistance guide</a> — and patterns become high-value confirmation tools.</p>
-<p>Deepen your chart-reading at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) with technical analysis sessions on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Get your pass</a>.</p>
+<p>Deepen your chart-reading at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) with technical analysis sessions on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Get your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>Do candlestick patterns really work?</summary><p>They work as probabilistic signals in context — at key levels, with trend alignment — not as standalone predictions. Backtest any pattern in your market and timeframe before trusting it with capital.</p></details>
@@ -309,7 +309,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -321,7 +321,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -333,7 +333,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -372,26 +372,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "How Much Capital Do You Need to Start Trading?",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/capital-needed-start-trading.html"
+      "item": "https://thetradersexpo.com/blog/capital-needed-start-trading.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-networking.webp" alt="How Much Capital Do You Need to Start Trading?" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Ask how much capital trading needs and you will hear everything from 'R5,000 is enough' to 'don't bother below R10 lakh'. Both answers mislead. The honest answer is mathematical: it depends on your style, your costs and the iron law of position sizing.</p>
 <p>Here are realistic numbers to work with.</p>
@@ -409,7 +409,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Fund the stages from the right sources: learning capital from disposable income, validation capital from savings after the emergency fund is secure, growth capital from trading profits and deliberate savings — never from loans, credit cards or money whose loss would change your life. Set review gates between stages: advance only on evidence (six months of journaled, plan-following profitability), never on hope or impatience. This staged approach feels slow in a world of overnight-success marketing, but it is how every sustainable trading career is actually built — capital growing in step with competence, each protecting the other.</p>
 <h2>Invest in skill first</h2>
 <p>The highest-ROI use of limited funds is education: books, structured learning, and events where professionals teach. An expo pass that prevents one R25,000 mistake pays for itself a hundred times.</p>
-<p>Start at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): beginner sessions on the <a href="../agenda.html">agenda</a>, broker comparisons on the floor. <a href="../tickets.html">Book early-bird</a>.</p>
+<p>Start at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): beginner sessions on the <a href="../agenda.html">agenda</a>, broker comparisons on the floor. <a href="../tickets.html">Book early-bird</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>Can I start trading with R5,000?</summary><p>You can open an account and place trades, but proper risk management becomes nearly impossible — the 1% rule gives you R50 risk per trade, which most real setups exceed. Treat tiny accounts as learning sandboxes, not income vehicles.</p></details>
@@ -418,7 +418,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -430,7 +430,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -442,7 +442,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -481,25 +481,25 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "CBDCs vs Crypto: What Traders Should Know",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/cbdcs-vs-crypto-guide.html"
+      "item": "https://thetradersexpo.com/blog/cbdcs-vs-crypto-guide.html"
     }
   ]
 }`],html:`<p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-vip-lounge.webp" alt="CBDCs vs Crypto: What Traders Should Know" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 
 <p>While private crypto built its story on decentralisation, central banks around the world have been running some of the most closely watched money experiments in history: central bank digital currencies, or CBDCs. For traders, the CBDC story matters less as a trade and more as a signal of where digital-money regulation is heading.</p>
@@ -517,7 +517,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Beyond payments, the most interesting property of CBDCs is programmability — money with conditions attached. Wholesale pilots have explored settlement use cases; the retail imagination runs further: targeted disbursements that can only be spent on food or fuel, corporate payouts released automatically on delivery confirmation, and cross-border settlement that bypasses correspondent banking delays. Each programmable-money use case is a potential product surface: whoever builds the wallets, compliance tooling and merchant integrations for CBDC rails captures the next infrastructure cycle.</p>
 <p>The constraints matter as much as the possibilities. Programmable, traceable money raises genuine privacy questions that central banks must answer convincingly for mass adoption. Adoption so far has been measured rather than explosive, suggesting the technology is ready before the use cases are. Watch the pilots for the signal that matters: not transaction volumes, but the emergence of a killer application that cash and mobile money cannot replicate.</p>
 <h2>Digital money meets the expo floor</h2>
-<p>Fintech innovation — including digital payments and currency infrastructure — is a core theme at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027, where exhibitors will showcase the technology moving money across the continent.</p>
+<p>Fintech innovation — including digital payments and currency infrastructure — is a core theme at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027, where exhibitors will showcase the technology moving money across the continent.</p>
 <p>Explore the <a href="../exhibit.html">exhibitor lineup</a> and conference sessions on fintech's next decade. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -527,7 +527,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -539,7 +539,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>`},{slug:"comparing-brokers-at-a-trading-expo",title:"What to Look for When Comparing Brokers at a Trading Expo",meta:"Meet brokers face-to-face at a trading expo and know what to compare: regulation, fees, platforms, support — and the red flags to walk away from.",category:"Expo & Events Guide",img:"hero-expo.webp",read:"6 min read",date:"Sep 25, 2026",excerpt:"Meet brokers face-to-face at a trading expo and know exactly what to compare: regulation, full fee structures, platforms, support, product range — and the red flags to walk away from.",file:"blog/comparing-brokers-at-a-trading-expo.html",bylineDate:"September 25, 2026",heroImg:"",heroAlt:"What to Look for When Comparing Brokers at a Trading Expo",ldjson:[`{
@@ -550,7 +550,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-25",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -597,26 +597,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "What to Look for When Comparing Brokers at a Trading Expo",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/comparing-brokers-at-a-trading-expo.html"
+      "item": "https://thetradersexpo.com/blog/comparing-brokers-at-a-trading-expo.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img width="1600" height="685" src="../assets/img/hero-expo.webp" alt="What to Look for When Comparing Brokers at a Trading Expo" loading="lazy">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>A trading expo floor is the fastest way to compare brokers in Africa: a dozen booths in one hall, live platform demos, and real humans answering your questions instead of chatbots. It can also be overwhelming — every stall claims the lowest brokerage and the best platform, and the loudest booth is rarely the best broker.</p>
 <p>The difference between a useful expo visit and an expensive mistake is arriving with a comparison framework instead of relying on impressions. This guide gives you one: what to check first, which questions actually reveal quality, and the red flags that should send you walking to the next booth.</p>
@@ -665,8 +665,8 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <h2>Red flags: when to walk to the next booth</h2>
 <p>Some signals should end the conversation immediately. Walk away from any broker that promises guaranteed returns or "risk-free" profits — no legitimate broker does this anywhere. Walk away from pressure to deposit money on the spot, from representatives who can't produce a verifiable licence number, and from anyone who asks for your existing broker's login credentials or an OTP — legitimate onboarding never needs those.</p>
 <p>Also be wary of the subtler flags: fee answers that stay vague after two direct questions, demo platforms that look nothing like the product described, and "today only" offers presented with no written terms. The expo floor rewards the visitor who is willing to say "I'll think about it" and keep walking.</p>
-<h2>Meet the brokers in person at Trading Expo Africa</h2>
-<p><a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) brings dozens of brokers, platforms and fintech exhibitors onto one floor — the ideal place to run this exact checklist, watch live demos, and compare offers side by side instead of across browser tabs.</p>
+<h2>Meet the brokers in person at Trading Expo Johannesburg</h2>
+<p><a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) brings dozens of brokers, platforms and fintech exhibitors onto one floor — the ideal place to run this exact checklist, watch live demos, and compare offers side by side instead of across browser tabs.</p>
 <p>Arrive with your questions ready, and leave with a shortlist built on evidence. Book your <a href="../tickets.html">pass</a> and make the exhibition floor work for you.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -677,7 +677,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -688,7 +688,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -700,7 +700,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -739,26 +739,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Copy Trading: Risks Every Follower Must Understand",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/copy-trading-risks.html"
+      "item": "https://thetradersexpo.com/blog/copy-trading-risks.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/booth-demo.webp" alt="Copy Trading: Risks Every Follower Must Understand" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Copy trading promises the ultimate shortcut: automatically mirror the trades of experienced traders and share their returns. Platforms market it heavily to beginners, and the pitch is seductive — expertise without the learning curve.</p>
 <p>But the mechanics hide risks that marketing never mentions, and Africa's regulatory stance adds another layer of caution. Here is the complete picture.</p>
@@ -776,7 +776,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Worse, fees distort provider incentives: performance fees reward volatility (big wins earn fees; subsequent losses are the followers' problem), and some platforms compensate providers per follower, rewarding marketing over trading skill. Before allocating, model three scenarios — provider up 30%, flat, down 20% — and compute your net in each after all fees and realistic slippage. Then compare against the alternative: investing the same time in learning to trade yourself. The fee maths usually reveals copy trading as one of the most expensive ways to participate in markets — expensive in money, and costliest in the skill you never build.</p>
 <h2>Better ways to learn from pros</h2>
 <p>Instead of copying trades blindly, learn the reasoning: follow educators who explain their analysis, paper-trade their approaches yourself, and build your own playbook. The skill compounds; the shortcut does not.</p>
-<p>Meet real traders and educators at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) — ask them how they actually trade across <a href="../agenda.html">conference sessions</a>. <a href="../tickets.html">Book your pass</a>.</p>
+<p>Meet real traders and educators at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) — ask them how they actually trade across <a href="../agenda.html">conference sessions</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>Is copy trading legal?</summary><p>The regulatory position is cautious and evolving — regulators have acted against unregulated advisory-like and pooled-return schemes. Copy-trading platforms operate in a grey zone in many countries; verify regulatory standing carefully before using one.</p></details>
@@ -785,7 +785,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -797,7 +797,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -809,7 +809,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -848,26 +848,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Crypto Trading Safety Checklist",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/crypto-trading-safety-checklist.html"
+      "item": "https://thetradersexpo.com/blog/crypto-trading-safety-checklist.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/booth-demo.webp" alt="Crypto Trading Safety Checklist" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Crypto gives you something equity markets never do: total personal responsibility for security. There is no broker to reverse a mistaken transfer and no regulator to recover coins sent to a scammer. Your safety setup is your only safety net.</p>
 <p>Run through this ten-step checklist before your next buy — most of it takes under an hour.</p>
@@ -884,7 +884,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Prevention is ideal; response is essential, because even careful traders get targeted. If you suspect a breach: one, immediately transfer remaining funds to a clean wallet or account from a secure device — speed matters more than forensics. Two, revoke token approvals and active sessions on the compromised platform. Three, change passwords and rotate 2FA from a device you trust, and check for email forwarding rules attackers commonly plant. Four, document everything with timestamps and screenshots before memories fade. Five, file a cybercrime complaint at cybercrime.gov.in and inform your bank if fiat rails were involved — reports within hours have meaningfully better outcomes than reports within weeks.</p>
 <p>After the incident, conduct a blameless post-mortem: how did the attacker get in — phishing, SIM-swap, malware, or a leaked seed phrase? Close that specific vector before resuming any activity, and upgrade the corresponding control (hardware key instead of SMS 2FA, for example). Share anonymised lessons with trading communities you trust; the attack that hit you is being run against thousands of others. Finally, resist the urge to 'trade your way back' to recover losses — incident recovery and trading recovery are separate processes, and mixing them is how a security loss becomes a trading blowup too.</p>
 <h2>Build safety into your trading education</h2>
-<p>Security is a skill, and skills are learned fastest from practitioners. At <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027), digital-asset security and custody will feature across the <a href="../agenda.html">conference programme</a>.</p>
+<p>Security is a skill, and skills are learned fastest from practitioners. At <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027), digital-asset security and custody will feature across the <a href="../agenda.html">conference programme</a>.</p>
 <p>Join visitors from across Africa learning to navigate digital assets safely — <a href="../tickets.html">early-bird passes will be announced soon</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -894,7 +894,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -904,7 +904,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -916,7 +916,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -955,26 +955,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Diversifying a Trading Portfolio: Beyond 'Don't Put All Eggs in One Basket'",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/diversifying-trading-portfolio.html"
+      "item": "https://thetradersexpo.com/blog/diversifying-trading-portfolio.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/conference-panel.webp" alt="Diversifying a Trading Portfolio: Beyond 'Don't Put All Eggs in One Basket'" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>'Diversify' is the most given and least understood advice in trading. Most traders think it means holding many positions — then discover all twenty of their stocks fell together in a market selloff. That is not diversification; it is diversification theatre.</p>
 <p>Real diversification means spreading exposure across uncorrelated return drivers. Here is how traders should think about it.</p>
@@ -991,7 +991,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Diversification decays without maintenance: winners grow into oversized concentrations, correlations spike during crises, and a carefully balanced book drifts into a concentrated one within months. Rebalancing is the scheduled correction — quarterly for most traders — where you trim positions that have grown beyond their risk allocation and redeploy into underweight drivers. The discipline feels unnatural (selling winners, buying laggards) but it systematically enforces 'buy low, sell high' at the portfolio level and prevents any single thesis from dominating your outcomes. Set calendar reminders; do not rely on noticing.</p>
 <p>Rebalance risk, not just capital: a position that doubled may now represent triple its original risk share even if it is the same percentage of a grown portfolio — compute heat per position, not just weight. Also use rebalancing reviews to check correlation drift: the two 'uncorrelated' positions you added last year may now move together as macro regimes shifted. True diversification is a moving target because correlations themselves move. The traders who maintain genuinely diversified books share one trait: they treat diversification as a verb — an ongoing practice of measuring, trimming and adjusting — rather than a noun describing a portfolio they built once. Start this quarter: list every position's true return driver in a spreadsheet and compute your actual heat — the results usually surprise.</p>
 <h2>Multi-asset thinking at the expo</h2>
-<p>Explore asset classes beyond your comfort zone at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): currency, commodity and equity specialists exhibit side by side across booths.</p>
+<p>Explore asset classes beyond your comfort zone at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): currency, commodity and equity specialists exhibit side by side across booths.</p>
 <p>Walk the <a href="../exhibit.html">floor</a>, compare opportunities, and <a href="../tickets.html">book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -1001,7 +1001,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1012,19 +1012,19 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
-`},{slug:"exhibitor-guide-trading-expo-africa",title:"Exhibitor Guide: Trading Expo Africa",meta:"Exhibitor guide for Trading Expo Africa: booth options, pricing, logistics and how to make the floor pay.",category:"For exhibitors",img:"booth-demo.webp",read:"7 min read",date:"Sep 25, 2026",excerpt:"Booth options, logistics and the playbook for making the exhibition floor pay.",file:"blog/exhibitor-guide-trading-expo-africa.html",bylineDate:"September 25, 2026",heroImg:"",heroAlt:"Exhibitor Guide: Trading Expo Africa",ldjson:[`{
+`},{slug:"exhibitor-guide-trading-expo-africa",title:"Exhibitor Guide: Trading Expo Johannesburg",meta:"Exhibitor guide for Trading Expo Johannesburg: booth options, pricing, logistics and how to make the floor pay.",category:"For exhibitors",img:"booth-demo.webp",read:"7 min read",date:"Sep 25, 2026",excerpt:"Booth options, logistics and the playbook for making the exhibition floor pay.",file:"blog/exhibitor-guide-trading-expo-africa.html",bylineDate:"September 25, 2026",heroImg:"",heroAlt:"Exhibitor Guide: Trading Expo Johannesburg",ldjson:[`{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Exhibitor Guide: Trading Expo Africa",
-  "description": "Exhibitor guide for Trading Expo Africa: booth options, pricing, logistics and how to make the floor pay.",
+  "headline": "Exhibitor Guide: Trading Expo Johannesburg",
+  "description": "Exhibitor guide for Trading Expo Johannesburg: booth options, pricing, logistics and how to make the floor pay.",
   "datePublished": "2026-09-25",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1034,30 +1034,30 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Exhibitor Guide: Trading Expo Africa",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/exhibitor-guide-trading-expo-africa.html"
+      "name": "Exhibitor Guide: Trading Expo Johannesburg",
+      "item": "https://thetradersexpo.com/blog/exhibitor-guide-trading-expo-africa.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">← Back to all articles</a></p>
 <figure>
-<img width="1600" height="1066" src="../assets/img/booth-demo.webp" alt="Exhibitor Guide: Trading Expo Africa" loading="lazy">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<img width="1600" height="1066" src="../assets/img/booth-demo.webp" alt="Exhibitor Guide: Trading Expo Johannesburg" loading="lazy">
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
-<p>Exhibiting at a major expo is one of the highest-leverage marketing investments a trading-industry brand can make — and one of the easiest to waste. The difference between a booth that generates a year's worth of pipeline and a booth that collects dust is preparation. This guide distils what works, so your team arrives at Trading Expo Africa on <strong>19–20 February</strong> ready to win.</p>
+<p>Exhibiting at a major expo is one of the highest-leverage marketing investments a trading-industry brand can make — and one of the easiest to waste. The difference between a booth that generates a year's worth of pipeline and a booth that collects dust is preparation. This guide distils what works, so your team arrives at Trading Expo Johannesburg on <strong>19–20 February</strong> ready to win.</p>
 <h2>Why exhibit: the opportunity in one paragraph</h2>
-<p>Trading Expo Africa brings <strong>visitors from across Africa</strong> — retail traders, investors, introducing brokers, affiliates, fintech professionals and entrepreneurs — together with <strong>exhibitors</strong> under one roof. It connects the B2C trading community with the B2B financial ecosystem in a way no webinar, ad campaign or content strategy can replicate: face to face, product in hand, trust being built in real time. If Africa is central to your growth plans, this is the room to be in.</p>
+<p>Trading Expo Johannesburg brings <strong>visitors from across Africa</strong> — retail traders, investors, introducing brokers, affiliates, fintech professionals and entrepreneurs — together with <strong>exhibitors</strong> under one roof. It connects the B2C trading community with the B2B financial ecosystem in a way no webinar, ad campaign or content strategy can replicate: face to face, product in hand, trust being built in real time. If Africa is central to your growth plans, this is the room to be in.</p>
 <h2>Choose your presence with intent</h2>
 <p>Start by defining what success looks like <em>before</em> you book. Are you launching a product? Recruiting introducing brokers? Building a retail client base? Each goal points to a different booth strategy — a demo-heavy setup for product launches, a lounge-style space for partner conversations, a high-traffic position for brand awareness.</p>
 <p>Booth options and the reservation process are on the <a href="../exhibit.html">exhibit page</a>, and the team can advise on positioning once you enquire. Companies with larger ambitions should also look at <a href="../sponsors.html">sponsorship packages</a> — stage branding, lounge sponsorships and lanyard or badge placements put your name in front of every attendee, not just the ones who find your booth.</p>
@@ -1079,7 +1079,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Premium booth positions are allocated as reservations come in, and the first edition of a major expo tends to sell its best locations fastest. Starting the conversation early also gives you more time to plan — which, as this guide argues, is where exhibiting is actually won.</p>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">← Back to all articles</a></p>
@@ -1091,7 +1091,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1130,26 +1130,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Expo vs Online Trading Education: Why You Need Both",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/expo-vs-online-trading-education.html"
+      "item": "https://thetradersexpo.com/blog/expo-vs-online-trading-education.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-floor.webp" alt="Expo vs Online Trading Education: Why You Need Both" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>The modern trader learns online: YouTube breakdowns, structured courses, Discord communities, endless free content. It is a golden age for access — and yet something is missing, because a persistent gap separates traders who consume content from traders who perform.</p>
 <p>That gap is judgement, context and accountability — and it is exactly what physical events supply. Here is how the two modes complement each other.</p>
@@ -1166,7 +1166,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Stop consuming trading content randomly and build a curriculum. Structure it in four quarters: Q1 foundations — market mechanics, order types, and risk management (our beginner guides cover this); Q2 method — one coherent strategy studied deeply through books and structured courses, paper-traded throughout; Q3 psychology and process — journaling, review routines and emotional discipline with real (small) capital at stake; Q4 specialisation — the asset class, style or edge you will develop over the coming years. Each quarter has defined inputs (what you study), outputs (what you produce — journal entries, backtests, reviews) and a gate (what proves readiness for the next phase). Random content consumption has none of these; curricula do.</p>
 <p>Place the expo inside this curriculum deliberately: attend after completing Q1–Q2 foundations so you can ask advanced questions and evaluate claims critically, and use the event as the bridge into Q3 — the contacts, platform trials and strategy refinements that accelerate live-market learning. After the expo, return to the curriculum with new inputs rather than starting over. This integration is what makes events compound: they are not interruptions to your education but intensives within it. Write your 2027 curriculum down now, slot February's expo into it, and let the year's learning build sequentially instead of scattering.</p>
 <h2>Start the combination in February 2027</h2>
-<p>Put the physical half of your education on the calendar: <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027 — speakers, exhibitors, visitors from across Africa.</p>
+<p>Put the physical half of your education on the calendar: <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027 — speakers, exhibitors, visitors from across Africa.</p>
 <p><a href="../tickets.html">See ticket options</a>. Learn online all year; calibrate in person in February.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -1176,7 +1176,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1188,7 +1188,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -1200,7 +1200,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1239,26 +1239,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "9 Mistakes First-Time Expo Visitors Make (and How to Avoid Them)",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/first-time-expo-visitor-mistakes.html"
+      "item": "https://thetradersexpo.com/blog/first-time-expo-visitor-mistakes.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/brand-rollup.webp" alt="9 Mistakes First-Time Expo Visitors Make (and How to Avoid Them)" loading="lazy" width="520" height="700">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>First-time expo visitors make predictable mistakes: they arrive without a plan, collect 40 brochures they never read, attend random sessions, skip networking from shyness, and leave with sore feet and zero outcomes. The event was not the problem — the approach was.</p>
 <p>Here are the nine mistakes, each with its fix.</p>
@@ -1275,7 +1275,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>The expo ends; the value begins — if you have a follow-up system. Within 48 hours, process every contact in three buckets: action (people you promised something or who promised you something — message them first, referencing the specific conversation), nurture (interesting people with no immediate agenda — a short personalised note and a quarterly check-in), and archive (polite exchanges with no fit — filed, not deleted). For platforms and brokers shortlisted on the floor, start trials immediately while your comparison notes are fresh; trial conversions decay steeply after a week. Write the one-paragraph summary of each meaningful conversation within two days, or the details blur into a generic 'nice event'.</p>
 <p>Then convert learning into habit: pick exactly one strategy, tool or process change from the expo and implement it over the next 30 days — one, not ten. Schedule a 30-day review on your calendar now: what did I implement, what worked, what contacts proved valuable? This closed loop is what separates professionals from tourists. Most attendees' expo value evaporates within a fortnight through inaction; a simple system — 48-hour messages, immediate trials, one implementation, one review — captures compounding returns from two days' investment. The best time to build this system is before you travel; the second-best time is on the flight home. Print this system on a single card and keep it in your badge holder — visible plans get executed, while mental ones get forgotten.</p>
 <h2>Do it right in April 2027</h2>
-<p>Arrive prepared at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027: study the <a href="../agenda.html">agenda</a>, rank your exhibitors via <a href="../exhibit.html">exhibitor info</a>, and bring objectives.</p>
+<p>Arrive prepared at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027: study the <a href="../agenda.html">agenda</a>, rank your exhibitors via <a href="../exhibit.html">exhibitor info</a>, and bring objectives.</p>
 <p><a href="../tickets.html">Book your pass</a> — and make the two days count.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -1285,19 +1285,19 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
 <ul>
-<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Africa: The Complete Visitor Checklist</a></li>
+<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Johannesburg: The Complete Visitor Checklist</a></li>
 <li><a href="why-attend-trading-expo-events.html">Why Attend a Trading Expo? 8 Benefits You Can't Get Online</a></li>
 <li><a href="networking-tips-trading-events.html">Networking at Trading Events: How to Build Relationships That Matter</a></li>
 </ul>
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -1309,7 +1309,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1348,26 +1348,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Forex Scams: Red Flags Every Trader Must Know",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/forex-scams-red-flags.html"
+      "item": "https://thetradersexpo.com/blog/forex-scams-red-flags.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/conference-panel.webp" alt="Forex Scams: Red Flags Every Trader Must Know" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Africa's trading boom has a shadow: an industrial-scale scam ecosystem built to separate new traders from their money. Regulators issue warnings regularly, yet the schemes keep evolving — because they exploit hope, not ignorance.</p>
 <p>Learn the seven red flags below and you will be immune to the vast majority of forex fraud aimed at African traders.</p>
@@ -1385,7 +1385,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Inoculate yourself with process: a mandatory 48-hour cooling period before acting on any unsolicited opportunity, a rule that you never invest through links from messages, and a habit of explaining the opportunity aloud to a sceptical friend — scams wither under plain-language explanation. Teach these habits to family members too, since scammers increasingly target beginners through relatives. And remember the base rate: the overwhelming majority of unsolicited trading opportunities arriving via message are fraudulent. That single prior belief, held firmly, filters more scams than any blacklist.</p>
 <h2>Protect yourself — and report</h2>
 <p>Never invest through links from social media, never share screen access or OTPs, and never send crypto to 'unlock' withdrawals — the advance-fee trap. If you have been targeted, report to your national cybercrime portal, your bank, and your market regulator's complaint channels with full documentation.</p>
-<p>Education is the best antivirus. Sessions on investor protection will feature at <a href="../index.html">Trading Expo Africa</a> on 19–20 February 2027 — <a href="../tickets.html">join fellow traders</a> learning to trade safely.</p>
+<p>Education is the best antivirus. Sessions on investor protection will feature at <a href="../index.html">Trading Expo Johannesburg</a> on 19–20 February 2027 — <a href="../tickets.html">join fellow traders</a> learning to trade safely.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>Are Telegram forex signal groups scams?</summary><p>Many are. Common models include VIP upsells, affiliate links to shady brokers that pay for your losses, and outright managed-account theft. Treat unsolicited trading 'mentors' on messaging apps as guilty until proven innocent.</p></details>
@@ -1394,7 +1394,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1404,7 +1404,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -1416,7 +1416,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1455,26 +1455,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Forex vs Equity Trading: Which Fits You?",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/forex-vs-equity-trading.html"
+      "item": "https://thetradersexpo.com/blog/forex-vs-equity-trading.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/keynote-stage.webp" alt="Forex vs Equity Trading: Which Fits You?" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>New traders often choose a market by accident — whatever their first YouTube video covered. But forex and equity trading in Africa are genuinely different games, with different hours, different leverage, different regulators and different psychological demands.</p>
 <p>Here is an honest comparison to help you choose deliberately.</p>
@@ -1492,7 +1492,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Score each market on these five and the answer usually emerges clearly. And treat the decision as reversible: many traders start in one market, build core skills — risk management, journaling, psychology are universal — and expand later. What you must not do is drift between markets chasing recent performance, resetting the learning curve each time. Commit to one market for at least a year, learn it properly, and let the transferable skills compound. Depth first, breadth later — that sequence is itself a trading edge.</p>
 <h2>You don't have to marry one market</h2>
 <p>Many experienced traders eventually operate in both — equities for wealth-building positions, currencies for tactical and hedging trades. The skills transfer: risk management, journaling and psychology are market-agnostic.</p>
-<p>Explore both at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): compare equity and currency platforms on the <a href="../exhibit.html">exhibition floor</a> and attend strategy sessions on the <a href="../agenda.html">conference agenda</a>. <a href="../tickets.html">See ticket options</a>.</p>
+<p>Explore both at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): compare equity and currency platforms on the <a href="../exhibit.html">exhibition floor</a> and attend strategy sessions on the <a href="../agenda.html">conference agenda</a>. <a href="../tickets.html">See ticket options</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>Which is better for beginners in Africa: forex or equity?</summary><p>Neither is universally better. Equities suit those available during market hours who want company-level stories; currency derivatives suit evening traders comfortable with macro themes. Start with whichever fits your schedule, and paper-trade first.</p></details>
@@ -1501,7 +1501,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1511,7 +1511,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -1523,7 +1523,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1562,26 +1562,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Learn Trading for Free: The Best No-Cost Resources for Beginners",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/free-trading-education-resources.html"
+      "item": "https://thetradersexpo.com/blog/free-trading-education-resources.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/networking-lounge.webp" alt="Learn Trading for Free: The Best No-Cost Resources for Beginners" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>The internet offers more free trading education than any human could consume — alongside more free misinformation than any beginner can filter. The skill is not finding content but curating it: knowing which free resources build real competence and which build confident incompetence.</p>
 <p>This guide maps the genuinely valuable free tier.</p>
@@ -1598,7 +1598,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Structure your free education as a 12-month roadmap. Months 1–3: foundations via free exchange and regulator programmes — market mechanics, order types, participant roles — plus one classic book on trading psychology. Months 4–6: technical analysis through free charting platforms and our strategy guides here — price action, support/resistance, indicators — paper-trading one setup throughout. Months 7–9: risk management deep dive — position sizing maths, journaling discipline, drawdown rules — with small live capital introducing real emotions. Months 10–12: specialisation — pick one market and style, study it intensively, and build the review routines of a professional.</p>
 <p>Each quarter ends with a gate: can you explain the concepts taught? Do your paper or small-live results show improving process metrics (deviation rate falling, journal complete)? Gates prevent the common failure of perpetual beginnerhood — consuming content without progressing. Supplement throughout with market immersion: read financial news daily, follow thoughtful traders (not lifestyle marketers) on X and YouTube, and discuss ideas in process-focused communities. At month 12, assess honestly: the roadmap will have revealed whether trading genuinely suits you, and if it does, you will possess something most paid-course graduates lack — a complete, self-built foundation earned through structured effort rather than purchased. Start this week: enrol in one official exchange programme and finish its first module — momentum beats planning every time.</p>
 <h2>Free learning, live in April 2027</h2>
-<p>Two days of professional trading education for the price of a pizza: <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) packs beginner-friendly sessions, live demos and speakers into one venue.</p>
+<p>Two days of professional trading education for the price of a pizza: <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) packs beginner-friendly sessions, live demos and speakers into one venue.</p>
 <p><a href="../tickets.html">Early-bird passes to be announced</a> — the best-value trading education.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -1608,7 +1608,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1620,19 +1620,19 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
-`},{slug:"how-to-prepare-trading-expo-africa",title:"How to Prepare for Trading Expo Africa",meta:"How to prepare for Trading Expo Africa: tickets, travel, agenda planning and the booth checklist that pays off.",category:"Expo & Events Guide",img:"hero-expo.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"Tickets, travel, agenda planning — the preparation checklist that pays off.",file:"blog/how-to-prepare-trading-expo-africa.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/hero-expo.webp",heroAlt:"How to Prepare for Trading Expo Africa",ldjson:[`{
+`},{slug:"how-to-prepare-trading-expo-africa",title:"How to Prepare for Trading Expo Johannesburg",meta:"How to prepare for Trading Expo Johannesburg: tickets, travel, agenda planning and the booth checklist that pays off.",category:"Expo & Events Guide",img:"hero-expo.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"Tickets, travel, agenda planning — the preparation checklist that pays off.",file:"blog/how-to-prepare-trading-expo-africa.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/hero-expo.webp",heroAlt:"How to Prepare for Trading Expo Johannesburg",ldjson:[`{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "How to Prepare for Trading Expo Africa",
-  "description": "How to prepare for Trading Expo Africa: tickets, travel, agenda planning and the booth checklist that pays off.",
+  "headline": "How to Prepare for Trading Expo Johannesburg",
+  "description": "How to prepare for Trading Expo Johannesburg: tickets, travel, agenda planning and the booth checklist that pays off.",
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1640,7 +1640,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "When and where is Trading Expo Africa?",
+      "name": "When and where is Trading Expo Johannesburg?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "19–20 February 2027, in Africa (city and venue to be announced). Book passes early and arrange travel once the venue is confirmed."
@@ -1671,28 +1671,28 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "How to Prepare for Trading Expo Africa",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/how-to-prepare-trading-expo-africa.html"
+      "name": "How to Prepare for Trading Expo Johannesburg",
+      "item": "https://thetradersexpo.com/blog/how-to-prepare-trading-expo-africa.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
-<img src="../assets/img/hero-expo.webp" alt="How to Prepare for Trading Expo Africa" loading="lazy" width="1600" height="685">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<img src="../assets/img/hero-expo.webp" alt="How to Prepare for Trading Expo Johannesburg" loading="lazy" width="1600" height="685">
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
-<p>Trading Expo Africa — 19–20 February 2027, Johannesburg — packs visitors from across Africa, exhibitors and speakers into two days. Attendees who prepare extract multiples of the value of those who wander in cold. This checklist ensures you are in the first group.</p>
+<p>Trading Expo Johannesburg — 19–20 February 2027, Johannesburg — packs visitors from across Africa, exhibitors and speakers into two days. Attendees who prepare extract multiples of the value of those who wander in cold. This checklist ensures you are in the first group.</p>
 <p>Work through it in the weeks before the event.</p>
 <h2>Before you go: tickets and agenda</h2>
 <p>Book early: ticket pricing will be announced soon, and <a href="../tickets.html">ticket tiers</a> (Trader, Pro Trader, VIP) determine lounge and networking access — choose based on your goals. Study the <a href="../agenda.html">conference agenda</a> once published and shortlist must-attend sessions, noting clashes; you cannot be in two keynotes at once.</p>
@@ -1711,13 +1711,13 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p><a href="../tickets.html">Book your pass now</a> and start preparing — April 2027 rewards the ready.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
-<details><summary>When and where is Trading Expo Africa?</summary><p>19–20 February 2027, in Africa (city and venue to be announced). Book passes early and arrange travel once the venue is confirmed.</p></details>
+<details><summary>When and where is Trading Expo Johannesburg?</summary><p>19–20 February 2027, in Africa (city and venue to be announced). Book passes early and arrange travel once the venue is confirmed.</p></details>
 <details><summary>Which ticket tier should I choose?</summary><p>Trader suits visitors focused on learning and exploring; Pro Trader adds deeper access; VIP is for professionals prioritising networking and premium experiences. Match the tier to your objectives.</p></details>
 <details><summary>How do I get the most from the exhibition floor?</summary><p>Research exhibitors beforehand, visit priority booths with prepared questions, take notes on answers for comparison, and follow up within 48 hours while conversations are fresh.</p></details>
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1729,7 +1729,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -1741,7 +1741,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1780,26 +1780,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "How to Start Trading in 2026: A Step-by-Step Beginner's Guide",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/how-to-start-trading-2026.html"
+      "item": "https://thetradersexpo.com/blog/how-to-start-trading-2026.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/trading-tech.webp" alt="How to Start Trading in 2026: A Step-by-Step Beginner's Guide" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Starting trading in Africa in 2026 is simultaneously easier and harder than ever: easier because accounts open in minutes on your phone, harder because the noise — tips, gurus, guaranteed-return schemes — is deafening. What beginners need is not more information but the right sequence.</p>
 <p>Here is that sequence, step by step.</p>
@@ -1816,7 +1816,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Turn the roadmap into a calendar. Weeks 1–2: open your trading account, verify your broker's licence, and complete one structured basics course — market mechanics, order types, candlestick fundamentals. Weeks 3–4: study risk management exclusively (position sizing, the 1% rule, stop-loss placement) and set up your trading journal before your first practice trade. Weeks 5–8: paper-trade one simple strategy — a single setup, defined entry, stop and target — logging every trade with screenshots and R-multiples. Aim for 30+ paper trades; the goal is process familiarity, not paper profits.</p>
 <p>Weeks 9–12: go live with minimum size that still triggers real emotions, risking 1% per trade on the same single setup. Expect performance to dip as psychology enters — this is normal and educational. End each week with a journal review: am I following the plan? Which deviations cost money? At day 90, conduct a full review: win rate, average R, deviation rate, and an honest assessment of whether you are ready to continue, adjust, or extend the learning phase. Ninety disciplined days build more real skill than a year of casual dabbling — and they reveal, with evidence, whether trading suits you before significant capital is at risk.</p>
 <h2>Learn faster at the expo</h2>
-<p>Compress months of trial-and-error into two days at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): broker comparisons and beginner strategy sessions.</p>
+<p>Compress months of trial-and-error into two days at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): broker comparisons and beginner strategy sessions.</p>
 <p><a href="../tickets.html">Start with an early-bird pass</a> — the cheapest trading education you will find.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -1826,7 +1826,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1837,7 +1837,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -1849,7 +1849,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1888,25 +1888,25 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "How to Verify Your Broker Is Properly Regulated",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/how-to-verify-broker-regulation.html"
+      "item": "https://thetradersexpo.com/blog/how-to-verify-broker-regulation.html"
     }
   ]
 }`],html:`<p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-grand-hall.webp" alt="How to Verify Your Broker Is Properly Regulated" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 
 <p>Every scam broker has one thing in common: they are counting on you not to check. Verifying a broker's licence is the fastest, highest-value due-diligence step in trading — and it takes less time than brewing tea.</p>
@@ -1924,7 +1924,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Licensing is the first check; there are two more worth running. Check whether the regulator publishes disciplinary actions — fines, suspensions or warnings are usually public record and reveal patterns a clean-looking website hides. And before committing significant capital, look for the broker's complaint record: the volume of complaints and, more importantly, how quickly they get resolved. A broker drowning in unresolved complaints is telling you about its operational culture.</p>
 <p>Finally, verify the fund trail: your money should move only between your bank account and the broker's designated client account, with statements issued for every trade. Any request to transfer funds to a personal account, a different company name, or via crypto is an immediate walk-away signal, no matter how convincing the explanation.</p>
 <h2>Verify in person, too</h2>
-<p>Online checks are essential, but meeting a broker's team face to face adds a layer no website can fake. At <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027), you can walk up to exhibitor booths, ask about licensing and compliance directly, and compare answers across the floor.</p>
+<p>Online checks are essential, but meeting a broker's team face to face adds a layer no website can fake. At <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027), you can walk up to exhibitor booths, ask about licensing and compliance directly, and compare answers across the floor.</p>
 <p>Make broker verification part of your exhibition floor plan. <a href="../tickets.html">Book your pass</a> — cheap insurance for decisions involving your capital.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -1934,7 +1934,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -1946,7 +1946,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>`},{slug:"intraday-trading-strategy-guide",title:"Intraday Trading Strategy Guide: What Actually Works (and What Doesn't)",meta:"Intraday trading strategy guide: realistic expectations, proven intraday setups, risk rules, costs, and why most day traders fail. Honest 2026 guide.",category:"Trading Strategies",img:"brand-rollup.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"An honest intraday guide: the statistics are brutal, the costs are real, and only a disciplined minority survives. What separates them.",file:"blog/intraday-trading-strategy-guide.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/brand-rollup.webp",heroAlt:"Intraday Trading Strategy Guide: What Actually Works (and What Doesn't)",ldjson:[`{
@@ -1957,7 +1957,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -1996,26 +1996,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Intraday Trading Strategy Guide: What Actually Works (and What Doesn't)",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/intraday-trading-strategy-guide.html"
+      "item": "https://thetradersexpo.com/blog/intraday-trading-strategy-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/brand-rollup.webp" alt="Intraday Trading Strategy Guide: What Actually Works (and What Doesn't)" loading="lazy" width="520" height="700">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Intraday trading has the best marketing and the worst statistics in retail finance. Studies of day-trader profitability across markets consistently find that a large majority lose money — yet intraday remains Africa's most popular trading style. Both facts can be true: the style is brutally hard, and a disciplined minority does make it work.</p>
 <p>This guide is about what that minority does differently.</p>
@@ -2032,7 +2032,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Amateur intraday traders spend the first 15 minutes chasing; professionals spend it observing. The opening routine: watch how price behaves relative to the pre-market range and prior day's high/low, note the initial volume character (conviction or hesitation), and identify the opening range whose breakout or breakdown will define the early trend. No trades in the first 5–15 minutes is itself a strategy — it filters the chaotic opening auction where spreads widen, algos battle, and retail traders donate. Your first planned trade should come from levels identified before the bell, not from excitement at the screen.</p>
 <p>Prepare the routine the evening before: mark key levels on 3–5 instruments maximum (focus beats coverage intraday), note scheduled data releases for the day, and define your scenarios — 'if the index opens above X with volume, I watch for pullback entries toward Y; if it gaps down through support, I stand aside for 30 minutes.' Write the daily loss limit on a sticky note beside the screen. This 20-minute evening preparation and 15-minute morning observation convert intraday from reaction to execution — and that conversion is the entire difference between the traders who survive the statistics and those who become them.</p>
 <h2>See intraday pros work live</h2>
-<p>Watching professional intraday traders narrate their decision-making beats a hundred hours of solo screen time. At <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027), live trading demonstrations and strategy sessions run across the <a href="../agenda.html">two-day agenda</a>.</p>
+<p>Watching professional intraday traders narrate their decision-making beats a hundred hours of solo screen time. At <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027), live trading demonstrations and strategy sessions run across the <a href="../agenda.html">two-day agenda</a>.</p>
 <p><a href="../tickets.html">Book your pass</a> and study how disciplined intraday execution actually looks.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2042,7 +2042,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -2054,7 +2054,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2066,7 +2066,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2105,26 +2105,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Leverage in Trading Explained: The Double-Edged Sword",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/leverage-trading-explained-risks.html"
+      "item": "https://thetradersexpo.com/blog/leverage-trading-explained-risks.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-grand-hall.webp" alt="Leverage in Trading Explained: The Double-Edged Sword" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Leverage — controlling a large position with a small deposit — is simultaneously trading's greatest attraction and its greatest destroyer. Brokers advertise 10x, 50x, 100x leverage as opportunity; risk managers describe the same numbers as the speed at which accounts die.</p>
 <p>Understand the mechanics and the maths before you touch it.</p>
@@ -2141,7 +2141,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Margin collection is more structured than the 'leverage' marketing suggests. For derivatives, SPAN margins — calculated from the exchange's risk arrays — set the baseline, covering potential one-day losses at high confidence levels; brokers add exposure margins on top. For equities, VAR (Value at Risk) based margins apply. These are regulatory floors, not broker choices: when your broker demands a certain margin, much of it is the exchange's requirement passed through. Understanding this reframes leverage from 'my broker gives me 10x' to 'the system requires this much collateral for this much risk' — a healthier mental model.</p>
 <p>On top of exchange margins, brokers set their own policies: intraday leverage offered (within regulatory limits), interest charged on funded debit balances, and charges for margin shortfalls including penalties the exchange levies and brokers pass on. Peak-margin reporting rules mean shortfalls are computed on the highest margin utilisation of the day — intraday spikes count, not just end-of-day positions. The practical takeaways: maintain buffer capital above minimum margins, understand your broker's square-off timings and charges, and never treat 'available margin' as 'safe to deploy fully'. Margin is the system's safety equipment; use it with the respect its designers intended.</p>
 <h2>Learn leverage from professionals</h2>
-<p>Derivatives and leverage mechanics will be covered in depth at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) across strategy and education sessions on the <a href="../agenda.html">agenda</a>.</p>
+<p>Derivatives and leverage mechanics will be covered in depth at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) across strategy and education sessions on the <a href="../agenda.html">agenda</a>.</p>
 <p><a href="../tickets.html">Book your pass</a> and understand the tool before it uses you.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2151,7 +2151,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -2162,7 +2162,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2174,7 +2174,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2213,26 +2213,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Mobile Trading Apps: A 2026 Guide",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/mobile-trading-apps-guide.html"
+      "item": "https://thetradersexpo.com/blog/mobile-trading-apps-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-vip-lounge.webp" alt="Mobile Trading Apps: A 2026 Guide" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Africa is a mobile-first trading nation: for millions, the phone is not a companion to the trading terminal — it is the terminal. Broker apps have matured enormously, but trading from a phone introduces specific risks that desktop traders never face.</p>
 <p>How to choose an app, lock it down, and trade on it without the medium becoming the mistake.</p>
@@ -2249,7 +2249,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>The phone's greatest trading strength is not manual order entry — it is vigilance. Configure price alerts at your key levels so the market taps you on the shoulder instead of demanding constant watching: most broker apps support alerts on price, and charting platforms add indicator-based triggers. Combine alerts with GTT orders (Good Till Triggered) and your phone becomes a monitoring station for a pre-planned campaign — positions managed by resting orders, you intervened only when alerted. This is how full-time employees trade seriously from phones: the planning happens on larger screens in the evening, the phone merely executes the plan's notifications.</p>
 <p>Extend this with disciplined notification hygiene: enable only trading-critical alerts, silence everything else during market hours, and set app time limits to prevent the compulsive P&L-checking that erodes decision quality. Consider a separate 'trading profile' on your phone — broker app, charting, journal — distinct from social and entertainment apps, so opening your trading tools is a deliberate act rather than a boredom reflex. The goal is a phone that serves your trading plan rather than hijacking your attention: alerts for opportunities, resting orders for management, and silence for everything else.</p>
 <h2>Compare apps hands-on in April 2027</h2>
-<p>Test-drive broker and platform apps side by side at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027 — exhibitors with live demos on the <a href="../exhibit.html">floor</a>.</p>
+<p>Test-drive broker and platform apps side by side at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027 — exhibitors with live demos on the <a href="../exhibit.html">floor</a>.</p>
 <p><a href="../tickets.html">Book your pass</a> and choose your trading tech with evidence.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2259,7 +2259,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -2269,7 +2269,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2281,7 +2281,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2320,26 +2320,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Moving Averages Trading Strategy: SMAs, EMAs and How Pros Use Them",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/moving-averages-trading-strategy.html"
+      "item": "https://thetradersexpo.com/blog/moving-averages-trading-strategy.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-floor.webp" alt="Moving Averages Trading Strategy: SMAs, EMAs and How Pros Use Them" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Few tools are as universally plotted and as poorly understood as the moving average. Beginners treat crossovers as mechanical buy/sell signals; professionals use averages as trend filters, dynamic zones and regime detectors. Same indicator, completely different results.</p>
 <p>Here is the professional playbook for moving averages.</p>
@@ -2356,7 +2356,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Indicators without plans are decorations. Here is a complete MA-based swing plan you can adapt: regime filter — trade longs only when price is above the rising 200-day EMA and the 50-day EMA is above the 200-day; setup — wait for a pullback to the rising 20-day EMA in that uptrend; trigger — a bullish price-action candle (engulfing or strong close) at the average; stop — below the pullback swing low, verified against 1.5x ATR; target — 2R minimum or the prior swing high, whichever is nearer; size — 1% risk per the fixed-fractional formula from our <a href="position-sizing-trading-guide.html">position sizing guide</a>. Every element is defined before the trade exists.</p>
 <p>Then define the plan's boundaries: maximum three concurrent positions, no new entries when the index itself is below its 200-day average (regime filter at market level), and a monthly review where you compute win rate and average R per setup from your journal. Backtest the plan on two years of data before risking capital, then forward-test on paper for a month. This is what 'using moving averages' actually means professionally — not plotting lines, but operating a rules-based system where the averages serve defined functions. Build one complete plan like this and you will understand indicators more deeply than years of casual plotting.</p>
 <h2>See indicators used properly</h2>
-<p>Watch professionals apply moving averages to live market charts at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027 — technical analysis sessions across the <a href="../agenda.html">two-day agenda</a>.</p>
+<p>Watch professionals apply moving averages to live market charts at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027 — technical analysis sessions across the <a href="../agenda.html">two-day agenda</a>.</p>
 <p><a href="../tickets.html">Book your pass</a> and upgrade from indicator-plotting to indicator-thinking.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2366,7 +2366,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -2378,7 +2378,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2390,7 +2390,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2429,26 +2429,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Networking at Trading Events: How to Build Relationships That Matter",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/networking-tips-trading-events.html"
+      "item": "https://thetradersexpo.com/blog/networking-tips-trading-events.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/brand-signage.webp" alt="Networking at Trading Events: How to Build Relationships That Matter" loading="lazy" width="990" height="233">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Trading looks like a solo game played against screens, but the traders with the longest careers almost all have networks: peers who share ideas, mentors who shorten learning curves, partners who open doors. Trading events are where those networks are built — if you know how to work the room.</p>
 <p>Practical networking for people who would rather be chart-reading.</p>
@@ -2465,7 +2465,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>The handshake starts the relationship; digital channels sustain it. After the expo, connect on LinkedIn with a personalised note referencing your conversation — generic invites get ignored, specific ones get remembered. On X and trading communities, engage with your new contacts' content thoughtfully before asking for anything: comment with substance, share their useful posts, contribute to discussions. This giving-first posture builds the social capital that later makes introductions, collaborations and mentorship flow naturally. The goal is to become a known, valued presence in their professional periphery — not a name in a contacts list.</p>
 <p>For deeper relationships, create lightweight structures: a monthly video call with two or three traders at your level to review trades and share research, a shared watchlist or idea channel, or a small accountability group with defined norms. These micro-communities outperform large networks for actual skill development — they create the feedback and accountability that solitary trading lacks. And contribute beyond your circle: write up what you learned at the expo, share it publicly, tag the speakers and exhibitors who taught you. Generosity with knowledge is the fastest reputation-builder in trading communities, and reputation is the currency that converts contacts into opportunities.</p>
 <h2>10,000 potential connections in April 2027</h2>
-<p><a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) gathers visitors from across Africa, exhibitors and speakers — Africa's largest trading networking opportunity of the year.</p>
+<p><a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) gathers visitors from across Africa, exhibitors and speakers — Africa's largest trading networking opportunity of the year.</p>
 <p>Choose your <a href="../tickets.html">pass</a> (VIP tiers maximise networking access) and start building your network where it gathers.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2475,19 +2475,19 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
 <ul>
 <li><a href="why-attend-trading-expo-events.html">Why Attend a Trading Expo? 8 Benefits You Can't Get Online</a></li>
-<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Africa: The Complete Visitor Checklist</a></li>
+<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Johannesburg: The Complete Visitor Checklist</a></li>
 <li><a href="first-time-expo-visitor-mistakes.html">9 Mistakes First-Time Expo Visitors Make (and How to Avoid Them)</a></li>
 </ul>
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2499,7 +2499,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-25",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2546,26 +2546,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Should You Open a Brokerage Account at a Trading Expo? A Practical Checklist",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/opening-brokerage-account-at-expo.html"
+      "item": "https://thetradersexpo.com/blog/opening-brokerage-account-at-expo.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img width="520" height="700" src="../assets/img/brand-rollup.webp" alt="Should You Open a Brokerage Account at a Trading Expo? A Practical Checklist" loading="lazy">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>The booth representative is friendly, the offer is "today only," and the tablet is already open on the application form. Expos compress the account-opening decision into minutes — which is precisely why you should decide your rules before you arrive, not while a queue forms behind you.</p>
 <p>Opening a brokerage account at an expo is neither inherently smart nor inherently foolish. The venue gives you real advantages: side-by-side comparison, staff who can answer questions on the spot, and occasionally genuine launch promotions. It also gives sales teams their best closing environment of the year. This checklist helps you take the advantages and dodge the traps.</p>
@@ -2609,8 +2609,8 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Only transfer funds when the platform has proven itself to you — not to the booth representative. There is no legitimate reason a broker needs your first deposit today, and any pressure to fund immediately is a red flag, not a sign of a good deal.</p>
 <h2>Red flags that end the conversation</h2>
 <p>Walk away — and warn fellow visitors if appropriate — when you encounter any of these: promises of guaranteed returns or "risk-free" profits; staff who fill in your application without explaining each section; requests for your existing broker's login credentials or for OTPs; no verifiable licence number; fee structures that stay vague after direct questions; and "today only" offers with no written terms. None of these are normal, and none of them improve with a second conversation.</p>
-<h2>Make the decision at Trading Expo Africa</h2>
-<p><a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) puts dozens of brokers and platforms on one floor — the best possible place to run this checklist, compare offers side by side, and take written terms home for a calm decision.</p>
+<h2>Make the decision at Trading Expo Johannesburg</h2>
+<p><a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) puts dozens of brokers and platforms on one floor — the best possible place to run this checklist, compare offers side by side, and take written terms home for a calm decision.</p>
 <p>Arrive prepared, compare with evidence, and decide on your own timeline. Get your <a href="../tickets.html">pass</a> and make the expo floor work for you.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2621,7 +2621,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -2633,7 +2633,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2645,7 +2645,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2684,26 +2684,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Paper Trading: How to Practise Trading Without Losing Money",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/paper-trading-practice-guide.html"
+      "item": "https://thetradersexpo.com/blog/paper-trading-practice-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/keynote-stage.webp" alt="Paper Trading: How to Practise Trading Without Losing Money" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Paper trading — executing strategies with virtual money at real prices — is the flight simulator of trading: the place to crash safely while learning. Done honestly, it builds competence cheaply. Done casually, it builds false confidence that live markets then bill at full price.</p>
 <p>Here is how to practise so the lessons transfer.</p>
@@ -2720,7 +2720,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Standard paper trading has a flaw: you know you are practising, and you see the full chart — hindsight contaminates every decision. Replay trading fixes this: charting platforms' bar-replay modes let you step through historical price action candle by candle, making decisions with only the information available at each moment, exactly as in live markets. This is deliberate practice in its purest form — hundreds of decisions compressed into focused sessions, each one honest. A weekend of replay trading can simulate months of live decision-making without risking a rupee.</p>
 <p>Structure replay sessions like training blocks: pick one setup, replay three months of a single instrument, take every valid signal with defined stops and targets, and log results in R-multiples as you would live trades. Review the session afterwards: which signals did you hesitate on, which did you force, how did emotions behave even with virtual money? Many traders discover that replay exposes the same psychological patterns as live trading — hesitation, FOMO, premature exits — making it a genuine bridge between theory and live execution. Two focused replay hours weekly will advance your pattern recognition faster than months of passive chart-watching.</p>
 <h2>Practise, then meet the market</h2>
-<p>Build foundational skills with our <a href="how-to-start-trading-2026.html">beginner's roadmap</a> and <a href="price-action-trading-guide-beginners.html">price action guide</a> — then test yourself against the real industry at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027.</p>
+<p>Build foundational skills with our <a href="how-to-start-trading-2026.html">beginner's roadmap</a> and <a href="price-action-trading-guide-beginners.html">price action guide</a> — then test yourself against the real industry at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027.</p>
 <p><a href="../tickets.html">Book your pass</a> and accelerate from practise to profession.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2730,7 +2730,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -2742,7 +2742,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2754,7 +2754,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2793,26 +2793,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Position Sizing in Trading: The Math That Matters More Than Strategy",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/position-sizing-trading-guide.html"
+      "item": "https://thetradersexpo.com/blog/position-sizing-trading-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/trading-tech.webp" alt="Position Sizing in Trading: The Math That Matters More Than Strategy" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Two traders can take identical trades with identical win rates — and one thrives while the other blows up. The difference is position sizing: how much capital each trade risks. It is the least glamorous and most decisive skill in trading.</p>
 <p>Master this maths and every strategy you ever learn gets safer. Ignore it and no strategy can save you.</p>
@@ -2829,7 +2829,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Options buyers face a sizing subtlety: the premium is the maximum loss, which tempts traders to buy 'cheap' far out-of-the-money options in large quantities. But a R5 option that expires worthless 80% of the time needs very different sizing than equity with a stop-loss — the win rate is low and the payoff distribution is skewed. Size options positions by premium risked as a fraction of capital (0.5–1% for speculative long options), and never let the low ticket price justify oversized quantity. Ten thousand rupees in lottery-ticket options is not 'small' — it is ten thousand rupees of near-certain decay.</p>
 <p>For leveraged futures and intraday positions, compute size from the stop distance in points times lot quantity, exactly as with equities — leverage does not change the formula, it only means smaller capital controls the position. And add a portfolio-level rule leveraged traders often miss: cap total margin utilised at a fraction (say 50–60%) of available capital, keeping dry powder for drawdowns and preventing the forced exits that margin calls impose at the worst moments. The traders who survive leveraged products are not the ones who predict best; they are the ones whose sizing survives being wrong repeatedly.</p>
 <h2>Risk maths is a conference topic</h2>
-<p>Position sizing and risk frameworks feature across strategy sessions at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027 — because professionals know the maths decides outcomes.</p>
+<p>Position sizing and risk frameworks feature across strategy sessions at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027 — because professionals know the maths decides outcomes.</p>
 <p>Study risk with speakers on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2839,7 +2839,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -2851,7 +2851,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2863,7 +2863,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-25",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -2910,26 +2910,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "After the Expo: How to Turn Contacts, Notes and Ideas Into Trading Results",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/post-expo-follow-up-guide.html"
+      "item": "https://thetradersexpo.com/blog/post-expo-follow-up-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img width="990" height="233" src="../assets/img/brand-signage.webp" alt="After the Expo: How to Turn Contacts, Notes and Ideas Into Trading Results" loading="lazy">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>The tote bag is full of brochures, your phone holds forty new contacts, and your notebook is thick with half-formed ideas — and by next month, most attendees will remember almost nothing actionable. That is not a failure of the event; it is the absence of a follow-up system. The difference between an expensive weekend and a career-shaping one is what happens in the two weeks after the expo ends.</p>
 <p>This guide gives you that system: how to triage everything you collected, follow up while memories are fresh, test new ideas without blowing up your account, and honestly review whether the event earned its place in your calendar.</p>
@@ -2958,8 +2958,8 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <h2>Write your one-page expo review</h2>
 <p>Within a week, write a single page answering four questions: What did I learn? Which contacts and ideas am I actively pursuing? What will I change at my trading desk? What will I do differently at the next event? Then put calendar reminders to revisit it at 30, 60 and 90 days.</p>
 <p>This review is how you measure the expo's return honestly. If the actions you listed produced better decisions, genuine relationships, avoided mistakes, or even one strategy improvement that survived testing — the event paid for itself many times over. If the page is blank at 90 days, you know the next expo needs a different approach: clearer goals, better preparation, or a different event entirely.</p>
-<h2>Start building next year's edge at Trading Expo Africa</h2>
-<p><a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) gathers visitors from across Africa, exhibitors and speakers — two days of raw material for exactly the system above: contacts worth following up, ideas worth testing, and brokers worth comparing.</p>
+<h2>Start building next year's edge at Trading Expo Johannesburg</h2>
+<p><a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) gathers visitors from across Africa, exhibitors and speakers — two days of raw material for exactly the system above: contacts worth following up, ideas worth testing, and brokers worth comparing.</p>
 <p>Arrive with a plan, leave with a system, and make the weeks after the event count. Book your <a href="../tickets.html">pass</a> today.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -2970,19 +2970,19 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
 <ul>
 <li><a href="networking-tips-trading-events.html">Networking at Trading Events: How to Build Relationships That Matter</a></li>
-<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Africa: The Complete Visitor Checklist</a></li>
+<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Johannesburg: The Complete Visitor Checklist</a></li>
 <li><a href="trading-journal-guide-improve-results.html">The Trading Journal Guide: How to Turn Your Trades Into Lessons</a></li>
 </ul>
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -2994,7 +2994,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3033,26 +3033,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Price Action Trading: The Beginner's Guide to Reading Charts Without Indicators",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/price-action-trading-guide-beginners.html"
+      "item": "https://thetradersexpo.com/blog/price-action-trading-guide-beginners.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-main-stage.webp" alt="Price Action Trading: The Beginner's Guide to Reading Charts Without Indicators" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Open a beginner's trading screen and you will usually find it buried under indicators: RSI, MACD, Bollinger Bands, stochastic — all describing the same price, all lagging it. Price action trading takes the opposite approach: read the price itself, because every indicator is derived from it anyway.</p>
 <p>This guide introduces the foundations — market structure, candlestick behaviour and key levels — and a realistic path to learning them.</p>
@@ -3070,7 +3070,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>This discipline eliminates an enormous category of losing trades — the ones where you were 'right' on your chart but fighting a larger force. Implement it as a written checklist item: before every entry, note the daily trend, the key daily levels, and whether your trade aligns with them. Over a month of journaling, compare the R-multiples of confluence-aligned trades versus single-timeframe trades; the gap is usually decisive enough to make the habit permanent. Confluence does not guarantee winners, but it systematically removes the trades that were structurally disadvantaged from the start — and in trading, removing disadvantages compounds like adding edges.</p>
 <h2>A realistic learning path</h2>
 <p>Spend one month on structure, one on candlestick reading, one on levels — all on historical charts, then in replay or paper trading. Only then risk small real capital, because live money introduces emotions no simulator reproduces.</p>
-<p>Accelerate the journey at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): watch professional traders break down live charts in <a href="../agenda.html">conference sessions</a> and test charting platforms on the <a href="../exhibit.html">expo floor</a>. <a href="../tickets.html">Book your pass</a>.</p>
+<p>Accelerate the journey at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): watch professional traders break down live charts in <a href="../agenda.html">conference sessions</a> and test charting platforms on the <a href="../exhibit.html">expo floor</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>Can you trade with price action alone?</summary><p>Yes — many professional traders use no indicators at all, relying on market structure, candlestick behaviour and key levels. It demands more screen time and practice than indicator systems, but it works in every market and timeframe.</p></details>
@@ -3079,7 +3079,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3091,7 +3091,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -3103,7 +3103,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3142,26 +3142,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Prop Trading Firms Explained",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/prop-trading-firms-explained.html"
+      "item": "https://thetradersexpo.com/blog/prop-trading-firms-explained.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/brand-booth.webp" alt="Prop Trading Firms Explained" loading="lazy" width="1200" height="622">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Proprietary trading firms offering 'funded accounts' have exploded in popularity: pay an evaluation fee, prove profitability on a demo challenge, and trade the firm's capital for a profit split. For undercapitalised but skilled traders, it sounds like the perfect deal.</p>
 <p>The model is legitimate in principle — and heavily abused in practice. Here is how to navigate it.</p>
@@ -3188,7 +3188,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3200,7 +3200,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -3212,7 +3212,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3251,26 +3251,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Risk Management in Trading: The Complete Guide (2026)",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/risk-management-trading-complete-guide.html"
+      "item": "https://thetradersexpo.com/blog/risk-management-trading-complete-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-networking.webp" alt="Risk Management in Trading: The Complete Guide (2026)" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Ask professionals what separates survivors from casualties and the answer is never 'better entries'. It is risk management — the system of rules governing how much you can lose, when you stop, and how positions combine. Strategy is the engine; risk management is the brakes, steering and seatbelt.</p>
 <p>This is the complete framework, from per-trade rules to portfolio-level thinking.</p>
@@ -3287,7 +3287,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Professional trading firms govern risk with written policy documents — and individual traders should too. Your personal risk constitution is a one-page document specifying: maximum risk per trade (1%), maximum portfolio heat (5–6%), maximum daily loss (−2 to −3%, then done for the day), maximum monthly drawdown (−8 to −10%, then halve size and review), and the conditions under which you stop trading entirely and return to paper. It also defines correlation rules (no more than X% of heat in one sector), news-event rules (reduce size into binary events), and the review cadence (weekly journal review, monthly strategy audit). Write it, print it, sign it.</p>
 <p>The document's power is pre-commitment: decisions made in calm rationality constrain behaviour in emotional storms. Review it every quarter and amend only in calm periods — never mid-drawdown, when the temptation is to loosen rules rather than tighten them. Share it with a trading buddy or mentor who can ask uncomfortable questions when you deviate. Most traders know every risk rule in this guide intellectually; the ones who survive have converted knowledge into documented, witnessed commitment. Your risk policy is the difference between understanding risk management and practising it.</p>
 <h2>Make risk management your edge</h2>
-<p>Risk frameworks will be taught across sessions at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027) — professional traders consistently cite risk process, not prediction, as their real edge.</p>
+<p>Risk frameworks will be taught across sessions at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027) — professional traders consistently cite risk process, not prediction, as their real edge.</p>
 <p>Learn it from speakers on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -3297,7 +3297,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3309,7 +3309,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -3321,7 +3321,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3360,26 +3360,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Scalping Strategy: The Honest Pros and Cons for Retail Traders",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/scalping-strategy-pros-cons.html"
+      "item": "https://thetradersexpo.com/blog/scalping-strategy-pros-cons.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-main-stage.webp" alt="Scalping Strategy: The Honest Pros and Cons for Retail Traders" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Scalping — holding positions for seconds to minutes to capture tiny price movements, repeated dozens of times daily — promises the dream of steady daily income with no overnight risk. It also has the highest cost burden and the steepest technology requirements of any retail style.</p>
 <p>Before you try it, understand exactly what you are signing up for.</p>
@@ -3396,7 +3396,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>For the minority who attempt scalping seriously, the setup is non-negotiable: a wired broadband connection with a backup (mobile hotspot or second ISP), a desktop with multiple monitors, a broker offering fast execution with low latency and genuinely competitive intraday brokerage, and a platform with hotkeys, depth-of-market ladder and one-click order entry. Mobile apps and Wi-Fi-only setups are disqualifying — when your edge is measured in paise and seconds, infrastructure is the strategy. Co-located professionals operate on another plane entirely; the retail scalper's realistic goal is to be the fastest among retail, not to beat institutions.</p>
 <p>The routine matters as much as the tools: trade only the most liquid instruments (top index options and futures) during peak-volume windows (opening hour, closing hour), avoid news spikes where slippage explodes, and enforce a hard stop after consecutive losses — tilt destroys scalpers faster than any other style because decisions compound every minute. Most professionals who try retail scalping conclude within months whether they have the temperament: the required emotional flatness across hundreds of micro-decisions is rare. An honest two-month trial with meticulous cost accounting gives you a definitive answer — and for most, that answer redirects them to intraday or swing styles where their talents compound better.</p>
 <h2>Execution tech on the expo floor</h2>
-<p>If you are serious about short-term trading, evaluate execution technology properly: compare broker platforms, data feeds and order types side by side at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027).</p>
+<p>If you are serious about short-term trading, evaluate execution technology properly: compare broker platforms, data feeds and order types side by side at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027).</p>
 <p>The <a href="../exhibit.html">exhibition floor's</a> exhibitors include trading technology providers — <a href="../tickets.html">book your pass</a> and test before you commit capital.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -3406,7 +3406,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3418,7 +3418,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -3430,7 +3430,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3469,25 +3469,25 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "The Brutal Truth About Retail Trading Losses",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/retail-trading-losses-truth.html"
+      "item": "https://thetradersexpo.com/blog/retail-trading-losses-truth.html"
     }
   ]
 }`],html:`<p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-main-stage.webp" alt="The Brutal Truth About Retail Trading Losses" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 
 <p>In August 2026, Africa's market regulator published the kind of document most retail traders scroll past and almost nobody reads end to end. It is worth reading. The Securities and Exchange Board of Africa's study on the profitability of individual traders in the equity derivatives segment — built on client-level and transaction-level data covering roughly 90% of individual traders — puts a number on the hardest fact in retail trading: 87.7% of individual F&amp;O traders ended the year with a net loss.</p>
@@ -3507,7 +3507,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>First, know your real costs. Hundreds of thousands of traders were winners until the bill arrived. Calculate your all-in cost per round trip before you size a position — if the number surprises you, that is the point.</p>
 <p>Second, respect what the 97% are doing. If nearly everyone in the room is buying options and nearly everyone loses, 'buy options' is not a strategy, it is a lottery ticket with time decay. Selling, spreading, hedging — the structures with a documented edge — are where the consistent minority live. They are harder to learn, which is exactly why they pay.</p>
 <p>Third, get educated before you get exposed. Paper trading, risk guardrails, position-sizing discipline and mentorship are not garnish — they are the difference between paying tuition to the market and paying catastrophic losses. Regulator data like this is the strongest advertisement for trading education ever published.</p>
-<p>That is also where events earn their keep. At <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027, you can watch professional traders explain how they structure trades, compare brokers' real cost structures side by side at the exhibition, and sit through conference sessions on risk management that studies like this make impossible to ignore. New to derivatives entirely? Start with our <a href="how-to-start-trading-2026.html">beginner's guide</a> and the <a href="risk-management-trading-complete-guide.html">complete risk-management guide</a> first. <a href="../tickets.html">Book your pass</a>.</p>
+<p>That is also where events earn their keep. At <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027, you can watch professional traders explain how they structure trades, compare brokers' real cost structures side by side at the exhibition, and sit through conference sessions on risk management that studies like this make impossible to ignore. New to derivatives entirely? Start with our <a href="how-to-start-trading-2026.html">beginner's guide</a> and the <a href="risk-management-trading-complete-guide.html">complete risk-management guide</a> first. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>What percentage of retail derivatives traders lose money?</summary><p>Africa's market regulator found that 87.7% of individual equity-derivatives traders incurred net losses in FY26, after costs. Before costs, the share was 82.1% — meaning transaction costs pushed roughly 440,000 traders from profit into loss.</p></details>
@@ -3516,7 +3516,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3528,7 +3528,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>`},{slug:"stablecoins-explained",title:"Stablecoins Explained: What Traders Should Know",meta:"Stablecoins explained: how they work, the risks behind the peg, and how traders actually use them.",category:"Crypto & Regulation",img:"expo-grand-hall.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"The dollar-pegged tokens at the heart of crypto trading — how they work and where the risks hide.",file:"blog/stablecoins-explained.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/expo-grand-hall.webp",heroAlt:"Stablecoins Explained: What Traders Should Know",ldjson:[`{
@@ -3539,7 +3539,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3578,26 +3578,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Stablecoins Explained: What Traders Should Know",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/stablecoins-explained.html"
+      "item": "https://thetradersexpo.com/blog/stablecoins-explained.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-grand-hall.webp" alt="Stablecoins Explained: What Traders Should Know" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Stablecoins — tokens designed to hold a steady value against the dollar — became crypto's plumbing: the parking spot between trades, the remittance shortcut, the DeFi collateral. Then several high-profile failures reminded everyone that 'stable' is a design goal, not a guarantee.</p>
 <p>Here is what African traders should understand before trusting significant capital to a stablecoin.</p>
@@ -3614,7 +3614,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Stablecoins promise something seductive: dollar-denominated yields of 5–15% through DeFi lending and liquidity provision, far above bank rates. The returns are real when they arrive — but they are payment for risks that marketing understates. Smart-contract risk means the code holding your funds can be exploited; the history of DeFi is punctuated by nine-figure hacks. Protocol risk means the lending platform itself can fail or be drained. And the yield itself is often paid in volatile governance tokens or depends on leverage loops that unwind violently in downturns. A 'stable' 12% yield built on three layers of leverage is not a savings account.</p>
 <p>If you participate, apply position discipline: allocate only what you can lose, prefer battle-tested protocols with multiple audits and long track records, understand exactly where the yield comes from (if you cannot explain it, you are the yield), and watch for the warning signs — spiking utilisation rates, falling token incentives, or yields far above market norms. Add the tax layer: DeFi transactions are VDA transfers with the same 30% and TDS implications, and tracking them is genuinely hard. Most traders are better served keeping stablecoins as a transit tool and earning yield, if at all, in small experimental allocations.</p>
 <h2>Stablecoins on the 2027 agenda</h2>
-<p>Digital-asset infrastructure — including stablecoins and tokenised money — will be debated at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027, across fintech and policy sessions.</p>
+<p>Digital-asset infrastructure — including stablecoins and tokenised money — will be debated at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027, across fintech and policy sessions.</p>
 <p>Hear how builders and regulators see the future of digital dollars from the <a href="../agenda.html">conference stage</a>. <a href="../tickets.html">Get your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -3624,7 +3624,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3635,7 +3635,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -3647,7 +3647,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3686,26 +3686,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Stop-Loss Guide: Where to Place It and 5 Mistakes That Guarantee Losses",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/stop-loss-guide-placement-mistakes.html"
+      "item": "https://thetradersexpo.com/blog/stop-loss-guide-placement-mistakes.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-grand-hall.webp" alt="Stop-Loss Guide: Where to Place It and 5 Mistakes That Guarantee Losses" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>The stop-loss is the most important order in trading — it is the price at which your thesis is proven wrong and you exit with a small, planned loss instead of a large, unplanned one. Yet most traders place stops arbitrarily: at round numbers, at fixed percentages, or wherever feels comfortable.</p>
 <p>Here is how to place stops that actually protect you.</p>
@@ -3721,7 +3721,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Brokers offer stop-loss order types and confusing them is costly. A stop-loss limit order (SL) triggers at your price but executes as a limit order — in a fast crash, the market can blow through your limit leaving the order unfilled while losses mount. A stop-loss market order (SL-M) triggers and executes immediately at the best available price — guaranteed fill, but with slippage in violent moves. For liquid large-caps in normal conditions, SL with a small limit buffer works well; around news events or in illiquid stocks, SL-M's guaranteed exit is usually worth the slippage cost. Know which you are placing before volatility decides for you.</p>
 <p>Also master GTT (Good Till Triggered) orders where your broker offers them: stop-loss and target orders that persist across sessions, essential for swing traders who cannot watch screens all day. And understand the broker's auto-square-off policies — intraday positions get squared off at defined times (often 3:15–3:20 PM) regardless of your plans, so never assume a position survives past the cutoff. The mechanics of your exits deserve as much study as your entries: a perfect stop-loss level is useless if the order type fails you in the moment it matters.</p>
 <h2>Execution discipline, taught live</h2>
-<p>Watch professionals manage real positions — entries, stops, adjustments — at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027, in live trading demonstrations on the <a href="../agenda.html">agenda</a>.</p>
+<p>Watch professionals manage real positions — entries, stops, adjustments — at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027, in live trading demonstrations on the <a href="../agenda.html">agenda</a>.</p>
 <p><a href="../tickets.html">Book your pass</a> and learn risk execution from traders who do it daily.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -3731,7 +3731,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3743,7 +3743,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -3755,7 +3755,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3794,26 +3794,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Support and Resistance Trading: Drawing Levels That Actually Hold",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/support-resistance-trading-guide.html"
+      "item": "https://thetradersexpo.com/blog/support-resistance-trading-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/brand-badge.webp" alt="Support and Resistance Trading: Drawing Levels That Actually Hold" loading="lazy" width="610" height="700">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Every trading book preaches support and resistance, yet most beginners draw levels that price ignores completely. The problem is rarely the concept — it is the execution: too many lines, wrong timeframes, and lines treated as exact prices instead of zones.</p>
 <p>Here is how to identify and trade levels that genuinely influence price.</p>
@@ -3831,7 +3831,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Apply the same lens to breakouts: a level broken on strong volume with follow-through indicates real commitment, while a low-volume drift through a level begs for the false-breakout reversal. In equities, combine this with volume data where available — high delivery volumes at support suggest institutional accumulation rather than intraday noise. The practical rule: never trade a level on price alone. Price shows you where the battle is; volume shows you who is winning it. Two candles of observation at a key zone, reading volume character, will keep you out of more bad trades than any additional indicator.</p>
 <h2>Fewer, better levels</h2>
 <p>Limit yourself to levels from the daily timeframe and above, plus the nearest intraday zones if you day-trade. Delete everything else. A chart with four meaningful zones beats a chart with forty lines every time — clarity is a trading edge.</p>
-<p>Practice level-drawing with professionals at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): technical sessions on the <a href="../agenda.html">agenda</a> will break down real charts. <a href="../tickets.html">Book your pass</a>.</p>
+<p>Practice level-drawing with professionals at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): technical sessions on the <a href="../agenda.html">agenda</a> will break down real charts. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>How many support/resistance levels should I draw?</summary><p>As few as possible: key daily/weekly zones plus the nearest relevant intraday levels. Three to five zones per chart is plenty — more creates analysis paralysis and post-hoc justification.</p></details>
@@ -3840,7 +3840,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3852,7 +3852,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -3864,7 +3864,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3903,26 +3903,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Swing Trading Strategy Guide: Capturing Multi-Day Moves",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/swing-trading-strategy-guide.html"
+      "item": "https://thetradersexpo.com/blog/swing-trading-strategy-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/hero-expo.webp" alt="Swing Trading Strategy Guide: Capturing Multi-Day Moves" loading="lazy" width="1600" height="685">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Intraday trading demands constant screen attention; investing demands years of patience. Swing trading lives between them — holding positions for days to weeks to capture multi-day price moves — and for Africa's millions of salaried market participants, it is often the most practical style of all.</p>
 <p>Here is how swing trading works, what it requires, and how to approach it in African markets.</p>
@@ -3939,7 +3939,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Swing traders holding positions for days live inside event risk: quarterly earnings, central-bank announcements, budget sessions and global data releases can gap positions violently overnight. The professional approach is calendar-driven: maintain an event calendar for every open position, and decide in advance — not in the moment — whether to hold through, reduce size, or exit. As a rule, never hold full size through a binary event in a single stock unless the position was explicitly designed as an event trade with sized-down risk. Earnings gaps of 5–10% are routine in mid-caps; a 1% risk allocation becomes survivable, a 5% allocation becomes a portfolio event.</p>
 <p>Between events, use the calendar offensively: earnings seasons create the year's best swing opportunities, as post-result trends persist for weeks. Build a watchlist of quality names reporting soon, define your entry triggers for bullish and bearish surprises in advance, and let the results come to your levels. Also respect the pre-event drift — implied volatility rises into known events, widening the effective cost of options-based swing structures. The swing trader's edge is patience; event risk is where impatience gets taxed. Plan the calendar, size for the gap, and let scheduled volatility work for the prepared rather than against the surprised.</p>
 <h2>Learn swing tactics from practitioners</h2>
-<p>Swing trading will feature across strategy sessions at <a href="../index.html">Trading Expo Africa</a> on 19–20 February 2027, with speakers covering technical strategies for African market conditions.</p>
+<p>Swing trading will feature across strategy sessions at <a href="../index.html">Trading Expo Johannesburg</a> on 19–20 February 2027, with speakers covering technical strategies for African market conditions.</p>
 <p>Bring your charts and your questions to the <a href="../agenda.html">conference</a>. <a href="../tickets.html">Early-bird passes to be announced</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -3949,7 +3949,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -3961,19 +3961,19 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
-`},{slug:"top-reasons-attend-trading-expo-africa",title:"Top Reasons to Attend Trading Expo Africa",meta:"Top reasons to attend Trading Expo Africa: brokers, live demos, conference, networking and the awards night.",category:"Visitors",img:"networking-lounge.webp",read:"6 min read",date:"Sep 25, 2026",excerpt:"Why Africa's traders are heading to Johannesburg on 19–20 February 2027.",file:"blog/top-reasons-attend-trading-expo-africa.html",bylineDate:"September 25, 2026",heroImg:"",heroAlt:"Top Reasons to Attend Trading Expo Africa",ldjson:[`{
+`},{slug:"top-reasons-attend-trading-expo-africa",title:"Top Reasons to Attend Trading Expo Johannesburg",meta:"Top reasons to attend Trading Expo Johannesburg: brokers, live demos, conference, networking and the awards night.",category:"Visitors",img:"networking-lounge.webp",read:"6 min read",date:"Sep 25, 2026",excerpt:"Why Africa's traders are heading to Johannesburg on 19–20 February 2027.",file:"blog/top-reasons-attend-trading-expo-africa.html",bylineDate:"September 25, 2026",heroImg:"",heroAlt:"Top Reasons to Attend Trading Expo Johannesburg",ldjson:[`{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Top Reasons to Attend Trading Expo Africa",
-  "description": "Top reasons to attend Trading Expo Africa: brokers, live demos, conference, networking and the awards night.",
+  "headline": "Top Reasons to Attend Trading Expo Johannesburg",
+  "description": "Top reasons to attend Trading Expo Johannesburg: brokers, live demos, conference, networking and the awards night.",
   "datePublished": "2026-09-25",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -3983,28 +3983,28 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Top Reasons to Attend Trading Expo Africa",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/top-reasons-attend-trading-expo-africa.html"
+      "name": "Top Reasons to Attend Trading Expo Johannesburg",
+      "item": "https://thetradersexpo.com/blog/top-reasons-attend-trading-expo-africa.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">← Back to all articles</a></p>
 <figure>
-<img width="1600" height="1066" src="../assets/img/networking-lounge.webp" alt="Top Reasons to Attend Trading Expo Africa" loading="lazy">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<img width="1600" height="1066" src="../assets/img/networking-lounge.webp" alt="Top Reasons to Attend Trading Expo Johannesburg" loading="lazy">
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
-<p>Still deciding whether Trading Expo Africa deserves two days of your April? Here are eight reasons — from the practical to the once-in-a-first-edition — that 19–20 February belongs in your calendar.</p>
+<p>Still deciding whether Trading Expo Johannesburg deserves two days of your April? Here are eight reasons — from the practical to the once-in-a-first-edition — that 19–20 February belongs in your calendar.</p>
 <h2>1. See brands side by side</h2>
 <p>Comparing brokers and platforms online means juggling tabs, sponsored reviews and conflicting opinions. On the exhibition floor, <strong>exhibitors</strong> stand side by side with live demos and real teams. You can open demo accounts, ask uncomfortable questions and compare conditions in an afternoon — due diligence that would take weeks online.</p>
 <h2>2. Learn from 80+ industry voices</h2>
@@ -4018,26 +4018,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <h2>6. Every ticket enters the lucky draw</h2>
 <p>All ticket holders are automatically entered into the Trading Expo lucky draw on Day 2. It's a small thing, but first editions are about shared moments — and being in the room when the winners are announced is part of the fun.</p>
 <h2>7. Be there for the first edition</h2>
-<p>First editions have an energy that can't be repeated. The crowd is curious, the exhibitors bring their best, and everyone you meet becomes part of the founding story. Years from now, "I was at the first Trading Expo Africa" will mean something.</p>
+<p>First editions have an energy that can't be repeated. The crowd is curious, the exhibitors bring their best, and everyone you meet becomes part of the founding story. Years from now, "I was at the first Trading Expo Johannesburg" will mean something.</p>
 <h2>8. Experience Africa's trading moment</h2>
 <p>This isn't an expo that happens to be in Africa — it's an expo <em>about</em> what Africa means for trading's future: a mobile-first generation, world-class digital payments and one of the world's most dynamic retail investing cultures. It is an expo about what Africa means for the future of trading.</p>
 <h2>Making the most of your two days</h2>
-<p>A quick word of advice from people who've been to a lot of expos: the visitors who get the most out of it arrive with a plan. Skim the <a href="../agenda.html">agenda</a> beforehand and shortlist your must-attend sessions. List the exhibitors you want to meet and the questions you want answered — booth teams love a visitor who knows what they're after. Book the early-bird pass now rather than paying more later, bring a digital business card on your phone, and wear comfortable shoes: you'll cover more floor than you expect. Most importantly, talk to strangers. The best thing you'll take home from Trading Expo Africa probably isn't a brochure — it's a contact.</p>
+<p>A quick word of advice from people who've been to a lot of expos: the visitors who get the most out of it arrive with a plan. Skim the <a href="../agenda.html">agenda</a> beforehand and shortlist your must-attend sessions. List the exhibitors you want to meet and the questions you want answered — booth teams love a visitor who knows what they're after. Book the early-bird pass now rather than paying more later, bring a digital business card on your phone, and wear comfortable shoes: you'll cover more floor than you expect. Most importantly, talk to strangers. The best thing you'll take home from Trading Expo Johannesburg probably isn't a brochure — it's a contact.</p>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">← Back to all articles</a></p>
-`},{slug:"trading-expo-africa-awards",title:"Trading Expo Africa Awards: The Complete Guide",meta:"Trading Expo Africa Awards: categories, nominations, judging and the gala night — everything you need to know.",category:"Expo & Events Guide",img:"brand-badge.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"Categories, nominations, judging criteria and the gala night — your complete awards guide.",file:"blog/trading-expo-africa-awards.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/brand-badge.webp",heroAlt:"Trading Expo Africa Awards: The Complete Guide",ldjson:[`{
+`},{slug:"trading-expo-africa-awards",title:"Trading Expo Johannesburg Awards: The Complete Guide",meta:"Trading Expo Johannesburg Awards: categories, nominations, judging and the gala night — everything you need to know.",category:"Expo & Events Guide",img:"brand-badge.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"Categories, nominations, judging criteria and the gala night — your complete awards guide.",file:"blog/trading-expo-africa-awards.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/brand-badge.webp",heroAlt:"Trading Expo Johannesburg Awards: The Complete Guide",ldjson:[`{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Trading Expo Africa Awards: The Complete Guide",
-  "description": "Trading Expo Africa Awards: categories, nominations, judging and the gala night — everything you need to know.",
+  "headline": "Trading Expo Johannesburg Awards: The Complete Guide",
+  "description": "Trading Expo Johannesburg Awards: categories, nominations, judging and the gala night — everything you need to know.",
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4045,7 +4045,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What are the Trading Expo Africa Awards?",
+      "name": "What are the Trading Expo Johannesburg Awards?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "An awards programme during the expo honouring excellence across trading platforms, brokers, fintech innovation, education and community contribution. Categories and nominations will be announced via official expo channels."
@@ -4056,7 +4056,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "name": "How are award winners chosen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Details of categories, nominations and judging will be published through official Trading Expo Africa announcements as the event approaches. Follow the official website for verified information."
+        "text": "Details of categories, nominations and judging will be published through official Trading Expo Johannesburg announcements as the event approaches. Follow the official website for verified information."
       }
     },
     {
@@ -4076,28 +4076,28 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Trading Expo Africa Awards: The Complete Guide",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/trading-expo-africa-awards.html"
+      "name": "Trading Expo Johannesburg Awards: The Complete Guide",
+      "item": "https://thetradersexpo.com/blog/trading-expo-africa-awards.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
-<img src="../assets/img/brand-badge.webp" alt="Trading Expo Africa Awards: The Complete Guide" loading="lazy" width="610" height="700">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<img src="../assets/img/brand-badge.webp" alt="Trading Expo Johannesburg Awards: The Complete Guide" loading="lazy" width="610" height="700">
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
-<p>Every industry has its moment of recognition — and trading is no exception. The Trading Expo Africa Awards will honour the brokers, fintech innovators, educators and platforms raising the standard for Africa's trading community, live during the expo on 19–20 February 2027.</p>
+<p>Every industry has its moment of recognition — and trading is no exception. The Trading Expo Johannesburg Awards will honour the brokers, fintech innovators, educators and platforms raising the standard for Africa's trading community, live during the expo on 19–20 February 2027.</p>
 <p>Here is what the awards are about, and why they matter to everyone attending — not just the winners.</p>
 <h2>What the awards celebrate</h2>
 <p>The awards recognise excellence across the ecosystem: trading platforms and technology, brokerage services, fintech innovation, trading education, and community contribution. The spirit is simple — spotlight the companies and people making trading better, safer and more accessible for Indians.</p>
@@ -4112,41 +4112,41 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Not all awards are equal, and traders should read them critically. Credible industry awards share hallmarks: transparent judging criteria published in advance, judges with genuine domain expertise and no commercial ties to nominees, a nomination process open to the market rather than pay-to-play shortlists, and winners selected for verifiable achievement rather than sponsorship spend. When evaluating any award — in trading or elsewhere — ask who judges, what the criteria are, and whether the process could be bought. Awards that cannot answer these questions clearly are marketing exercises, not recognition.</p>
 <p>For traders, awards serve a practical function beyond ceremony: shortlists of recognised brokers, platforms and educators become a discovery filter. A broker recognised for service quality or a platform recognised for innovation has survived scrutiny by knowledgeable judges — a stronger signal than advertising. But keep perspective: awards recognise past achievement and institutional quality, not suitability for your specific needs. Use them to build your consideration set, then apply your own due diligence — the verification habits from our broker guides — before committing capital. Recognition points you toward candidates; verification chooses among them. Bookmark the official expo channels now so nomination announcements reach you first — credible recognition starts with being in the room.</p>
 <h2>Be there for the celebration</h2>
-<p>The awards ceremony will be a highlight of <a href="../index.html">Trading Expo Africa</a> — two days, 19–20 February 2027, celebrating the best of African trading alongside speakers and exhibitors.</p>
+<p>The awards ceremony will be a highlight of <a href="../index.html">Trading Expo Johannesburg</a> — two days, 19–20 February 2027, celebrating the best of African trading alongside speakers and exhibitors.</p>
 <p><a href="../tickets.html">Book your pass</a> and witness who sets the standard for the industry's future.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
-<details><summary>What are the Trading Expo Africa Awards?</summary><p>An awards programme during the expo honouring excellence across trading platforms, brokers, fintech innovation, education and community contribution. Categories and nominations will be announced via official expo channels.</p></details>
-<details><summary>How are award winners chosen?</summary><p>Details of categories, nominations and judging will be published through official Trading Expo Africa announcements as the event approaches. Follow the official website for verified information.</p></details>
+<details><summary>What are the Trading Expo Johannesburg Awards?</summary><p>An awards programme during the expo honouring excellence across trading platforms, brokers, fintech innovation, education and community contribution. Categories and nominations will be announced via official expo channels.</p></details>
+<details><summary>How are award winners chosen?</summary><p>Details of categories, nominations and judging will be published through official Trading Expo Johannesburg announcements as the event approaches. Follow the official website for verified information.</p></details>
 <details><summary>Can companies nominate themselves for awards?</summary><p>Nomination mechanics will be announced officially. Companies interested should exhibit or engage with the expo and monitor official channels for the nomination process.</p></details>
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
 <ul>
 <li><a href="why-attend-trading-expo-events.html">Why Attend a Trading Expo? 8 Benefits You Can't Get Online</a></li>
-<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Africa: The Complete Visitor Checklist</a></li>
-<li><a href="trading-expo-africa-conference-guide.html">Trading Expo Africa Conference Guide: Keynotes, Panels &amp; What to Attend</a></li>
+<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Johannesburg: The Complete Visitor Checklist</a></li>
+<li><a href="trading-expo-africa-conference-guide.html">Trading Expo Johannesburg Conference Guide: Keynotes, Panels &amp; What to Attend</a></li>
 </ul>
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
-`},{slug:"trading-expo-africa-conference-guide",title:"Trading Expo Africa Conference Guide",meta:"Trading Expo Africa conference guide: stages, session formats, speakers and how to plan your two days.",category:"Expo & Events Guide",img:"expo-main-stage.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"Stages, session formats and speakers — how to plan your conference two days.",file:"blog/trading-expo-africa-conference-guide.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/expo-main-stage.webp",heroAlt:"Trading Expo Africa Conference Guide",ldjson:[`{
+`},{slug:"trading-expo-africa-conference-guide",title:"Trading Expo Johannesburg Conference Guide",meta:"Trading Expo Johannesburg conference guide: stages, session formats, speakers and how to plan your two days.",category:"Expo & Events Guide",img:"expo-main-stage.webp",read:"3 min read",date:"Sep 24, 2026",excerpt:"Stages, session formats and speakers — how to plan your conference two days.",file:"blog/trading-expo-africa-conference-guide.html",bylineDate:"September 24, 2026",heroImg:"../assets/img/expo-main-stage.webp",heroAlt:"Trading Expo Johannesburg Conference Guide",ldjson:[`{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Trading Expo Africa Conference Guide",
-  "description": "Trading Expo Africa conference guide: stages, session formats, speakers and how to plan your two days.",
+  "headline": "Trading Expo Johannesburg Conference Guide",
+  "description": "Trading Expo Johannesburg conference guide: stages, session formats, speakers and how to plan your two days.",
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4154,7 +4154,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How many speakers are at Trading Expo Africa?",
+      "name": "How many speakers are at Trading Expo Johannesburg?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "speakers across keynotes, panels, workshops and demos over two days (19–20 February 2027). The full agenda with session details will be published on the official website."
@@ -4185,28 +4185,28 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Trading Expo Africa Conference Guide",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/trading-expo-africa-conference-guide.html"
+      "name": "Trading Expo Johannesburg Conference Guide",
+      "item": "https://thetradersexpo.com/blog/trading-expo-africa-conference-guide.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
-<img src="../assets/img/expo-main-stage.webp" alt="Trading Expo Africa Conference Guide" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<img src="../assets/img/expo-main-stage.webp" alt="Trading Expo Johannesburg Conference Guide" loading="lazy" width="1920" height="1280">
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
-<p>With speakers across two days, the Trading Expo Africa conference is where the industry's thinking gets aired: keynotes on the big picture, panels debating contested questions, and workshops going deep on craft. But abundance creates a problem — you cannot attend everything.</p>
+<p>With speakers across two days, the Trading Expo Johannesburg conference is where the industry's thinking gets aired: keynotes on the big picture, panels debating contested questions, and workshops going deep on craft. But abundance creates a problem — you cannot attend everything.</p>
 <p>This guide helps you plan your two days (19–20 February 2027) for maximum value.</p>
 <h2>The session formats, decoded</h2>
 <p>Keynotes deliver the big-picture narratives — where markets, regulation and technology are heading — from the industry's most experienced voices. Panels stage structured disagreement on contested topics (regulation, crypto's future, active vs systematic trading), which is where the most honest insights surface. Workshops and demos go hands-on: platforms, strategies and tools explained in working detail.</p>
@@ -4221,29 +4221,29 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Conference Q&A sessions are underused leverage: a good question extracts personalised insight from an expert, signals your seriousness to everyone listening, and often starts conversations that continue into networking breaks. The formula for a memorable question: brief context ('I swing-trade index options with 1% risk per trade'), a specific tension ('I find my winners reverse before reaching 2R in low-volatility regimes'), and a precise ask ('do you adjust targets by volatility regime, and if so, how?'). Contrast this with the questions speakers dread — long autobiographies, requests for stock tips, or challenges disguised as questions. Specificity respects the speaker's time and earns a substantive answer.</p>
 <p>Prepare two or three questions per must-attend session in advance, and sit where microphones reach easily. Listen to other attendees' questions too — they reveal what the room is struggling with and often surface angles you missed. If your question is too specific for the public session, use it as your opener when approaching the speaker afterwards: 'I had a question about adjusting targets by volatility regime…' transitions naturally into the one-on-one conversations where the deepest learning happens. Speakers remember engaged questioners; be one, and the conference keeps teaching after the microphones switch off.</p>
 <h2>Secure your seat</h2>
-<p>Conference access is built into <a href="../index.html">Trading Expo Africa</a> passes — 19–20 February 2027, Africa — with tiered access across Trader, Pro Trader and VIP passes.</p>
+<p>Conference access is built into <a href="../index.html">Trading Expo Johannesburg</a> passes — 19–20 February 2027, Africa — with tiered access across Trader, Pro Trader and VIP passes.</p>
 <p>Compare <a href="../tickets.html">ticket tiers</a> and book early: popular sessions fill, and early-bird pricing to be announced.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
-<details><summary>How many speakers are at Trading Expo Africa?</summary><p>speakers across keynotes, panels, workshops and demos over two days (19–20 February 2027). The full agenda with session details will be published on the official website.</p></details>
+<details><summary>How many speakers are at Trading Expo Johannesburg?</summary><p>speakers across keynotes, panels, workshops and demos over two days (19–20 February 2027). The full agenda with session details will be published on the official website.</p></details>
 <details><summary>Are conference sessions included in all ticket tiers?</summary><p>Conference access is part of the expo experience; specific session access and premium formats vary by ticket tier. Check the tickets page for tier details when booking.</p></details>
 <details><summary>Will sessions be recorded?</summary><p>Recording and on-demand availability details will be announced closer to the event via official channels. Attending live guarantees you miss nothing.</p></details>
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
 <ul>
-<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Africa: The Complete Visitor Checklist</a></li>
-<li><a href="trading-expo-africa-awards.html">Trading Expo Africa Awards: Celebrating Excellence in Trading &amp; Fintech</a></li>
+<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Johannesburg: The Complete Visitor Checklist</a></li>
+<li><a href="trading-expo-africa-awards.html">Trading Expo Johannesburg Awards: Celebrating Excellence in Trading &amp; Fintech</a></li>
 <li><a href="why-attend-trading-expo-events.html">Why Attend a Trading Expo? 8 Benefits You Can't Get Online</a></li>
 </ul>
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -4255,7 +4255,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4294,26 +4294,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Trading Glossary: 40 Essential Terms Every Beginner Must Know",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/trading-glossary-essential-terms.html"
+      "item": "https://thetradersexpo.com/blog/trading-glossary-essential-terms.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/conference-panel.webp" alt="Trading Glossary: 40 Essential Terms Every Beginner Must Know" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Trading has a language, and beginners who do not speak it cannot evaluate strategies, read broker documents or follow market commentary. This glossary covers the 40 terms you will encounter constantly — in plain English, with practical market context where it matters.</p>
 <p>Bookmark it and return whenever a new term appears.</p>
@@ -4331,7 +4331,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Learn these in your broker's platform specifically, because implementations and availability vary: place each order type in a simulator or with tiny quantities, observe exactly how triggers, modifications and cancellations behave, and note which types persist overnight. Pay special attention to how your broker handles stop-loss orders in fast markets and what their auto-square-off cutoffs do to intraday GTTs. Execution fluency — knowing without thinking which order type each situation demands — is an underrated trading skill. It never makes headlines, but in volatile moments it is the difference between controlled exits and costly surprises.</p>
 <h2>Keep learning the language</h2>
 <p>Fluency comes from exposure: read market commentary daily, and discuss concepts with real traders — the fastest way to turn vocabulary into understanding.</p>
-<p>Immerse yourself at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): two days of the industry speaking its language, with beginner-friendly sessions on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
+<p>Immerse yourself at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): two days of the industry speaking its language, with beginner-friendly sessions on the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>What is the bid-ask spread?</summary><p>The difference between the highest price buyers will pay (bid) and the lowest price sellers will accept (ask). It is effectively a cost of trading — narrower spreads in liquid instruments mean cheaper trading.</p></details>
@@ -4340,7 +4340,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -4352,7 +4352,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -4364,7 +4364,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4403,26 +4403,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Trading Journal Guide: How Documenting Trades Transforms Results",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/trading-journal-guide-improve-results.html"
+      "item": "https://thetradersexpo.com/blog/trading-journal-guide-improve-results.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/keynote-stage.webp" alt="Trading Journal Guide: How Documenting Trades Transforms Results" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Ask consistently profitable traders their most important tool and a surprising number will say the journal — not a platform, not an indicator, but the written record of every decision. The journal converts expensive market tuition into reusable lessons instead of repeated mistakes.</p>
 <p>Here is how to build a journaling practice that actually improves your trading.</p>
@@ -4439,7 +4439,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Once your journal holds 50+ trades, compute the metrics that actually diagnose performance. Expectancy — (win rate × average win) − (loss rate × average loss), in R-multiples — tells you what each trade is worth on average; positive expectancy is the mathematical definition of an edge. Profit factor (gross profits ÷ gross losses) above 1.5 indicates a healthy system; below 1.2 suggests fragility. Maximum adverse excursion (how far trades typically go against you before winning) reveals whether your stops are optimally placed or routinely too tight. And the plan-deviation rate — what percentage of trades broke your rules — often explains more variance than any strategy metric.</p>
 <p>Slice these metrics by dimension: by setup (which setups earn their keep?), by weekday and session (are Friday afternoons a donation machine?), by market regime (does your system work in trends, ranges, or neither?). One trader discovered through journal analytics that 80% of his profits came from Tuesday–Thursday mornings — he now trades a four-day week with better results. Your journal contains these insights about your trading; the metrics are how you extract them. Review monthly, act on one finding at a time, and watch the equity curve respond to evidence rather than opinions.</p>
 <h2>Learn review processes from the best</h2>
-<p>Professional traders' review routines will be shared in strategy and psychology sessions at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027 — learn how full-time traders dissect their own performance.</p>
+<p>Professional traders' review routines will be shared in strategy and psychology sessions at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027 — learn how full-time traders dissect their own performance.</p>
 <p>Join the <a href="../agenda.html">conference sessions</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -4449,7 +4449,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -4461,7 +4461,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -4473,7 +4473,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4512,26 +4512,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Trading Psychology: Mastering Fear, Greed and Revenge Trading",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/trading-psychology-master-emotions.html"
+      "item": "https://thetradersexpo.com/blog/trading-psychology-master-emotions.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-floor-aerial.webp" alt="Trading Psychology: Mastering Fear, Greed and Revenge Trading" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Every trader knows the theory: cut losses, let winners run, follow the plan. And every trader has watched themselves do the opposite in real time — freezing on a stop-loss, revenge-trading after a loss, euphorically oversizing after wins. Trading psychology is the study of that gap between knowledge and behaviour.</p>
 <p>Here are the four emotional patterns that destroy accounts, and concrete systems to neutralise each.</p>
@@ -4549,7 +4549,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Extend the routine to session structure: define your trading window in advance (e.g., first two hours only for intraday), schedule breaks away from screens, and end each session with a two-minute log — trades taken, plan deviations, emotional notes. Over weeks, this routine builds something willpower cannot: identity. You stop being someone trying to be disciplined and become someone who follows a process. That identity shift — from outcome-chasing to process-executing — is the psychological destination all these techniques serve. Build the routine, trust the routine, become the routine.</p>
 <h2>Build the mental game deliberately</h2>
 <p>Elite performance psychology — routines, reviews, accountability — applies to trading as much as to sport. Consider working through these frameworks with mentors who have survived multiple market cycles.</p>
-<p>Meet experienced traders and performance coaches at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): psychology and discipline sessions run across the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
+<p>Meet experienced traders and performance coaches at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): psychology and discipline sessions run across the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>How do I stop revenge trading?</summary><p>Install a non-negotiable daily loss limit (e.g., 2% of capital) that ends your trading day when hit. Remove discretion from the decision — pre-commitment beats willpower every time.</p></details>
@@ -4558,7 +4558,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -4570,7 +4570,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -4582,7 +4582,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4621,26 +4621,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Trading Technology Trends 2027: What's Next for Traders",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/trading-technology-trends-2027.html"
+      "item": "https://thetradersexpo.com/blog/trading-technology-trends-2027.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-grand-hall.webp" alt="Trading Technology Trends 2027: What's Next for Traders" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>Trading technology moves in waves: first came discount brokers, then mobile apps, then APIs. The next wave — AI-assisted analysis, richer data, deeper automation — is already forming. For retail traders, the challenge is separating durable shifts from demo-day theatre.</p>
 <p>Here are the trends that matter for 2027, and how to think about each.</p>
@@ -4657,7 +4657,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Technology marketing creates urgency around every launch; a filter creates clarity. Adopt now when a tool improves a process you already run: a faster backtesting library when you backtest weekly, a better journaling app when you journal daily, API automation when you already trade a rules-based system manually. The test is process-first — the tool serves an existing habit. Watch (but do not buy) when a product promises to replace judgement: autonomous bots, 'AI-guaranteed' signals, black-box strategies with no auditable logic. Between these poles lies the trial zone: paper-trade or sandbox-test anything interesting for a month, measuring whether it changes your metrics — expectancy, execution quality, time spent — before committing money.</p>
 <p>Apply the same filter to information sources: adopt data and research tools that shorten your existing workflow, ignore prediction products that ask you to outsource decisions. Revisit the filter annually, because today's 'watch' becomes tomorrow's 'adopt' as products mature — retail APIs were exotic five years ago and are standard now. And budget technology like any trading expense: cap tool subscriptions as a percentage of expected returns, cancel ruthlessly what you do not use weekly, and remember that the highest-ROI technology in trading remains embarrassingly simple — a journal, a calendar and a checklist. Master those before chasing anything with 'AI' in the headline. Revisit your technology stack each January with fresh eyes — tools you have outgrown should be cancelled as deliberately as they were adopted.</p>
 <h2>See 2027's tech on the expo floor</h2>
-<p>The best way to evaluate trading technology is hands-on: exhibitors demonstrating platforms, data and automation tools at <a href="../index.html">Trading Expo Africa</a>, 19–20 February 2027.</p>
+<p>The best way to evaluate trading technology is hands-on: exhibitors demonstrating platforms, data and automation tools at <a href="../index.html">Trading Expo Johannesburg</a>, 19–20 February 2027.</p>
 <p>Compare the future side by side at the <a href="../exhibit.html">exhibition</a> and <a href="../agenda.html">conference</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -4667,7 +4667,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -4679,7 +4679,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
@@ -4691,7 +4691,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4730,26 +4730,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Trading vs Investing: What's the Difference and Which Suits You?",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/trading-vs-investing-difference.html"
+      "item": "https://thetradersexpo.com/blog/trading-vs-investing-difference.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/conference-panel.webp" alt="Trading vs Investing: What's the Difference and Which Suits You?" loading="lazy" width="1920" height="1280">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>'Should I trade or invest?' is often framed as a rivalry, but trading and investing are different professions that happen to use the same markets. Confusing them — trading like an investor or investing like a trader — is a classic beginner error.</p>
 <p>Here is how they actually differ, and how to choose.</p>
@@ -4767,7 +4767,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>The allocation between core and satellite should shift with evidence: beginners keep satellites small while learning; consistently profitable traders may expand the satellite as their edge proves itself over years, never months. Rebalance annually — if trading went well, sweep profits to the core rather than letting success inflate risk-taking; if trading struggled, the core's compounding cushions the tuition. Many of Africa's most successful market participants run exactly this structure, often without naming it. It resolves the trader-versus-investor debate pragmatically: be both, with boundaries that protect each pursuit from the other's risks.</p>
 <h2>Many do both — sequentially</h2>
 <p>A common successful path: invest for long-term wealth from day one (even small SIPs), and learn trading separately with dedicated risk capital. The investing compounds while the trading educates — neither jeopardises the other.</p>
-<p>Explore both worlds at <a href="../index.html">Trading Expo Africa</a> (19–20 February 2027): investor education and active-trading strategy sessions share the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
+<p>Explore both worlds at <a href="../index.html">Trading Expo Johannesburg</a> (19–20 February 2027): investor education and active-trading strategy sessions share the <a href="../agenda.html">agenda</a>. <a href="../tickets.html">Book your pass</a>.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
 <details><summary>Is trading or investing more profitable?</summary><p>Investing is more reliably profitable for more people — broad market compounding works with patience. Trading offers higher potential returns but with much lower success rates and far greater demands on time and skill.</p></details>
@@ -4776,7 +4776,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
@@ -4788,19 +4788,19 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
-`},{slug:"what-to-expect-trading-expo-africa",title:"What to Expect at Trading Expo Africa",meta:"What to expect at Trading Expo Africa: the exhibition floor, conference, networking, awards night and practical tips.",category:"Event guide",img:"expo-floor.webp",read:"7 min read",date:"Sep 25, 2026",excerpt:"Your first-timer's briefing for 19–20 February 2027 at Emperors Palace.",file:"blog/what-to-expect-trading-expo-africa.html",bylineDate:"September 25, 2026",heroImg:"",heroAlt:"What to Expect at Trading Expo Africa",ldjson:[`{
+`},{slug:"what-to-expect-trading-expo-africa",title:"What to Expect at Trading Expo Johannesburg",meta:"What to expect at Trading Expo Johannesburg: the exhibition floor, conference, networking, awards night and practical tips.",category:"Event guide",img:"expo-floor.webp",read:"7 min read",date:"Sep 25, 2026",excerpt:"Your first-timer's briefing for 19–20 February 2027 at Emperors Palace.",file:"blog/what-to-expect-trading-expo-africa.html",bylineDate:"September 25, 2026",heroImg:"",heroAlt:"What to Expect at Trading Expo Johannesburg",ldjson:[`{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "What to Expect at Trading Expo Africa",
-  "description": "What to expect at Trading Expo Africa: the exhibition floor, conference, networking, awards night and practical tips.",
+  "headline": "What to Expect at Trading Expo Johannesburg",
+  "description": "What to expect at Trading Expo Johannesburg: the exhibition floor, conference, networking, awards night and practical tips.",
   "datePublished": "2026-09-25",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4810,26 +4810,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "What to Expect at Trading Expo Africa",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/what-to-expect-trading-expo-africa.html"
+      "name": "What to Expect at Trading Expo Johannesburg",
+      "item": "https://thetradersexpo.com/blog/what-to-expect-trading-expo-africa.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">← Back to all articles</a></p>
 <figure>
-<img width="1600" height="1066" src="../assets/img/expo-floor.webp" alt="What to Expect at Trading Expo Africa" loading="lazy">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<img width="1600" height="1066" src="../assets/img/expo-floor.webp" alt="What to Expect at Trading Expo Johannesburg" loading="lazy">
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>On <strong>19–20 February 2027</strong>, Africa hosts its most ambitious gathering for the online trading community. Whether you're a first-time visitor or a seasoned expo-goer, here's an honest walkthrough of what your two days will look like — so you can plan, pack and make every hour count.</p>
 <h2>The exhibition floor: the heart of the event</h2>
@@ -4846,7 +4846,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>The <a href="../agenda.html">draft agenda</a> runs from the opening ceremony on the morning of Day 1 through the closing ceremony on Day 2, with networking breaks built in so you never have to choose between a great session and a great conversation. Conference access depends on your <a href="../tickets.html">pass type</a> — Pro Trader and VIP passes include full conference access.</p>
 <blockquote>Come for the products, stay for the people: the conversations between sessions are where expos quietly pay for themselves.</blockquote>
 <h2>Networking, engineered in</h2>
-<p>With <strong>visitors from across Africa</strong>, Trading Expo Africa is a networking opportunity on a national scale. Dedicated networking areas, a networking lounge and structured breaks mean you're never more than a coffee away from your next useful contact — whether that's a mentor, a business partner, an affiliate connection or simply a trader who thinks like you do.</p>
+<p>With <strong>visitors from across Africa</strong>, Trading Expo Johannesburg is a networking opportunity on a national scale. Dedicated networking areas, a networking lounge and structured breaks mean you're never more than a coffee away from your next useful contact — whether that's a mentor, a business partner, an affiliate connection or simply a trader who thinks like you do.</p>
 <p><strong>Tip:</strong> bring business cards or a digital card on your phone, and decide in advance who you want to meet — exhibitors you shortlist beforehand get far more value from the floor than those who wander.</p>
 <h2>Live demos and product launches</h2>
 <p>Expos are where companies choose to show off. Expect live platform walkthroughs, hands-on technology zones and product announcements timed for the event audience. If you're evaluating a new broker or tool, there is no better due diligence than watching it work live and interrogating the team behind it.</p>
@@ -4857,7 +4857,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Group packages are available for trading communities, colleges and corporate teams — enquire through the <a href="../contact.html">contact page</a> if you're bringing a crowd.</p>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">← Back to all articles</a></p>
@@ -4869,7 +4869,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
   "datePublished": "2026-09-24",
   "author": {
     "@type": "Organization",
-    "name": "Trading Expo Africa"
+    "name": "Trading Expo Johannesburg"
   }
 }`,`{
   "@context": "https://schema.org",
@@ -4908,26 +4908,26 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/"
+      "item": "https://thetradersexpo.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog.html"
+      "item": "https://thetradersexpo.com/blog.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Why Attend a Trading Expo? 8 Benefits You Can't Get Online",
-      "item": "https://dawoodshah2232-svg.github.io/tradingexpo-africa/blog/why-attend-trading-expo-events.html"
+      "item": "https://thetradersexpo.com/blog/why-attend-trading-expo-events.html"
     }
   ]
 }`],html:`
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
 <figure>
 <img src="../assets/img/expo-floor.webp" alt="Why Attend a Trading Expo? 8 Benefits You Can't Get Online" loading="lazy" width="1600" height="1066">
-<figcaption>Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
+<figcaption>Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</figcaption>
 </figure>
 <p>You can learn trading online — courses, streams, communities, endless content. So why travel to a physical expo? Because some of trading's most valuable experiences cannot be digitised: the handshake that starts a partnership, the platform you test with your own hands, the question you finally ask aloud.</p>
 <p>Here are eight benefits unique to attending a trading expo in person.</p>
@@ -4944,7 +4944,7 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 <p>Different attendees extract different value, so match the event to your current stage. Beginners gain the most from structured learning: beginner strategy sessions, platform demonstrations and the ability to ask basic questions face to face without the judgement of online forums. Intermediate traders benefit from comparison shopping — brokers, data feeds, charting tools evaluated side by side — and from strategy sessions that challenge their existing approaches. Advanced traders and professionals come for networking: partnerships, service providers, talent and deal flow concentrate where the industry gathers. Each group should plan differently: beginners schedule sessions, intermediates schedule booth visits, professionals schedule meetings.</p>
 <p>Set your objectives before booking: write down the three outcomes that would make the trip worthwhile, then choose your ticket tier and plan around them. A beginner seeking education needs the conference agenda; a business seeker needs networking access that higher tiers provide. After the event, measure against those objectives honestly — did you achieve them? This habit turns event attendance from entertainment into investment, and it informs which events deserve your time next year. The expo is a tool; like any tool, its value depends on the clarity of the job you bring to it. Share your objectives with a friend or colleague attending alongside you — mutual accountability turns good intentions into completed plans.</p>
 <h2>Experience it in April 2027</h2>
-<p><a href="../index.html">Trading Expo Africa</a> brings all eight benefits together on 19–20 February 2027 in Johannesburg: visitors from across Africa, exhibitors, speakers across two days of exhibition and conference.</p>
+<p><a href="../index.html">Trading Expo Johannesburg</a> brings all eight benefits together on 19–20 February 2027 in Johannesburg: visitors from across Africa, exhibitors, speakers across two days of exhibition and conference.</p>
 <p><a href="../tickets.html">Early-bird passes will be announced soon</a> — the cheapest high-ROI investment a trader can make this year.</p>
 <h2>Frequently asked questions</h2>
 <div class="txi-faq">
@@ -4954,20 +4954,20 @@ const t=[{slug:"ai-tools-traders-2026",title:"AI Tools for Traders in 2026: What
 </div>
 <div class="txi-author">
 <h3>About the author</h3>
-<p>Written by the <strong>Trading Expo Africa editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
+<p>Written by the <strong>Trading Expo Johannesburg editorial team</strong> &mdash; market researchers and event producers behind Africa&rsquo;s premier trading &amp; fintech exhibition, 19–20 February 2027. We publish practical, hype-free guides for African traders. <a href="../contact.html">Contact us</a>.</p>
 </div>
 <div class="txi-related">
 <h3>Related articles</h3>
 <ul>
-<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Africa: The Complete Visitor Checklist</a></li>
+<li><a href="how-to-prepare-trading-expo-africa.html">How to Prepare for Trading Expo Johannesburg: The Complete Visitor Checklist</a></li>
 <li><a href="first-time-expo-visitor-mistakes.html">9 Mistakes First-Time Expo Visitors Make (and How to Avoid Them)</a></li>
 <li><a href="networking-tips-trading-events.html">Networking at Trading Events: How to Build Relationships That Matter</a></li>
 </ul>
 </div>
 <div class="txi-cta-box">
 <h3>Meet the market in person.</h3>
-<p>Join us at Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
+<p>Join us at Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg. Ticket pricing to be announced.</p>
 <p><a class="btn btn-primary btn-lg" href="../tickets.html">Book your ticket</a></p>
 </div>
 <p><a class="txi-back" href="../blog.html">&larr; Back to all articles</a></p>
-`}],a=Object.fromEntries(t.map(e=>[e.slug,e]));export{a,t as p};
+`}],n=Object.fromEntries(t.map(e=>[e.slug,e]));export{n as a,t as p};

@@ -11,32 +11,38 @@ function EnquireBtn({ tier, className = 'btn btn-ghost btn-sm' }) {
 }
 
 const TIERS = [
-  { name: 'Title Sponsor', badge: ['avail-badge one', '1 available'], cls: 'tier-card premium-tier tier-flagship', p: 'The name above the door. Maximum visibility across the venue, stage, app and every campaign.', li: ['Full naming rights & logo lockup', 'Prime booth placement', 'Main-stage keynote slot', 'VIP lounge hospitality'], btn: 'btn btn-primary btn-sm', mail: 'Title' },
-  { name: 'Platinum', badge: ['avail-badge limited', 'Limited'], cls: 'tier-card premium-tier', p: 'Headline presence with premium branding and headline visibility across the event.', li: ['Premium booth placement', 'Main-stage branding', 'Speaking session', 'Event app feature'], btn: 'btn btn-ghost btn-sm', mail: 'Platinum' },
-  { name: 'Gold', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'High-impact on-site presence with stage mentions and branding zones.', li: ['Branded zone presence', 'Stage mentions', 'Digital exposure', 'Networking access'], btn: 'btn btn-ghost btn-sm', mail: 'Gold' },
-  { name: 'Silver', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'Visible, credible presence across key visitor touchpoints.', li: ['Logo across touchpoints', 'Digital directory listing', 'Social mentions', 'Delegate passes'], btn: 'btn btn-ghost btn-sm', mail: 'Silver' },
-  { name: 'Bronze', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: "Targeted entry point into Africa's trading community.", li: ['Logo on sponsor wall', 'Website & brochure listing', 'Social mentions', 'Delegate passes'], btn: 'btn btn-ghost btn-sm', mail: 'Bronze' },
+  { name: 'Title Sponsor', price: '$30,000', booth: '5 × 3 m · 15 sqm · space only', badge: ['avail-badge one', '1 available'], cls: 'tier-card premium-tier tier-flagship', p: 'The name above the door. Exclusive Title designation with the highest level of branding across exhibition, conference, media and awards.', li: ['10-minute conference presentation', '2 podcast / video interviews', '6 dedicated social promotions', 'Full A4 ad + 2-page editorial', '8 complimentary gala dinner seats'], btn: 'btn btn-primary btn-sm', mail: 'Title' },
+  { name: 'Official Sponsor', price: '$20,000', booth: '5 × 3 m · 15 sqm · space only', badge: ['avail-badge limited', 'Limited'], cls: 'tier-card premium-tier', p: 'Premium visibility for established financial brands — prime placement plus conference exposure and interviews.', li: ['8-minute company / product presentation', '1 podcast / video interview', '4 dedicated social promotions', 'Full A4 ad + editorial feature', '6 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Official' },
+  { name: 'Exclusive Sponsor', price: '$15,000', booth: '5 × 3 m · 15 sqm · space only', badge: ['avail-badge limited', 'Limited'], cls: 'tier-card premium-tier', p: 'Premium visibility with recognition within one agreed business category, subject to agreement.', li: ['Exclusive category partner recognition', '1 podcast / video interview', '3 dedicated social promotions', 'Half-page ad + editorial profile', '4 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Exclusive' },
+  { name: 'Regional Sponsor', price: '$12,000', booth: '5 × 3 m · 15 sqm · space only', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'Built for companies developing partnerships and broker networks across African markets.', li: ['20-minute partner networking roundtable', '1 podcast / video interview', '2 dedicated social promotions', 'Half-page ad + company listing', '4 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Regional' },
+  { name: 'Diamond Sponsor', price: '$9,000', booth: '4 × 3 m · 12 sqm · space only', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'A platform for fintech innovators, trading platforms and financial technology providers.', li: ['15-minute product demonstration', '1 podcast / video interview', '2 dedicated social promotions', 'Quarter-page ad + company listing', '3 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Diamond' },
+  { name: 'Elite Sponsor', price: '$8,000', booth: '4 × 3 m · 12 sqm · space only', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'Balanced exhibition presence, professional media exposure and industry networking.', li: ['1 podcast / video interview', '1 dedicated social promotion', 'Enhanced directory profile', 'Company mention in ProFX Magazine', '3 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Elite' },
+  { name: 'Gold Sponsor', price: '$6,500', booth: '3 × 3 m · 9 sqm · shell scheme + TV', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'A professionally constructed, branded booth with two sides open — focus on demos and trader engagement.', li: ['Shell-scheme booth built by ProFX Media', '1 exhibitor podcast / video interview', 'Shared social promotion', 'Magazine company listing', '2 complimentary gala dinner seats'], btn: 'btn btn-ghost btn-sm', mail: 'Gold' },
+  { name: 'Silver Sponsor', price: '$4,000', booth: '3 × 2 m · shell scheme · TV not included', badge: ['avail-badge open', 'Available'], cls: 'tier-card premium-tier', p: 'Accessible visibility for emerging financial companies — a ready-built branded booth.', li: ['Shell-scheme booth built by ProFX Media', '1 on-site podcast / video interview', 'Shared social promotion', 'Magazine listing', '1 complimentary gala dinner seat'], btn: 'btn btn-ghost btn-sm', mail: 'Silver' },
 ];
 
 const ROWS = [
-  ['Naming rights & logo on all branding', ['yes', 'no', 'no', 'no', 'no']],
-  ['Prime / premium booth placement', ['yes', 'yes', 'yes', 'no', 'no']],
-  ['Main-stage branding', ['yes', 'yes', 'yes', 'no', 'no']],
-  ['Speaking / keynote slot', ['yes', 'yes', 'no', 'no', 'no']],
-  ['VIP lounge hospitality', ['yes', 'yes', 'no', 'no', 'no']],
-  ['Event app feature & push', ['yes', 'yes', 'yes', 'no', 'no']],
-  ['Social media & PR mentions', ['yes', 'yes', 'yes', 'yes', 'yes']],
-  ['Logo on sponsor wall & website', ['yes', 'yes', 'yes', 'yes', 'yes']],
-  ['Delegate passes', ['yes', 'yes', 'yes', 'yes', 'yes']],
+  ['Title Sponsor', '$30,000', '5 × 3 m · 15 sqm', '8'],
+  ['Official Sponsor', '$20,000', '5 × 3 m · 15 sqm', '6'],
+  ['Exclusive Sponsor', '$15,000', '5 × 3 m · 15 sqm', '4'],
+  ['Regional Sponsor', '$12,000', '5 × 3 m · 15 sqm', '4'],
+  ['Diamond Sponsor', '$9,000', '4 × 3 m · 12 sqm', '3'],
+  ['Elite Sponsor', '$8,000', '4 × 3 m · 12 sqm', '3'],
+  ['Gold Sponsor', '$6,500', '3 × 3 m · 9 sqm · shell scheme', '2'],
+  ['Silver Sponsor', '$4,000', '3 × 2 m · shell scheme', '1'],
 ];
 
 const SPOTS = [
-  { icon: '🎗️', name: 'Lanyard Partner', p: "Your logo on every attendee's lanyard — visible in every photo, panel and conversation across both days." },
-  { icon: '🎤', name: 'Stage Branding', p: 'Own the main stage backdrop where speakers address the crowd — broadcast in photos and videos everywhere.' },
-  { icon: '🧾', name: 'Registration Area', p: 'Brand the first thing visitors see — counters, backdrops and welcome screens at registration.' },
-  { icon: '📱', name: 'Mobile App', mail: 'Mobile App Partner', p: 'Splash screen, push notifications and in-app banners on the official event app every attendee uses.' },
-  { icon: '📶', name: 'Wi-Fi Sponsor', p: 'Your branded login page and SSID connect thousands of visitors — with your message on every reconnect.' },
-  { icon: '🏆', name: 'Gala Dinner', p: 'Presenting rights at the awards gala night — stage time, table branding and a room full of industry leaders.' },
+  { icon: '🎤', name: 'Speaker Hall Sponsor', price: '$10,000', p: 'Exclusive naming rights to the Speaker Hall, logo on stage branding and conference screens, branded entrance signage and session graphics, moderator acknowledgement, and four reserved conference seats.' },
+  { icon: '🚪', name: 'Entrance Arch Sponsor', price: '$5,000', p: 'Prominent branding on the official entrance arch, logo alongside event branding, visibility in entrance photography and video, and one dedicated social media acknowledgement.' },
+  { icon: '🤝', name: 'Networking Lounge Sponsor', price: '$5,000', p: 'Exclusive lounge naming association, branding at the lounge entrance and seating areas, logo on approved networking signage, and reserved meeting access for representatives.' },
+  { icon: '🧾', name: 'Registration Area Sponsor', price: '$5,000', p: 'Branding on approved registration counters, logo on check-in and queue signage, opportunity to display approved promotional materials, and official Registration Partner identification.' },
+  { icon: '☕', name: 'Café / Coffee Bar Sponsor', price: '$5,000', p: 'Exclusive branding on the café or coffee bar, branding on cups or sleeves subject to approval, and recognition as Official Coffee Bar Partner.' },
+  { icon: '🥂', name: 'Cocktail Reception Sponsor', price: '$5,000', p: 'Exclusive reception naming association, branding at the designated reception area, logo on approved menu or service materials, and four reception invitations.' },
+  { icon: '🖼️', name: 'LED Wall Roll-up', price: '$5,000', p: 'One professionally produced roll-up banner with company artwork, placed in a designated common area for the contracted exhibition period, including installation and removal.' },
+  { icon: '📺', name: 'Advertising Banner', price: '$250 each', p: 'One approved 30-second branded advertisement, scheduled within the event advertising rotation on designated LED screens during agreed operating hours.' },
+  { icon: '🚩', name: 'Flag Pole Sponsor', price: '$500 each', p: 'One professionally produced company flag on an approved flag pole or display stand along designated visitor pathways, including production, installation and removal.' },
+  { icon: '👜', name: 'Attendee Bag Sponsor', price: '$3,000', p: 'Official Attendee Bag Partner — your logo on the official event bags distributed to attendees, with approved promotional inserts.' },
 ];
 
 export default function SponsorsPage() {
@@ -49,17 +55,17 @@ export default function SponsorsPage() {
           <div className="spon-hero-bg" aria-hidden="true"></div>
           <div className="spon-hero-shade" aria-hidden="true"></div>
           <div className="container">
-            <Reveal className="eyebrow">Sponsorships · Trading Expo Africa</Reveal>
+            <Reveal className="eyebrow">Sponsorships · Trading Expo Johannesburg</Reveal>
             <Reveal as="h1">Put your brand at the heart of<br /><span className="grad">Africa's trading movement.</span></Reveal>
-            <Reveal className="section-lead">Two days at Emperors Palace, Johannesburg. The stage where Africa's trading industry comes to decide what happens next.</Reveal>
+            <Reveal className="section-lead">Two days at Emperors Palace, Johannesburg. The stage where Africa's trading industry comes to decide what happens next. Packages from $4,000.</Reveal>
             <Reveal className="spon-hero-ctas">
               <a className="btn btn-light btn-lg" href="contact.html">Talk to the Partnerships Team</a>
               <a className="btn btn-primary btn-lg" href={MAIL + 'Sponsorship%20Enquiry%20' + SUBJ}>Enquire Now</a>
             </Reveal>
             <Reveal className="spon-stats">
-              <div className="spon-stat"><strong>TBA</strong><span>Expected visitors</span></div>
-              <div className="spon-stat"><strong>TBA</strong><span>Exhibitors</span></div>
-              <div className="spon-stat"><strong>TBA</strong><span>Speakers</span></div>
+              <div className="spon-stat"><strong>4,000+</strong><span>Expected traders</span></div>
+              <div className="spon-stat"><strong>8</strong><span>Sponsorship tiers</span></div>
+              <div className="spon-stat"><strong>10</strong><span>Branding add-ons</span></div>
               <div className="spon-stat"><strong>2 days</strong><span>19–20 February 2027</span></div>
             </Reveal>
           </div>
@@ -72,13 +78,16 @@ export default function SponsorsPage() {
             <Reveal as="h2" className="section-title">Be seen where <span className="grad">decisions get made.</span></Reveal>
             <div className="split">
               <Reveal>
-                <p className="section-lead" style={{ margin: '0 0 16px' }}>Trading Expo Africa gathers Africa\'s trading ecosystem under one roof — brokers, fintech platforms, educators, institutional players and active traders.</p>
+                <p className="section-lead" style={{ margin: '0 0 16px' }}>Trading Expo Johannesburg gathers Africa\'s trading ecosystem under one roof — brokers, fintech platforms, educators, institutional players and active traders.</p>
                 <p className="section-lead" style={{ margin: 0 }}>Sponsors get what money alone can't buy elsewhere: face time with the community that trades every day, on the stage everyone in the industry is watching.</p>
               </Reveal>
               <div className="africa-cards">
-                <Reveal className="africa-card"><strong>Reach Africa's trading community</strong><span>Engaged visitors actively interested in forex, crypto, equities and fintech.</span></Reveal>
-                <Reveal className="africa-card"><strong>Brand authority at scale</strong><span>Main-stage presence, media coverage and digital exposure before, during and after the event.</span></Reveal>
-                <Reveal className="africa-card"><strong>High-value networking</strong><span>Connect with exhibitors, partners and speakers — the relationships that move the industry.</span></Reveal>
+                <Reveal className="africa-card"><strong>Business visibility</strong><span>Present your company through exhibition space, official sponsor identification and approved promotional materials.</span></Reveal>
+                <Reveal className="africa-card"><strong>Direct engagement</strong><span>Meet prospective customers and partners face to face, introduce solutions and answer commercial or technical questions.</span></Reveal>
+                <Reveal className="africa-card"><strong>Product awareness</strong><span>Use product demonstrations, presentations and conversations to explain your company's strengths.</span></Reveal>
+                <Reveal className="africa-card"><strong>Content opportunities</strong><span>Extend your presence through interviews, event photography, company profiles and package-specific promotion.</span></Reveal>
+                <Reveal className="africa-card"><strong>Relationship development</strong><span>Start new conversations, strengthen existing partnerships and arrange follow-up commercial meetings.</span></Reveal>
+                <Reveal className="africa-card"><strong>Brand experience</strong><span>Create a professional environment that communicates your company identity and encourages visitor interaction.</span></Reveal>
               </div>
             </div>
           </div>
@@ -89,12 +98,13 @@ export default function SponsorsPage() {
           <div className="container">
             <Reveal className="eyebrow">Sponsorship tiers</Reveal>
             <Reveal as="h2" className="section-title">Choose your <span className="grad">spotlight.</span></Reveal>
-            <Reveal className="section-lead">Five tiers. One shared stage. Every package is designed to put your brand in front of the right people.</Reveal>
+            <Reveal className="section-lead">Eight tiers. One shared stage. Every package is designed to put your brand in front of the right people.</Reveal>
             <div className="tier-grid premium">
               {TIERS.map((t, i) => (
                 <Reveal as="article" className={t.cls} key={t.name} delay={i * 0.06}>
                   <span className={t.badge[0]}>{t.badge[1]}</span>
                   <h3>{t.name}</h3>
+                  <p className="tier-price"><strong>{t.price}</strong> · {t.booth}</p>
                   <p>{t.p}</p>
                   <ul>{t.li.map((x) => <li key={x}>{x}</li>)}</ul>
                   <EnquireBtn tier={t.mail} className={t.btn} />
@@ -111,18 +121,17 @@ export default function SponsorsPage() {
             <Reveal as="h2" className="section-title">What each tier <span className="grad">includes.</span></Reveal>
             <Reveal className="table-wrap">
               <table className="data-table">
-                <thead><tr><th>Benefit</th><th>Title</th><th>Platinum</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr></thead>
+                <thead><tr><th>Package</th><th>Investment</th><th>Booth</th><th>Gala seats</th></tr></thead>
                 <tbody>
-                  {ROWS.map(([benefit, cells]) => (
-                    <tr key={benefit}>
-                      <td>{benefit}</td>
-                      {cells.map((c, i) => <td className={c} key={i}>{c === 'yes' ? '✓' : '✕'}</td>)}
+                  {ROWS.map(([tier, price, booth, seats]) => (
+                    <tr key={tier}>
+                      <td>{tier}</td><td>{price}</td><td>{booth}</td><td>{seats}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </Reveal>
-            <Reveal className="compare-note">Exact deliverables are finalised with our partnerships team per tier. Swipe sideways on mobile to compare.</Reveal>
+            <Reveal className="compare-note">Customised booths (Title to Elite) are space only — design, construction, branding and dismantling are the sponsor's responsibility. Gold and Silver are organiser-provided branded shell-scheme booths; Silver TV rental is charged separately. Media, magazine and gala benefits vary by package — see each tier above.</Reveal>
           </div>
         </section>
 
@@ -135,7 +144,7 @@ export default function SponsorsPage() {
             <div className="spot-grid">
               {SPOTS.map((s, i) => (
                 <Reveal as="article" className="spot-card" key={s.name} delay={i * 0.06}>
-                  <span className="spot-tag">Available</span>
+                  <span className="spot-tag">{s.price}</span>
                   <div className="spot-icon" aria-hidden="true">{s.icon}</div>
                   <h3>{s.name}</h3>
                   <p>{s.p}</p>
@@ -154,11 +163,13 @@ export default function SponsorsPage() {
             <Reveal className="section-lead">We're in conversation with leading brokers, fintech brands and trading platforms. Your logo could be here.</Reveal>
             <Reveal className="logo-wall">
               <div className="logo-tile"><span>Your Logo</span><em>Title Sponsor</em></div>
-              <div className="logo-tile"><span>Your Logo</span><em>Platinum</em></div>
-              <div className="logo-tile"><span>Your Logo</span><em>Gold</em></div>
-              <div className="logo-tile"><span>Your Logo</span><em>Gold</em></div>
-              <div className="logo-tile"><span>Your Logo</span><em>Silver</em></div>
-              <div className="logo-tile"><span>Your Logo</span><em>Bronze</em></div>
+              <div className="logo-tile"><span>Your Logo</span><em>Official Sponsor</em></div>
+              <div className="logo-tile"><span>Your Logo</span><em>Exclusive Sponsor</em></div>
+              <div className="logo-tile"><span>Your Logo</span><em>Regional Sponsor</em></div>
+              <div className="logo-tile"><span>Your Logo</span><em>Diamond Sponsor</em></div>
+              <div className="logo-tile"><span>Your Logo</span><em>Elite Sponsor</em></div>
+              <div className="logo-tile"><span>Your Logo</span><em>Gold Sponsor</em></div>
+              <div className="logo-tile"><span>Your Logo</span><em>Silver Sponsor</em></div>
             </Reveal>
           </div>
         </section>
@@ -183,12 +194,30 @@ export default function SponsorsPage() {
           </div>
         </section>
 
+        {/* How booking works */}
+        <section className="section section-alt">
+          <div className="container">
+            <Reveal className="eyebrow">Booking &amp; participation</Reveal>
+            <Reveal as="h2" className="section-title">How booking <span className="grad">works.</span></Reveal>
+            <div className="africa-cards">
+              <Reveal className="africa-card"><strong>1 · Choose your package</strong><span>Pick the sponsorship tier or branding add-on that matches your objectives.</span></Reveal>
+              <Reveal className="africa-card"><strong>2 · Confirm availability</strong><span>Contact the ProFX team to check available positions and technical details.</span></Reveal>
+              <Reveal className="africa-card"><strong>3 · Complete the agreement</strong><span>Sign the sponsorship agreement and confirm your booking with payment.</span></Reveal>
+              <Reveal className="africa-card"><strong>4 · Send your artwork</strong><span>Provide your logo, company profile, promotional artwork and required information before the deadlines.</span></Reveal>
+            </div>
+            <Reveal className="center" style={{ marginTop: '10px' }}>
+              <a href={MAIL + 'Sponsorship%20Enquiry%20' + SUBJ} className="btn btn-primary btn-lg">Start the Conversation</a>
+            </Reveal>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="section">
           <div className="container narrow center">
             <Reveal as="h2" className="section-title">Ready to own the <span className="grad">spotlight?</span></Reveal>
             <Reveal className="section-lead">Tell us about your goals — our partnerships team will build the right package for your brand.</Reveal>
             <Reveal as="a" href={MAIL + 'Sponsorship%20Enquiry%20' + SUBJ} className="btn btn-primary btn-lg">Start the Conversation</Reveal>
+            <Reveal className="section-lead" style={{ marginTop: '18px' }}>Media &amp; sponsorship enquiries: <a href="tel:+971588845033">+971 58 884 5033</a> · <a href="mailto:info@profxmedia.com">info@profxmedia.com</a> · <a href="https://www.profxexpo.com" target="_blank" rel="noopener">profxexpo.com</a></Reveal>
           </div>
         </section>
       </main>

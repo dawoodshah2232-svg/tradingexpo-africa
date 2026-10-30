@@ -34,7 +34,7 @@ export default function BlogPage() {
         <div className="container">
           <p className="eyebrow">Blog</p>
           <h1>Insights from the editorial team.</h1>
-          <p className="section-lead">55 in-depth guides on forex, crypto, trading strategies, risk management and fintech for African traders — plus everything about Trading Expo Africa.</p>
+          <p className="section-lead">55 in-depth guides on forex, crypto, trading strategies, risk management and fintech for African traders — plus everything about Trading Expo Johannesburg.</p>
         </div>
       </section>
       <section className="section">

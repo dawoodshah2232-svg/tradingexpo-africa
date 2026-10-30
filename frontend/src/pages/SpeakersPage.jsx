@@ -34,7 +34,7 @@ export default function SpeakersPage() {
             <a href="tickets.html" className="btn btn-primary btn-lg">Book Your Ticket</a>
           </Reveal>
           <Reveal as="p" className="fine center" style={{ marginTop: '18px' }}>
-            Want to speak at Trading Expo Africa 2027? <a href="contact.html" style={{ textDecoration: 'underline' }}>Get in touch</a>.
+            Want to speak at Trading Expo Johannesburg 2027? <a href="contact.html" style={{ textDecoration: 'underline' }}>Get in touch</a>.
           </Reveal>
         </div>
       </section>

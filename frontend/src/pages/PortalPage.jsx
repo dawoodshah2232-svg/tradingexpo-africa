@@ -79,7 +79,7 @@ const AGENDA_PICKS = [
   ['Day 1 · 10:00', 'Opening keynote: the state of trading in Africa'],
   ['Day 1 · 12:00', 'Panel: brokers, prop firms and the future of retail FX'],
   ['Day 2 · 11:00', 'Live trading sessions with professional traders'],
-  ['Day 2 · 15:00', 'Awards ceremony & Trading Expo lucky draw'],
+  ['Day 2 · 15:00', 'Awards ceremony & live trading contest finale'],
 ];
 
 /* ---------- printable ticket ---------- */
@@ -88,7 +88,7 @@ function printTicket(b) {
   const w = window.open('', '_blank', 'width=760,height=940');
   if (!w) return false;
   const escH = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Ticket ' + escH(b.ref) + ' — Trading Expo Africa</title>' +
+  w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Ticket ' + escH(b.ref) + ' — Trading Expo Johannesburg</title>' +
     '<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:#f2f4f7;margin:0;padding:32px}' +
     '.t{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.12)}' +
     '.th{background:#0b1f3a;color:#fff;padding:28px 30px}.th h1{margin:0 0 6px;font-size:22px;letter-spacing:1px}.th p{margin:0;color:#b9c9dd;font-size:14px}' +
@@ -1146,8 +1146,8 @@ function MyTickets({ ctx }) {
         </>
       )}
       <div className="callout">
-        <strong>Lucky draw — Day 2.</strong>
-        <span>Your ticket is automatically entered into the Trading Expo lucky draw on 24 April. Be in the hall to win.</span>
+        <strong>Live trading contest — both days.</strong>
+        <span>Full contest rules, entry details and prizes will be announced closer to the event.</span>
       </div>
     </>
   );
@@ -1198,7 +1198,7 @@ const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'What is the Trading Expo Africa portal?', acceptedAnswer: { '@type': 'Answer', text: 'The portal is your personal dashboard for the expo, with separate logins for ticket holders, exhibitors and admins. Ticket holders manage tickets and announcements; exhibitors manage booths, badges, branding and documents; admins oversee bookings and communications. One login gives you everything related to your role.' } },
+    { '@type': 'Question', name: 'What is the Trading Expo Johannesburg portal?', acceptedAnswer: { '@type': 'Answer', text: 'The portal is your personal dashboard for the expo, with separate logins for ticket holders, exhibitors and admins. Ticket holders manage tickets and announcements; exhibitors manage booths, badges, branding and documents; admins oversee bookings and communications. One login gives you everything related to your role.' } },
     { '@type': 'Question', name: 'How do I log in to the portal?', acceptedAnswer: { '@type': 'Answer', text: 'Go to the portal page and choose your role — ticket holder, exhibitor or admin — then enter your booking reference or exhibitor ID and password. Your credentials are issued when you book a ticket or confirm a booth. Keep them safe: you will use the same login before, during and after the event.' } },
     { '@type': 'Question', name: 'I forgot my portal password — what do I do?', acceptedAnswer: { '@type': 'Answer', text: 'Use the password recovery option on the portal login screen, or contact support through the contact page with your booking reference or exhibitor ID. The team will verify your identity and reset your access. To avoid delays, save your credentials securely when you first receive them after booking.' } },
     { '@type': 'Question', name: 'What can ticket holders do in the portal?', acceptedAnswer: { '@type': 'Answer', text: 'Ticket holders can view and download their tickets anytime, check event announcements, see the program schedule, find venue and travel updates, and access exclusive promotions. Your booking reference is your key — log in before the event to make sure your ticket details are correct and ready for entry.' } },
@@ -1209,7 +1209,7 @@ const FAQ_SCHEMA = {
   ],
 };
 const FAQS = [
-  ['What is the Trading Expo Africa portal?', 'The portal is your personal dashboard for the expo, with separate logins for ticket holders, exhibitors and admins. Ticket holders manage tickets and announcements; exhibitors manage booths, badges, branding and documents; admins oversee bookings and communications. One login gives you everything related to your role.'],
+  ['What is the Trading Expo Johannesburg portal?', 'The portal is your personal dashboard for the expo, with separate logins for ticket holders, exhibitors and admins. Ticket holders manage tickets and announcements; exhibitors manage booths, badges, branding and documents; admins oversee bookings and communications. One login gives you everything related to your role.'],
   ['How do I log in to the portal?', 'Go to the portal page and choose your role — ticket holder, exhibitor or admin — then enter your booking reference or exhibitor ID and password. Your credentials are issued when you book a ticket or confirm a booth. Keep them safe: you will use the same login before, during and after the event.'],
   ['I forgot my portal password — what do I do?', 'Use the password recovery option on the portal login screen, or contact support through the contact page with your booking reference or exhibitor ID. The team will verify your identity and reset your access. To avoid delays, save your credentials securely when you first receive them after booking.'],
   ['What can ticket holders do in the portal?', 'Ticket holders can view and download their tickets anytime, check event announcements, see the program schedule, find venue and travel updates, and access exclusive promotions. Your booking reference is your key — log in before the event to make sure your ticket details are correct and ready for entry.'],
@@ -1493,14 +1493,14 @@ export default function PortalPage() {
         <div id="portalLogin" className="login-view">
           <aside className="login-brand">
             <div className="login-brand-inner">
-              <img className="login-logo" src={ab + 'logo-light.png'} alt="Trading Expo Africa" />
+              <img className="login-logo" src={ab + 'logo-jhb-light.png'} alt="Trading Expo Johannesburg" />
               <p className="login-eyebrow">ProFX Media FZ-LLC presents</p>
-              <h1>Trading Expo Africa</h1>
-              <p className="login-dates">19–20 February 2027 · Africa</p>
+              <h1>Trading Expo Johannesburg</h1>
+              <p className="login-dates">19–20 February 2027 · Johannesburg</p>
               <div className="login-stats">
-                <div><strong>TBA</strong><span>Visitors</span></div>
-                <div><strong>TBA</strong><span>Exhibitors</span></div>
-                <div><strong>TBA</strong><span>Speakers</span></div>
+                <div><strong>4,000+</strong><span>Expected traders</span></div>
+                <div><strong>2</strong><span>Days</span></div>
+                <div><strong>18</strong><span>Featured speakers</span></div>
               </div>
               <p className="login-demo-note">Demo preview — bookings are stored in this browser only, no real server is connected yet.</p>
             </div>

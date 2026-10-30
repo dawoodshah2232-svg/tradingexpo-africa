@@ -31,13 +31,13 @@ function FaqGroup({ items }) {
 
 const GENERAL = [
   {
-    q: 'When and where is Trading Expo Africa?',
+    q: 'When and where is Trading Expo Johannesburg?',
     a: <>19–20 February 2027, at Emperors Palace, Johannesburg, South Africa. <a href="venue.html">See the venue →</a>.</>,
     open: true,
   },
   {
     q: 'Who organises the event?',
-    a: 'Trading Expo Africa is organised by ProFX Media FZ-LLC.',
+    a: 'Trading Expo Johannesburg is organised by ProFX Media FZ-LLC.',
   },
   {
     q: 'Who should attend?',
@@ -63,8 +63,8 @@ const TICKETS = [
     a: 'Tickets are generally non-refundable except where required by law or stated in the official terms. If the event is cancelled, ticket holders will be refunded.',
   },
   {
-    q: 'Is there a lucky draw?',
-    a: 'Yes — every ticket is automatically entered into the Trading Expo lucky draw held on Day 2 (24 April).',
+    q: 'Will there be a live trading contest?',
+    a: 'Yes — a live trading contest runs across both expo days. Full contest rules, entry details and prizes will be announced closer to the event.',
   },
   {
     q: 'Do you offer group tickets?',
@@ -79,11 +79,11 @@ const EXHIBITORS = [
   },
   {
     q: 'What booth sizes are available?',
-    a: <>Standard 3×3m, Corner 3×3m, Premium 6×3m and Custom/Island builds. <a href="exhibit.html#booths">See options →</a></>,
+    a: <>Sponsor booths 5 × 3 m and 4 × 3 m (space only, custom build by sponsor); Gold 3 × 3 m and Silver 3 × 2 m shell-scheme booths. <a href="exhibit.html#booths">See options →</a></>,
   },
   {
     q: 'What sponsorship tiers exist?',
-    a: <>Title, Presenting, Platinum, Gold, Silver and 10 specialty packages (Registration, Main Stage, Lounges, Lanyard, Badge, App, Wi-Fi, Trading Challenge, Media Wall). <a href="sponsors.html">See tiers →</a></>,
+    a: <>Eight tiers from $4,000 (Silver) to $30,000 (Title): Title, Official, Exclusive, Regional, Diamond, Elite, Gold and Silver — plus branding add-ons such as the Speaker Hall ($10,000), Entrance Arch, Networking Lounge and Registration Area ($5,000 each). <a href="sponsors.html">See tiers →</a></>,
   },
   {
     q: 'How does the exhibitor portal work?',
@@ -94,22 +94,22 @@ const EXHIBITORS = [
 const VENUE = [
   {
     q: 'Where exactly is the venue?',
-    a: <>The venue city will be announced soon. <a href="venue.html">See the venue page →</a></>,
+    a: <>Emperors Palace, Centre Court, 64 Jones Road, Kempton Park, Johannesburg, South Africa. <a href="venue.html">See the venue page →</a></>,
   },
   {
     q: 'Will there be partner hotels?',
-    a: 'Yes — partner hotel rates and booking links will be published with the venue announcement.',
+    a: 'Partner hotel rates and booking links will be published closer to the event.',
   },
   {
-    q: "I'm travelling from outside Africa — do I need a visa?",
-    a: "International visitors should check Africa's e-Visa requirements well in advance of travel.",
+    q: "I'm travelling from outside South Africa — do I need a visa?",
+    a: 'International visitors should check South Africa\u2019s visa requirements well in advance of travel.',
   },
 ];
 
 const PAYMENTS = [
   {
     q: 'When do I pay for my booking?',
-    a: 'No payment is taken when you reserve. Our team emails your payment link — your early-bird price is locked for 48 hours.',
+    a: 'No payment is collected when you register your interest. Pricing will be confirmed with you before anything is charged.',
   },
   {
     q: 'Which payment methods are accepted?',

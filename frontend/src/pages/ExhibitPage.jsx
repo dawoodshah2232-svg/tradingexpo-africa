@@ -5,18 +5,18 @@ import { useLightbox } from '../components/Gallery.jsx';
 import { useAssetBase } from '../lib/theme.jsx';
 
 const OPTIONS = [
-  { name: 'Standard 3×3m', price: 0, priceHtml: 'Request pricing',
-    desc: 'Shell scheme · fascia branding · 2 badges' },
-  { name: 'Corner 3×3m', price: 0, priceHtml: 'Request pricing',
-    desc: 'Two open sides · higher visibility · 2 badges' },
-  { name: 'Premium 6×3m', price: 0, tag: 'Popular', priceHtml: 'Request pricing',
-    desc: 'Larger footprint · upgraded branding · 4 badges' },
-  { name: 'Custom / Island', price: 0, priceHtml: 'Request pricing',
-    desc: 'Your own build · custom layout' },
+  { name: 'Sponsor booth 5×3 m (space only)', price: 0, priceHtml: 'Request pricing',
+    desc: 'Title / Official / Exclusive / Regional footprint · custom build by sponsor' },
+  { name: 'Sponsor booth 4×3 m (space only)', price: 0, priceHtml: 'Request pricing',
+    desc: 'Diamond / Elite footprint · custom build by sponsor' },
+  { name: 'Gold booth 3×3 m (shell scheme)', price: 0, priceHtml: 'Request pricing',
+    desc: 'Shell scheme · 2 sides open · TV included · organiser-built branding' },
+  { name: 'Silver booth 3×2 m (shell scheme)', price: 0, priceHtml: 'Request pricing',
+    desc: 'Shell scheme · 1 side open · TV not included · organiser-built branding' },
 ];
 
 const FAQS = [
-  ['How do I exhibit at Trading Expo Africa?', 'Head to the exhibit page and submit a booth reservation with your company details and preferred booth size. The team will confirm pricing, hold your space and share the exhibitor pack. After confirmation you get exhibitor portal access to manage your profile, team badges, branding uploads and readiness checklist.'],
+  ['How do I exhibit at Trading Expo Johannesburg?', 'Head to the exhibit page and submit a booth reservation with your company details and preferred booth size. The team will confirm pricing, hold your space and share the exhibitor pack. After confirmation you get exhibitor portal access to manage your profile, team badges, branding uploads and readiness checklist.'],
   ['How many exhibitors will be at the expo?', 'The expo floor hosts exhibitors across trading, fintech, brokerage, payments, technology and education. Exhibitors get sustained footfall and face time with serious buyers over two days. Booth space is limited to keep the floor curated — reserving early gives you the best choice of location.'],
   ['What is included with an exhibitor booth?', 'Every booth package includes your floor space, shell scheme or custom-build options, standard furniture, power supply, Wi-Fi, exhibitor badges for your team and a listing in the official exhibitor directory. Premium packages add branding placements, stage mentions and lead-retrieval options. Full inclusions are detailed in the exhibitor pack after you reserve.'],
   ['Can I choose my booth location on the floor?', 'Yes — booth locations are allocated on a first-come, first-served basis, so early reservations get first pick. You can share your preferences — near the entrance, main stage or networking lounge — when you reserve, and the floor team will do its best to match them. A concept floor plan is available on the exhibit page.'],
@@ -52,7 +52,7 @@ export default function ExhibitPage() {
         <div className="container">
           <Reveal className="eyebrow">Exhibit</Reveal>
           <Reveal as="h1">Put your brand in front of<br /><span className="grad">Africa's trading community.</span></Reveal>
-          <Reveal className="section-lead">Two days of deal-making at Emperors Palace, Johannesburg. Reserve your booth now — no payment taken today.</Reveal>
+          <Reveal className="section-lead">Two days of deal-making at Emperors Palace, Johannesburg. Reserve your booth now — no payment collected at this stage.</Reveal>
           <Reveal className="center">
             <a className="btn btn-primary" href="#reserve" style={{ marginLeft: 10 }}>Reserve Your Booth</a>
           </Reveal>
@@ -84,10 +84,10 @@ export default function ExhibitPage() {
           <Reveal as="h2" className="section-title">Choose your <span className="grad">space.</span></Reveal>
           <div className="ticket-grid">
             {[
-              ['Standard 3×3m', 'Shell scheme, fascia branding, table, 2 chairs, 2 badges.', false],
-              ['Corner 3×3m', 'High-visibility corner position with two open sides.', false],
-              ['Premium 6×3m', 'Larger footprint with upgraded branding and 4 badges.', true],
-              ['Custom / Island', 'Your own build — pricing and layout on request.', false],
+              ['Sponsor booth 5×3 m', 'Space only, custom build — Title, Official, Exclusive and Regional footprints.', false],
+              ['Sponsor booth 4×3 m', 'Space only, custom build — Diamond and Elite footprints.', false],
+              ['Gold booth 3×3 m', 'Organiser-built branded shell scheme, two sides open, TV included.', true],
+              ['Silver booth 3×2 m', 'Organiser-built branded shell scheme, one side open, TV not included.', false],
             ].map(([h, p, featured], i) => (
               <Reveal as="article" className={'ticket' + (featured ? ' ticket-featured' : '')} delay={i * 80} key={h}>
                 {featured && <span className="flag">Popular</span>}
@@ -107,12 +107,13 @@ export default function ExhibitPage() {
           <Reveal className="section-lead">Concept layout — exhibition hall, main stage, lounges, registration and food court. Final layout follows venue confirmation.</Reveal>
           <Reveal as="figure" className="banner">
             <img
-              src={fpSrc} alt="Concept floor plan blueprint of Trading Expo Africa"
+              src={fpSrc} alt="Concept floor plan blueprint of Trading Expo Johannesburg"
               loading="lazy" id="floorplanImg" style={{ cursor: 'zoom-in' }}
-              onClick={() => open([{ src: fpSrc, alt: 'Concept floor plan blueprint of Trading Expo Africa', caption: 'Concept floor plan — Trading Expo Africa' }], 0)}
+              onClick={() => open([{ src: fpSrc, alt: 'Concept floor plan blueprint of Trading Expo Johannesburg', caption: 'Concept floor plan — Trading Expo Johannesburg' }], 0)}
             />
             <figcaption>Concept floor plan — tap to view full size</figcaption>
           </Reveal>
+          <Reveal className="section-lead" style={{ marginTop: '18px' }}>Booth &amp; screen sizes from the sponsorship brochure — sponsor booths 5 × 3 m and 4 × 3 m (space only, custom build by sponsor); Gold 3 × 3 m and Silver 3 × 2 m shell-scheme booths. On-site screens: Speaker LED 6 × 2.5 m, side LED screens 1.5 × 2.5 m, LED exposure walls 2.5 × 3 m, backdrop / media wall 3.3 × 2.3 m.</Reveal>
         </div>
       </section>
 

@@ -7,11 +7,11 @@ const SECTIONS = [
   ['Exhibitors and sponsors',
     'Booth and sponsorship reservations are confirmed by our partnerships team, who will share pricing, the exhibitor pack and payment terms. Participation is subject to the organiser\u2019s approval and the terms in your booking agreement.'],
   ['Conduct',
-    'Trading Expo Africa is a professional event. Attendees, exhibitors and speakers are expected to behave respectfully. The organiser may remove anyone whose behaviour disrupts the event or endangers others, without refund. Promotional activity is limited to booked exhibitor and sponsor spaces.'],
+    'Trading Expo Johannesburg is a professional event. Attendees, exhibitors and speakers are expected to behave respectfully. The organiser may remove anyone whose behaviour disrupts the event or endangers others, without refund. Promotional activity is limited to booked exhibitor and sponsor spaces.'],
   ['Trading contest',
     'The live trading contest runs under its own published rules, including eligibility, scoring and prize terms. Participation is voluntary. Trading involves risk; contest results do not guarantee future performance.'],
   ['Content and media',
-    'The event may be photographed and recorded. By attending, you consent to appearing in event photography and recordings used for Trading Expo Africa marketing, unless you inform our team in writing in advance.'],
+    'The event may be photographed and recorded. By attending, you consent to appearing in event photography and recordings used for Trading Expo Johannesburg marketing, unless you inform our team in writing in advance.'],
   ['Liability',
     'The organiser works to deliver the programme as described, but sessions, speakers and timings may change. To the extent permitted by law, the organiser is not liable for indirect or consequential losses arising from attendance or reliance on event content. Nothing here limits liability that cannot legally be limited.'],
   ['Governing terms',
@@ -25,7 +25,7 @@ export default function TermsPage() {
         <div className="container">
           <Reveal className="eyebrow">Legal</Reveal>
           <Reveal as="h1">Terms &amp; <span className="grad">Conditions.</span></Reveal>
-          <Reveal className="section-lead">The rules for tickets, exhibiting, and attending Trading Expo Africa — 19–20 February 2027, Emperors Palace, Johannesburg.</Reveal>
+          <Reveal className="section-lead">The rules for tickets, exhibiting, and attending Trading Expo Johannesburg — 19–20 February 2027, Emperors Palace, Johannesburg.</Reveal>
         </div>
       </section>
       <section className="section">

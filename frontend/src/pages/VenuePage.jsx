@@ -32,7 +32,7 @@ export default function VenuePage() {
         <section className="section section-alt">
           <div className="container">
             <Reveal as="h2" className="section-title">The venue <span className="grad">in photos.</span></Reveal>
-            <Reveal className="section-lead">Real photography of Emperors Palace — the resort hosting Trading Expo Africa 2027. Tap any photo to view it full size.</Reveal>
+            <Reveal className="section-lead">Real photography of Emperors Palace — the resort hosting Trading Expo Johannesburg 2027. Tap any photo to view it full size.</Reveal>
             <div className="gallery-page" style={{ marginTop: '34px' }}>
               {VENUE_PHOTOS.map((p, i) => (
                 <figure className="g-item" key={p.src} onClick={() => open(lbItems, i)}>

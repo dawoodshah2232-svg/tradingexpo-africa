@@ -7,7 +7,7 @@ import { useAssetBase } from '../lib/theme.jsx';
 function onEnquirySubmit(e) {
   e.preventDefault();
   const d = new FormData(e.target);
-  const subject = encodeURIComponent('Trading Expo Africa enquiry — ' + d.get('interest'));
+  const subject = encodeURIComponent('Trading Expo Johannesburg enquiry — ' + d.get('interest'));
   const body = encodeURIComponent(
     'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') +
     '\nInterested in: ' + d.get('interest') +
@@ -48,9 +48,14 @@ export default function ContactPage() {
                   <span className="muted">Booths, sponsorships &amp; partnerships</span></p>
               </Reveal>
               <Reveal className="contact-card">
+                <h3>Media &amp; sponsorship</h3>
+                <p><a href="tel:+971588845033">+971 58 884 5033</a><br />
+                  <span className="muted">Sponsorship &amp; media enquiries</span></p>
+              </Reveal>
+              <Reveal className="contact-card">
                 <h3>Organiser</h3>
                 <p>ProFX Media FZ-LLC<br />
-                  <span className="muted">TradingExpo.com</span></p>
+                  <span className="muted">thetradersexpo.com · <a href="https://www.profxexpo.com" target="_blank" rel="noopener">profxexpo.com</a></span></p>
               </Reveal>
               <Reveal className="contact-card">
                 <h3>Event</h3>

@@ -90,7 +90,7 @@ export function Countdown() {
   const m = pad(Math.floor(diff / 6e4) % 60);
   const s = pad(Math.floor(diff / 1e3) % 60);
   return (
-    <div className="countdown" data-hero role="timer" aria-label="Countdown to Trading Expo Africa">
+    <div className="countdown" data-hero role="timer" aria-label="Countdown to Trading Expo Johannesburg">
       <div className="cd-cell"><span className="cd-num">{diff <= 0 ? '00' : d}</span><span className="cd-label">Days</span></div>
       <div className="cd-sep">:</div>
       <div className="cd-cell"><span className="cd-num">{h}</span><span className="cd-label">Hours</span></div>
@@ -171,7 +171,7 @@ export function Preloader() {
   if (done) return null;
   return (
     <div className={'preloader' + (pct >= 100 ? ' done' : '')} id="preloader" aria-hidden="true">
-      <img className="pre-logo-img" src={ab + 'logo-dark.png'} alt="Trading Expo Africa" />
+      <img className="pre-logo-img" src={ab + 'logo-dark.png'} alt="Trading Expo Johannesburg" />
       <div className="pre-count"><span>{pct < 10 ? '0' : ''}{pct}</span>%</div>
       <div className="pre-bar"><i style={{ width: pct + '%' }}></i></div>
     </div>
