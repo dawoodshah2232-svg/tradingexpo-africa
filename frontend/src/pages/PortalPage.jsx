@@ -97,7 +97,7 @@ function printTicket(b) {
     'display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:1px}' +
     '.note{text-align:center;color:#6b7a90;font-size:13px;margin:6px 0 0}' +
     '@media print{body{background:#fff;padding:0}.t{box-shadow:none}}</style></head><body>' +
-    '<div class="t"><div class="th"><h1>TRADING EXPO AFRICA</h1><p>19–20 February 2027 · Emperors Palace, Johannesburg · Organised by ProFX Media FZ-LLC</p></div>' +
+    '<div class="t"><div class="th"><h1>TRADERS EXPO JOHANNESBURG</h1><p>19–20 February 2027 · Emperors Palace, Johannesburg · Organised by ProFX Media FZ-LLC</p></div>' +
     '<div class="tb">' +
     '<div class="row"><span>Pass</span><strong>' + escH(b.option ? b.option.name : '—') + '</strong></div>' +
     '<div class="row"><span>Name</span><strong>' + escH(f.name || f.company || '—') + '</strong></div>' +
@@ -188,7 +188,7 @@ function TicketCard({ b, compact }) {
     <div className="pticket">
       <div className="pticket-top">
         <div>
-          <strong>TRADING EXPO AFRICA</strong>
+          <strong>TRADERS EXPO JOHANNESBURG</strong>
           <span>19–20 February 2027 · Africa · ProFX Media FZ-LLC</span>
         </div>
         <div className="pticket-qr">{b.ref}</div>
