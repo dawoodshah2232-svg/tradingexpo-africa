@@ -117,6 +117,68 @@ async function sendFreeTicketEmail(rec) {
   } catch { return false; } finally { clearTimeout(timer); }
 }
 
+/* Interim email path for portal accounts (same FormSubmit mechanism as the
+   ticket email). The code / credentials travel ONLY inside _autoresponse
+   to the user's own inbox. Never throws — returns false on any failure so
+   the UI can say so honestly instead of pretending an email was sent. */
+async function formSubmitPost(fields) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 10000);
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/info@profxmedia.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ _template: 'table', _captcha: 'false', ...fields }),
+      signal: ctrl.signal,
+    });
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data) return false;
+    if ('success' in data) return data.success === true || data.success === 'true';
+    return true;
+  } catch { return false; } finally { clearTimeout(timer); }
+}
+
+export async function sendOtpEmail({ email, name, code }) {
+  return formSubmitPost({
+    name: name || '', email,
+    _subject: 'Your Traders Expo Johannesburg portal signup code',
+    _autoresponse: [
+      'Your Traders Expo Johannesburg signup code',
+      '',
+      `Hi ${name || ''},`,
+      '',
+      `Your verification code is: ${code}`,
+      '',
+      'Enter this code in the portal within 10 minutes to finish signing up. If you did not request this, ignore this email.',
+      '',
+      'Traders Expo Johannesburg · 19–20 February 2027 · Emperors Palace, Johannesburg',
+    ].join('\n'),
+  });
+}
+
+export async function sendAccountCredentialsEmail({ email, name, password, role }) {
+  const roleLabel = role === 'sponsor' ? 'Sponsor' : role === 'exhibitor' ? 'Exhibitor' : role === 'admin' ? 'Admin' : 'Ticket Holder';
+  return formSubmitPost({
+    name: name || '', email,
+    _subject: `Your Traders Expo Johannesburg portal login (${roleLabel})`,
+    _autoresponse: [
+      'Your Traders Expo Johannesburg portal login',
+      '',
+      `Hi ${name || ''},`,
+      '',
+      'An account has been created for you on the Traders Expo Johannesburg portal:',
+      '',
+      `Login email: ${email}`,
+      `Password: ${password}`,
+      `Role: ${roleLabel}`,
+      '',
+      'Log in on the event portal with the email and password above. You can change your password after logging in.',
+      '',
+      'Traders Expo Johannesburg · 19–20 February 2027 · Emperors Palace, Johannesburg',
+    ].join('\n'),
+  });
+}
+
 export async function createBooking(payload) {
   // payload: { type: 'ticket'|'exhibitor', pass_name, qty, total, name,
   //            company, email, phone, extra }
@@ -152,8 +214,6 @@ export async function createBooking(payload) {
 
 const DEMO_LOGINS = [
   { role: 'admin', ref: 'admin', password: 'expo2027' },
-  { role: 'exhibitor', ref: 'EXB27-DEMO', password: 'demo123' },
-  { role: 'ticket', ref: 'TEA-DEMO', password: 'demo123' },
 ];
 
 export async function portalLogin(role, ref, password) {
@@ -310,41 +370,6 @@ export function writeKey(k, ref, val) {
   try { localStorage.setItem(pkey(k, ref), JSON.stringify(val)); } catch {}
 }
 
-/* ---------------- Demo seed (mirrors the original static portal) ---------------- */
-
-export function seedDemoIfEmpty() {
-  if (!localStorage.getItem('tea_bookings')) {
-    writeStore('tea_bookings', [{
-      ref: 'TEA-DEMO', password: 'demo123', qty: 1,
-      option: { name: 'Pro Trader Pass', price: 999 },
-      fields: { name: 'Demo Trader', email: 'demo@tradingexpo.com', phone: '+27 11 000 0000', city: 'Johannesburg' },
-      at: new Date().toISOString(),
-    }]);
-  }
-  if (!localStorage.getItem('tea_exhibit')) {
-    writeStore('tea_exhibit', [{
-      ref: 'EXB27-DEMO', password: 'demo123', qty: 1,
-      option: { name: 'Premium 6×3m', price: 0 },
-      fields: {
-        company: 'Demo Fintech Pvt Ltd', name: 'Demo Exhibitor', email: 'demo@tradingexpo.com',
-        phone: '+27 11 000 0001', website: 'https://example.com', category: 'Fintech',
-      },
-      at: new Date().toISOString(),
-    }]);
-  }
-  if (!localStorage.getItem('tea_announcements')) {
-    const now = new Date().toISOString();
-    writeStore('tea_announcements', [
-      { id: 'a1', title: 'Ticket pricing coming soon', audience: 'all', at: now,
-        body: 'Ticket pricing will be announced soon. Reserve your pass now — no payment taken today. Share the expo with your trading community.' },
-      { id: 'a2', title: 'Exhibitor manual & booth allocation', audience: 'exhibitor', at: now,
-        body: 'The exhibitor manual with setup timings, freight and branding guidelines will be published here. Complete your company profile and team details so we can prepare your badges.' },
-      { id: 'a3', title: 'Live trading contest — both days', audience: 'ticket', at: now,
-        body: 'A live trading contest runs across both expo days. Full contest rules, entry details and prizes will be announced closer to the event.' },
-    ]);
-  }
-}
-
 /* ---------------- Announcements (portal shape) ---------------- */
 
 export async function announcements(audience) {
@@ -410,7 +435,6 @@ export const api = {
   portalLogin, bookingLogin, adminLogin, adminLogout,
   getSession, setSession, clearSession,
   readKey, writeKey,
-  seedDemoIfEmpty,
   getAnnouncements, announcements, saveAnnouncement, publishAnnouncement, deleteAnnouncement,
   getAllBookings, adminBookings,
   submitContact, subscribeNewsletter,

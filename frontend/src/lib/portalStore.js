@@ -1,24 +1,25 @@
-// Traders Expo Johannesburg — portal demo store (Layer 1).
+// Traders Expo Johannesburg — portal interim store (Layer 1).
 //
-// This is the DEMO data layer for the portal. Everything lives in this
-// browser's localStorage so every flow is clickable today. It mirrors the
+// This is the INTERIM browser store for the portal. Everything lives in this
+// browser's localStorage until the real backend lands. It mirrors the
 // Laravel 10 + MySQL backend spec in frontend/docs/portal-api-spec.md 1:1 —
 // same entities, same field names — so the real backend can replace it
 // without redesigning the portal.
 //
-// Honesty rules baked in:
-//  - No real attendee data. Seeded people are fictional ("Demo Attendee One"
-//    etc.) on example.com addresses. Real bookings made on the tickets page
-//    land in tea_bookings and are picked up by email login automatically.
-//  - The 10 sponsor-wall brands are past ProFX partners. Their demo sponsor
-//    accounts reuse ONLY their names + the logos already in the repo. No
-//    2027 deal, booth, or payment is implied for them — their seeded records
-//    carry no booth and no payment.
+// Rules baked in (Oct 2026 no-demo order):
+//  - NO demo data. Lists start empty. Accounts exist only when the admin
+//    creates them, when someone signs up (email OTP), or when someone books
+//    on the tickets / exhibit pages. The single exception is the temporary
+//    TEST account (see ensureTestAccount), ordered by the owner for now and
+//    marked for deletion before production.
 //  - Tickets are FREE. No payment UI ever appears on a ticket, and no card
 //    details are ever captured anywhere in this file.
 //  - The floor plan is REAL (organiser-supplied PDF, visually verified).
-//    Booth numbers/tiers/sizes come from that plan. Availability states
-//    (available/reserved/sold) remain demo data.
+//    Booth numbers/tiers/sizes come from that plan. Availability reflects
+//    reservations made in this portal; nothing is pre-filled.
+//  - Passwords are never rendered in any UI. This interim layer stores them
+//    as entered (same as booking passwords); production uses bcrypt and
+//    never stores them in readable form.
 
 const KEY = 'tea_portal_v2';
 const READ_PREFIX = 'tea_portal_v2_read_';
@@ -86,90 +87,184 @@ const BOOTH_MAP = [
   ['37', 'Silver', '3×3', 4000], ['38', 'Gold', '3×3', 6500],
 ];
 function buildBooths() {
-  const sold = new Set(['02', '05', '17', '29']);
-  const reserved = new Set(['01', '09', '24', '31']); // 24 held by the fictional demo sponsor
+  // Every booth starts available. A booth becomes reserved only when a
+  // sponsor picks it in this portal (or the admin assigns it); sold only
+  // when the admin marks it sold. No pre-filled availability.
   return BOOTH_MAP.map(([id, tier, size, price]) => ({
-    id, row: tier, tier, size, price,
-    status: sold.has(id) ? 'sold' : reserved.has(id) ? 'reserved' : 'available',
+    id, row: tier, tier, size, price, status: 'available',
   }));
 }
 
 function seedState() {
-  const wall = [
-    { brand: 'BridgingFX', tier: 'Platinum', logo: 'bridgingfx.png' },
-    { brand: 'Swiset', tier: 'Gold', logo: 'swiset.png' },
-    { brand: 'Taurex', tier: 'Gold', logo: 'taurex.png' },
-    { brand: 'FXKEY', tier: 'Silver', logo: 'fxkey.png' },
-    { brand: 'GGCC', tier: 'Silver', logo: 'ggcc.png' },
-    { brand: 'JKV', tier: 'Silver', logo: 'jkv.png' },
-    { brand: 'Miles Capital', tier: 'Silver', logo: 'milescapital.png' },
-    { brand: 'PipsForex', tier: 'Silver', logo: 'pipsforex.png' },
-    { brand: 'Profit FX', tier: 'Silver', logo: 'profitfx.png' },
-    { brand: 'ZaraFX', tier: 'Silver', logo: 'zarafx.png' },
-  ];
-  const sponsors = wall.map((w, i) => ({
-    id: 'spn-' + (i + 1),
-    brand: w.brand, tier: w.tier, logo: w.logo,
-    email: 'demo-' + w.brand.toLowerCase().replace(/[^a-z0-9]+/g, '') + '@example.com',
-    password: 'demo123', contact: 'Demo Contact', phone: '+27 11 000 00' + (10 + i),
-    isWallDemo: true, boothId: null, boothChosenAt: null, packageId: null,
-    note: 'Past ProFX partner — demo account for preview only. No 2027 sponsorship deal is implied.',
-  }));
-  sponsors.push(
-    { id: 'spn-demo-1', brand: 'Demo Sponsor One', tier: 'Gold', logo: null, email: 'sponsor1@example.com', password: 'demo123', contact: 'Demo Sponsor One', phone: '+27 11 000 0091', isWallDemo: false, boothId: '24', boothChosenAt: nowISO(), packageId: 'pkg-gold', note: 'Fictional demo sponsor.' },
-    { id: 'spn-demo-2', brand: 'Demo Sponsor Two', tier: 'Silver', logo: null, email: 'sponsor2@example.com', password: 'demo123', contact: 'Demo Sponsor Two', phone: '+27 11 000 0092', isWallDemo: false, boothId: null, boothChosenAt: null, packageId: 'pkg-silver', note: 'Fictional demo sponsor.' },
-  );
+  // Empty by design (Oct 2026 no-demo order): no seeded people, tickets,
+  // sponsors, notifications, offers or payments. Lists start empty; the
+  // only account created here is the temporary test account (see
+  // ensureTestAccount), plus real accounts the admin creates or users
+  // sign up for. Dashboard counts read from these rows, so they start 0.
   return {
-    version: 2,
+    version: 3,
     packages: PACKAGES,
     addons: ADDONS,
     booths: buildBooths(),
-    sponsors,
+    sponsors: [],
     assets: [],
-    notifications: [
-      { id: 'n-welcome', kind: 'announcement', audience: 'all', title: 'Welcome to the Traders Expo Johannesburg portal', body: 'Ticket holders, sponsors and admins manage everything for 19–20 February 2027 here: tickets, booths, floor plan, payments and announcements.', at: nowISO() },
-      { id: 'n-offer', kind: 'offer', audience: 'ticket', title: 'Partner offer: free expo-day trading workshop', body: 'Demo promotion: a free 60-minute trading workshop on Day 1 for all ticket holders. No purchase needed — tickets are free and this offer is free too.', at: nowISO() },
-    ],
+    notifications: [],
     packageOffers: [],
-    payments: [
-      { id: 'pay-demo-1', sponsorId: 'spn-demo-1', sponsor: 'Demo Sponsor One', item: 'Gold package', amount: 6500, currency: 'USD', method: 'Bank transfer', status: 'Confirmed', note: 'Fictional demo payment.', at: nowISO() },
-    ],
+    payments: [],
     deletedTickets: [],
     ticketEvents: {},
+    speakerApplications: [],
   };
 }
 
 export function loadStore() {
   const s = readJSON(KEY, null);
-  if (!s || s.version !== 2) return null;
+  if (!s || s.version !== 3) return null;
   return s;
 }
 export function saveStore(s) { return writeJSON(KEY, s); }
 
-export function seedPortalV2() {
-  // Fictional demo attendees (also seeded as ticket bookings so the
-  // existing email-login path and ticket views work unchanged).
+// Temporary TEST account (owner-ordered, delete before production).
+// Works on both the Ticket Holder login (as a ticket booking) and the
+// Sponsor login (as a sponsor record). The password is never rendered
+// in any UI; it is listed here only because the owner ordered this
+// exact test account seeded for now.
+const TEST_EMAIL = 'test@abc.com';
+const TEST_PASSWORD = 'test@1234';
+
+function isDemoBooking(b) {
+  const ref = String(b.ref || '').toUpperCase();
+  const email = String((b.fields && b.fields.email) || '').toLowerCase();
+  if (b.demo === true) return true;
+  if (/^TEA-DEMO/i.test(ref) || /^EXB27-DEMO/i.test(ref)) return true;
+  if (email === 'demo@tradingexpo.com') return true;
+  if (/^(attendee[123]|sponsor[12])@example\.com$/.test(email)) return true;
+  if (/^demo-[a-z0-9]+@example\.com$/.test(email)) return true;
+  return false;
+}
+
+export function ensureTestAccount() {
   const bookings = readJSON('tea_bookings', []);
-  const seeds = [
-    { ref: 'TEA-DEMO1', name: 'Demo Attendee One', email: 'attendee1@example.com', phone: '+27 11 000 0011', pass: 'Trader Pass' },
-    { ref: 'TEA-DEMO2', name: 'Demo Attendee Two', email: 'attendee2@example.com', phone: '+27 11 000 0012', pass: 'Pro Trader Pass' },
-    { ref: 'TEA-DEMO3', name: 'Demo Attendee Three', email: 'attendee3@example.com', phone: '+27 11 000 0013', pass: 'VIP Pass' },
-  ];
-  let changed = false;
-  seeds.forEach((sd) => {
-    if (!bookings.find((b) => b.ref === sd.ref)) {
-      bookings.push({
-        ref: sd.ref, password: 'demo123', qty: 1,
-        option: { name: sd.pass, price: 0 },
-        fields: { name: sd.name, email: sd.email, phone: sd.phone },
-        at: nowISO(), type: 'ticket', demo: true,
-      });
-      changed = true;
-    }
+  if (!bookings.find((b) => String((b.fields && b.fields.email) || '').toLowerCase() === TEST_EMAIL)) {
+    bookings.push({
+      ref: 'TEA-TEST01', password: TEST_PASSWORD, qty: 1,
+      option: { name: 'Trader Pass', price: 0 },
+      fields: { name: 'Test Account', email: TEST_EMAIL, phone: '' },
+      at: nowISO(), type: 'ticket', test: true,
+    });
+    writeJSON('tea_bookings', bookings);
+  }
+  const st = loadStore();
+  if (st && !st.sponsors.find((s) => s.email.toLowerCase() === TEST_EMAIL)) {
+    st.sponsors.push({
+      id: 'spn-test', brand: 'Test Account', tier: 'Unassigned', logo: null,
+      email: TEST_EMAIL, password: TEST_PASSWORD, contact: 'Test Account', phone: '',
+      boothId: null, boothChosenAt: null, packageId: null,
+      note: 'Temporary test account — delete before production.', test: true,
+    });
+    saveStore(st);
+  }
+}
+
+export function seedPortalV2() {
+  // Purge any demo bookings left from earlier versions; keep real bookings.
+  ['tea_bookings', 'tea_exhibit'].forEach((k) => {
+    const all = readJSON(k, []);
+    const kept = all.filter((b) => !isDemoBooking(b));
+    if (kept.length !== all.length) writeJSON(k, kept);
   });
-  if (changed) writeJSON('tea_bookings', bookings);
-  if (!loadStore()) saveStore(seedState());
+  // Migrate the portal store to the empty v3 state (old v2 data was
+  // demo-only, so it is replaced, not carried over).
+  const st0 = loadStore();
+  if (!st0) saveStore(seedState());
+  else if (!Array.isArray(st0.speakerApplications)) { st0.speakerApplications = []; saveStore(st0); }
+  ensureTestAccount();
   return loadStore();
+}
+
+export function createSponsor(rec) {
+  const st = loadStore(); if (!st) return { ok: false, error: 'Store unavailable.' };
+  const email = String(rec.email || '').trim().toLowerCase();
+  if (!email) return { ok: false, error: 'Email is required.' };
+  if (st.sponsors.find((s) => s.email.toLowerCase() === email)) return { ok: false, error: 'An account with this email already exists.' };
+  const sp = {
+    id: uid('spn-'), brand: rec.brand || rec.contact || email, tier: rec.tier || 'Unassigned',
+    logo: null, email, password: rec.password || '', contact: rec.contact || '',
+    phone: rec.phone || '', boothId: null, boothChosenAt: null,
+    packageId: rec.packageId || null, note: rec.note || '',
+    interestedPackageId: rec.interestedPackageId || null,
+    interestedPackage: rec.interestedPackage || '',
+  };
+  st.sponsors = [...st.sponsors, sp];
+  saveStore(st);
+  return { ok: true, sponsor: sp };
+}
+
+const ADMIN_KEY = 'tea_admins';
+export function getAdminUsers() { return readJSON(ADMIN_KEY, []); }
+export function addAdminUser({ user, name, password }) {
+  const u = String(user || '').trim();
+  if (!u || !password) return { ok: false, error: 'Username and password are required.' };
+  if (u.toLowerCase() === 'admin') return { ok: false, error: 'That username is already taken.' };
+  const all = getAdminUsers();
+  if (all.find((a) => a.user.toLowerCase() === u.toLowerCase())) return { ok: false, error: 'That username is already taken.' };
+  all.push({ user: u, name: name || u, password });
+  writeJSON(ADMIN_KEY, all);
+  return { ok: true };
+}
+export function adminUserLogin(user, password) {
+  const hit = getAdminUsers().find((a) => a.user.toLowerCase() === String(user || '').trim().toLowerCase() && a.password === password);
+  return hit || null;
+}
+
+/* ---------- email OTP (signup verification, interim browser layer) ----------
+   The code lives ONLY in the short-lived pending record below (with expiry
+   and attempt count). It is never logged, never rendered, and never sent
+   anywhere except inside the FormSubmit autoresponse to the user's own
+   inbox. Production replaces this with server-side codes + Laravel mail. */
+const OTP_KEY = 'tea_otp_pending';
+const OTP_TTL_MS = 10 * 60 * 1000;
+const OTP_MAX_ATTEMPTS = 5;
+const OTP_RESEND_MS = 60 * 1000;
+function otpCode() {
+  if (!window.crypto || !window.crypto.getRandomValues) return null;
+  const buf = new Uint32Array(1);
+  window.crypto.getRandomValues(buf);
+  return String(100000 + (buf[0] % 900000));
+}
+export function createOtp(email, form) {
+  const code = otpCode();
+  if (!code) return { ok: false, error: 'Secure code generation is unavailable in this browser. Please ask the admin to create your account.' };
+  const rec = { email: String(email).trim().toLowerCase(), code, form, expiresAt: Date.now() + OTP_TTL_MS, attempts: 0, lastSentAt: Date.now() };
+  writeJSON(OTP_KEY, rec);
+  return { ok: true, code, expiresAt: rec.expiresAt };
+}
+export function getOtpRecord() { return readJSON(OTP_KEY, null); }
+export function clearOtp() { try { localStorage.removeItem(OTP_KEY); } catch {} }
+export function resendOtp() {
+  const rec = getOtpRecord();
+  if (!rec) return { ok: false, error: 'No signup in progress. Please start again.' };
+  const wait = rec.lastSentAt + OTP_RESEND_MS - Date.now();
+  if (wait > 0) return { ok: false, error: `Please wait ${Math.ceil(wait / 1000)}s before resending.`, waitSec: Math.ceil(wait / 1000) };
+  const code = otpCode();
+  if (!code) return { ok: false, error: 'Secure code generation is unavailable in this browser.' };
+  rec.code = code; rec.attempts = 0; rec.expiresAt = Date.now() + OTP_TTL_MS; rec.lastSentAt = Date.now();
+  writeJSON(OTP_KEY, rec);
+  return { ok: true, code, expiresAt: rec.expiresAt };
+}
+export function verifyOtp(email, code) {
+  const rec = getOtpRecord();
+  if (!rec || rec.email !== String(email || '').trim().toLowerCase()) return { ok: false, error: 'No code request found for this email. Please sign up again.' };
+  if (Date.now() > rec.expiresAt) { clearOtp(); return { ok: false, error: 'That code has expired. Please request a new code.', expired: true }; }
+  if (String(code || '').trim() !== rec.code) {
+    rec.attempts += 1;
+    if (rec.attempts >= OTP_MAX_ATTEMPTS) { clearOtp(); return { ok: false, error: 'Too many wrong attempts. Please request a new code.', locked: true }; }
+    writeJSON(OTP_KEY, rec);
+    return { ok: false, error: `Wrong code. ${OTP_MAX_ATTEMPTS - rec.attempts} attempt(s) left.`, attemptsLeft: OTP_MAX_ATTEMPTS - rec.attempts };
+  }
+  const form = rec.form;
+  clearOtp();
+  return { ok: true, form };
 }
 
 export function getSponsors() { return (loadStore() || seedState()).sponsors; }
@@ -307,8 +402,33 @@ export function markAllNotifRead(userKey, ids) { writeJSON(READ_PREFIX + userKey
 export function readNotifIds(userKey) { return readJSON(READ_PREFIX + userKey, []); }
 export function moneyUSD(n) { return '$' + Number(n || 0).toLocaleString('en-US'); }
 
+export function getSpeakerApplications() {
+  const st = loadStore();
+  return st ? (st.speakerApplications || []) : [];
+}
+export function addSpeakerApplication(rec) {
+  const st = loadStore(); if (!st) return null;
+  const row = {
+    id: uid('spk-'), name: rec.name || '', email: rec.email || '', phone: rec.phone || '',
+    topic: rec.topic || '', bio: rec.bio || '', status: 'pending', at: nowISO(),
+  };
+  st.speakerApplications = [...(st.speakerApplications || []), row];
+  saveStore(st);
+  return row;
+}
+export function setSpeakerApplicationStatus(id, status) {
+  const st = loadStore(); if (!st) return false;
+  st.speakerApplications = (st.speakerApplications || []).map((a) => (a.id === id ? { ...a, status } : a));
+  saveStore(st);
+  return true;
+}
+
 export const portalStore = {
-  loadStore, saveStore, seedPortalV2, getSponsors, getSponsor, sponsorLogin, updateSponsor,
+  loadStore, saveStore, seedPortalV2, ensureTestAccount, createSponsor,
+  getAdminUsers, addAdminUser, adminUserLogin,
+  createOtp, getOtpRecord, clearOtp, resendOtp, verifyOtp,
+  getSpeakerApplications, addSpeakerApplication, setSpeakerApplicationStatus,
+  getSponsors, getSponsor, sponsorLogin, updateSponsor,
   getPackages, addPackage, getBooths, getBooth, chooseBooth, addAsset, getAssets,
   publishNotification, getNotifications, notificationsFor, offersFor, addPackageOffer,
   submitPayment, setPaymentStatus, getPayments, getDeletedTickets, recordDeletedTicket,

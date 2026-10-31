@@ -1,9 +1,10 @@
 # Traders Expo Johannesburg — Portal Backend Spec (Laravel 10 + MySQL)
 
 Status: **SPEC ONLY — nothing here is deployed.** The clickable portal in
-`src/pages/PortalPage.jsx` + `src/lib/portalStore.js` is a localStorage demo
-that mirrors this spec 1:1. When the backend is built, the demo store is
-replaced endpoint-by-endpoint; no portal screen needs redesigning.
+`src/pages/PortalPage.jsx` + `src/lib/portalStore.js` is an interim
+localStorage store that mirrors this spec 1:1. When the backend is built,
+the interim store is replaced endpoint-by-endpoint; no portal screen needs
+redesigning.
 
 Standing constraints (repo owner, Kailash — these precede any other rule):
 - Laravel **10** on PHP **8.1 only. Never upgrade.**
@@ -14,16 +15,23 @@ Standing constraints (repo owner, Kailash — these precede any other rule):
 - Frontend: React with `.jsx` only (Vite). No TypeScript, no Next.js.
 - Build and test locally before any push to `main` (a push auto-deploys).
 
-## 1. Demo → real mapping
+## 1. Interim → real mapping
 
-| Demo (localStorage, today) | Real (Laravel API + MySQL) |
+| Interim (localStorage, today) | Real (Laravel API + MySQL) |
 |---|---|
 | `tea_bookings` (ticket bookings) | `tickets` + `users` |
 | `tea_exhibit` (exhibitor reservations) | `sponsors` (reservation rows) |
-| `tea_portal_v2` (store: sponsors, packages, booths, notifications, package_offers, payments, deletedTickets, ticketEvents, assets) | Tables below, same field names |
+| `tea_portal_v2` (store: sponsors, packages, booths, notifications, package_offers, payments, deletedTickets, ticketEvents, assets, speakerApplications) | Tables below, same field names |
 | `tea_portal_v2_read_<userKey>` | `notification_reads` |
+| `tea_admins` (admin-created admin logins) | `users` with `role = admin` |
+| `tea_otp_pending` (signup OTP record) | `otp_verifications` (code stored hashed only) |
 | `tea_announcements` | `notifications` (kind = announcement) |
 | `printTicket()` (browser print window) | `GET /api/tickets/{ref}/download` (server-rendered ticket file) |
+
+No demo seeds exist. Lists start empty; accounts exist only when the admin
+creates them, when someone signs up, or when someone books on the tickets /
+exhibit pages. The single exception is the temporary test account
+(`test@abc.com`, see §2), which must be deleted before production.
 
 ## 2. Auth
 
@@ -35,8 +43,49 @@ Standing constraints (repo owner, Kailash — these precede any other rule):
 - `POST /api/auth/logout` — revokes the token.
 - `POST /api/auth/change-password` (auth) — body:
   `{ current_password, password, password_confirmation }`. Validates the
-  current password; new password min 6 characters (raise to 8+ in production
-  policy if the owner agrees — do not silently change the demo rule).
+  current password; new password min **8** characters.
+- `POST /api/auth/signup/request-code` — body: `{ type, name, email,
+  phone, password, password_confirmation, trades?, topic?, bio?,
+  company?, interested_package_id?, booth_size_interest? }` where `type`
+  is `trader | speaker | sponsor | exhibitor`. Validates: email format +
+  uniqueness, password min 8 + confirmation match, mobile required, and
+  per-type required fields (speaker: `topic` + `bio`; sponsor/exhibitor:
+  `company`). Rate-limited per email + IP. Generates a 6-digit code with a
+  CSPRNG (never `rand()`), stores only its **hash** in `otp_verifications`
+  with a 10-minute expiry and 0 attempts, and emails the code to the user
+  via Laravel Mail. The plaintext code is never stored, never logged, and
+  never returned by any API. The password is bcrypt-hashed at request time
+  and kept only as a hash in the verification row until the account is
+  created.
+- `POST /api/auth/signup/verify-code` — body: `{ email, code }`. Checks
+  expiry, then the code hash; wrong codes increment `attempts` and lock the
+  row after **5** attempts (a new code must be requested). On success the
+  row is marked used and the account is created:
+  - `trader` → attendee user + free ticket (optional `trades` stored on
+    the ticket).
+  - `speaker` → attendee user + free ticket **plus** a
+    `speaker_applications` row (`status = pending`). A speaker signup is an
+    APPLICATION for admin review. It must NEVER auto-list the person among
+    featured speakers, and approval only flips the application status —
+    featured listings stay admin-curated content.
+  - `sponsor` → sponsor row (`tier = Unassigned` until confirmed,
+    `interested_package_id` recorded, not a confirmed package).
+  - `exhibitor` → sponsor reservation row with `company` +
+    `booth_size_interest`.
+  Response: `{ ok, token, role, ref, email }` (same shape as login).
+- `POST /api/auth/signup/resend-code` — same rate rules as request-code
+  plus a 60-second cooldown per email; rotates the code and resets
+  attempts/expiry.
+- Admin-created accounts (admin creates ANY account from the portal):
+  `POST /api/admin/accounts` — body: `{ name, email, phone, password,
+  role: attendee|sponsor|exhibitor|admin, package_id?, booth_id? }`.
+  Validates email uniqueness and password min 8; for `sponsor` with
+  `booth_id`, the booth must be `available` (marked `reserved` in the same
+  transaction). The server emails the login details to the account's email
+  via Laravel Mail; if mail fails, the endpoint still returns success for
+  the creation and flags `email_sent: false` so the admin UI shows the
+  credentials to share manually. Admins log in with their email as the
+  username. Passwords are bcrypt-hashed and never returned or listed.
 - Ticket issue flow (the booked email is the login ID):
   1. Attendee reserves a free ticket (name, email, mobile — no payment step,
      ever; tickets are FREE).
@@ -47,8 +96,12 @@ Standing constraints (repo owner, Kailash — these precede any other rule):
   3. Attendee logs in with email + that password and can change it in
      My Account. Passwords are never shown in admin views.
 - Admin login is a separate guard (`admins` table or `users` with
-  `role = admin` + IP allow-list if the owner wants it). Demo credential
-  `admin / expo2027` is **demo only** and must not exist in production.
+  `role = admin` + IP allow-list if the owner wants it). The interim
+  bootstrap admin (`admin / expo2027`) exists only in the browser store
+  and must not exist in production — production admins are provisioned
+  accounts. The temporary test account (`test@abc.com`, usable on ticket
+  and sponsor logins in the interim store) must be **deleted before
+  production** and must never be seeded by any production seeder.
 
 ## 3. Endpoints
 
@@ -71,11 +124,12 @@ name/email/phone/reference. Errors: `{ ok: false, error }`.
 
 ### Sponsor (role: sponsor)
 - `GET /api/sponsors/me` — `{ id, brand, tier, logo_path, contact, email,
-  phone, package, booth_id, note }`. Wall demo accounts are labelled
-  `is_wall_demo` in the demo only; production sponsors are real agreements.
+  phone, package, booth_id, interested_package_id, note }`. Production
+  sponsors are real agreements; an `interested_package_id` is only an
+  expression of interest, never a confirmed package.
 - `PATCH /api/sponsors/me` — company profile fields.
 - `GET /api/booths` — the real 38-booth plan grid (see §5). Booth
-  availability is demo data until real allocations are entered.
+  availability reflects reservations in the system; nothing is pre-filled.
 - `POST /api/sponsors/me/booth` — body `{ booth_id }`. Only `available`
   booths can be chosen; the endpoint frees the sponsor's previous `reserved`
   booth and marks the new one `reserved` in one transaction. Sold booths
@@ -95,6 +149,16 @@ name/email/phone/reference. Errors: `{ ok: false, error }`.
   details are ever typed into the portal or sent to this API.
 
 ### Admin (role: admin)
+- `GET /api/admin/accounts` — every portal account: admins, ticket
+  holders, sponsors, exhibitors (name, email/username, role, detail,
+  created date). Passwords are never returned.
+- `POST /api/admin/accounts` — create any account (see §2). For a sponsor
+  with `booth_id`, the booth must be `available`.
+- `GET /api/admin/speaker-applications?status=` — speaker signups with
+  name, email, phone, topic, bio, status, applied date.
+- `POST /api/admin/speaker-applications/{id}/status` — body
+  `{ status: approved|declined }`. Approval flips the application status
+  only; it never writes to featured-speaker content.
 - `GET /api/admin/tickets?q=&kind=&pass=&status=` — the tickets register:
   every ticket with name, mobile, email, pass, reference, issue date,
   status. `GET /api/admin/tickets/export` returns the same list as CSV.
@@ -129,10 +193,17 @@ name/email/phone/reference. Errors: `{ ok: false, error }`.
 // phone nullable, password (bcrypt), email_verified_at nullable, timestamps.
 // tickets: id, ref string unique, user_id FK, pass_type, qty default 1,
 // status enum('active','deleted') default 'active', issued_at, timestamps.
+// trades string nullable on tickets (attendee signup: what they trade).
 // ticket_events: id, ticket_id FK, status enum('issued','deleted'),
 // note nullable, created_at only.
 // ticket_deletes: id, ticket_id FK, ref, name, email, phone, pass,
 // reason text, deleted_by, deleted_at, timestamps.
+// otp_verifications: id, email index, code_hash string (never plaintext),
+// attempts integer default 0, expires_at, used_at nullable, payload JSON
+// (signup form WITHOUT any plaintext password — password stored only as its
+// bcrypt hash), timestamps.
+// speaker_applications: id, name, email, phone nullable, topic, bio text,
+// status enum('pending','approved','declined') default 'pending', timestamps.
 // notifications: id, kind enum('announcement','promotion','offer','ticket'),
 // audience string (all|ticket|sponsor|email), title, body text, created_at.
 // notification_reads: notification_id FK, user_key string, read_at,
@@ -141,7 +212,8 @@ name/email/phone/reference. Errors: `{ ok: false, error }`.
 // custom bool default false, timestamps.
 // sponsors: id, brand, tier, logo_path nullable, contact, email unique,
 // phone nullable, package_id FK nullable, booth_id FK nullable,
-// note text nullable, is_wall_demo bool default false, timestamps.
+// interested_package_id FK nullable, booth_size_interest string nullable,
+// note text nullable, timestamps.
 // sponsor_assets: id, sponsor_id FK, kind enum('logo','booth-design','rollup'),
 // name, mime, path, timestamps.
 // package_offers: id, sponsor_id FK, package_id FK, list_price_usd,
@@ -169,8 +241,8 @@ name/email/phone/reference. Errors: `{ ok: false, error }`.
   `public/assets/floor-plan-johannesburg-2027.pdf` (downloadable from the
   portal) with a rendered image at `public/assets/img/floor-plan.jpg`.
   The picker groups booths by tier — it does not claim pixel positions.
-  Availability states (available/reserved/sold) are demo data until the
-  team enters real allocations. Zone names only, no invented dimensions,
+  Availability reflects reservations in the system; nothing is pre-filled.
+  Zone names only, no invented dimensions,
   and never reproduce the source typo "Contestt" or garbled dimension
   strings from the PDF text layer.
 - **Tickets are FREE.** No ticket endpoint accepts money, and no payment
@@ -183,12 +255,27 @@ name/email/phone/reference. Errors: `{ ok: false, error }`.
 - **Deletion keeps the record.** `DELETE /api/admin/tickets/{ref}` without
   a reason is rejected; with a reason it writes `ticket_deletes` + a
   `ticket_events` row and flips the ticket to `deleted` (or archives it —
-  never hard-deletes the row in production; the demo removes it from the
-  active list but keeps the deleted-lead record).
-- **Demo data is fictional.** Seeders must use `example.com` addresses and
-  "Demo …" names. The 10 wall brands may be seeded as demo sponsor accounts
-  with names/logos only, flagged `is_wall_demo`, with no booth, package,
-  or payment implied.
+  never hard-deletes the row in production; the interim store removes it
+  from the active list but keeps the deleted-lead record).
+- **No demo seeds, ever.** Seeders must not create fictional people,
+  tickets, sponsors, or payments. Lists start empty. The temporary test
+  account (`test@abc.com`) exists only in the interim browser store and
+  must be deleted before production.
+- **Speaker signups are applications, not listings.** Approving a speaker
+  application changes only its status. Featured-speaker content is curated
+  separately and is never written by signup or approval flows.
+- **OTP codes are hashed, expiring, and attempt-limited.** Codes are
+  CSPRNG 6-digit, stored as hashes only, 10-minute expiry, 5 attempts,
+  60-second resend cooldown. The interim browser layer keeps the code in a
+  short-lived pending record only (documented interim exception); it is
+  never logged, never rendered, and never used as a bypass when email
+  delivery fails.
+- **Interim email path.** Until Laravel Mail lands, portal emails go
+  through the FormSubmit ajax path to `info@profxmedia.com` with the
+  content in `_autoresponse` to the user's inbox. That path needs its
+  one-time activation in the `info@profxmedia.com` inbox (still pending) —
+  until then, sends fail and the UI must say so honestly and offer the
+  admin-create fallback instead of pretending delivery.
 
 ## 6. Environment (names only — no values, never committed)
 
@@ -207,4 +294,8 @@ to Dawood first so Kailash can add it.
    reaching `thetradersexpo.com` (verified 2026-10-31), so the backend
    cannot go live until Kailash fixes that wiring.
 3. Backend implementation from this spec + mail delivery test (ticket +
-   password email) + admin account provisioning (no demo credentials).
+   password email + OTP code email) + admin account provisioning (no
+   bootstrap or test credentials in production).
+4. FormSubmit one-time activation in the `info@profxmedia.com` inbox, so
+   the interim email path (ticket mail, credentials mail, OTP mail) works
+   until Laravel Mail lands.

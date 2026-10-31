@@ -2,10 +2,13 @@ import { useState, useEffect, useRef } from 'react';
 import {
   portalLogin, getAnnouncements, saveAnnouncement, deleteAnnouncement, getAllBookings,
   money, exportCSV, uid, dstr, dtime, daysToEvent, apiHealth,
-  seedDemoIfEmpty as seedDemo,
+  sendOtpEmail, sendAccountCredentialsEmail,
 } from '../lib/api.js';
 import {
-  seedPortalV2, getSponsors, getSponsor, sponsorLogin, updateSponsor,
+  seedPortalV2, getSponsors, getSponsor, sponsorLogin, updateSponsor, createSponsor,
+  getAdminUsers, addAdminUser, adminUserLogin,
+  createOtp, getOtpRecord, clearOtp, resendOtp, verifyOtp,
+  getSpeakerApplications, addSpeakerApplication, setSpeakerApplicationStatus,
   getPackages, addPackage, getBooths, getBooth, chooseBooth, addAsset, getAssets,
   publishNotification, notificationsFor, offersFor, addPackageOffer,
   submitPayment, setPaymentStatus, getPayments, getDeletedTickets, recordDeletedTicket,
@@ -22,7 +25,31 @@ const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); retu
 const pkey = (k, ref) => 'tea_portal_' + k + '_' + ref;
 const matchQ = (q) => (s) => String(s || '').toLowerCase().indexOf(q) >= 0;
 
-/* ---------- booking lookup (local demo store) ---------- */
+/* Random reference / password helpers (crypto-first; refs are not security codes). */
+const randChars = (len, chars) => {
+  let out = '';
+  if (window.crypto && window.crypto.getRandomValues) {
+    const buf = new Uint32Array(len);
+    window.crypto.getRandomValues(buf);
+    for (let i = 0; i < len; i++) out += chars[buf[i] % chars.length];
+    return out;
+  }
+  for (let i = 0; i < len; i++) out += chars[Math.floor(Math.random() * chars.length)];
+  return out;
+};
+const genPortalRef = (prefix) => prefix + '-' + randChars(6, 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789');
+const genStrongPassword = () => randChars(12, 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789!@#$%');
+const emailTaken = (email) => {
+  const e = String(email || '').trim().toLowerCase();
+  if (!e || e === 'admin') return true;
+  if (read('tea_bookings', []).find((b) => String((b.fields && b.fields.email) || '').toLowerCase() === e)) return true;
+  if (read('tea_exhibit', []).find((b) => String((b.fields && b.fields.email) || '').toLowerCase() === e)) return true;
+  if (getSponsors().find((s) => s.email.toLowerCase() === e)) return true;
+  if (getAdminUsers().find((a) => a.user.toLowerCase() === e)) return true;
+  return false;
+};
+
+/* ---------- booking lookup (local store) ---------- */
 const findBookingByRef = (ref) => {
   const clean = String(ref || '').trim().toUpperCase();
   const t = read('tea_bookings', []).find((b) => String(b.ref || '').toUpperCase() === clean);
@@ -42,8 +69,10 @@ const NAV = {
   admin: [
     ['dashboard', 'Dashboard', '📊'],
     ['bookings', 'Tickets Register', '🎫'],
+    ['accounts', 'Accounts', '👥'],
     ['deleted', 'Deleted Leads', '🗑️'],
     ['sponsors', 'Sponsors', '🤝'],
+    ['speaker-apps', 'Speaker Applications', '🎤'],
     ['packages', 'Packages & Offers', '📦'],
     ['payments', 'Payments', '💳'],
     ['floorplan', 'Floor Plan', '🗺️'],
@@ -79,8 +108,10 @@ const ROLE_LABEL = { admin: 'Admin Portal', exhibitor: 'Exhibitor Portal', ticke
 const VIEW_TITLE = {
   dashboard: ['Dashboard', 'Your event overview at a glance.'],
   bookings: ['Bookings', 'All ticket and exhibitor reservations.'],
+  accounts: ['Accounts', 'Every portal account — created by the admin or by signup. Passwords are never shown.'],
   deleted: ['Deleted Leads', 'Cancelled tickets kept as callable leads — nothing is silently erased.'],
   sponsors: ['Sponsors', 'Every sponsor, their package, booth, uploads and payments.'],
+  'speaker-apps': ['Speaker Applications', 'Speaker signups awaiting review — applications only, never featured listings.'],
   packages: ['Packages & Offers', 'Brochure packages, new packages, and discounted offers to sponsors.'],
   payments: ['Payments', 'Sponsorship payment records. Tickets are free and never appear here.'],
   floorplan: ['Floor Plan', 'Emperors Palace Centre Court — real plan, 38 booths, pick yours.'],
@@ -286,7 +317,7 @@ function AdminDashboard({ ctx }) {
       </div>
       <div className="kpi-grid">
         <Kpi label="Total bookings" value={bookings.length} sub={`${tickets.length} tickets · ${exhibs.length} exhibitors`} />
-        <Kpi label="Gross revenue" value={money(revenue)} sub="demo figures — no real payments yet" cls="navy" />
+        <Kpi label="Gross revenue" value={money(revenue)} sub="booking values (tickets are free)" cls="navy" />
         <Kpi label="Team badges" value={teamCount} sub="registered across exhibitors" cls="amber" />
         <Kpi label="Leads captured" value={leadCount} sub="by exhibitors at booths" />
       </div>
@@ -462,8 +493,222 @@ function AdminBookings({ ctx }) {
             </tbody>
           </table>
         </div>
-      ) : <EmptyState icon="🎫">No bookings match your filters.</EmptyState>}
+      ) : <EmptyState icon="🎫">{bookings.length ? 'No bookings match your filters.' : 'No tickets yet — tickets appear here when the admin creates an account or someone signs up.'}</EmptyState>}
     </div>
+  );
+}
+
+function SpeakerApplications({ ctx }) {
+  const [apps, setApps] = useState(getSpeakerApplications());
+  const [q, setQ] = useState('');
+  const [statusF, setStatusF] = useState('all');
+  const refresh = () => setApps(getSpeakerApplications());
+  const shown = apps.filter((a) => {
+    if (statusF !== 'all' && a.status !== statusF) return false;
+    if (!q) return true;
+    const mq = matchQ(q.toLowerCase());
+    return mq(a.name) || mq(a.email) || mq(a.topic) || mq(a.bio);
+  });
+  const setStatus = (id, status) => {
+    setSpeakerApplicationStatus(id, status); refresh();
+    ctx.toast(status === 'approved' ? 'Application marked approved.' : 'Application marked declined.');
+  };
+  return (
+    <div className="card">
+      <h3>Speaker applications ({shown.length})</h3>
+      <p className="card-sub">Applications only, awaiting review. Approving marks an application approved — featured speaker listings are curated separately and are not changed here.</p>
+      <div className="table-tools">
+        <input type="search" placeholder="Search applications…" value={q} onChange={(e) => setQ(e.target.value)} />
+        <select value={statusF} onChange={(e) => setStatusF(e.target.value)} aria-label="Filter by status">
+          <option value="all">All statuses</option>
+          <option value="pending">Pending</option>
+          <option value="approved">Approved</option>
+          <option value="declined">Declined</option>
+        </select>
+      </div>
+      {shown.length ? (
+        <div className="table-wrap"><table className="data-table">
+          <thead><tr><th>Name</th><th>Topic</th><th>Contact</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>{shown.map((a) => (
+            <tr key={a.id}>
+              <td><strong>{a.name}</strong><br /><span className="muted">{a.bio}</span></td>
+              <td>{a.topic}</td>
+              <td>{a.email}<br /><span className="muted">{a.phone}</span></td>
+              <td><span className="pill">{a.status}</span></td>
+              <td>
+                {a.status === 'pending' && (<>
+                  <button className="mini-btn" type="button" onClick={() => setStatus(a.id, 'approved')}>Approve</button>{' '}
+                  <button className="mini-btn danger" type="button" onClick={() => setStatus(a.id, 'declined')}>Decline</button>
+                </>)}
+              </td>
+            </tr>
+          ))}</tbody>
+        </table></div>
+      ) : <EmptyState icon="🎤">No speaker applications yet — applications appear here when someone signs up as a speaker.</EmptyState>}
+    </div>
+  );
+}
+
+function AdminAccounts({ ctx }) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPass, setShowPass] = useState(false);
+  const [role, setRole] = useState('ticket');
+  const [pkgId, setPkgId] = useState('');
+  const [boothId, setBoothId] = useState('');
+  const [msg, setMsg] = useState(null);
+  const [creds, setCreds] = useState(null);
+  const [busy, setBusy] = useState(false);
+  const [q, setQ] = useState('');
+  const [roleFilter, setRoleFilter] = useState('all');
+  const pkgs = getPackages();
+  const booths = getBooths();
+  const rows = [
+    { kind: 'Admin', name: 'Event Admin', email: 'admin', detail: 'Bootstrap admin', at: '', test: false },
+    ...getAdminUsers().map((a) => ({ kind: 'Admin', name: a.name, email: a.user, detail: 'Admin login', at: '', test: false })),
+    ...read('tea_bookings', []).map((b) => ({ kind: 'Ticket Holder', name: (b.fields && b.fields.name) || '—', email: (b.fields && b.fields.email) || '—', detail: ((b.option && b.option.name) || 'Ticket') + ' · ' + b.ref, at: b.at || '', test: !!b.test })),
+    ...read('tea_exhibit', []).map((b) => ({ kind: 'Exhibitor', name: (b.fields && (b.fields.company || b.fields.name)) || '—', email: (b.fields && b.fields.email) || '—', detail: ((b.option && b.option.name) || 'Booth') + ' · ' + b.ref, at: b.at || '', test: !!b.test })),
+    ...getSponsors().map((s) => ({ kind: 'Sponsor', name: s.brand, email: s.email, detail: (s.tier || 'Unassigned') + (s.boothId ? ' · Booth ' + s.boothId : ''), at: s.boothChosenAt || '', test: !!s.test })),
+  ];
+  const shown = rows.filter((r) => {
+    if (roleFilter !== 'all' && r.kind !== roleFilter) return false;
+    if (!q) return true;
+    const mq = matchQ(q.toLowerCase());
+    return mq(r.name) || mq(r.email) || mq(r.kind) || mq(r.detail);
+  });
+  const submit = async (e) => {
+    e.preventDefault();
+    setMsg(null); setCreds(null);
+    const em = email.trim().toLowerCase();
+    if (!name.trim()) { setMsg({ t: 'error', text: 'Full name is required.' }); return; }
+    if (!/^\S+@\S+\.\S+$/.test(em)) { setMsg({ t: 'error', text: 'Enter a valid email address.' }); return; }
+    if (!mobile.trim()) { setMsg({ t: 'error', text: 'Mobile number is required.' }); return; }
+    if (!password || password.length < 8) { setMsg({ t: 'error', text: 'Password must be at least 8 characters.' }); return; }
+    if (emailTaken(em)) { setMsg({ t: 'error', text: 'An account with this email already exists.' }); return; }
+    let booth = null;
+    if (role === 'sponsor' && boothId) {
+      booth = getBooth(boothId);
+      if (!booth || booth.status !== 'available') { setMsg({ t: 'error', text: `Booth ${boothId} is not available — pick an available booth.` }); return; }
+    }
+    const pkg = pkgs.find((p) => p.id === pkgId) || null;
+    setBusy(true);
+    try {
+      let boothNote = '';
+      if (role === 'ticket') {
+        const all = read('tea_bookings', []);
+        all.push({ ref: genPortalRef('TEA'), password, qty: 1, option: { name: 'Trader Pass', price: 0 }, fields: { name: name.trim(), email: em, phone: mobile.trim() }, at: new Date().toISOString(), type: 'ticket', createdBy: 'admin' });
+        write('tea_bookings', all);
+      } else if (role === 'exhibitor') {
+        const all = read('tea_exhibit', []);
+        all.push({ ref: genPortalRef('EXB27'), password, qty: 1, option: { name: 'Exhibitor', price: 0 }, fields: { company: name.trim(), name: name.trim(), email: em, phone: mobile.trim() }, at: new Date().toISOString(), type: 'exhibitor', createdBy: 'admin' });
+        write('tea_exhibit', all);
+      } else if (role === 'sponsor') {
+        const r = createSponsor({ brand: name.trim(), contact: name.trim(), email: em, phone: mobile.trim(), password, tier: pkg ? pkg.tier : 'Unassigned', packageId: pkg ? pkg.id : null });
+        if (!r.ok) { setMsg({ t: 'error', text: r.error }); return; }
+        if (booth) {
+          const cr = chooseBooth(r.sponsor.id, booth.id);
+          if (!cr.ok) boothNote = ' Booth assignment failed: ' + cr.error;
+        }
+      } else {
+        const r = addAdminUser({ user: em, name: name.trim(), password });
+        if (!r.ok) { setMsg({ t: 'error', text: r.error }); return; }
+      }
+      const sent = await sendAccountCredentialsEmail({ email: em, name: name.trim(), password, role });
+      if (sent) {
+        setMsg({ t: 'ok', text: `Account created and login details emailed to ${em}.${boothNote}` });
+      } else {
+        setCreds({ email: em, password, role });
+        setMsg({ t: 'warn', text: 'Account created, but the email could not be sent (email delivery is still being set up) — share these login details manually.' + boothNote });
+      }
+      setName(''); setEmail(''); setMobile(''); setPassword(''); setPkgId(''); setBoothId('');
+      ctx.reloadBookings(); ctx.refresh();
+    } finally { setBusy(false); }
+  };
+  return (
+    <>
+      <div className="card">
+        <h3>Create account</h3>
+        <p className="card-sub">The admin can create any account. It works for login immediately, and appears below and in the tickets register or sponsors list.</p>
+        <form className="portal-form" onSubmit={submit}>
+          <label>Full name<input value={name} onChange={(e) => setName(e.target.value)} placeholder="Full name" autoComplete="off" required /></label>
+          <label>Email<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@company.com" autoComplete="off" required /></label>
+          <label>Mobile number<input type="tel" value={mobile} onChange={(e) => setMobile(e.target.value)} placeholder="+971 …" autoComplete="off" required /></label>
+          <label>Password
+            <div style={{ display: 'flex', gap: 8 }}>
+              <input type={showPass ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Minimum 8 characters" autoComplete="new-password" required style={{ marginTop: 0 }} />
+              <button className="btn btn-ghost btn-sm" type="button" onClick={() => setShowPass((s) => !s)}>{showPass ? 'Hide' : 'Show'}</button>
+              <button className="btn btn-ghost btn-sm" type="button" onClick={() => setPassword(genStrongPassword())}>Generate</button>
+            </div>
+          </label>
+          <label>Role
+            <select value={role} onChange={(e) => setRole(e.target.value)}>
+              <option value="ticket">Ticket Holder</option>
+              <option value="sponsor">Sponsor</option>
+              <option value="exhibitor">Exhibitor</option>
+              <option value="admin">Admin</option>
+            </select>
+          </label>
+          {role === 'sponsor' && (
+            <>
+              <label>Package (optional)
+                <select value={pkgId} onChange={(e) => setPkgId(e.target.value)}>
+                  <option value="">Unassigned — set later</option>
+                  {pkgs.map((p) => (<option key={p.id} value={p.id}>{p.tier} · {p.size} · ${p.price.toLocaleString()}</option>))}
+                </select>
+              </label>
+              <label>Booth (optional)
+                <select value={boothId} onChange={(e) => setBoothId(e.target.value)}>
+                  <option value="">No booth yet</option>
+                  {booths.filter((b) => b.status === 'available').map((b) => (<option key={b.id} value={b.id}>Booth {b.id} · {b.tier} · {b.size}</option>))}
+                </select>
+              </label>
+            </>
+          )}
+          {role === 'admin' && <p className="fine">Admins log in with their email as the username.</p>}
+          {msg && <p className={msg.t === 'error' ? 'portal-error' : 'fine'}>{msg.text}</p>}
+          {creds && (
+            <div className="card" style={{ marginTop: 12 }}>
+              <h3 className="panel-title">Share these login details manually</h3>
+              <div className="d-row"><span>Email</span><strong>{creds.email}</strong></div>
+              <div className="d-row"><span>Password</span><strong>{creds.password}</strong></div>
+              <div className="d-row"><span>Role</span><strong>{creds.role}</strong></div>
+              <div className="bnav"><button className="btn btn-ghost btn-sm" type="button" onClick={() => setCreds(null)}>Dismiss</button></div>
+            </div>
+          )}
+          <div className="bnav"><button className="btn btn-primary btn-lg" type="submit" disabled={busy}>{busy ? 'Creating…' : 'Create account'}</button></div>
+        </form>
+      </div>
+      <div className="card">
+        <h3>Accounts ({shown.length})</h3>
+        <p className="card-sub">Passwords are never shown here.</p>
+        <div className="table-tools">
+          <input type="search" placeholder="Search accounts…" value={q} onChange={(e) => setQ(e.target.value)} />
+          <select value={roleFilter} onChange={(e) => setRoleFilter(e.target.value)} aria-label="Filter by role">
+            <option value="all">All roles</option>
+            <option value="Admin">Admin</option>
+            <option value="Ticket Holder">Ticket Holder</option>
+            <option value="Sponsor">Sponsor</option>
+            <option value="Exhibitor">Exhibitor</option>
+          </select>
+        </div>
+        {shown.length ? (
+          <div className="table-wrap"><table className="data-table">
+            <thead><tr><th>Name</th><th>Email / username</th><th>Role</th><th>Detail</th><th>Created</th></tr></thead>
+            <tbody>{shown.map((r, i) => (
+              <tr key={r.kind + '-' + r.email + '-' + i}>
+                <td><strong>{r.name}</strong>{r.test ? <span className="pill">Test</span> : null}</td>
+                <td>{r.email}</td>
+                <td>{r.kind}</td>
+                <td>{r.detail}</td>
+                <td>{r.at ? dstr(r.at) : '—'}</td>
+              </tr>
+            ))}</tbody>
+          </table></div>
+        ) : <EmptyState icon="👥">No accounts yet — create one above or share the signup link.</EmptyState>}
+      </div>
+    </>
   );
 }
 
@@ -523,7 +768,7 @@ function AdminReports({ ctx }) {
     <>
       <div className="kpi-grid">
         <Kpi label="Bookings in view" value={filtered.length} sub={range === 'all' ? 'all time' : 'last ' + range} />
-        <Kpi label="Revenue in view" value={money(revenue)} sub="demo figures" cls="navy" />
+        <Kpi label="Revenue in view" value={money(revenue)} sub="booking values" cls="navy" />
         <Kpi label="Avg. booking value" value={filtered.length ? money(Math.round(revenue / filtered.length)) : money(0)} sub="per booking" cls="amber" />
         <Kpi label="Mix" value={tix + ' / ' + exh} sub="tickets / exhibitors" />
       </div>
@@ -547,7 +792,7 @@ function AdminReports({ ctx }) {
         <div className="card">
           <h3>Ticket vs exhibitor</h3>
           <Donut rows={[['Tickets', tix, 'navy'], ['Exhibitors', exh, 'green']]} />
-          <p className="fine">Demo data only. Real revenue appears once the PHP backend is connected.</p>
+          <p className="fine">Records in this browser; the real backend will hold the master copy.</p>
         </div>
       </div>
     </>
@@ -664,15 +909,15 @@ function AdminSettings({ ctx }) {
         })));
     ctx.toast('All bookings exported.');
   };
-  const wipeDemo = () => {
-    if (!window.confirm('Delete all demo bookings and portal data in this browser?')) return;
+  const wipePortal = () => {
+    if (!window.confirm('Delete all portal bookings and portal data in this browser?')) return;
     ['tea_bookings', 'tea_exhibit', 'tea_announcements', 'tea_notif_read'].forEach((k) => {
       try { localStorage.removeItem(k); } catch {}
     });
     Object.keys(localStorage).filter((k) => k.indexOf('tea_portal_') === 0).forEach((k) => {
       try { localStorage.removeItem(k); } catch {}
     });
-    ctx.toast('Demo data cleared. Reloading…');
+    ctx.toast('Portal data cleared. Reloading…');
     setTimeout(() => window.location.reload(), 600);
   };
 
@@ -681,7 +926,7 @@ function AdminSettings({ ctx }) {
       <div className="card">
         <h3>System status</h3>
         <p className="card-sub">How this portal is currently wired.</p>
-        <div className="d-row"><span>Backend</span><strong>{ok === null ? 'Checking…' : ok ? 'Connected ✓' : 'Demo mode (browser storage)'}</strong></div>
+        <div className="d-row"><span>Backend</span><strong>{ok === null ? 'Checking…' : ok ? 'Connected ✓' : 'Browser storage (interim)'}</strong></div>
         <div className="d-row"><span>Bookings API</span><strong className="mono">/api/bookings</strong></div>
         <div className="d-row"><span>Health endpoint</span><strong className="mono">/api/health</strong></div>
         <div className="d-row"><span>Storage</span><strong>{ok ? 'MySQL (Laravel 10 API)' : 'localStorage (this browser)'}</strong></div>
@@ -689,10 +934,10 @@ function AdminSettings({ ctx }) {
       </div>
       <div className="card">
         <h3>Data tools</h3>
-        <p className="card-sub">Exports and demo maintenance.</p>
+        <p className="card-sub">Exports and data tools.</p>
         <div className="bnav">
           <button className="btn btn-ghost" type="button" onClick={exportAll}>⬇ Export all bookings (CSV)</button>
-          <button className="btn btn-danger" type="button" onClick={wipeDemo}>🗑 Clear demo data</button>
+          <button className="btn btn-danger" type="button" onClick={wipePortal}>🗑 Clear portal data</button>
         </div>
       </div>
       <div className="card">
@@ -701,7 +946,7 @@ function AdminSettings({ ctx }) {
         <div className="bnav">
           <button className="btn btn-ghost" type="button" onClick={() => { try { sessionStorage.removeItem(SESSION_KEY); } catch {} window.location.reload(); }}>Log out</button>
         </div>
-        <p className="fine">Demo credentials are for review only — production uses the secure admin login on the Laravel backend.</p>
+        <p className="fine">Production uses the secure admin login on the Laravel backend.</p>
       </div>
     </>
   );
@@ -1112,7 +1357,7 @@ function ExDocs({ ctx }) {
               </div>
             ))}
           </div>
-          <p className="fine">Files are stored in this browser's demo portal. On the live platform they upload to the event server automatically.</p>
+          <p className="fine">Files are stored in this browser's portal. On the live platform they upload to the event server automatically.</p>
         </div>
         <div className="card">
           <h3>Event documents</h3>
@@ -1248,7 +1493,7 @@ function MyTickets({ ctx }) {
         <button className="btn btn-primary" type="button" onClick={doPrint}>Download / Print / Re-issue Ticket</button>
         <a className="btn btn-ghost" href="agenda.html">View Agenda</a>
       </div>
-      <p className="fine">Your ticket was emailed to <strong>{f.email || 'your email'}</strong> at booking time (demo preview — connect the PHP backend for real email delivery). You can download or re-issue it here anytime.</p>
+      <p className="fine">Your ticket was emailed to <strong>{f.email || 'your email'}</strong> at booking time. You can download or re-issue it here anytime.</p>
       {others.length > 0 && (
         <>
           <h3 className="panel-title">Other bookings on this email</h3>
@@ -1356,7 +1601,7 @@ function PortalFaq() {
 }
 
 /* ================= PORTAL V2 VIEWS (attendee / sponsor / admin) ================= */
-/* Data lives in src/lib/portalStore.js (localStorage demo layer) and mirrors
+/* Data lives in src/lib/portalStore.js (localStorage interim layer) and mirrors
    frontend/docs/portal-api-spec.md 1:1. */
 
 function sponsorBooking(sp) {
@@ -1380,7 +1625,7 @@ function FloorPlanView({ ctx }) {
     if (!mine || !chosen) return;
     const r = chooseBooth(mine.id, chosen.id);
     if (!r.ok) { ctx.toast(r.error); return; }
-    ctx.toast(`Booth ${chosen.id} reserved for ${mine.brand} (demo availability — admin confirms final allocation).`);
+    ctx.toast(`Booth ${chosen.id} reserved for ${mine.brand} (admin confirms final allocation).`);
     ctx.refresh();
   };
   const TIERS = ['Title', 'Official', 'Exclusive', 'Regional', 'Diamond', 'Elite', 'Gold', 'Silver'];
@@ -1388,16 +1633,16 @@ function FloorPlanView({ ctx }) {
     <>
       <div className="card">
         <h3>Emperors Palace, Centre Court — floor plan</h3>
-        <p className="card-sub">The organiser's floor plan for 19–20 February 2027. The plan drawing is dated 11 February 2027 — that is the drawing date, not the event date. Booth availability shown here is demo data; the booth numbers, tiers and sizes are from the real plan.</p>
+        <p className="card-sub">The organiser's floor plan for 19–20 February 2027. The plan drawing is dated 11 February 2027 — that is the drawing date, not the event date. Booth availability reflects reservations in this portal; the booth numbers, tiers and sizes are from the real plan.</p>
         <p>
           <a className="btn btn-primary btn-sm" href={ab + 'floor-plan-johannesburg-2027.pdf'} target="_blank" rel="noreferrer">⬇ Download full floor plan (PDF)</a>
         </p>
         <img src={ab + 'img/floor-plan.jpg'} alt="Traders Expo Johannesburg floor plan — Emperors Palace Centre Court" style={{ width: '100%', borderRadius: 12, border: '1px solid var(--line)', background: '#fff' }} />
         <p className="fine">Around the hall: Speaker Hall + Speaker Stage · Networking Lounge · Trading Arena · League Area · Trading Contest Floor · LED screens · Charging Station · Entry/Exit doors · Entrance Gates · Exposure Walls.</p>
         <div className="fp-legend">
-          <span><i className="fp-dot avail"></i> Available (demo)</span>
-          <span><i className="fp-dot res"></i> Reserved (demo)</span>
-          <span><i className="fp-dot sold"></i> Sold (demo)</span>
+          <span><i className="fp-dot avail"></i> Available</span>
+          <span><i className="fp-dot res"></i> Reserved</span>
+          <span><i className="fp-dot sold"></i> Sold</span>
         </div>
         {TIERS.map((tier) => {
           const row = booths.filter((b) => b.tier === tier);
@@ -1429,7 +1674,7 @@ function FloorPlanView({ ctx }) {
           <div className="d-row"><span>Tier</span><strong>{chosen.tier}</strong></div>
           <div className="d-row"><span>Size</span><strong>{chosen.size} m</strong></div>
           <div className="d-row"><span>Package price</span><strong>{moneyUSD(chosen.price)}</strong></div>
-          <div className="d-row"><span>Availability (demo)</span><strong>{chosen.status}</strong></div>
+          <div className="d-row"><span>Availability</span><strong>{chosen.status}</strong></div>
           {holder(chosen) ? <div className="d-row"><span>Held by</span><strong>{holder(chosen).brand}</strong></div> : null}
           {mine ? (
             <div className="bnav">
@@ -1492,7 +1737,7 @@ function AdminSponsors({ ctx }) {
     <>
       <div className="card">
         <h3>Sponsors ({shown.length})</h3>
-        <p className="card-sub">Past-partner demo accounts are labelled — no 2027 deal is implied for them. Click a row for uploads, offers and payments.</p>
+        <p className="card-sub">Click a row for uploads, offers and payments.</p>
         <div className="table-tools">
           <input type="search" placeholder="Search sponsors…" value={q} onChange={(e) => setQ(e.target.value)} />
         </div>
@@ -1504,7 +1749,7 @@ function AdminSponsors({ ctx }) {
                 .reduce((sum, p) => sum + Number(p.amount || 0), 0);
               return (
                 <tr key={s.id} className="row-click" onClick={() => setSel(s.id)}>
-                  <td><strong>{s.brand}</strong>{s.isWallDemo ? <span className="pill">Demo · past partner</span> : null}</td>
+                  <td><strong>{s.brand}</strong>{s.test ? <span className="pill">Test</span> : null}</td>
                   <td>{s.tier}</td>
                   <td>{s.contact}<br /><span className="muted">{s.email}</span><br /><span className="muted">{s.phone}</span></td>
                   <td>{s.boothId || '—'}</td>
@@ -1514,7 +1759,7 @@ function AdminSponsors({ ctx }) {
               );
             })}</tbody>
           </table></div>
-        ) : <EmptyState icon="🤝">No sponsors match your search.</EmptyState>}
+        ) : <EmptyState icon="🤝">{sponsors.length ? 'No sponsors match your search.' : 'No sponsors yet — sponsors appear here when the admin creates an account or a sponsor signs up.'}</EmptyState>}
       </div>
       {selected ? (
         <div className="card">
@@ -1524,6 +1769,7 @@ function AdminSponsors({ ctx }) {
             <p><img src={(ab || '') + 'img/sponsors/' + selected.logo} alt={selected.brand + ' logo'} style={{ maxHeight: 64, background: '#fff', borderRadius: 8, padding: 6 }} /></p>
           ) : null}
           <div className="d-row"><span>Package tier</span><strong>{selected.tier}</strong></div>
+          {selected.interestedPackage ? <div className="d-row"><span>Interested package</span><strong>{selected.interestedPackage}</strong></div> : null}
           <div className="d-row"><span>Booth</span><strong>{selected.boothId || 'Not chosen yet'}</strong></div>
           <div className="d-row"><span>Contact</span><strong>{selected.contact} · {selected.email} · {selected.phone}</strong></div>
           <h3 className="panel-title">Uploaded assets ({assets.length})</h3>
@@ -1718,7 +1964,7 @@ function SponsorAssets({ ctx }) {
   const onFile = (e) => {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
-    if (file.size > 1.5 * 1024 * 1024) { setErr('File is over 1.5 MB — demo storage limit. Use a smaller file.'); return; }
+    if (file.size > 1.5 * 1024 * 1024) { setErr('File is over 1.5 MB — browser storage limit. Use a smaller file.'); return; }
     const reader = new FileReader();
     reader.onload = () => {
       addAsset(sp.id, { kind, name: file.name, mime: file.type || '', dataUrl: reader.result });
@@ -1734,7 +1980,7 @@ function SponsorAssets({ ctx }) {
     <>
       <div className="card">
         <h3>Upload brand assets</h3>
-        <p className="card-sub">Your logo, booth designs and roll-up artwork go straight to the admin team. Demo storage caps files at 1.5 MB.</p>
+        <p className="card-sub">Your logo, booth designs and roll-up artwork go straight to the admin team. Browser storage caps files at 1.5 MB.</p>
         <div className="form-grid">
           <label>Asset type
             <select value={kind} onChange={(e) => setKind(e.target.value)}>
@@ -1947,7 +2193,7 @@ function AccountView({ ctx }) {
       </div>
       <div className="card">
         <h3>Change password</h3>
-        <p className="card-sub">In the real backend your new password is confirmed by email. In this demo it updates this browser only.</p>
+        <p className="card-sub">In the real backend your new password is confirmed by email. Here it updates this browser only.</p>
         <div className="form-grid">
           <label>Current password<input type="password" value={cur} onChange={(e) => setCur(e.target.value)} /></label>
           <label>New password<input type="password" value={nw} onChange={(e) => setNw(e.target.value)} /></label>
@@ -1967,6 +2213,181 @@ function AccountView({ ctx }) {
   );
 }
 
+function SignupForm({ onAuth, onCancel }) {
+  const [step, setStep] = useState('form');
+  const [type, setType] = useState('trader');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [trades, setTrades] = useState('');
+  const [topic, setTopic] = useState('');
+  const [bio, setBio] = useState('');
+  const [company, setCompany] = useState('');
+  const [pkgInterest, setPkgInterest] = useState('');
+  const [boothSize, setBoothSize] = useState('');
+  const [pass, setPass] = useState('');
+  const [pass2, setPass2] = useState('');
+  const [code, setCode] = useState('');
+  const [err, setErr] = useState('');
+  const [info, setInfo] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [cooldown, setCooldown] = useState(0);
+  const [sentTo, setSentTo] = useState('');
+  useEffect(() => {
+    if (step !== 'otp' || cooldown <= 0) return undefined;
+    const t = setTimeout(() => setCooldown((c) => Math.max(0, c - 1)), 1000);
+    return () => clearTimeout(t);
+  }, [step, cooldown]);
+  const submitForm = async (e) => {
+    e.preventDefault();
+    setErr(''); setInfo('');
+    const em = email.trim().toLowerCase();
+    if (!name.trim()) { setErr('Full name is required.'); return; }
+    if (!/^\S+@\S+\.\S+$/.test(em)) { setErr('Enter a valid email address.'); return; }
+    if (!mobile.trim()) { setErr('Mobile number is required.'); return; }
+    if (!pass || pass.length < 8) { setErr('Password must be at least 8 characters.'); return; }
+    if (pass !== pass2) { setErr('Passwords do not match.'); return; }
+    if (type === 'speaker' && (!topic.trim() || !bio.trim())) { setErr('Talk topic and short bio are required for speaker applications.'); return; }
+    if ((type === 'sponsor' || type === 'exhibitor') && !company.trim()) { setErr('Company name is required.'); return; }
+    if (emailTaken(em)) { setErr('An account with this email already exists — please log in or ask the admin to create your account.'); return; }
+    setBusy(true);
+    try {
+      const r = createOtp(em, { type, name: name.trim(), email: em, mobile: mobile.trim(), password: pass, trades: type === 'trader' ? trades : '', topic: type === 'speaker' ? topic.trim() : '', bio: type === 'speaker' ? bio.trim() : '', company: (type === 'sponsor' || type === 'exhibitor') ? company.trim() : '', pkgInterest: type === 'sponsor' ? pkgInterest : '', boothSize: type === 'exhibitor' ? boothSize : '' });
+      if (!r.ok) { setErr(r.error); return; }
+      const sent = await sendOtpEmail({ email: em, name: name.trim(), code: r.code });
+      if (!sent) { clearOtp(); setErr("We couldn't send the code — email delivery is being set up; please try again or ask the admin to create your account."); return; }
+      setSentTo(em); setCooldown(60); setStep('otp');
+      setInfo('Code sent — check your inbox.');
+    } finally { setBusy(false); }
+  };
+  const submitCode = async (e) => {
+    e.preventDefault();
+    setErr('');
+    const r = verifyOtp(sentTo, code);
+    if (!r.ok) { setErr(r.error); if (r.expired || r.locked) setStep('form'); return; }
+    const f = r.form;
+    if (f.type === 'sponsor') {
+      const pkg = f.pkgInterest ? getPackages().find((p) => p.id === f.pkgInterest) : null;
+      const cr = createSponsor({ brand: f.company || f.name, contact: f.name, email: f.email, phone: f.mobile, password: f.password, tier: 'Unassigned', interestedPackageId: pkg ? pkg.id : null, interestedPackage: pkg ? pkg.tier : '', note: 'Signed up via portal — package interest recorded, awaiting confirmation.' });
+      if (!cr.ok) { setErr(cr.error); setStep('form'); return; }
+      onAuth({ role: 'exhibitor', ref: cr.sponsor.id, sponsorId: cr.sponsor.id, email: cr.sponsor.email, booking: sponsorBooking(cr.sponsor) });
+    } else if (f.type === 'exhibitor') {
+      const ref = genPortalRef('EXB27');
+      const all = read('tea_exhibit', []);
+      all.push({ ref, password: f.password, qty: 1, option: { name: 'Exhibitor', price: 0 }, fields: { company: f.company, name: f.name, email: f.email, phone: f.mobile, boothSizeInterest: f.boothSize || '' }, at: new Date().toISOString(), type: 'exhibitor', signup: true });
+      write('tea_exhibit', all);
+      onAuth({ role: 'exhibitor', ref, email: f.email });
+    } else {
+      // Trader and speaker both land in the ticket portal (free ticket).
+      // A speaker signup additionally records an APPLICATION for admin
+      // review — it never lists the person among featured speakers.
+      const ref = genPortalRef('TEA');
+      const all = read('tea_bookings', []);
+      all.push({ ref, password: f.password, qty: 1, option: { name: 'Trader Pass', price: 0 }, fields: { name: f.name, email: f.email, phone: f.mobile, trades: f.trades || '' }, at: new Date().toISOString(), type: 'ticket', signup: true });
+      write('tea_bookings', all);
+      if (f.type === 'speaker') {
+        addSpeakerApplication({ name: f.name, email: f.email, phone: f.mobile, topic: f.topic, bio: f.bio });
+        publishNotification({ kind: 'announcement', audience: f.email, title: 'Speaker application received', body: 'Thanks for applying to speak at Traders Expo Johannesburg. The programme team reviews every application and will confirm slots — applying does not guarantee a slot. We will contact you on this email.' });
+      }
+      onAuth({ role: 'ticket', ref, email: f.email });
+    }
+  };
+  const resend = async () => {
+    setErr(''); setInfo('');
+    const r = resendOtp();
+    if (!r.ok) { setErr(r.error); if (r.waitSec) setCooldown(r.waitSec); return; }
+    const sent = await sendOtpEmail({ email: sentTo, name: name.trim(), code: r.code });
+    if (!sent) { clearOtp(); setStep('form'); setErr("We couldn't send the code — email delivery is being set up; please try again or ask the admin to create your account."); return; }
+    setCooldown(60); setInfo('New code sent — check your inbox.');
+  };
+  if (step === 'otp') {
+    return (
+      <form className="portal-form" onSubmit={submitCode}>
+        <h3 className="panel-title">Check your email</h3>
+        <p className="fine">We sent a 6-digit code to <strong>{sentTo}</strong>. It expires in 10 minutes and stops working after 5 wrong attempts.</p>
+        <label>Verification code
+          <input value={code} onChange={(e) => setCode(e.target.value.replace(/[^0-9]/g, '').slice(0, 6))} placeholder="6-digit code" inputMode="numeric" autoComplete="one-time-code" required />
+        </label>
+        {err && <p className="portal-error">{err}</p>}
+        {info && <p className="fine">{info}</p>}
+        <div className="bnav">
+          <button className="btn btn-primary btn-lg" type="submit" disabled={busy}>{busy ? 'Verifying…' : 'Verify & sign in'}</button>
+          <button className="btn btn-ghost" type="button" disabled={cooldown > 0} onClick={resend}>{cooldown > 0 ? `Resend in ${cooldown}s` : 'Resend code'}</button>
+        </div>
+        <p className="form-note"><button className="btn btn-ghost btn-sm" type="button" onClick={() => { clearOtp(); setStep('form'); setErr(''); }}>Use a different email</button></p>
+      </form>
+    );
+  }
+  return (
+    <form className="portal-form" onSubmit={submitForm}>
+      <h3 className="panel-title">Sign up</h3>
+      <div>
+        <p style={{ fontSize: 13, fontWeight: 600, marginBottom: 8 }}>I am signing up as</p>
+        <div className="role-tabs" role="tablist">
+          {['trader', 'speaker', 'sponsor', 'exhibitor'].map((t) => (
+            <button key={t} type="button" role="tab" className={'role-tab' + (type === t ? ' active' : '')} onClick={() => { setType(t); setErr(''); }}>
+              {t === 'trader' ? 'Trader' : t === 'speaker' ? 'Speaker' : t === 'sponsor' ? 'Sponsor' : 'Exhibitor'}
+            </button>
+          ))}
+        </div>
+        <p className="fine">{type === 'trader' ? 'Join us at Emperors Palace, Johannesburg, on 19–20 February 2027. Entry is free — reserve your ticket and walk the floor with 4,000+ traders.' : type === 'speaker' ? 'Take the main stage across two days — keynotes, panels and fireside chats. The programme team reviews every application and confirms slots. Applying does not guarantee a slot.' : type === 'sponsor' ? 'Put your brand at the heart of the expo. Sponsorship packages from $4,000 across a 38-booth floor at Emperors Palace.' : 'Exhibit on the floor at Emperors Palace, Johannesburg, on 19–20 February 2027. Tell us your company and the booth size you are interested in.'}</p>
+      </div>
+      <label>Full name<input value={name} onChange={(e) => setName(e.target.value)} placeholder="Full name" autoComplete="off" required /></label>
+      <label>Email<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@company.com" autoComplete="off" required /></label>
+      <label>Mobile number<input type="tel" value={mobile} onChange={(e) => setMobile(e.target.value)} placeholder="+971 …" autoComplete="off" required /></label>
+      {type === 'trader' && (
+        <label>What do you trade? (optional)
+          <select value={trades} onChange={(e) => setTrades(e.target.value)}>
+            <option value="">Prefer not to say</option>
+            <option value="Forex">Forex</option>
+            <option value="Crypto">Crypto</option>
+            <option value="Stocks">Stocks</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      )}
+      {type === 'speaker' && (
+        <>
+          <label>Talk topic / title<input value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g. Reading the market in 2027" autoComplete="off" required /></label>
+          <label>Short bio<textarea value={bio} onChange={(e) => setBio(e.target.value)} placeholder="A few lines about you and your trading background" rows={3} required /></label>
+        </>
+      )}
+      {type === 'sponsor' && (
+        <>
+          <label>Company name<input value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Company Ltd." autoComplete="off" required /></label>
+          <label>Interested package (optional)
+            <select value={pkgInterest} onChange={(e) => setPkgInterest(e.target.value)}>
+              <option value="">Not sure yet</option>
+              {getPackages().map((p) => (<option key={p.id} value={p.id}>{p.tier} · {p.size} · ${p.price.toLocaleString()}</option>))}
+            </select>
+          </label>
+        </>
+      )}
+      {type === 'exhibitor' && (
+        <>
+          <label>Company name<input value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Company Ltd." autoComplete="off" required /></label>
+          <label>Booth size interest (optional)
+            <select value={boothSize} onChange={(e) => setBoothSize(e.target.value)}>
+              <option value="">Not sure yet</option>
+              <option value="5×3">5×3 m</option>
+              <option value="4×3">4×3 m</option>
+              <option value="3×3">3×3 m</option>
+            </select>
+          </label>
+        </>
+      )}
+      <label>Password<input type="password" value={pass} onChange={(e) => setPass(e.target.value)} placeholder="Minimum 8 characters" autoComplete="new-password" required /></label>
+      <label>Confirm password<input type="password" value={pass2} onChange={(e) => setPass2(e.target.value)} placeholder="Repeat your password" autoComplete="new-password" required /></label>
+      {err && <p className="portal-error">{err}</p>}
+      <p className="fine">Your password is never shown to anyone. We email you a 6-digit code to verify this address.</p>
+      <div className="bnav">
+        <button className="btn btn-primary btn-lg btn-block" type="submit" disabled={busy}>{busy ? 'Sending code…' : 'Send verification code'}</button>
+        <button className="btn btn-ghost" type="button" onClick={onCancel}>Back to log in</button>
+      </div>
+    </form>
+  );
+}
+
 /* ================= MAIN COMPONENT ================= */
 export default function PortalPage() {
   const ab = useAssetBase();
@@ -1981,6 +2402,7 @@ export default function PortalPage() {
   const [search, setSearch] = useState('');
   const [loginRole, setLoginRole] = useState('exhibitor');
   const [loginError, setLoginError] = useState('');
+  const [showSignup, setShowSignup] = useState(false);
   const [busy, setBusy] = useState(false);
   const [anns, setAnns] = useState([]);
   const [bookings, setBookings] = useState([]);
@@ -2010,9 +2432,8 @@ export default function PortalPage() {
     setBookings(tagged);
   };
 
-  /* mount: seed demo data, restore session */
+  /* mount: migrate store, restore session */
   useEffect(() => {
-    seedDemo();
     seedPortalV2();
     reloadAnns();
     let sess = null;
@@ -2093,13 +2514,13 @@ export default function PortalPage() {
         const okRef = res.ref || ref.trim().toUpperCase();
         const okRole = res.role || loginRole;
         if (okRole !== 'admin' && !findBookingByRef(okRef)) {
-          setLoginError('That demo booking is not in this browser yet. Book a ticket or booth first, then log in to preview the portal.');
+          setLoginError('That booking is not in this browser yet. Book a ticket or booth first, then log in.');
           return;
         }
         startSession({ role: okRole, ref: okRef });
         return;
       }
-      /* demo fallback — original portal.js behaviour: match stored bookings */
+      /* fallback — original portal.js behaviour: match stored bookings */
       const b = findBooking(ref, pass);
       if (!b) { setLoginError('No booking matches that reference and password. Check your booking confirmation.'); return; }
       if (b._kind !== loginRole) {
@@ -2119,8 +2540,10 @@ export default function PortalPage() {
     setBusy(true);
     try {
       const res = await portalLogin('admin', user, pass);
-      if (res.ok) startSession({ role: 'admin', ref: 'ADMIN' });
-      else setLoginError(res.error || 'Invalid admin username or password.');
+      if (res.ok) { startSession({ role: 'admin', ref: 'ADMIN' }); return; }
+      const created = adminUserLogin(user, pass);
+      if (created) { startSession({ role: 'admin', ref: 'ADMIN' }); return; }
+      setLoginError('Invalid admin username or password.');
     } finally {
       setBusy(false);
     }
@@ -2151,7 +2574,7 @@ export default function PortalPage() {
               Print / Download Ticket
             </button>
           </div>
-          <p className="fine">Demo preview — passwords are never shown here.</p>
+          <p className="fine">Passwords are never shown here.</p>
         </>
       ),
     });
@@ -2186,8 +2609,10 @@ export default function PortalPage() {
     }
     if (role === 'admin') {
       if (view === 'bookings') return <AdminBookings ctx={ctx} />;
+      if (view === 'accounts') return <AdminAccounts ctx={ctx} />;
       if (view === 'deleted') return <DeletedLeads ctx={ctx} />;
       if (view === 'sponsors') return <AdminSponsors ctx={ctx} />;
+      if (view === 'speaker-apps') return <SpeakerApplications ctx={ctx} />;
       if (view === 'packages') return <AdminPackages ctx={ctx} />;
       if (view === 'payments') return <AdminPayments ctx={ctx} />;
       if (view === 'floorplan') return <FloorPlanView ctx={ctx} />;
@@ -2278,7 +2703,7 @@ export default function PortalPage() {
                 <div><strong>2</strong><span>Days</span></div>
                 <div><strong>18</strong><span>Featured speakers</span></div>
               </div>
-              <p className="login-demo-note">Demo preview — bookings are stored in this browser only, no real server is connected yet.</p>
+              <p className="login-demo-note">Ticket holders and sponsors: sign in with the email and password from your booking, or sign up below.</p>
             </div>
           </aside>
 
@@ -2301,16 +2726,23 @@ export default function PortalPage() {
               </div>
 
               {loginRole !== 'admin' ? (
+                <>
                 <form id="bookingForm" className="portal-form" onSubmit={doBookingLogin}>
                   <label>Email or booking reference
-                    <input id="portalRef" type="text" placeholder={loginRole === 'ticket' ? 'e.g. attendee1@example.com or TEA-AB12CD' : 'e.g. sponsor1@example.com or EXB27-AB12CD'} autoComplete="off" required />
+                    <input id="portalRef" type="text" placeholder={loginRole === 'ticket' ? 'e.g. your email or TEA-AB12CD' : 'e.g. your email or EXB27-AB12CD'} autoComplete="off" required />
                   </label>
                   <label>Password
                     <input id="portalPass" type="password" placeholder="Shown on your booking confirmation" autoComplete="current-password" required />
                   </label>
                   <button className="btn btn-primary btn-lg btn-block" type="submit" disabled={busy}>Log In to Dashboard</button>
-                  <p className="form-note">Ticket holders: your booked email is your login ID — the password was shown when you booked and emailed with your ticket. New here? <a href="tickets.html">Book a ticket</a> or <a href="exhibit.html">reserve a booth</a>.</p>
+                  <p className="form-note">Ticket holders: your booked email is your login ID — the password was shown when you booked and emailed with your ticket. New here? Sign up below, <a href="tickets.html">book a ticket</a> or <a href="exhibit.html">reserve a booth</a>.</p>
                 </form>
+                {!showSignup ? (
+                  <p className="form-note" style={{ textAlign: 'center' }}>Don't have an account? <button className="btn btn-ghost btn-sm" type="button" onClick={() => setShowSignup(true)}>Sign up</button></p>
+                ) : (
+                  <SignupForm onAuth={startSession} onCancel={() => setShowSignup(false)} />
+                )}
+                </>
               ) : (
                 <form id="adminForm" className="portal-form" onSubmit={doAdminLogin}>
                   <label>Admin username
@@ -2325,15 +2757,7 @@ export default function PortalPage() {
 
               {loginError && <p id="portalError" className="portal-error">{loginError}</p>}
 
-              <div className="demo-box">
-                <strong>Demo logins for review</strong>
-                <div><span>Admin</span><code>admin / expo2027</code></div>
-                <div><span>Exhibitor</span><code>EXB27-DEMO / demo123</code></div>
-                <div><span>Ticket holder</span><code>TEA-DEMO / demo123</code></div>
-                <div><span>Attendee (email)</span><code>attendee1@example.com / demo123</code></div>
-                <div><span>Sponsor (email)</span><code>sponsor1@example.com / demo123</code></div>
-              </div>
-              <p className="login-foot" style={{ fontSize: 13, color: 'var(--muted)' }}>Demo mode: everything here runs in this browser (localStorage). The real backend is the Laravel 10 API + MySQL spec in <span className="mono">frontend/docs/portal-api-spec.md</span> — same data model, real email delivery, no demo passwords.</p>
+              <p className="login-foot" style={{ fontSize: 13, color: 'var(--muted)' }}>Accounts are created by the admin or by signing up above. This portal currently stores accounts in this browser; email delivery uses the FormSubmit path until the Laravel backend lands. No password is ever shown here.</p>
             </div>
             <p className="login-foot"><a href="index.html">← Back to website</a></p>
           </div>
@@ -2413,7 +2837,7 @@ export default function PortalPage() {
               {renderView()}
             </main>
             <p className="fine" style={{ padding: '0 20px 24px' }}>
-              How it works — <strong>demo mode:</strong> this portal runs in your browser (localStorage) with fictional demo accounts, so every flow can be tried today. <strong>Real mode:</strong> the same screens talk to the Laravel 10 API + MySQL backend in <span className="mono">frontend/docs/portal-api-spec.md</span> — real emailed passwords, real notifications, real payment records. No demo data, password or key is ever committed to the repo.
+              How it works — accounts are created by the admin or by signing up with email verification. This portal currently stores accounts in this browser (localStorage); email delivery uses the FormSubmit path until the real backend lands. The Laravel 10 API + MySQL backend in <span className="mono">frontend/docs/portal-api-spec.md</span> will replace this storage with real emailed passwords, notifications and payment records. No password or key is ever committed to the repo.
             </p>
           </div>
         </div>
