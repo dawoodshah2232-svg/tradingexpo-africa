@@ -121,7 +121,7 @@ export default function FaqPage() {
   const ab = useAssetBase();
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-03.webp')` }}>
+      <section className="page-hero has-img" style={{ backgroundImage: `url('${ab}img/profx/profx-03.webp')` }}>
         <div className="container">
           <Reveal as="p" className="eyebrow">FAQ</Reveal>
           <Reveal as="h1">Questions,<br /><span className="grad">answered.</span></Reveal>

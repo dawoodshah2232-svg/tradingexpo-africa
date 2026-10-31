@@ -30,7 +30,7 @@ export default function BlogPage() {
 
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-19.webp')` }}>
+      <section className="page-hero has-img" style={{ backgroundImage: `url('${ab}img/profx/profx-19.webp')` }}>
         <div className="container">
           <p className="eyebrow">Blog</p>
           <h1>Insights from the editorial team.</h1>

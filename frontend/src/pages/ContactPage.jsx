@@ -25,7 +25,7 @@ export default function ContactPage() {
   const ab = useAssetBase();
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-19.webp')` }}>
+      <section className="page-hero has-img" style={{ backgroundImage: `url('${ab}img/profx/profx-19.webp')` }}>
         <div className="container">
           <Reveal as="p" className="eyebrow">Contact</Reveal>
           <Reveal as="h1">Talk to the <span className="grad">team.</span></Reveal>
@@ -87,7 +87,7 @@ export default function ContactPage() {
         <div className="container narrow center">
           <Reveal as="h2" className="section-title">Prefer to explore <span className="grad">first?</span></Reveal>
           <Reveal style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '24px' }}>
-            <a href="tickets.html" className="btn btn-primary">Book Tickets</a>
+            <a href="tickets.html" className="btn btn-primary">Reserve Free Ticket</a>
             <a href="exhibit.html" className="btn btn-ghost">Exhibit</a>
             <a href="sponsors.html" className="btn btn-ghost">Sponsor</a>
             <a href="faq.html" className="btn btn-ghost">FAQ</a>

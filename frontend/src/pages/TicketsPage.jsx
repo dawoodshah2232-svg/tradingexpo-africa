@@ -4,34 +4,34 @@ import { Reveal, MarketTicker } from '../components/ui.jsx';
 import { useAssetBase } from '../lib/theme.jsx';
 
 const OPTIONS = [
-  { name: 'Trader Pass', price: 0, priceHtml: 'Register interest <em>— no payment collected now</em>',
+  { name: 'Trader Pass', price: 0, priceHtml: 'Free',
     desc: '2-day exhibition access · booths · demos · networking areas · digital badge' },
-  { name: 'Pro Trader Pass', price: 0, tag: 'Most popular', priceHtml: 'Register interest <em>— no payment collected now</em>',
+  { name: 'Pro Trader Pass', price: 0, tag: 'Most popular', priceHtml: 'Free',
     desc: 'Everything in Trader, plus full conference access · priority seating · fast-track entry' },
-  { name: 'VIP Pass', price: 0, priceHtml: 'Register interest <em>— no payment collected now</em>',
+  { name: 'VIP Pass', price: 0, priceHtml: 'Free',
     desc: 'Everything in Pro, plus VIP lounge · reserved seating · exclusive networking' },
 ];
 
 const FAQS = [
-  ['How do I book a ticket for Traders Expo Johannesburg?', 'Choose your pass — Trader, Pro Trader or VIP — on the tickets page, fill in your name and email, and complete the booking. You will receive a confirmation email with your ticket and a booking reference. You can also re-download your ticket anytime from the ticket holder portal. Registering now collects no payment — pricing will be confirmed with you before anything is charged.'],
-  ['What is the difference between Trader, Pro Trader and VIP passes?', 'The Trader pass gives you full access to the exhibition floor, exhibitor booths and networking areas. Pro Trader adds the two-day conference program, panels and workshops. VIP adds everything in Pro Trader plus the premium lounge, front-row seating, exclusive networking sessions and priority entry. Pick the pass that matches how deep you want to go.'],
-  ['How will I receive my ticket after booking?', 'After you complete your booking, your ticket is emailed to you automatically with your booking reference and a downloadable ticket. You can also log in to the ticket holder portal anytime to view, re-download or print your ticket. Keep your booking reference handy — you will need it for entry and support.'],
-  ['Can I transfer my ticket to someone else?', 'Yes, tickets can be transferred to another person before the event. Contact the support team or use the ticket holder portal to update the attendee name on your booking. The new attendee will need a valid ID matching the updated name at entry. Transfers are free — just make sure the details are correct.'],
-  ['Are group or corporate ticket discounts available?', 'Yes. If you are bringing a team, a trading community or a corporate group, group passes are available at preferential rates. Contact the team through the contact page with your group size, and they will arrange a tailored quote. Group bookings also simplify entry — everyone receives their own ticket under one booking.'],
-  ['What is the refund policy for tickets?', 'Tickets are generally non-refundable, except where required by law or stated in the official terms. If the event is rescheduled, your ticket remains valid for the new dates; if it is cancelled, refunds will be processed per the official policy. Check the terms on the tickets page before booking, and contact support with questions.'],
-  ['Can I upgrade my ticket pass later?', 'Yes, you can upgrade from Trader to Pro Trader or VIP by paying the price difference, subject to availability. Contact the support team with your booking reference and they will arrange the upgrade. Upgrades are easiest before the event — on-site upgrades depend on remaining capacity, so arrange yours in advance.'],
-  ['Do I need to print my ticket?', 'No — a digital ticket on your phone is enough for entry. Your ticket email and the ticket holder portal both let you display or download your ticket. Just make sure your phone is charged and your booking reference is accessible. Printed copies are accepted too, if you prefer a backup.'],
+  ['How do I reserve a free ticket for Traders Expo Johannesburg?', 'Choose your pass — Trader, Pro Trader or VIP — on the tickets page, fill in your name, email and mobile number, and reserve. Your ticket is emailed to you with a ticket reference. Entry is free for both days.'],
+  ['What is the difference between Trader, Pro Trader and VIP passes?', 'The Trader pass gives you full access to the exhibition floor, exhibitor booths and networking areas. Pro Trader adds the two-day conference program, panels and workshops. VIP adds everything in Pro Trader plus the premium lounge, front-row seating, exclusive networking sessions and priority entry. All three passes are free — pick the one that matches how deep you want to go.'],
+  ['How will I receive my ticket after reserving?', 'After you complete your reservation, your ticket is emailed to you automatically with your ticket reference. You can also log in to the ticket holder portal anytime to view or re-download your ticket. Keep your ticket reference handy — you will need it for entry and support.'],
+  ['Can I transfer my ticket to someone else?', 'Yes, tickets can be transferred to another person before the event. Contact the support team or use the ticket holder portal to update the attendee name on your reservation. The new attendee will need a valid ID matching the updated name at entry. Transfers are free — just make sure the details are correct.'],
+  ['Are group reservations available?', 'Yes. Every ticket is free, so each member of your team, trading community or corporate group simply reserves their own pass. If you are bringing a large group, contact the team through the contact page and they will help coordinate your visit.'],
+  ['What is the refund policy for tickets?', 'There is nothing to refund — entry to Traders Expo Johannesburg is free. If the event is rescheduled, your ticket remains valid for the new dates; if it is cancelled, no payment was taken so nothing is owed.'],
+  ['Can I upgrade my ticket pass later?', 'Yes, you can upgrade from Trader to Pro Trader or VIP free of charge, subject to availability. Contact the support team with your ticket reference and they will arrange the upgrade. Upgrades are easiest before the event — on-site upgrades depend on remaining capacity, so arrange yours in advance.'],
+  ['Do I need to print my ticket?', 'No — a digital ticket on your phone is enough for entry. Your ticket email and the ticket holder portal both let you display or download your ticket. Just make sure your phone is charged and your ticket reference is accessible. Printed copies are accepted too, if you prefer a backup.'],
 ];
 
 export default function TicketsPage() {
   const ab = useAssetBase();
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-16.webp')` }}>
+      <section className="page-hero has-img" style={{ backgroundImage: `url('${ab}img/profx/profx-16.webp')` }}>
         <div className="container">
           <Reveal className="eyebrow">Tickets</Reveal>
-          <Reveal as="h1">Book your pass.</Reveal>
-          <Reveal className="section-lead">Register your interest in under a minute. No payment is collected at this stage — pricing will be confirmed before anything is charged.</Reveal>
+          <Reveal as="h1">Reserve your free pass.</Reveal>
+          <Reveal className="section-lead">Free entry to both days. Pick your pass, fill in your name, email and mobile number, and your ticket is emailed to you.</Reveal>
         </div>
       </section>
 
@@ -42,6 +42,25 @@ export default function TicketsPage() {
           <BookingFlow
             id="ticketBooking" refPrefix="TEA" storeKey="tea_bookings" apiType="ticket"
             options={OPTIONS}
+            showQty={false}
+            steps={['Choose pass', 'Your details', 'Ticket sent']}
+            fields={<>
+              <label>Full name<input required name="name" type="text" placeholder="Your name" autoComplete="name" /></label>
+              <label>Email<input required name="email" type="email" placeholder="you@email.com" autoComplete="email" /></label>
+              <label>Mobile number<input required name="phone" type="tel" placeholder="+27 ..." autoComplete="tel" /></label>
+            </>}
+            submitLabel="Reserve My Free Ticket"
+            formNote="Free entry. Your ticket will be emailed to you right after you reserve."
+            confirmTitle="You're in!"
+            refLabel="Ticket reference"
+            freeLabel="Free"
+            portalNoteTitle="Keep your ticket reference safe"
+            fineEmailPrefix="Your free ticket will be emailed to"
+            fineTail="Your ticket is free and valid for both days — and you can log in to the"
+            portalLinkText="portal"
+            fineAfter=" anytime to re-download it."
+            newBookingHref="tickets.html"
+            newBookingLabel="Reserve another ticket"
           />
         </div>
       </section>
@@ -58,9 +77,9 @@ export default function TicketsPage() {
           <Reveal className="group-banner">
             <div>
               <h3>Coming with your community or team?</h3>
-              <p>Special group packages for trading communities, colleges &amp; universities, corporate teams, financial academies and affiliate networks.</p>
+              <p>Every ticket is free — each person reserves their own pass, and groups can arrive together. For large groups, trading communities, colleges &amp; universities, corporate teams and affiliate networks, we can help coordinate your visit.</p>
             </div>
-            <a href="contact.html" className="btn btn-ghost">Enquire for Group Tickets</a>
+            <a href="contact.html" className="btn btn-ghost">Plan a Group Visit</a>
           </Reveal>
         </div>
       </section>

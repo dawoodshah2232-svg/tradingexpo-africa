@@ -48,7 +48,7 @@ export default function ExhibitPage() {
   const fpSrc = ab + 'img/profx/profx-01.webp';
   return (
     <main>
-      <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-27.webp')` }}>
+      <section className="page-hero has-img" style={{ backgroundImage: `url('${ab}img/profx/profx-27.webp')` }}>
         <div className="container">
           <Reveal className="eyebrow">Exhibit</Reveal>
           <Reveal as="h1">Put your brand in front of<br /><span className="grad">Africa's trading community.</span></Reveal>

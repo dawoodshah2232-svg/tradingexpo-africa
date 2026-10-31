@@ -17,9 +17,9 @@ const EXP = [
 ];
 
 const TICKETS = [
-  { h: 'Trader Pass', amount: 'Register', was: 'interest — no payment collected now', desc: '2-day exhibition access, booths, demos & networking areas.', featured: false },
-  { h: 'Pro Trader Pass', amount: 'Register', was: 'interest — no payment collected now', desc: 'Full 2-day conference access, priority seating & fast-track entry.', featured: true },
-  { h: 'VIP Pass', amount: 'Register', was: 'interest — no payment collected now', desc: 'VIP lounge, reserved seating & exclusive networking sessions.', featured: false },
+  { h: 'Trader Pass', amount: 'Free', was: 'No payment · ticket emailed to you', desc: '2-day exhibition access, booths, demos & networking areas.', featured: false },
+  { h: 'Pro Trader Pass', amount: 'Free', was: 'No payment · ticket emailed to you', desc: 'Full 2-day conference access, priority seating & fast-track entry.', featured: true },
+  { h: 'VIP Pass', amount: 'Free', was: 'No payment · ticket emailed to you', desc: 'VIP lounge, reserved seating & exclusive networking sessions.', featured: false },
 ];
 
 const AEO_FAQ = [
@@ -27,14 +27,14 @@ const AEO_FAQ = [
   { q: 'Where is Traders Expo Johannesburg held?', a: 'The expo takes place at Emperors Palace, Centre Court, 64 Jones Road, Kempton Park, Johannesburg, South Africa. The venue page carries travel guidance — how to reach the venue, where to stay nearby and what to expect on arrival.' },
   { q: 'What is Traders Expo Johannesburg?', a: "It is Africa's premier exhibition and conference for online trading, fintech and financial markets. Over two days, traders, brokers, investors, fintech companies and educators come together for exhibitions, keynotes, panels, workshops and deal-making — all under one roof." },
   { q: 'Who should attend Traders Expo Johannesburg?', a: 'Retail and professional traders, investors, brokers, IBs, fintech founders, payment providers, educators, analysts and anyone curious about financial markets. Whether you trade forex, crypto, equities or derivatives — or you build products for people who do — the expo is built for you.' },
-  { q: 'How much do Traders Expo Johannesburg tickets cost?', a: 'Register your interest now — no payment is collected at this stage. Ticket pricing will be confirmed before anything is charged. The Trader pass covers the exhibition floor, Pro Trader adds conference access and workshops, and VIP adds the premium lounge, front-row seating and exclusive networking.' },
+  { q: 'How much do Traders Expo Johannesburg tickets cost?', a: 'Tickets are free. Reserve your pass on the tickets page with your name, email and mobile number, and your ticket is emailed to you. The Trader pass covers the exhibition floor, Pro Trader adds conference access and workshops, and VIP adds the premium lounge, front-row seating and exclusive networking.' },
   { q: 'Who is organizing Traders Expo Johannesburg?', a: 'The expo is organized by ProFX Media FZ-LLC, an events and media company focused on the trading and fintech industry. The team runs the full program — exhibitions, conferences, sponsorships and the awards night — and supports exhibitors, sponsors and attendees from booking through the event days.' },
   { q: 'How big is Traders Expo Johannesburg?', a: 'It is a two-day expo at Emperors Palace, Johannesburg — a full exhibition floor with brokers and fintech brands, a two-day conference program with featured ProFX speakers, a live trading contest and an awards night.' },
   { q: 'Will there be a live trading contest?', a: 'Yes. A live trading contest runs across both days of Traders Expo Johannesburg — 19–20 February 2027. It is staged by ProFX Media FZ-LLC, an Official Guinness World Records™ Holder for \'Most participants in a trading competition\'. Full contest rules, entry details and prizes will be announced closer to the event.' },
   { q: 'Will there be an awards ceremony at the expo?', a: 'Yes. Traders Expo Johannesburg includes a dedicated awards night celebrating outstanding performers across the trading and fintech ecosystem. Award categories, the nomination process and judging criteria will be announced closer to the event. It is one of the highlights of the two-day program — plan to stay for the evening.' },
 ];
 
-const AEO_SCHEMA = '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "When is Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "Traders Expo Johannesburg takes place on 19–20 February 2027 — two full days of exhibitions, conferences and networking at Emperors Palace, Johannesburg, South Africa."}}, {"@type": "Question", "name": "Where is Traders Expo Johannesburg held?", "acceptedAnswer": {"@type": "Answer", "text": "The expo takes place at Emperors Palace, Centre Court, 64 Jones Road, Kempton Park, Johannesburg, South Africa."}}, {"@type": "Question", "name": "What is Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "It is Africa&#x27;s premier exhibition and conference for online trading, fintech and financial markets — two days of exhibitions, keynotes, panels, workshops and deal-making under one roof."}}, {"@type": "Question", "name": "Who should attend Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "Retail and professional traders, investors, brokers, IBs, fintech founders, payment providers, educators, analysts and anyone curious about financial markets."}}, {"@type": "Question", "name": "How much do Traders Expo Johannesburg tickets cost?", "acceptedAnswer": {"@type": "Answer", "text": "Registering interest collects no payment. Ticket pricing will be confirmed before anything is charged."}}, {"@type": "Question", "name": "Who is organizing Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "The expo is organized by ProFX Media FZ-LLC, an events and media company focused on the trading and fintech industry."}}, {"@type": "Question", "name": "How big is Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "It is a two-day expo at Emperors Palace, Johannesburg, with an exhibition floor, conference program, live trading contest and awards night."}}, {"@type": "Question", "name": "Will there be a live trading contest?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A live trading contest runs across both days of Traders Expo Johannesburg, 19-20 February 2027, staged by ProFX Media FZ-LLC, an Official Guinness World Records title holder for Most participants in a trading competition. Full contest rules, entry details and prizes will be announced closer to the event."}}, {"@type": "Question", "name": "Will there be an awards ceremony at the expo?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Traders Expo Johannesburg includes a dedicated awards night celebrating outstanding performers across the trading and fintech ecosystem."}}]}';
+const AEO_SCHEMA = '{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "When is Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "Traders Expo Johannesburg takes place on 19–20 February 2027 — two full days of exhibitions, conferences and networking at Emperors Palace, Johannesburg, South Africa."}}, {"@type": "Question", "name": "Where is Traders Expo Johannesburg held?", "acceptedAnswer": {"@type": "Answer", "text": "The expo takes place at Emperors Palace, Centre Court, 64 Jones Road, Kempton Park, Johannesburg, South Africa."}}, {"@type": "Question", "name": "What is Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "It is Africa&#x27;s premier exhibition and conference for online trading, fintech and financial markets — two days of exhibitions, keynotes, panels, workshops and deal-making under one roof."}}, {"@type": "Question", "name": "Who should attend Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "Retail and professional traders, investors, brokers, IBs, fintech founders, payment providers, educators, analysts and anyone curious about financial markets."}}, {"@type": "Question", "name": "How much do Traders Expo Johannesburg tickets cost?", "acceptedAnswer": {"@type": "Answer", "text": "Tickets are free. Reserve your pass with your name, email and mobile number, and your ticket is emailed to you."}}, {"@type": "Question", "name": "Who is organizing Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "The expo is organized by ProFX Media FZ-LLC, an events and media company focused on the trading and fintech industry."}}, {"@type": "Question", "name": "How big is Traders Expo Johannesburg?", "acceptedAnswer": {"@type": "Answer", "text": "It is a two-day expo at Emperors Palace, Johannesburg, with an exhibition floor, conference program, live trading contest and awards night."}}, {"@type": "Question", "name": "Will there be a live trading contest?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A live trading contest runs across both days of Traders Expo Johannesburg, 19-20 February 2027, staged by ProFX Media FZ-LLC, an Official Guinness World Records title holder for Most participants in a trading competition. Full contest rules, entry details and prizes will be announced closer to the event."}}, {"@type": "Question", "name": "Will there be an awards ceremony at the expo?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Traders Expo Johannesburg includes a dedicated awards night celebrating outstanding performers across the trading and fintech ecosystem."}}]}';
 
 export default function HomePage() {
   const ab = useAssetBase();
@@ -51,13 +51,13 @@ export default function HomePage() {
               19–20 February 2027 &nbsp;·&nbsp; Johannesburg
             </div>
             <h1 className="hero-title">
-              <img className="hero-logo" src={ab + 'logo-jhb-dark.png'} alt="Traders Expo — official logo" data-hero />
+              <img className="hero-logo" src={ab + 'logo-jhb-dark.png'} alt="Traders Expo Johannesburg — official logo" data-hero />
               <span className="ht-line ht-sub" data-hero><span className="africa-tag">JOHANNESBURG&nbsp;2027</span></span>
             </h1>
             <p className="hero-tagline" data-hero>Africa's Premier Online Trading, Fintech &amp; Financial Markets Exhibition</p>
             <p className="hero-sub" data-hero>Two powerful days where <strong>Traders. Brokers. Technology.</strong> come together — at Emperors Palace, Johannesburg.</p>
             <div className="hero-ctas" data-hero>
-              <a href="tickets.html" className="btn btn-primary btn-lg">Book Your Ticket</a>
+              <a href="tickets.html" className="btn btn-primary btn-lg">Reserve Your Free Ticket</a>
               <a href="exhibit.html" className="btn btn-glass btn-lg">Become an Exhibitor</a>
             </div>
             <Countdown />
@@ -117,7 +117,7 @@ export default function HomePage() {
               <a href="agenda.html#contest" className="btn btn-glass btn-lg">How it works</a>
             </Reveal>
             <Reveal className="center" style={{ marginTop: '18px' }}>
-              <a href="http://www.guinnessworldrecords.com/world-records/774828-most-participants-in-a-trading-competition" target="_blank" rel="noopener" className="fine" style={{ color: '#9aa3ad' }}>Verified on Guinness World Records&trade; &#8599;</a>
+              <a href="http://www.guinnessworldrecords.com/world-records/774828-most-participants-in-a-trading-competition" target="_blank" rel="noopener" className="fine" style={{ color: 'var(--muted)' }}>Verified on Guinness World Records&trade; &#8599;</a>
             </Reveal>
           </div>
         </section>
@@ -138,7 +138,7 @@ export default function HomePage() {
                 </Reveal>
               ))}
             </div>
-            <Reveal className="center"><a href="tickets.html" className="btn btn-primary btn-lg">Book Your Ticket</a></Reveal>
+            <Reveal className="center"><a href="tickets.html" className="btn btn-primary btn-lg">Reserve Your Free Ticket</a></Reveal>
           </div>
         </section>
         {/* ============ FROM CAPE TOWN TO JOHANNESBURG ============ */}
@@ -203,7 +203,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal as="p" className="final-date">19–20 February 2027 · Emperors Palace, Johannesburg</Reveal>
             <Reveal className="final-actions">
-              <a href="tickets.html" className="btn btn-primary btn-lg">Book Tickets</a>
+              <a href="tickets.html" className="btn btn-primary btn-lg">Reserve Free Ticket</a>
               <a href="exhibit.html" className="btn btn-glass btn-lg">Exhibit</a>
               <a href="sponsors.html" className="btn btn-glass btn-lg">Sponsor</a>
               <a href="portal.html" className="btn btn-glass btn-lg">Exhibitor Portal</a>
@@ -228,7 +228,7 @@ export default function HomePage() {
             </div>
             <div className="aeo-qa-card">
               <h3 className="aeo-qa-q">How much are tickets?</h3>
-              <p className="aeo-qa-a">Register your interest — no payment collected now. Ticket pricing will be confirmed before anything is charged.</p>
+              <p className="aeo-qa-a">Tickets are free. Reserve your pass with your name, email and mobile number, and your ticket is emailed to you.</p>
             </div>
           </div>
         </div>

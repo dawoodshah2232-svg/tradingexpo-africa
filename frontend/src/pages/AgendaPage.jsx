@@ -30,7 +30,7 @@ export default function AgendaPage() {
   return (
     <>
       <main>
-        <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/profx/profx-02.webp')` }}>
+        <section className="page-hero has-img" style={{ backgroundImage: `url('${ab}img/profx/profx-02.webp')` }}>
           <div className="container">
             <Reveal className="eyebrow">Agenda</Reveal>
             <Reveal as="h1">Two days of<br /><span className="grad">what matters.</span></Reveal>

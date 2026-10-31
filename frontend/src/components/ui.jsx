@@ -144,7 +144,7 @@ export function Preloader() {
       setPct(100);
       document.body.classList.add('loaded');
       document.body.classList.remove('pre-loading');
-      setTimeout(() => setDone(true), 1250);
+      setTimeout(() => setDone(true), 800);
     };
     const imgs = Array.prototype.slice.call(document.images);
     let loaded = 0;
@@ -165,13 +165,13 @@ export function Preloader() {
       creep = Math.min(creep + 5, 90);
       setPct((p) => (creep > p ? creep : p));
     }, 240);
-    const safety = setTimeout(finish, 6000);
+    const safety = setTimeout(finish, 3000);
     return () => { clearInterval(iv); clearTimeout(safety); finished = true; };
   }, []);
   if (done) return null;
   return (
     <div className={'preloader' + (pct >= 100 ? ' done' : '')} id="preloader" aria-hidden="true">
-      <img className="pre-logo-img" src={ab + 'logo-dark.png'} alt="Traders Expo Johannesburg" />
+      <img className="pre-logo-img" src={ab + 'logo-jhb-dark.png'} alt="Traders Expo Johannesburg" />
       <div className="pre-count"><span>{pct < 10 ? '0' : ''}{pct}</span>%</div>
       <div className="pre-bar"><i style={{ width: pct + '%' }}></i></div>
     </div>

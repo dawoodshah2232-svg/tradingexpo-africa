@@ -78,6 +78,45 @@ export async function apiHealth() {
 
 /* ---------------- Bookings (tickets + exhibitor booths) ---------------- */
 
+/* Free-ticket email for the static site (no Laravel backend on GitHub Pages).
+   Sends the reservation to the organiser inbox and a plain-text ticket to the
+   attendee via FormSubmit autoresponse. Never throws — a failed send only
+   flips emailSent so the confirmation can say so honestly. */
+async function sendFreeTicketEmail(rec) {
+  const ticketText = [
+    'Your free ticket — Traders Expo Johannesburg',
+    '',
+    `Name: ${rec.fields.name}`,
+    `Ticket reference: ${rec.ref}`,
+    `Pass: ${rec.option.name}`,
+    'Dates: 19–20 February 2027',
+    'Venue: Emperors Palace, Centre Court, 64 Jones Road, Kempton Park, Johannesburg',
+    '',
+    'Show this email or your ticket reference at entry. Your ticket is free and valid for both days.',
+    '',
+    'Organised by ProFX Media FZ-LLC · info@profxmedia.com · +971 58 884 5033',
+  ].join('\n');
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 10000);
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/info@profxmedia.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: rec.fields.name, email: rec.fields.email, phone: rec.fields.phone,
+        pass: rec.option.name, reference: rec.ref,
+        _subject: `Your free Traders Expo Johannesburg ticket — ${rec.ref}`,
+        _template: 'table', _captcha: 'false', _autoresponse: ticketText,
+      }),
+      signal: ctrl.signal,
+    });
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data) return false;
+    if ('success' in data) return data.success === true || data.success === 'true';
+    return true;
+  } catch { return false; } finally { clearTimeout(timer); }
+}
+
 export async function createBooking(payload) {
   // payload: { type: 'ticket'|'exhibitor', pass_name, qty, total, name,
   //            company, email, phone, extra }
@@ -104,7 +143,9 @@ export async function createBooking(payload) {
   const all = readStore(key);
   all.push(rec);
   writeStore(key, all);
-  return { ok: true, ref: rec.ref, password: rec.password, demo: true };
+  let emailSent;
+  if (payload.type === 'ticket') emailSent = await sendFreeTicketEmail(rec);
+  return { ok: true, ref: rec.ref, password: rec.password, demo: true, emailSent };
 }
 
 /* ---------------- Portal auth ---------------- */

@@ -21,7 +21,7 @@ export default function VenuePage() {
   return (
     <>
       <main>
-        <section className="page-hero has-img" style={{ '--ph-img': `url('${ab}img/emperors-palace-entrance.webp')` }}>
+        <section className="page-hero has-img" style={{ backgroundImage: `url('${ab}img/emperors-palace-entrance.webp')` }}>
           <div className="container">
             <Reveal className="eyebrow">Venue</Reveal>
             <Reveal as="h1">Emperors Palace.<br /><span className="grad">Johannesburg.</span></Reveal>
@@ -55,7 +55,7 @@ export default function VenuePage() {
                   <span><strong>2,698 m²</strong> Centre Court</span><span><strong>29</strong> conferencing venues</span><span><strong>4</strong> on-site hotels</span><span><strong>3,000</strong> cinema capacity</span>
                 </div>
                 <div className="center" style={{ marginTop: '20px', display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                  <a href="tickets.html" className="btn btn-primary">Book Your Ticket</a>
+                  <a href="tickets.html" className="btn btn-primary">Reserve Free Ticket</a>
                   <a href="https://emperorspalace.com/" target="_blank" rel="noopener" className="btn btn-glass">Visit the venue website</a>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function VenuePage() {
             </div>
             <Reveal className="fine" style={{ marginTop: '26px', textAlign: 'center' }}>International visitors: check South Africa's visa requirements well in advance of travel.</Reveal>
             <div className="center" style={{ marginTop: '32px' }}>
-              <Reveal as="a" href="tickets.html" className="btn btn-primary btn-lg">Book Your Ticket</Reveal>
+              <Reveal as="a" href="tickets.html" className="btn btn-primary btn-lg">Reserve Your Free Ticket</Reveal>
               <Reveal as="a" href="faq.html" className="btn btn-ghost btn-lg" style={{ marginLeft: '10px' }}>Visitor FAQs</Reveal>
             </div>
           </div>

@@ -68,7 +68,7 @@ function Header({ page, linkBase }) {
         </nav>
         <div className="nav-actions">
           <a href={linkBase + "portal.html"} className="nav-portal">Portal</a>
-          <a href={linkBase + "tickets.html"} className="btn btn-primary btn-sm nav-cta">Book Tickets</a>
+          <a href={linkBase + "tickets.html"} className="btn btn-primary btn-sm nav-cta">Reserve Free Ticket</a>
           <button className="theme-toggle" id="themeToggle" aria-label="Toggle light mode" onClick={toggle}>
             <SunIcon /><MoonIcon />
           </button>
@@ -115,9 +115,9 @@ function Footer({ linkBase }) {
           </nav>
           <div className="footer-col">
             <h4>Event Info</h4>
-            <p className="footer-meta">19–20 February 2027 · Emperors Palace, Johannesburg<br />thetradersexpo.com<br />Organizer: ProFX Media FZ-LLC<br />Media &amp; sponsorship: <a href="tel:+971588845033">+971 58 884 5033</a> · <a href="mailto:info@profxmedia.com">info@profxmedia.com</a></p>
+            <p className="footer-meta">19–20 February 2027 · Emperors Palace, Johannesburg<br />thetradersexpo.com<br />Organizer: ProFX Media FZ-LLC<br />Media &amp; sponsorship:<br /><a href="tel:+971588845033">+971 58 884 5033</a><br /><a href="mailto:info@profxmedia.com">info@profxmedia.com</a></p>
             <button className="theme-toggle theme-toggle-footer" id="themeToggleFooter" aria-label="Toggle light mode" onClick={toggle}>
-              <SunIcon /><MoonIcon />
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
               <span id="themeLabel">{theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>
             </button>
           </div>
@@ -136,11 +136,24 @@ function Footer({ linkBase }) {
   );
 }
 
-/* Sticky bottom ticket bar — mobile only (desktop keeps the nav CTA). */
+/* Sticky bottom ticket bar — mobile only (desktop keeps the nav CTA).
+   On mobile the bar holds a small Reserve button plus the WhatsApp help
+   button beside it; on desktop only the WhatsApp button shows, fixed at
+   the bottom-right corner. */
 function StickyCta({ linkBase }) {
+  const ab = useAssetBase();
   return (
-    <div className="sticky-cta" role="complementary" aria-label="Book tickets">
-      <a href={linkBase + 'tickets.html'} className="btn btn-primary">Book Tickets · 19–20 Feb 2027</a>
+    <div className="sticky-cta" role="complementary" aria-label="Reserve a free ticket or get help">
+      <a href={linkBase + 'tickets.html'} className="btn btn-primary reserve-btn">Reserve Free Ticket</a>
+      <a
+        className="wa-btn"
+        href="https://wa.me/971588845033?text=Hi%21%20I%20need%20help%20with%20Traders%20Expo%20Johannesburg%202027."
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with us on WhatsApp"
+      >
+        <img src={ab + 'whatsapp.svg'} alt="" aria-hidden="true" />
+      </a>
     </div>
   );
 }

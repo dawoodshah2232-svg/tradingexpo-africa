@@ -29,6 +29,7 @@ export default function BookingFlow({
   fineTail = 'Your reservation is held for 48 hours — and you can log in to the',
   portalLinkText = 'portal', fineAfter = ' anytime to download your ticket.',
   newBookingHref = 'tickets.html', newBookingLabel = 'New booking',
+  freeLabel = 'On request',
 }) {
   const [step, setStep] = useState(1);
   const [pick, setPick] = useState(null);
@@ -40,7 +41,7 @@ export default function BookingFlow({
   const rootRef = useRef(null);
 
   const opt = pick !== null ? options[pick] : null;
-  const totalText = !opt ? '—' : opt.price > 0 ? money(opt.price * qty) : 'On request';
+  const totalText = !opt ? '—' : opt.price > 0 ? money(opt.price * qty) : freeLabel;
 
   const show = (n) => {
     setStep(n);
@@ -79,7 +80,7 @@ export default function BookingFlow({
         category: data.category || '', package: chosen.name, price: chosen.price, qty,
         storeKey, refPrefix,
       });
-      setResult({ ref: res.ref, password: res.password, fields: data, chosen, qty });
+      setResult({ ref: res.ref, password: res.password, emailSent: res.emailSent, fields: data, chosen, qty });
       show(3);
     } catch (e) {
       setError(e.message || 'Something went wrong. Please try again.');
@@ -99,7 +100,7 @@ export default function BookingFlow({
   if (result) {
     summaryRows.push(['Selection', result.chosen.name]);
     if (result.qty > 1) summaryRows.push(['Quantity', String(result.qty)]);
-    summaryRows.push(['Total', result.chosen.price > 0 ? money(result.chosen.price * result.qty) : 'On request']);
+    summaryRows.push(['Total', result.chosen.price > 0 ? money(result.chosen.price * result.qty) : freeLabel]);
     Object.keys(result.fields).forEach((k) => {
       if (result.fields[k]) summaryRows.push([k.charAt(0).toUpperCase() + k.slice(1), result.fields[k]]);
     });
@@ -173,8 +174,13 @@ export default function BookingFlow({
             </div>
             <p className="portal-creds">{portalNoteTitle}<br />
               Reference <strong>{result.ref}</strong> &nbsp;·&nbsp; Password <strong>{result.password}</strong></p>
-            <p className="fine">{fineEmailPrefix} <strong>{result.fields.email || 'your email'}</strong> automatically.{' '}
-              {fineTail} <a href="portal.html">{portalLinkText}</a>{fineAfter}</p>
+            {result.emailSent === false && (
+              <p className="form-note" style={{ color: '#ffb020' }}>We could not email your ticket — please save this reference and contact info@profxmedia.com if it does not arrive.</p>
+            )}
+            {result.emailSent !== false && (
+              <p className="fine">{fineEmailPrefix} <strong>{result.fields.email || 'your email'}</strong> automatically.{' '}
+                {fineTail} <a href="portal.html">{portalLinkText}</a>{fineAfter}</p>
+            )}
             <div className="bnav center">
               <a className="btn btn-ghost" href="portal.html">Go to Portal</a>
               <a className="btn btn-ghost" href={newBookingHref}>{newBookingLabel}</a>
