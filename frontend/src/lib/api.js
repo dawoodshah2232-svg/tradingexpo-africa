@@ -94,7 +94,7 @@ async function sendFreeTicketEmail(rec) {
     '',
     'Show this email or your ticket reference at entry. Your ticket is free and valid for both days.',
     '',
-    'Organised by ProFX Media FZ-LLC · info@profxmedia.com · +971 58 884 5033',
+    'Organised by ProFX Media FZ-LLC · info@profxmedia.com · +971 58 553 1033',
   ].join('\n');
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), 10000);

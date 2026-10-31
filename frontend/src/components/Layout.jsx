@@ -132,7 +132,7 @@ function Footer({ linkBase }) {
           </nav>
           <div className="footer-col">
             <h4>Event Info</h4>
-            <p className="footer-meta">19–20 February 2027 · Emperors Palace, Johannesburg<br />thetradersexpo.com<br />Organizer: ProFX Media FZ-LLC<br />Media &amp; sponsorship:<br /><a href="tel:+971588845033">+971 58 884 5033</a><br /><a href="mailto:info@profxmedia.com">info@profxmedia.com</a></p>
+            <p className="footer-meta">19–20 February 2027 · Emperors Palace, Johannesburg<br />thetradersexpo.com<br />Organizer: ProFX Media FZ-LLC<br />Media &amp; sponsorship:<br /><a href="tel:+971585531033">+971 58 553 1033</a><br /><a href="mailto:info@profxmedia.com">info@profxmedia.com</a></p>
             <button className="theme-toggle theme-toggle-footer" id="themeToggleFooter" aria-label="Toggle light mode" onClick={toggle}>
               {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
               <span id="themeLabel">{theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>
@@ -164,7 +164,7 @@ function StickyCta({ linkBase }) {
       <a href={linkBase + 'tickets.html'} className="btn btn-primary reserve-btn">Reserve Free Ticket</a>
       <a
         className="wa-btn"
-        href="https://wa.me/971588845033?text=Hi%21%20I%20need%20help%20with%20Traders%20Expo%20Johannesburg%202027."
+        href="https://wa.me/971585531033?text=Hi%21%20I%20need%20help%20with%20Traders%20Expo%20Johannesburg%202027."
         target="_blank"
         rel="noopener"
         aria-label="Chat with us on WhatsApp"

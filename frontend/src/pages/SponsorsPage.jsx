@@ -217,7 +217,7 @@ export default function SponsorsPage() {
             <Reveal as="h2" className="section-title">Ready to own the <span className="grad">spotlight?</span></Reveal>
             <Reveal className="section-lead">Tell us about your goals — our partnerships team will build the right package for your brand.</Reveal>
             <Reveal as="a" href={MAIL + 'Sponsorship%20Enquiry%20' + SUBJ} className="btn btn-primary btn-lg">Start the Conversation</Reveal>
-            <Reveal className="section-lead" style={{ marginTop: '18px' }}>Media &amp; sponsorship enquiries: <a href="tel:+971588845033">+971 58 884 5033</a> · <a href="mailto:info@profxmedia.com">info@profxmedia.com</a> · <a href="https://www.profxexpo.com" target="_blank" rel="noopener">profxexpo.com</a></Reveal>
+            <Reveal className="section-lead" style={{ marginTop: '18px' }}>Media &amp; sponsorship enquiries: <a href="tel:+971585531033">+971 58 553 1033</a> · <a href="mailto:info@profxmedia.com">info@profxmedia.com</a> · <a href="https://www.profxexpo.com" target="_blank" rel="noopener">profxexpo.com</a></Reveal>
           </div>
         </section>
       </main>

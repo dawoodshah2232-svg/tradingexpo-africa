@@ -49,7 +49,7 @@ export default function ContactPage() {
               </Reveal>
               <Reveal className="contact-card">
                 <h3>Media &amp; sponsorship</h3>
-                <p><a href="tel:+971588845033">+971 58 884 5033</a><br />
+                <p><a href="tel:+971585531033">+971 58 553 1033</a><br />
                   <span className="muted">Sponsorship &amp; media enquiries</span></p>
               </Reveal>
               <Reveal className="contact-card">
