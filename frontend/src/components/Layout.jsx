@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider, useTheme, useAssetBase, AssetBaseProvider } from '../lib/theme.jsx';
+import { notificationsFor, readNotifIds as portalReadIds } from '../lib/portalStore.js';
 
 const NAV_LINKS = [
   ['index.html', 'home', 'Home'],
@@ -37,12 +38,26 @@ function Header({ page, linkBase }) {
   const ab = useAssetBase();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [portalUnread, setPortalUnread] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  /* Portal notification badge: only when a portal session exists in this
+     browser. The in-portal bell is authoritative; this is just a dot. */
+  useEffect(() => {
+    try {
+      const sess = JSON.parse(sessionStorage.getItem('tea_portal_session') || 'null');
+      if (!sess || sess.role === 'admin') { setPortalUnread(0); return; }
+      const key = sess.email || sess.ref || '';
+      const all = notificationsFor({ role: sess.role, email: sess.email || '' });
+      const read = portalReadIds(key);
+      setPortalUnread(all.filter((n) => read.indexOf(n.id) < 0).length);
+    } catch { setPortalUnread(0); }
   }, []);
 
   const logo = theme === 'dark' ? 'logo-jhb-dark-compact.png' : 'logo-jhb-light-compact.png';
@@ -67,7 +82,9 @@ function Header({ page, linkBase }) {
           ))}
         </nav>
         <div className="nav-actions">
-          <a href={linkBase + "portal.html"} className="nav-portal">Portal</a>
+          <a href={linkBase + "portal.html"} className="nav-portal">Portal{portalUnread > 0 ? (
+            <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: '#e5484d', marginLeft: 6, verticalAlign: 'super' }} aria-label={`${portalUnread} unread portal notifications`} />
+          ) : null}</a>
           <a href={linkBase + "tickets.html"} className="btn btn-primary btn-sm nav-cta">Reserve Free Ticket</a>
           <button className="theme-toggle" id="themeToggle" aria-label="Toggle light mode" onClick={toggle}>
             <SunIcon /><MoonIcon />

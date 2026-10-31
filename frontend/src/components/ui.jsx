@@ -89,16 +89,24 @@ export function Countdown() {
   const h = pad(Math.floor(diff / 36e5) % 24);
   const m = pad(Math.floor(diff / 6e4) % 60);
   const s = pad(Math.floor(diff / 1e3) % 60);
+  const cells = [
+    [diff <= 0 ? '00' : d, 'Days'],
+    [h, 'Hours'],
+    [m, 'Minutes'],
+    [s, 'Seconds'],
+  ];
   return (
-    <div className="countdown" data-hero role="timer" aria-label="Countdown to Traders Expo Johannesburg">
-      <div className="cd-cell"><span className="cd-num">{diff <= 0 ? '00' : d}</span><span className="cd-label">Days</span></div>
-      <div className="cd-sep">:</div>
-      <div className="cd-cell"><span className="cd-num">{h}</span><span className="cd-label">Hours</span></div>
-      <div className="cd-sep">:</div>
-      <div className="cd-cell"><span className="cd-num">{m}</span><span className="cd-label">Minutes</span></div>
-      <div className="cd-sep">:</div>
-      <div className="cd-cell"><span className="cd-num">{s}</span><span className="cd-label">Seconds</span></div>
-    </div>
+    <section className="cd-strip" aria-label="Countdown to Traders Expo Johannesburg">
+      <div className="cd-strip-inner">
+        <p className="cd-eyebrow">Countdown to the expo</p>
+        <div className="cd-tiles" role="timer" aria-label="Countdown to Traders Expo Johannesburg">
+          {cells.map(([v, l]) => (
+            <div className="cd-tile" key={l}><span className="cd-num">{v}</span><span className="cd-label">{l}</span></div>
+          ))}
+        </div>
+        <p className="cd-sub">19–20 February 2027 · Emperors Palace, Johannesburg — free entry</p>
+      </div>
+    </section>
   );
 }
 

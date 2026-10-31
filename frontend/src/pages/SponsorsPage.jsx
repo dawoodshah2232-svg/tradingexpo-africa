@@ -63,10 +63,10 @@ export default function SponsorsPage() {
               <a className="btn btn-primary btn-lg" href={MAIL + 'Sponsorship%20Enquiry%20' + SUBJ}>Enquire Now</a>
             </Reveal>
             <Reveal className="spon-stats">
-              <div className="spon-stat"><strong>4,000+</strong><span>Expected traders</span></div>
-              <div className="spon-stat"><strong>8</strong><span>Sponsorship tiers</span></div>
-              <div className="spon-stat"><strong>10</strong><span>Branding add-ons</span></div>
-              <div className="spon-stat"><strong>2 days</strong><span>19–20 February 2027</span></div>
+              <div className="spon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="#4dff9d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5" /><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" /><circle cx="17" cy="9" r="2.5" /><path d="M15.5 14.3c2.7.4 4.8 2.2 4.8 4.7" /></svg><strong>4,000+</strong><span>Expected traders</span></div>
+              <div className="spon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="#4dff9d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /></svg><strong>8</strong><span>Sponsorship tiers</span></div>
+              <div className="spon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="#4dff9d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 10.5v3h3l11 6V4.5L6 10.5H3z" /><path d="M18 9a4.5 4.5 0 0 1 0 6" /></svg><strong>10</strong><span>Branding add-ons</span></div>
+              <div className="spon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="#4dff9d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M8 3v4M16 3v4M3 10h18M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01" /></svg><strong>2 days</strong><span>19–20 February 2027</span></div>
             </Reveal>
           </div>
         </section>

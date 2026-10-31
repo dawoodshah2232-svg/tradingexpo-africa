@@ -1,5 +1,5 @@
 /* Traders Expo Johannesburg — Portal CRM styles
-   Brand: navy #0B1F3B · green #00C853 · light #F4F8FA · green-2 #00A86B *
+   Brand: navy #0B1F3B · green #00C853 · light #F4F8FA · green-2 #00A86B */
 :root{
   --navy:#0B1F3B; --navy-2:#12294d; --green:#00C853; --green-2:#00A86B;
   --bg:#F4F8FA; --card:#ffffff; --ink:#0e1a2e; --muted:#5b6b82;
@@ -239,6 +239,8 @@ button{font-family:inherit}
 .pticket-top span{font-size:12.5px;color:#b9c9dd}
 .pticket-qr{width:64px;height:64px;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--navy);font-weight:800;text-align:center}
 .pticket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;padding:20px 22px}
+.pticket-grid > div{min-width:0}
+.pticket-grid strong{overflow-wrap:anywhere}
 .pticket-grid span{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:700}
 .pticket-grid strong{font-size:15px}
 .pticket-grid .ref{color:var(--green-2);letter-spacing:1px}
@@ -296,3 +298,44 @@ button{font-family:inherit}
   .search-wrap input{font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- Portal v2 additions: floor plan, notifications, offers, assets ---------- */
+.fp-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:10px 0 14px}
+.fp-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px;background:#cfe3d8}
+.fp-dot.res{background:#f5a524}
+.fp-dot.sold{background:#e5484d}
+.fp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.fp-booth{border:2px solid var(--line);background:#fff;border-radius:12px;padding:12px 8px;cursor:pointer;text-align:center;display:flex;flex-direction:column;gap:2px;min-height:78px;align-items:center;justify-content:center}
+.fp-booth strong{font-size:15px;color:var(--navy)}
+.fp-booth span{font-size:11px;color:var(--muted);font-weight:700}
+.fp-booth em{font-size:11px;color:var(--ink);font-style:normal;font-weight:600}
+.fp-booth.reserved{border-color:#f5a524;background:#fff8e7}
+.fp-booth.sold{border-color:#f0b6b8;background:#fdf0f0;opacity:.75}
+.fp-booth.sel{border-color:var(--green-2);box-shadow:0 0 0 3px rgba(0,200,83,.18)}
+.fp-booth.mine{border-color:var(--green);background:#eefaf2}
+.delete-dialog{border:2px solid #f0b6b8;background:#fdf0f0;border-radius:12px;padding:18px;margin:0 0 18px}
+.delete-dialog h4{margin:0 0 4px;font-size:16px}
+.delete-dialog p{margin:0 0 12px;color:var(--muted);font-size:13px}
+.delete-dialog label{display:block;font-size:13px;font-weight:700}
+.delete-dialog textarea{width:100%;margin-top:7px;padding:12px;border:1.5px solid #f0b6b8;border-radius:10px;font-family:inherit;font-size:14px}
+.notif-list{display:flex;flex-direction:column;gap:10px}
+.notif-row{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer}
+.notif-row.read{opacity:.72}
+.notif-body{display:flex;flex-direction:column;gap:2px;flex:1}
+.notif-body span{font-size:13px;color:var(--muted)}
+.notif-body em{font-size:12px;color:var(--muted);font-style:normal}
+.notif-unread{background:var(--danger);color:#fff;font-size:11px;font-weight:800;border-radius:20px;padding:3px 9px;white-space:nowrap}
+.offer-card{border:1px solid var(--line);border-left:4px solid var(--green);border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#fbfdfc}
+.offer-card strong{display:block;font-size:15px}
+.offer-card span{font-size:12px;color:var(--muted)}
+.offer-card p{margin:8px 0 0;font-size:13.5px;color:var(--ink)}
+.asset-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.asset-card{border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:4px;background:#fff}
+.asset-card img{width:100%;height:110px;object-fit:contain;background:#f4f8fa;border-radius:8px}
+.asset-file{height:110px;display:flex;align-items:center;justify-content:center;font-size:34px;background:#f4f8fa;border-radius:8px}
+.asset-card span{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+@media(max-width:640px){
+  .fp-grid{grid-template-columns:repeat(2,1fr)}
+  .asset-grid{grid-template-columns:1fr 1fr}
+  .fp-booth{min-height:70px}
+}

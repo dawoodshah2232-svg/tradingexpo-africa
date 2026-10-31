@@ -4,6 +4,13 @@ import {
   money, exportCSV, uid, dstr, dtime, daysToEvent, apiHealth,
   seedDemoIfEmpty as seedDemo,
 } from '../lib/api.js';
+import {
+  seedPortalV2, getSponsors, getSponsor, sponsorLogin, updateSponsor,
+  getPackages, addPackage, getBooths, getBooth, chooseBooth, addAsset, getAssets,
+  publishNotification, notificationsFor, offersFor, addPackageOffer,
+  submitPayment, setPaymentStatus, getPayments, getDeletedTickets, recordDeletedTicket,
+  ticketHistory, markNotifRead, markAllNotifRead, readNotifIds as portalReadIds, moneyUSD,
+} from '../lib/portalStore.js';
 import { useAssetBase } from '../lib/theme.jsx';
 import ContentAdmin from '../components/ContentAdmin.jsx';
 
@@ -34,7 +41,12 @@ const findBooking = (ref, pass) => {
 const NAV = {
   admin: [
     ['dashboard', 'Dashboard', '📊'],
-    ['bookings', 'Bookings', '🎫'],
+    ['bookings', 'Tickets Register', '🎫'],
+    ['deleted', 'Deleted Leads', '🗑️'],
+    ['sponsors', 'Sponsors', '🤝'],
+    ['packages', 'Packages & Offers', '📦'],
+    ['payments', 'Payments', '💳'],
+    ['floorplan', 'Floor Plan', '🗺️'],
     ['reports', 'Reports', '📈'],
     ['announcements', 'Announcements', '📣'],
     ['content', 'Website Content', '🖼️'],
@@ -44,15 +56,21 @@ const NAV = {
     ['dashboard', 'Dashboard', '📊'],
     ['company', 'Company Profile', '🏢'],
     ['booth', 'Booth Details', '🏗️'],
+    ['floorplan', 'Floor Plan', '🗺️'],
+    ['assets', 'Brand Assets', '🎨'],
+    ['payments', 'Payments', '💳'],
+    ['offers', 'My Offers', '🏷️'],
     ['team', 'Team & Badges', '👥'],
     ['leads', 'Lead Capture', '🧲'],
     ['docs', 'Documents', '📁'],
-    ['offers', 'My Offers', '🏷️'],
     ['announcements', 'Announcements', '📣'],
   ],
   ticket: [
     ['dashboard', 'Dashboard', '📊'],
     ['tickets', 'My Tickets', '🎫'],
+    ['notifications', 'Notifications', '🔔'],
+    ['offers', 'Offers', '🎁'],
+    ['account', 'My Account', '👤'],
     ['event', 'Event Info', 'ℹ️'],
     ['promos', 'Promotions', '🎁'],
   ],
@@ -61,6 +79,15 @@ const ROLE_LABEL = { admin: 'Admin Portal', exhibitor: 'Exhibitor Portal', ticke
 const VIEW_TITLE = {
   dashboard: ['Dashboard', 'Your event overview at a glance.'],
   bookings: ['Bookings', 'All ticket and exhibitor reservations.'],
+  deleted: ['Deleted Leads', 'Cancelled tickets kept as callable leads — nothing is silently erased.'],
+  sponsors: ['Sponsors', 'Every sponsor, their package, booth, uploads and payments.'],
+  packages: ['Packages & Offers', 'Brochure packages, new packages, and discounted offers to sponsors.'],
+  payments: ['Payments', 'Sponsorship payment records. Tickets are free and never appear here.'],
+  floorplan: ['Floor Plan', 'Emperors Palace Centre Court — real plan, 38 booths, pick yours.'],
+  assets: ['Brand Assets', 'Logo, booth designs and roll-up artwork for the operations team.'],
+  notifications: ['Notifications', 'Announcements, promotions and ticket updates, newest first.'],
+  offers: ['Offers', 'Current promotions and package offers for you.'],
+  account: ['My Account', 'Your contact details and portal password.'],
   reports: ['Reports', 'Bookings, revenue and trends.'],
   announcements: ['Announcements', 'Publish updates to portal users.'],
   content: ['Website Content', 'Speakers, sponsors, photos and site text — publish straight to the live site.'],
@@ -226,9 +253,37 @@ function AdminDashboard({ ctx }) {
   const topTypes = Object.keys(byType).sort((a, b2) => byType[b2] - byType[a]).slice(0, 6)
     .map((k, i) => [k.length > 14 ? k.slice(0, 13) + '…' : k, byType[k], i === 0 ? 'navy' : i === 1 ? 'amber' : '']);
   const feed = [...bookings].slice(0, 6);
+  /* Reconciled register counts — computed from the same rows the register
+     shows, so the numbers can never drift from the lists. */
+  const activeTickets = tickets;
+  const attendeeEmails = new Set(activeTickets.map((b) => String((b.fields && b.fields.email) || '').toLowerCase()).filter(Boolean));
+  const byPass = {};
+  activeTickets.forEach((b) => { const k = b.option ? b.option.name : 'Other'; byPass[k] = (byPass[k] || 0) + 1; });
+  const deletedCount = getDeletedTickets().length;
+  const sponsorCount = getSponsors().length;
+  const paymentsConfirmed = getPayments().filter((p) => p.status === 'Confirmed')
+    .reduce((s, p) => s + Number(p.amount || 0), 0);
 
   return (
     <>
+      <div className="card">
+        <h3>Tickets register — reconciled counts</h3>
+        <p className="card-sub">Every number below is counted from the register rows themselves.</p>
+        <div className="kpi-grid">
+          <Kpi label="Tickets issued (active)" value={activeTickets.length} sub="excludes deleted tickets" />
+          <Kpi label="Attendees" value={attendeeEmails.size} sub="unique ticket emails" cls="navy" />
+          <Kpi label="Deleted / cancelled" value={deletedCount} sub="kept as callable leads" cls="amber" />
+          <Kpi label="Sponsors" value={sponsorCount} sub="portal sponsor accounts" />
+          <Kpi label="Payments confirmed" value={moneyUSD(paymentsConfirmed)} sub="sponsorship only — tickets are free" />
+        </div>
+        <p className="fine">By pass: {Object.keys(byPass).length ? Object.keys(byPass).map((k) => `${k} ×${byPass[k]}`).join(' · ') : 'none yet.'}</p>
+        <div className="bnav">
+          <button className="btn btn-ghost btn-sm" type="button" onClick={() => ctx.go('bookings')}>Tickets register →</button>
+          <button className="btn btn-ghost btn-sm" type="button" onClick={() => ctx.go('deleted')}>Deleted leads →</button>
+          <button className="btn btn-ghost btn-sm" type="button" onClick={() => ctx.go('sponsors')}>Sponsors →</button>
+          <button className="btn btn-ghost btn-sm" type="button" onClick={() => ctx.go('payments')}>Payments →</button>
+        </div>
+      </div>
       <div className="kpi-grid">
         <Kpi label="Total bookings" value={bookings.length} sub={`${tickets.length} tickets · ${exhibs.length} exhibitors`} />
         <Kpi label="Gross revenue" value={money(revenue)} sub="demo figures — no real payments yet" cls="navy" />
@@ -282,6 +337,8 @@ function AdminBookings({ ctx }) {
   const [kindF, setKindF] = useState('all');
   const [sortK, setSortK] = useState('at');
   const [sortD, setSortD] = useState(-1);
+  const [deleting, setDeleting] = useState(null);
+  const [reason, setReason] = useState('');
 
   const q = (bq || search || '').toLowerCase();
   let filtered = bookings.filter((b) => {
@@ -302,14 +359,29 @@ function AdminBookings({ ctx }) {
 
   const doExport = () => {
     exportCSV('bookings-export.csv',
-      [['Ref', 'Kind', 'Pass/Booth', 'Qty', 'Total (INR)', 'Name', 'Company', 'Email', 'Phone', 'Booked at']]
+      [['Ref', 'Kind', 'Pass/Booth', 'Qty', 'Total', 'Name', 'Company', 'Email', 'Phone', 'Status', 'Booked at']]
         .concat(filtered.map((b) => {
           const f = b.fields || {};
           return [b.ref, b._kind, b.option ? b.option.name : '', b.qty || 1,
             b.option && b.option.price ? b.option.price * (b.qty || 1) : 0,
-            f.name || '', f.company || '', f.email || '', f.phone || '', b.at || ''];
+            f.name || '', f.company || '', f.email || '', f.phone || '', 'Active', b.at || ''];
         })));
     ctx.toast(`Exported ${filtered.length} bookings.`);
+  };
+  const doDelete = () => {
+    if (!deleting || !reason.trim()) { ctx.toast('Please give a reason for deleting this ticket.'); return; }
+    const f = deleting.fields || {};
+    recordDeletedTicket({
+      ref: deleting.ref, pass: deleting.option ? deleting.option.name : '',
+      name: f.name || '', email: f.email || '', phone: f.phone || '',
+      reason: reason.trim(), deletedAt: new Date().toISOString(), deletedBy: 'Admin',
+    });
+    write('tea_bookings', read('tea_bookings', []).filter((b) => b.ref !== deleting.ref));
+    const ref = deleting.ref;
+    setDeleting(null); setReason('');
+    ctx.toast(`Ticket ${ref} deleted — kept in Deleted Leads with the reason.`);
+    ctx.reloadBookings();
+    ctx.refresh();
   };
   useEffect(() => {
     ctx.setActions(<button className="btn btn-ghost btn-sm" type="button" onClick={doExport}>⬇ Export CSV</button>);
@@ -330,8 +402,8 @@ function AdminBookings({ ctx }) {
 
   return (
     <div className="card">
-      <h3>Bookings ({filtered.length})</h3>
-      <p className="card-sub">Click a row to open booking details.</p>
+      <h3>Tickets register ({filtered.length})</h3>
+      <p className="card-sub">Every ticket with attendee name, mobile, email, pass, reference, issue date and status. Click a row for details. Deleting a ticket always asks for a reason and keeps the record in Deleted Leads.</p>
       <div className="table-tools">
         <input type="search" placeholder="Search ref, name, company, email…" value={bq}
           onChange={(e) => { setBq(e.target.value); ctx.setSearch(''); }} />
@@ -341,13 +413,30 @@ function AdminBookings({ ctx }) {
           <option value="exhibitor">Exhibitors</option>
         </select>
       </div>
+      {deleting ? (
+        <div className="delete-dialog" role="dialog" aria-label="Delete ticket">
+          <h4>Delete ticket {deleting.ref}?</h4>
+          <p>{(deleting.fields && (deleting.fields.name || deleting.fields.company)) || ''} · {(deleting.fields && deleting.fields.email) || ''}</p>
+          <label>Why are you deleting it? What is the reason?
+            <textarea rows="3" value={reason} onChange={(e) => setReason(e.target.value)} placeholder="e.g. Duplicate booking — attendee re-registered with a new email" />
+          </label>
+          <p className="fine">The ticket is cancelled, but the person, their contact details and this reason stay in Deleted Leads so the team can call them back.</p>
+          <div className="bnav">
+            <button className="btn btn-danger" type="button" onClick={doDelete}>Delete ticket</button>
+            <button className="btn btn-ghost" type="button" onClick={() => { setDeleting(null); setReason(''); }}>Cancel</button>
+          </div>
+        </div>
+      ) : null}
       {filtered.length ? (
         <div className="table-wrap">
           <table className="data-table">
             <thead><tr>
               {th('Reference', 'ref')}{th('Name / Company', 'name')}
               <th className="no-sort">Kind</th><th className="no-sort">Pass / Booth</th>
+              <th className="no-sort">Email</th><th className="no-sort">Mobile</th>
+              <th className="no-sort">Status</th>
               {th('Total', 'total')}{th('Booked', 'at')}
+              <th className="no-sort">Action</th>
             </tr></thead>
             <tbody>
               {filtered.map((b) => {
@@ -359,8 +448,14 @@ function AdminBookings({ ctx }) {
                     <td>{f.company || f.name || '—'}</td>
                     <td><span className={'pill ' + (b._kind === 'ticket' ? 'pill-ticket' : 'pill-exhibitor')}>{b._kind === 'ticket' ? 'Ticket' : 'Exhibitor'}</span></td>
                     <td>{b.option ? b.option.name : '—'}{b.qty > 1 ? ' ×' + b.qty : ''}</td>
+                    <td>{f.email || '—'}</td>
+                    <td>{f.phone || '—'}</td>
+                    <td><span className="pill">Active</span></td>
                     <td>{total ? money(total) : '—'}</td>
                     <td>{dstr(b.at)}</td>
+                    <td>{b._kind === 'ticket' ? (
+                      <button type="button" className="mini-btn danger" onClick={(e) => { e.stopPropagation(); setDeleting(b); setReason(''); }}>Delete</button>
+                    ) : '—'}</td>
                   </tr>
                 );
               })}
@@ -464,6 +559,7 @@ function AdminAnns({ ctx }) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [aud, setAud] = useState('all');
+  const [kind, setKind] = useState('announcement');
 
   const reload = async () => {
     const items = await getAnnouncements();
@@ -477,10 +573,16 @@ function AdminAnns({ ctx }) {
     await saveAnnouncement(item);
     const cur = read('tea_announcements', []);
     if (!cur.find((a) => a.id === item.id)) write('tea_announcements', [item, ...cur]);
-    setTitle(''); setBody(''); setAud('all');
+    /* Fan out to the portal notification feed too, so every attendee and
+       sponsor sees it in Notifications with read/unread state. */
+    publishNotification({
+      kind, audience: aud === 'exhibitor' ? 'sponsor' : aud,
+      title: title.trim(), body: body.trim(),
+    });
+    setTitle(''); setBody(''); setAud('all'); setKind('announcement');
     await reload();
     ctx.reloadAnns();
-    ctx.toast('Announcement published.');
+    ctx.toast('Published — it is now in every matching notification feed and offers section.');
     ctx.refresh();
   };
   const remove = async (id) => {
@@ -494,16 +596,23 @@ function AdminAnns({ ctx }) {
   return (
     <>
       <div className="card">
-        <h3>Publish announcement</h3>
-        <p className="card-sub">Shown to portal users in the chosen audience, plus the notification bell.</p>
+        <h3>Publish announcement, promotion or offer</h3>
+        <p className="card-sub">Shown to portal users in the chosen audience, plus the notification bell and their Notifications feed. Offers also appear in the Offers section.</p>
         <div className="form-grid">
           <label className="full">Title<input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="e.g. Venue announced" /></label>
           <label className="full">Message<textarea rows="3" value={body} onChange={(e) => setBody(e.target.value)} placeholder="Write the update…"></textarea></label>
+          <label>Type
+            <select value={kind} onChange={(e) => setKind(e.target.value)}>
+              <option value="announcement">Announcement</option>
+              <option value="promotion">Promotion</option>
+              <option value="offer">Offer</option>
+            </select>
+          </label>
           <label>Audience
             <select value={aud} onChange={(e) => setAud(e.target.value)}>
               <option value="all">Everyone</option>
               <option value="ticket">Ticket holders</option>
-              <option value="exhibitor">Exhibitors</option>
+              <option value="exhibitor">Sponsors / exhibitors</option>
             </select>
           </label>
         </div>
@@ -1131,20 +1240,29 @@ function MyTickets({ ctx }) {
     String(x.fields.email || '').toLowerCase() === String(f.email).toLowerCase()
   );
   const doPrint = () => { if (!printTicket(b)) ctx.toast('Please allow pop-ups to print your ticket.'); };
+  const hist = ticketHistory(b.ref, b.at);
   return (
     <>
       <TicketCard b={b} />
       <div className="bnav">
-        <button className="btn btn-primary" type="button" onClick={doPrint}>Download / Print Ticket</button>
+        <button className="btn btn-primary" type="button" onClick={doPrint}>Download / Print / Re-issue Ticket</button>
         <a className="btn btn-ghost" href="agenda.html">View Agenda</a>
       </div>
-      <p className="fine">Your ticket was emailed to <strong>{f.email || 'your email'}</strong> at booking time (demo preview — connect the PHP backend for real email delivery). You can download it here anytime.</p>
+      <p className="fine">Your ticket was emailed to <strong>{f.email || 'your email'}</strong> at booking time (demo preview — connect the PHP backend for real email delivery). You can download or re-issue it here anytime.</p>
       {others.length > 0 && (
         <>
           <h3 className="panel-title">Other bookings on this email</h3>
           {others.map((o) => <TicketCard key={o.ref} b={o} compact />)}
         </>
       )}
+      <div className="card">
+        <h3>Ticket history — {b.ref}</h3>
+        {hist.length ? (
+          <div className="feed">{hist.map((h, i) => (
+            <div className="feed-item" key={i}><span className="feed-dot"></span><div><strong>{h.status}</strong><p>{h.note || ''}</p><span>{dstr(h.at)}</span></div></div>
+          ))}</div>
+        ) : <EmptyState icon="🎫">No history yet.</EmptyState>}
+      </div>
       <div className="callout">
         <strong>Live trading contest — both days.</strong>
         <span>Full contest rules, entry details and prizes will be announced closer to the event.</span>
@@ -1158,13 +1276,13 @@ function EventInfo() {
     <>
       <div className="grid-3">
         <div className="info-card"><h3>📅 Dates</h3><p>19–20 February 2027, two full days of expo floor, conferences and networking.</p></div>
-        <div className="info-card"><h3>📍 Venue</h3><p>Africa — city and venue to be announced. Watch Promotions for the reveal.</p></div>
+        <div className="info-card"><h3>📍 Venue</h3><p>Emperors Palace, Centre Court, 64 Jones Road, Kempton Park, Johannesburg — 19–20 February 2027.</p></div>
         <div className="info-card"><h3>🏢 Organiser</h3><p>ProFX Media FZ-LLC. <a href="contact.html">Contact the team →</a></p></div>
       </div>
       <h3 className="panel-title">Travel &amp; stay</h3>
       <div className="grid-3">
         <div className="info-card"><h3>✈️ Getting there</h3><p>Fly into the host city — international and domestic connections. Metro and cab details will be published with the venue.</p></div>
-        <div className="info-card"><h3>🏨 Where to stay</h3><p>Partner hotel rates near the venue will be announced. Book early — April is peak season.</p></div>
+        <div className="info-card"><h3>🏨 Where to stay</h3><p>Partner hotel rates near Emperors Palace will be announced. Book early — February is peak season in Johannesburg.</p></div>
         <div className="info-card"><h3>🎫 At the door</h3><p>Show your booking reference at registration to collect your badge. Gates open 9:00 AM both days.</p></div>
       </div>
       <h3 className="panel-title">Agenda highlights</h3>
@@ -1237,6 +1355,618 @@ function PortalFaq() {
   );
 }
 
+/* ================= PORTAL V2 VIEWS (attendee / sponsor / admin) ================= */
+/* Data lives in src/lib/portalStore.js (localStorage demo layer) and mirrors
+   frontend/docs/portal-api-spec.md 1:1. */
+
+function sponsorBooking(sp) {
+  if (!sp) return null;
+  return {
+    ref: sp.id, _kind: 'exhibitor', at: sp.boothChosenAt || new Date().toISOString(),
+    option: { name: (sp.tier || 'Sponsor') + ' package', price: 0 },
+    fields: { company: sp.brand, name: sp.contact || sp.brand, email: sp.email, phone: sp.phone || '' },
+  };
+}
+
+function FloorPlanView({ ctx }) {
+  const booths = getBooths();
+  const sponsors = getSponsors();
+  const [sel, setSel] = useState(null);
+  const mine = ctx.sponsor;
+  const ab = ctx.ab || 'assets/';
+  const holder = (b) => sponsors.find((s) => s.boothId === b.id);
+  const chosen = sel ? booths.find((b) => b.id === sel) : null;
+  const choose = () => {
+    if (!mine || !chosen) return;
+    const r = chooseBooth(mine.id, chosen.id);
+    if (!r.ok) { ctx.toast(r.error); return; }
+    ctx.toast(`Booth ${chosen.id} reserved for ${mine.brand} (demo availability — admin confirms final allocation).`);
+    ctx.refresh();
+  };
+  const TIERS = ['Title', 'Official', 'Exclusive', 'Regional', 'Diamond', 'Elite', 'Gold', 'Silver'];
+  return (
+    <>
+      <div className="card">
+        <h3>Emperors Palace, Centre Court — floor plan</h3>
+        <p className="card-sub">The organiser's floor plan for 19–20 February 2027. The plan drawing is dated 11 February 2027 — that is the drawing date, not the event date. Booth availability shown here is demo data; the booth numbers, tiers and sizes are from the real plan.</p>
+        <p>
+          <a className="btn btn-primary btn-sm" href={ab + 'floor-plan-johannesburg-2027.pdf'} target="_blank" rel="noreferrer">⬇ Download full floor plan (PDF)</a>
+        </p>
+        <img src={ab + 'img/floor-plan.jpg'} alt="Traders Expo Johannesburg floor plan — Emperors Palace Centre Court" style={{ width: '100%', borderRadius: 12, border: '1px solid var(--line)', background: '#fff' }} />
+        <p className="fine">Around the hall: Speaker Hall + Speaker Stage · Networking Lounge · Trading Arena · League Area · Trading Contest Floor · LED screens · Charging Station · Entry/Exit doors · Entrance Gates · Exposure Walls.</p>
+        <div className="fp-legend">
+          <span><i className="fp-dot avail"></i> Available (demo)</span>
+          <span><i className="fp-dot res"></i> Reserved (demo)</span>
+          <span><i className="fp-dot sold"></i> Sold (demo)</span>
+        </div>
+        {TIERS.map((tier) => {
+          const row = booths.filter((b) => b.tier === tier);
+          if (!row.length) return null;
+          return (
+            <div key={tier}>
+              <h3 className="panel-title">{tier} — {row[0].size} m · {moneyUSD(row[0].price)} ({row.length} booths)</h3>
+              <div className="fp-grid">
+                {row.map((b) => {
+                  const h = holder(b);
+                  return (
+                    <button key={b.id} type="button"
+                      className={'fp-booth ' + b.status + (sel === b.id ? ' sel' : '') + (mine && mine.boothId === b.id ? ' mine' : '')}
+                      onClick={() => setSel(b.id)} title={`Booth ${b.id} · ${b.tier} · ${b.size} · ${moneyUSD(b.price)} · ${b.status}`}>
+                      <strong>{b.id}</strong><span>{b.tier}</span>{h ? <em>{h.brand}</em> : null}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+        <p className="fine">Green border = your booth. Reserved booths show the holding sponsor; sold booths cannot be chosen. Pick a booth to see its details.</p>
+      </div>
+      {chosen ? (
+        <div className="card">
+          <h3>Booth {chosen.id}</h3>
+          <p className="card-sub">Full details for this booth.</p>
+          <div className="d-row"><span>Tier</span><strong>{chosen.tier}</strong></div>
+          <div className="d-row"><span>Size</span><strong>{chosen.size} m</strong></div>
+          <div className="d-row"><span>Package price</span><strong>{moneyUSD(chosen.price)}</strong></div>
+          <div className="d-row"><span>Availability (demo)</span><strong>{chosen.status}</strong></div>
+          {holder(chosen) ? <div className="d-row"><span>Held by</span><strong>{holder(chosen).brand}</strong></div> : null}
+          {mine ? (
+            <div className="bnav">
+              <button className="btn btn-primary" type="button" disabled={chosen.status !== 'available'} onClick={choose}>
+                {chosen.status === 'available' ? `Choose booth ${chosen.id}` : `Booth ${chosen.id} is ${chosen.status}`}
+              </button>
+            </div>
+          ) : (
+            <p className="fine">Admin view — sponsors choose their booth from their own portal. The choice lands on the sponsor record.</p>
+          )}
+        </div>
+      ) : <EmptyState icon="🗺️">Select a booth above to see its details.</EmptyState>}
+    </>
+  );
+}
+
+function DeletedLeads({ ctx }) {
+  const list = getDeletedTickets();
+  const doExport = () => {
+    exportCSV('deleted-leads.csv',
+      [['Ref', 'Pass', 'Name', 'Email', 'Phone', 'Reason', 'Deleted at', 'Deleted by']]
+        .concat(list.map((d) => [d.ref, d.pass || '', d.name || '', d.email || '', d.phone || '', d.reason || '', d.deletedAt || '', d.deletedBy || ''])));
+    ctx.toast(`Exported ${list.length} deleted leads.`);
+  };
+  return (
+    <div className="card">
+      <h3>Deleted / cancelled tickets — callable leads ({list.length})</h3>
+      <p className="card-sub">Nothing is silently erased. Every deleted ticket stays here with the reason, so the team can call the person back as a lead.</p>
+      <div className="bnav"><button className="btn btn-ghost btn-sm" type="button" onClick={doExport}>⬇ Export CSV</button></div>
+      {list.length ? (
+        <div className="table-wrap"><table className="data-table">
+          <thead><tr><th>Ref</th><th>Name</th><th>Email</th><th>Phone</th><th>Pass</th><th>Reason for deletion</th><th>Deleted</th></tr></thead>
+          <tbody>{list.map((d) => (
+            <tr key={d.ref + d.deletedAt}>
+              <td><strong className="mono">{d.ref}</strong></td>
+              <td>{d.name || '—'}</td><td>{d.email || '—'}</td><td>{d.phone || '—'}</td>
+              <td>{d.pass || '—'}</td><td>{d.reason || '—'}</td><td>{dstr(d.deletedAt)}</td>
+            </tr>
+          ))}</tbody>
+        </table></div>
+      ) : <EmptyState icon="🗑️">No tickets deleted yet. When admin deletes a ticket with a reason, it appears here — not gone, just cancelled.</EmptyState>}
+    </div>
+  );
+}
+
+function AdminSponsors({ ctx }) {
+  const [q, setQ] = useState('');
+  const [sel, setSel] = useState(null);
+  const sponsors = getSponsors();
+  const payments = getPayments();
+  const shown = sponsors.filter((s) => {
+    if (!q) return true;
+    const mq = matchQ(q.toLowerCase());
+    return mq(s.brand) || mq(s.email) || mq(s.tier);
+  });
+  const selected = sel ? sponsors.find((s) => s.id === sel) : null;
+  const assets = selected ? getAssets(selected.id) : [];
+  const ab = ctx.ab;
+  return (
+    <>
+      <div className="card">
+        <h3>Sponsors ({shown.length})</h3>
+        <p className="card-sub">Past-partner demo accounts are labelled — no 2027 deal is implied for them. Click a row for uploads, offers and payments.</p>
+        <div className="table-tools">
+          <input type="search" placeholder="Search sponsors…" value={q} onChange={(e) => setQ(e.target.value)} />
+        </div>
+        {shown.length ? (
+          <div className="table-wrap"><table className="data-table">
+            <thead><tr><th>Brand</th><th>Tier</th><th>Contact</th><th>Booth</th><th>Assets</th><th>Payments confirmed</th></tr></thead>
+            <tbody>{shown.map((s) => {
+              const confirmed = payments.filter((p) => p.sponsorId === s.id && p.status === 'Confirmed')
+                .reduce((sum, p) => sum + Number(p.amount || 0), 0);
+              return (
+                <tr key={s.id} className="row-click" onClick={() => setSel(s.id)}>
+                  <td><strong>{s.brand}</strong>{s.isWallDemo ? <span className="pill">Demo · past partner</span> : null}</td>
+                  <td>{s.tier}</td>
+                  <td>{s.contact}<br /><span className="muted">{s.email}</span><br /><span className="muted">{s.phone}</span></td>
+                  <td>{s.boothId || '—'}</td>
+                  <td>{getAssets(s.id).length}</td>
+                  <td>{confirmed ? moneyUSD(confirmed) : '—'}</td>
+                </tr>
+              );
+            })}</tbody>
+          </table></div>
+        ) : <EmptyState icon="🤝">No sponsors match your search.</EmptyState>}
+      </div>
+      {selected ? (
+        <div className="card">
+          <h3>{selected.brand} — detail</h3>
+          <p className="card-sub">{selected.note || ''}</p>
+          {selected.logo ? (
+            <p><img src={(ab || '') + 'img/sponsors/' + selected.logo} alt={selected.brand + ' logo'} style={{ maxHeight: 64, background: '#fff', borderRadius: 8, padding: 6 }} /></p>
+          ) : null}
+          <div className="d-row"><span>Package tier</span><strong>{selected.tier}</strong></div>
+          <div className="d-row"><span>Booth</span><strong>{selected.boothId || 'Not chosen yet'}</strong></div>
+          <div className="d-row"><span>Contact</span><strong>{selected.contact} · {selected.email} · {selected.phone}</strong></div>
+          <h3 className="panel-title">Uploaded assets ({assets.length})</h3>
+          {assets.length ? (
+            <div className="asset-grid">{assets.map((a) => (
+              <div className="asset-card" key={a.id}>
+                {a.dataUrl && a.mime && a.mime.indexOf('image/') === 0
+                  ? <img src={a.dataUrl} alt={a.name} />
+                  : <div className="asset-file">📄</div>}
+                <strong>{a.kind}</strong><span>{a.name}</span><span className="muted">{dstr(a.at)}</span>
+              </div>
+            ))}</div>
+          ) : <EmptyState icon="🎨">No uploads yet — the sponsor uploads logo, booth designs and roll-up artwork from their portal.</EmptyState>}
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+function AdminPackages({ ctx }) {
+  const [pkgs, setPkgs] = useState(getPackages());
+  const [offers, setOffers] = useState(() => (loadStoreSafe().packageOffers || []));
+  const [tier, setTier] = useState('');
+  const [size, setSize] = useState('3×3');
+  const [scheme, setScheme] = useState('Shell scheme');
+  const [price, setPrice] = useState('');
+  const [benefits, setBenefits] = useState('');
+  const [offSponsor, setOffSponsor] = useState('');
+  const [offPkg, setOffPkg] = useState('');
+  const [offPrice, setOffPrice] = useState('');
+  const [offNote, setOffNote] = useState('');
+  const sponsors = getSponsors();
+  function loadStoreSafe() { try { return JSON.parse(localStorage.getItem('tea_portal_v2')) || {}; } catch { return {}; } }
+  const refreshAll = () => { setPkgs(getPackages()); setOffers(loadStoreSafe().packageOffers || []); ctx.refresh(); };
+  const add = () => {
+    if (!tier.trim() || !price) { ctx.toast('Package name and price are required.'); return; }
+    addPackage({ tier: tier.trim(), size, scheme, price: Number(price), benefits: benefits.trim() });
+    setTier(''); setPrice(''); setBenefits('');
+    refreshAll();
+    ctx.toast('Package added — sponsors see it in their portal.');
+  };
+  const offer = () => {
+    if (!offSponsor || !offPkg || !offPrice) { ctx.toast('Choose a sponsor, a package and a discounted price.'); return; }
+    const rec = addPackageOffer({ sponsorId: offSponsor, packageId: offPkg, discountedPrice: Number(offPrice), note: offNote.trim() });
+    if (!rec) { ctx.toast('Could not create the offer.'); return; }
+    setOffPrice(''); setOffNote('');
+    refreshAll();
+    ctx.toast(`Discounted offer sent to ${rec.sponsor} — they are notified in their portal.`);
+  };
+  return (
+    <>
+      <div className="card">
+        <h3>Packages ({pkgs.length})</h3>
+        <p className="card-sub">Brochure tiers plus anything admin adds. Prices in USD.</p>
+        <div className="table-wrap"><table className="data-table">
+          <thead><tr><th>Tier</th><th>Size</th><th>Scheme</th><th>Price</th><th>Benefits</th></tr></thead>
+          <tbody>{pkgs.map((p) => (
+            <tr key={p.id}><td><strong>{p.tier}</strong>{p.custom ? <span className="pill">Custom</span> : null}</td><td>{p.size} m</td><td>{p.scheme}</td><td>{moneyUSD(p.price)}</td><td>{p.benefits || '—'}</td></tr>
+          ))}</tbody>
+        </table></div>
+      </div>
+      <div className="card">
+        <h3>Add a package</h3>
+        <div className="form-grid">
+          <label>Package name<input value={tier} onChange={(e) => setTier(e.target.value)} placeholder="e.g. Community Partner" /></label>
+          <label>Size<select value={size} onChange={(e) => setSize(e.target.value)}><option>5×3</option><option>4×3</option><option>3×3</option><option>Other</option></select></label>
+          <label>Scheme<select value={scheme} onChange={(e) => setScheme(e.target.value)}><option>Space only</option><option>Shell scheme</option></select></label>
+          <label>Price (USD)<input type="number" min="0" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="4000" /></label>
+          <label className="full">Benefits<textarea rows="2" value={benefits} onChange={(e) => setBenefits(e.target.value)} placeholder="What the sponsor gets…" /></label>
+        </div>
+        <div className="bnav"><button className="btn btn-primary" type="button" onClick={add}>Add package</button></div>
+      </div>
+      <div className="card">
+        <h3>Offer a package at a discount</h3>
+        <p className="card-sub">The sponsor gets a notification in their portal and sees the offer under Offers.</p>
+        <div className="form-grid">
+          <label>Sponsor<select value={offSponsor} onChange={(e) => setOffSponsor(e.target.value)}><option value="">Choose sponsor…</option>{sponsors.map((s) => <option key={s.id} value={s.id}>{s.brand} ({s.tier})</option>)}</select></label>
+          <label>Package<select value={offPkg} onChange={(e) => setOffPkg(e.target.value)}><option value="">Choose package…</option>{pkgs.map((p) => <option key={p.id} value={p.id}>{p.tier} — {moneyUSD(p.price)}</option>)}</select></label>
+          <label>Discounted price (USD)<input type="number" min="0" value={offPrice} onChange={(e) => setOffPrice(e.target.value)} placeholder="e.g. 5000" /></label>
+          <label className="full">Note to sponsor<textarea rows="2" value={offNote} onChange={(e) => setOffNote(e.target.value)} placeholder="Why this offer, and until when…" /></label>
+        </div>
+        <div className="bnav"><button className="btn btn-primary" type="button" onClick={offer}>Send discounted offer</button></div>
+        <h3 className="panel-title">Offers sent ({offers.length})</h3>
+        {offers.length ? (
+          <div className="feed">{offers.map((o) => (
+            <div className="feed-item" key={o.id}><span className="feed-dot"></span><div>
+              <strong>{o.sponsor} — {o.package} at {moneyUSD(o.discountedPrice)} (list {moneyUSD(o.listPrice)})</strong>
+              <p>{o.note || 'No note.'}</p><span>{dstr(o.at)}</span>
+            </div></div>
+          ))}</div>
+        ) : <EmptyState icon="📦">No discounted offers sent yet.</EmptyState>}
+      </div>
+    </>
+  );
+}
+
+function AdminPayments({ ctx }) {
+  const [list, setList] = useState(getPayments());
+  const confirmed = list.filter((p) => p.status === 'Confirmed').reduce((s, p) => s + Number(p.amount || 0), 0);
+  const submitted = list.filter((p) => p.status === 'Submitted').reduce((s, p) => s + Number(p.amount || 0), 0);
+  const setStatus = (id, status) => { setPaymentStatus(id, status); setList(getPayments()); ctx.toast(`Payment marked ${status}.`); ctx.refresh(); };
+  return (
+    <div className="card">
+      <h3>Payments ({list.length})</h3>
+      <p className="card-sub">Sponsorship payments only. Tickets are free and never appear here. No card details are ever captured — card payments are recorded as provider-link payments.</p>
+      <div className="kpi-grid">
+        <Kpi label="Confirmed received" value={moneyUSD(confirmed)} sub="reconciles with confirmed rows below" />
+        <Kpi label="Awaiting confirmation" value={moneyUSD(submitted)} sub="submitted, not yet confirmed" cls="amber" />
+      </div>
+      {list.length ? (
+        <div className="table-wrap"><table className="data-table">
+          <thead><tr><th>Sponsor</th><th>Item</th><th>Amount</th><th>Method</th><th>Status</th><th>Date</th><th>Action</th></tr></thead>
+          <tbody>{list.map((p) => (
+            <tr key={p.id}>
+              <td><strong>{p.sponsor}</strong></td><td>{p.item}</td><td>{moneyUSD(p.amount)}</td><td>{p.method}</td>
+              <td><span className="pill">{p.status}</span></td><td>{dstr(p.at)}</td>
+              <td>{p.status === 'Submitted' ? (
+                <span style={{ display: 'flex', gap: 6 }}>
+                  <button type="button" className="mini-btn" onClick={() => setStatus(p.id, 'Confirmed')}>Confirm</button>
+                  <button type="button" className="mini-btn danger" onClick={() => setStatus(p.id, 'Declined')}>Decline</button>
+                </span>
+              ) : '—'}</td>
+            </tr>
+          ))}</tbody>
+        </table></div>
+      ) : <EmptyState icon="💳">No payments recorded yet.</EmptyState>}
+    </div>
+  );
+}
+
+function SponsorDashboard({ ctx }) {
+  const sp = ctx.sponsor;
+  const pkg = sp.packageId ? getPackages().find((p) => p.id === sp.packageId) : null;
+  const booth = sp.boothId ? getBooth(sp.boothId) : null;
+  const pays = getPayments(sp.id);
+  const confirmed = pays.filter((p) => p.status === 'Confirmed').reduce((s, p) => s + Number(p.amount || 0), 0);
+  const { notifs, packageOffers } = offersFor({ role: 'exhibitor', email: sp.email, sponsorId: sp.id });
+  const feed = notificationsFor({ role: 'exhibitor', email: sp.email }).slice(0, 3);
+  const assets = getAssets(sp.id);
+  return (
+    <>
+      <div className="kpi-grid">
+        <Kpi label="Your package" value={sp.tier} sub={pkg ? `${pkg.size} m · ${pkg.scheme}` : 'tier on record'} />
+        <Kpi label="Your booth" value={booth ? booth.id : 'Not chosen'} sub={booth ? `${booth.size} m · ${booth.status}` : 'pick one on the floor plan'} cls="navy" />
+        <Kpi label="Payments confirmed" value={moneyUSD(confirmed)} sub={`${pays.length} payment record(s)`} cls="amber" />
+        <Kpi label="Brand assets" value={assets.length} sub="logo, booth designs, roll-ups" />
+      </div>
+      <div className="grid-2">
+        <div className="card">
+          <h3>Your package</h3>
+          {pkg ? (
+            <><div className="d-row"><span>Tier</span><strong>{pkg.tier}</strong></div>
+            <div className="d-row"><span>Stand</span><strong>{pkg.size} m · {pkg.scheme}</strong></div>
+            <div className="d-row"><span>List price</span><strong>{moneyUSD(pkg.price)}</strong></div>
+            <p>{pkg.benefits}</p></>
+          ) : <p className="card-sub">Tier on record: {sp.tier}. Full package benefits are confirmed by the team — ask admin to attach a package.</p>}
+          {sp.note ? <p className="fine">{sp.note}</p> : null}
+          <div className="bnav"><button className="btn btn-ghost btn-sm" type="button" onClick={() => ctx.go('floorplan')}>Choose / change booth →</button></div>
+        </div>
+        <div className="card">
+          <h3>Discounted offers for you</h3>
+          {packageOffers.length ? packageOffers.map((o) => (
+            <div key={o.id} className="offer-card">
+              <strong>{o.package} — {moneyUSD(o.discountedPrice)}</strong>
+              <span>List price {moneyUSD(o.listPrice)} · {dstr(o.at)}</span>
+              <p>{o.note || 'No note.'}</p>
+            </div>
+          )) : <EmptyState icon="🏷️">No discounted package offers right now.</EmptyState>}
+          <h3 className="panel-title">Latest updates</h3>
+          <div className="feed">{feed.length ? feed.map((n) => (
+            <div className="feed-item" key={n.id}><span className="feed-dot"></span><div><strong>{n.title}</strong><p>{n.body}</p><span>{dstr(n.at)}</span></div></div>
+          )) : <EmptyState>No updates yet.</EmptyState>}</div>
+        </div>
+      </div>
+      {notifs.length ? (
+        <div className="card">
+          <h3>Promotions &amp; offers</h3>
+          <div className="feed">{notifs.slice(0, 5).map((n) => (
+            <div className="feed-item" key={n.id}><span className="feed-dot"></span><div><strong>{n.title}</strong><p>{n.body}</p><span>{dstr(n.at)}</span></div></div>
+          ))}</div>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+function SponsorAssets({ ctx }) {
+  const sp = ctx.sponsor;
+  const [list, setList] = useState(getAssets(sp.id));
+  const [kind, setKind] = useState('logo');
+  const [err, setErr] = useState('');
+  const onFile = (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    if (file.size > 1.5 * 1024 * 1024) { setErr('File is over 1.5 MB — demo storage limit. Use a smaller file.'); return; }
+    const reader = new FileReader();
+    reader.onload = () => {
+      addAsset(sp.id, { kind, name: file.name, mime: file.type || '', dataUrl: reader.result });
+      setList(getAssets(sp.id));
+      setErr('');
+      ctx.toast('Upload saved — admin can see it now.');
+      ctx.refresh();
+    };
+    reader.readAsDataURL(file);
+    e.target.value = '';
+  };
+  return (
+    <>
+      <div className="card">
+        <h3>Upload brand assets</h3>
+        <p className="card-sub">Your logo, booth designs and roll-up artwork go straight to the admin team. Demo storage caps files at 1.5 MB.</p>
+        <div className="form-grid">
+          <label>Asset type
+            <select value={kind} onChange={(e) => setKind(e.target.value)}>
+              <option value="logo">Logo</option>
+              <option value="booth-design">Booth design</option>
+              <option value="rollup">Roll-up artwork</option>
+            </select>
+          </label>
+          <label>File<input type="file" accept="image/*,.pdf" onChange={onFile} /></label>
+        </div>
+        {err ? <p className="portal-error">{err}</p> : null}
+      </div>
+      <div className="card">
+        <h3>Your uploads ({list.length})</h3>
+        {list.length ? (
+          <div className="asset-grid">{list.map((a) => (
+            <div className="asset-card" key={a.id}>
+              {a.dataUrl && a.mime && a.mime.indexOf('image/') === 0
+                ? <img src={a.dataUrl} alt={a.name} />
+                : <div className="asset-file">📄</div>}
+              <strong>{a.kind}</strong><span>{a.name}</span><span className="muted">{dstr(a.at)}</span>
+            </div>
+          ))}</div>
+        ) : <EmptyState icon="🎨">Nothing uploaded yet. Your logo and stand artwork live here once you add them.</EmptyState>}
+      </div>
+    </>
+  );
+}
+
+function SponsorPayments({ ctx }) {
+  const sp = ctx.sponsor;
+  const [list, setList] = useState(getPayments(sp.id));
+  const [item, setItem] = useState(sp.tier + ' package');
+  const [amount, setAmount] = useState('');
+  const [method, setMethod] = useState('Bank transfer');
+  const [note, setNote] = useState('');
+  const items = [sp.tier + ' package', ...getPackages().filter((p) => p.tier !== sp.tier).map((p) => p.tier + ' package')];
+  const submit = () => {
+    if (!amount || Number(amount) <= 0) { ctx.toast('Enter an amount above zero.'); return; }
+    submitPayment({ sponsorId: sp.id, sponsor: sp.brand, item, amount: Number(amount), currency: 'USD', method, note: note.trim() });
+    setList(getPayments(sp.id));
+    setAmount(''); setNote('');
+    ctx.toast('Payment recorded as Submitted — admin confirms it. No card details were entered here.');
+    ctx.refresh();
+  };
+  return (
+    <>
+      <div className="card">
+        <h3>Record a payment</h3>
+        <p className="card-sub">Sponsorship payments only — tickets are free and are never paid here. Choose bank transfer, or card via provider: for card, the team sends you a secure provider link. <strong>No card details are ever typed into this portal.</strong></p>
+        <div className="form-grid">
+          <label>Paying for<select value={item} onChange={(e) => setItem(e.target.value)}>{items.map((i) => <option key={i}>{i}</option>)}<option>Other / add-on</option></select></label>
+          <label>Amount (USD)<input type="number" min="0" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="e.g. 6500" /></label>
+          <label>Method<select value={method} onChange={(e) => setMethod(e.target.value)}><option>Bank transfer</option><option>Card via provider</option></select></label>
+          <label className="full">Reference / note<textarea rows="2" value={note} onChange={(e) => setNote(e.target.value)} placeholder="Bank reference, invoice number…" /></label>
+        </div>
+        <div className="bnav"><button className="btn btn-primary" type="button" onClick={submit}>Submit payment record</button></div>
+      </div>
+      <div className="card">
+        <h3>Your payment records ({list.length})</h3>
+        {list.length ? (
+          <div className="table-wrap"><table className="data-table">
+            <thead><tr><th>Item</th><th>Amount</th><th>Method</th><th>Status</th><th>Date</th></tr></thead>
+            <tbody>{list.map((p) => (
+              <tr key={p.id}><td>{p.item}</td><td>{moneyUSD(p.amount)}</td><td>{p.method}</td><td><span className="pill">{p.status}</span></td><td>{dstr(p.at)}</td></tr>
+            ))}</tbody>
+          </table></div>
+        ) : <EmptyState icon="💳">No payments recorded yet.</EmptyState>}
+      </div>
+    </>
+  );
+}
+
+function SponsorOffersView({ ctx }) {
+  const sp = ctx.sponsor;
+  const { notifs, packageOffers } = offersFor({ role: 'exhibitor', email: sp.email, sponsorId: sp.id });
+  return (
+    <>
+      <div className="card">
+        <h3>Discounted package offers for {sp.brand}</h3>
+        {packageOffers.length ? packageOffers.map((o) => (
+          <div key={o.id} className="offer-card">
+            <strong>{o.package} — {moneyUSD(o.discountedPrice)}</strong>
+            <span>List price {moneyUSD(o.listPrice)} · {dstr(o.at)}</span>
+            <p>{o.note || 'No note.'}</p>
+          </div>
+        )) : <EmptyState icon="🏷️">No discounted offers right now — admin offers appear here with a notification.</EmptyState>}
+      </div>
+      <div className="card">
+        <h3>Promotions</h3>
+        {notifs.length ? (
+          <div className="feed">{notifs.map((n) => (
+            <div className="feed-item" key={n.id}><span className="feed-dot"></span><div><strong>{n.title}</strong><p>{n.body}</p><span>{dstr(n.at)}</span></div></div>
+          ))}</div>
+        ) : <EmptyState icon="🎁">No promotions right now.</EmptyState>}
+      </div>
+      <ExOffers ctx={ctx} />
+    </>
+  );
+}
+
+function NotificationsView({ ctx }) {
+  const userKey = ctx.userKey;
+  const [readIds, setReadIds] = useState(portalReadIds(userKey));
+  const sess = ctx.session;
+  const email = (sess.booking && sess.booking.fields && sess.booking.fields.email) || sess.email || '';
+  const portal = notificationsFor({ role: sess.role, email }).map((n) => ({ ...n, source: 'portal' }));
+  const anns = (ctx.anns || []).filter((a) => a.audience === 'all' || a.audience === sess.role)
+    .map((a) => ({ id: a.id, kind: 'announcement', title: a.title, body: a.body, at: a.at, source: 'ann' }));
+  const annRead = (() => { try { return JSON.parse(sessionStorage.getItem('tea_notif_read') || '[]'); } catch { return []; } })();
+  const all = [...portal, ...anns].sort((a, b) => String(b.at || '').localeCompare(String(a.at || '')));
+  const isRead = (n) => (n.source === 'portal' ? readIds.includes(n.id) : annRead.includes(n.id));
+  const unread = all.filter((n) => !isRead(n)).length;
+  const markOne = (n) => {
+    if (n.source === 'portal') { markNotifRead(userKey, n.id); setReadIds(portalReadIds(userKey)); }
+    else {
+      try {
+        const cur = JSON.parse(sessionStorage.getItem('tea_notif_read') || '[]');
+        if (!cur.includes(n.id)) sessionStorage.setItem('tea_notif_read', JSON.stringify([...cur, n.id]));
+      } catch {}
+    }
+    ctx.refresh();
+  };
+  const markAll = () => {
+    markAllNotifRead(userKey, portal.map((n) => n.id));
+    try { sessionStorage.setItem('tea_notif_read', JSON.stringify(anns.map((a) => a.id))); } catch {}
+    setReadIds(portalReadIds(userKey));
+    ctx.refresh();
+    ctx.toast('All notifications marked read.');
+  };
+  return (
+    <div className="card">
+      <h3>Notifications {unread ? `(${unread} unread)` : ''}</h3>
+      <p className="card-sub">Admin announcements, promotions, offers and ticket updates — newest first.</p>
+      <div className="bnav"><button className="btn btn-ghost btn-sm" type="button" onClick={markAll}>Mark all read</button></div>
+      {all.length ? (
+        <div className="notif-list">{all.map((n) => (
+          <button type="button" key={n.source + n.id} className={'notif-row' + (isRead(n) ? ' read' : '')} onClick={() => markOne(n)}>
+            <span className="pill">{n.kind}</span>
+            <span className="notif-body"><strong>{n.title}</strong><span>{n.body}</span><em>{dstr(n.at)}</em></span>
+            {!isRead(n) ? <span className="notif-unread">New</span> : null}
+          </button>
+        ))}</div>
+      ) : <EmptyState icon="🔔">No notifications yet — admin announcements and offers appear here.</EmptyState>}
+    </div>
+  );
+}
+
+function OffersViewAttendee({ ctx }) {
+  const sess = ctx.session;
+  const email = (sess.booking && sess.booking.fields && sess.booking.fields.email) || sess.email || '';
+  const { notifs } = offersFor({ role: 'ticket', email });
+  return (
+    <div className="card">
+      <h3>Offers &amp; promotions for you</h3>
+      <p className="card-sub">Partner promotions and sponsor offers. Your ticket itself is free — nothing here is a ticket charge.</p>
+      {notifs.length ? notifs.map((n) => (
+        <div key={n.id} className="offer-card">
+          <strong>{n.title}</strong><span>{dstr(n.at)}</span><p>{n.body}</p>
+        </div>
+      )) : <EmptyState icon="🎁">No offers right now — new promotions from the organisers and sponsors appear here.</EmptyState>}
+    </div>
+  );
+}
+
+function AccountView({ ctx }) {
+  const b = ctx.session.booking;
+  const f = (b && b.fields) || {};
+  const [name, setName] = useState(f.name || '');
+  const [mobile, setMobile] = useState(f.phone || '');
+  const [cur, setCur] = useState('');
+  const [nw, setNw] = useState('');
+  const [cf, setCf] = useState('');
+  const hist = b ? ticketHistory(b.ref, b.at) : [];
+  const saveProfile = () => {
+    if (!name.trim() || !mobile.trim()) { ctx.toast('Name and mobile number are required.'); return; }
+    const all = read('tea_bookings', []);
+    const i = all.findIndex((x) => x.ref === b.ref);
+    if (i < 0) { ctx.toast('Booking not found in this browser.'); return; }
+    all[i] = { ...all[i], fields: { ...all[i].fields, name: name.trim(), phone: mobile.trim() } };
+    write('tea_bookings', all);
+    ctx.toast('Profile saved.');
+    ctx.reloadBookings();
+    ctx.refresh();
+  };
+  const changePass = () => {
+    if (String(b.password || '') !== cur) { ctx.toast('Current password does not match.'); return; }
+    if (nw.length < 6) { ctx.toast('New password must be at least 6 characters.'); return; }
+    if (nw !== cf) { ctx.toast('New passwords do not match.'); return; }
+    const all = read('tea_bookings', []);
+    const i = all.findIndex((x) => x.ref === b.ref);
+    if (i < 0) { ctx.toast('Booking not found in this browser.'); return; }
+    all[i] = { ...all[i], password: nw };
+    write('tea_bookings', all);
+    setCur(''); setNw(''); setCf('');
+    ctx.toast('Password changed. Use the new password at your next login.');
+    ctx.reloadBookings();
+  };
+  return (
+    <>
+      <div className="card">
+        <h3>My details</h3>
+        <p className="card-sub">Your booked email is your login ID and cannot be changed here — contact the team if your email changes.</p>
+        <div className="form-grid">
+          <label>Login email (login ID)<input value={f.email || ''} disabled /></label>
+          <label>Full name<input value={name} onChange={(e) => setName(e.target.value)} /></label>
+          <label>Mobile number<input value={mobile} onChange={(e) => setMobile(e.target.value)} /></label>
+        </div>
+        <div className="bnav"><button className="btn btn-primary" type="button" onClick={saveProfile}>Save details</button></div>
+      </div>
+      <div className="card">
+        <h3>Change password</h3>
+        <p className="card-sub">In the real backend your new password is confirmed by email. In this demo it updates this browser only.</p>
+        <div className="form-grid">
+          <label>Current password<input type="password" value={cur} onChange={(e) => setCur(e.target.value)} /></label>
+          <label>New password<input type="password" value={nw} onChange={(e) => setNw(e.target.value)} /></label>
+          <label>Confirm new password<input type="password" value={cf} onChange={(e) => setCf(e.target.value)} /></label>
+        </div>
+        <div className="bnav"><button className="btn btn-primary" type="button" onClick={changePass}>Change password</button></div>
+      </div>
+      <div className="card">
+        <h3>Ticket history — {b ? b.ref : ''}</h3>
+        {hist.length ? (
+          <div className="feed">{hist.map((h, i) => (
+            <div className="feed-item" key={i}><span className="feed-dot"></span><div><strong>{h.status}</strong><p>{h.note || ''}</p><span>{dstr(h.at)}</span></div></div>
+          ))}</div>
+        ) : <EmptyState icon="🎫">No history yet.</EmptyState>}
+      </div>
+    </>
+  );
+}
+
 /* ================= MAIN COMPONENT ================= */
 export default function PortalPage() {
   const ab = useAssetBase();
@@ -1283,6 +2013,7 @@ export default function PortalPage() {
   /* mount: seed demo data, restore session */
   useEffect(() => {
     seedDemo();
+    seedPortalV2();
     reloadAnns();
     let sess = null;
     try { sess = JSON.parse(sessionStorage.getItem(SESSION_KEY) || 'null'); } catch {}
@@ -1290,6 +2021,10 @@ export default function PortalPage() {
       if (sess.role === 'admin') {
         setSession(sess);
         setView('dashboard');
+      } else if (sess.sponsorId) {
+        const sp = getSponsor(sess.sponsorId);
+        if (sp) { sess.booking = sponsorBooking(sp); setSession(sess); setView('dashboard'); }
+        else { try { sessionStorage.removeItem(SESSION_KEY); } catch {} }
       } else {
         const rb = findBookingByRef(sess.ref);
         if (rb) { sess.booking = rb; setSession(sess); setView('dashboard'); }
@@ -1337,6 +2072,22 @@ export default function PortalPage() {
     const pass = document.getElementById('portalPass').value;
     setBusy(true);
     try {
+      /* Email login: attendees use the email they booked with; sponsors
+         use their sponsor-portal email. The booked email is the login ID. */
+      if (ref.indexOf('@') >= 0) {
+        if (loginRole === 'ticket') {
+          const hit = read('tea_bookings', []).find((b) =>
+            String((b.fields && b.fields.email) || '').toLowerCase() === ref.trim().toLowerCase()
+            && String(b.password || '') === String(pass || ''));
+          if (!hit) { setLoginError('No ticket matches that email and password. Check your booking confirmation.'); return; }
+          startSession({ role: 'ticket', ref: hit.ref, email: hit.fields.email });
+          return;
+        }
+        const sp = sponsorLogin(ref, pass);
+        if (!sp) { setLoginError('No sponsor account matches that email and password.'); return; }
+        startSession({ role: 'exhibitor', ref: sp.id, sponsorId: sp.id, email: sp.email, booking: sponsorBooking(sp) });
+        return;
+      }
       const res = await portalLogin(loginRole, ref, pass);
       if (res.ok) {
         const okRef = res.ref || ref.trim().toUpperCase();
@@ -1408,12 +2159,17 @@ export default function PortalPage() {
 
   /* ---- context shared with views ---- */
   const sessWithBooking = session && session.role !== 'admin'
-    ? { ...session, booking: session.booking || findBookingByRef(session.ref) }
+    ? { ...session, booking: session.booking || (session.sponsorId ? sponsorBooking(getSponsor(session.sponsorId)) : null) || findBookingByRef(session.ref) }
     : session;
+  const userKey = sessWithBooking
+    ? (sessWithBooking.role === 'admin' ? 'admin'
+      : (sessWithBooking.email || (sessWithBooking.booking && sessWithBooking.booking.fields && sessWithBooking.booking.fields.email) || sessWithBooking.ref))
+    : 'guest';
   const ctx = {
     session: sessWithBooking, toast, go, openDrawer: openBookingDrawer,
-    refresh, reloadAnns, setActions, search, setSearch,
-    anns, bookings, dataVersion,
+    refresh, reloadAnns, reloadBookings: loadBookings, setActions, search, setSearch,
+    anns, bookings, dataVersion, ab,
+    userKey, sponsor: sessWithBooking && sessWithBooking.sponsorId ? getSponsor(sessWithBooking.sponsorId) : null,
   };
 
   const renderView = () => {
@@ -1430,6 +2186,11 @@ export default function PortalPage() {
     }
     if (role === 'admin') {
       if (view === 'bookings') return <AdminBookings ctx={ctx} />;
+      if (view === 'deleted') return <DeletedLeads ctx={ctx} />;
+      if (view === 'sponsors') return <AdminSponsors ctx={ctx} />;
+      if (view === 'packages') return <AdminPackages ctx={ctx} />;
+      if (view === 'payments') return <AdminPayments ctx={ctx} />;
+      if (view === 'floorplan') return <FloorPlanView ctx={ctx} />;
       if (view === 'reports') return <AdminReports ctx={ctx} />;
       if (view === 'announcements') return <AdminAnns ctx={ctx} />;
       if (view === 'content') return <ContentAdmin />;
@@ -1439,30 +2200,45 @@ export default function PortalPage() {
     if (role === 'exhibitor') {
       if (view === 'company') return <ExCompany ctx={ctx} />;
       if (view === 'booth') return <ExBooth ctx={ctx} />;
+      if (view === 'floorplan') return <FloorPlanView ctx={ctx} />;
+      if (view === 'assets') return <SponsorAssets ctx={ctx} />;
+      if (view === 'payments') return <SponsorPayments ctx={ctx} />;
       if (view === 'team') return <ExTeam ctx={ctx} />;
       if (view === 'leads') return <ExLeads ctx={ctx} />;
       if (view === 'docs') return <ExDocs ctx={ctx} />;
-      if (view === 'offers') return <ExOffers ctx={ctx} />;
+      if (view === 'offers') return <SponsorOffersView ctx={ctx} />;
       if (view === 'announcements') return <AnnsView ctx={ctx} aud="exhibitor" />;
+      if (sessWithBooking.sponsorId) return <SponsorDashboard ctx={ctx} />;
       return <ExDashboard ctx={ctx} />;
     }
     if (view === 'tickets') return <MyTickets ctx={ctx} />;
+    if (view === 'notifications') return <NotificationsView ctx={ctx} />;
+    if (view === 'offers') return <OffersViewAttendee ctx={ctx} />;
+    if (view === 'account') return <AccountView ctx={ctx} />;
     if (view === 'event') return <EventInfo />;
     if (view === 'promos') return <AnnsView ctx={ctx} aud="ticket" />;
     return <TicketDashboard ctx={ctx} />;
   };
 
-  /* ---- notifications ---- */
+  /* ---- notifications (announcements + portal notifications, merged) ---- */
   const readNotifIds = () => {
     try { return JSON.parse(sessionStorage.getItem('tea_notif_read') || '[]'); } catch { return []; }
   };
   const audienceAnns = sessWithBooking
     ? anns.filter((a) => sessWithBooking.role === 'admin' || a.audience === 'all' || a.audience === sessWithBooking.role)
     : [];
-  const unread = audienceAnns.filter((a) => readNotifIds().indexOf(a.id) < 0).length;
+  const bellEmail = sessWithBooking
+    ? (sessWithBooking.email || (sessWithBooking.booking && sessWithBooking.booking.fields && sessWithBooking.booking.fields.email) || '')
+    : '';
+  const bellPortal = sessWithBooking
+    ? notificationsFor({ role: sessWithBooking.role, email: bellEmail })
+    : [];
+  const bellPortalUnread = bellPortal.filter((n) => portalReadIds(userKey).indexOf(n.id) < 0).length;
+  const unread = audienceAnns.filter((a) => readNotifIds().indexOf(a.id) < 0).length + bellPortalUnread;
   const markAllRead = (e) => {
     e.stopPropagation();
     try { sessionStorage.setItem('tea_notif_read', JSON.stringify(audienceAnns.map((a) => a.id))); } catch {}
+    markAllNotifRead(userKey, bellPortal.map((n) => n.id));
     setNotifOpen(false);
     refresh();
   };
@@ -1526,14 +2302,14 @@ export default function PortalPage() {
 
               {loginRole !== 'admin' ? (
                 <form id="bookingForm" className="portal-form" onSubmit={doBookingLogin}>
-                  <label>Booking reference
-                    <input id="portalRef" type="text" placeholder={loginRole === 'ticket' ? 'e.g. TEA-AB12CD' : 'e.g. EXB27-AB12CD'} autoComplete="off" required />
+                  <label>Email or booking reference
+                    <input id="portalRef" type="text" placeholder={loginRole === 'ticket' ? 'e.g. attendee1@example.com or TEA-AB12CD' : 'e.g. sponsor1@example.com or EXB27-AB12CD'} autoComplete="off" required />
                   </label>
                   <label>Password
                     <input id="portalPass" type="password" placeholder="Shown on your booking confirmation" autoComplete="current-password" required />
                   </label>
                   <button className="btn btn-primary btn-lg btn-block" type="submit" disabled={busy}>Log In to Dashboard</button>
-                  <p className="form-note">Your reference and password were shown when you booked. New here? <a href="tickets.html">Book a ticket</a> or <a href="exhibit.html">reserve a booth</a>.</p>
+                  <p className="form-note">Ticket holders: your booked email is your login ID — the password was shown when you booked and emailed with your ticket. New here? <a href="tickets.html">Book a ticket</a> or <a href="exhibit.html">reserve a booth</a>.</p>
                 </form>
               ) : (
                 <form id="adminForm" className="portal-form" onSubmit={doAdminLogin}>
@@ -1554,7 +2330,10 @@ export default function PortalPage() {
                 <div><span>Admin</span><code>admin / expo2027</code></div>
                 <div><span>Exhibitor</span><code>EXB27-DEMO / demo123</code></div>
                 <div><span>Ticket holder</span><code>TEA-DEMO / demo123</code></div>
+                <div><span>Attendee (email)</span><code>attendee1@example.com / demo123</code></div>
+                <div><span>Sponsor (email)</span><code>sponsor1@example.com / demo123</code></div>
               </div>
+              <p className="login-foot" style={{ fontSize: 13, color: 'var(--muted)' }}>Demo mode: everything here runs in this browser (localStorage). The real backend is the Laravel 10 API + MySQL spec in <span className="mono">frontend/docs/portal-api-spec.md</span> — same data model, real email delivery, no demo passwords.</p>
             </div>
             <p className="login-foot"><a href="index.html">← Back to website</a></p>
           </div>
@@ -1600,13 +2379,20 @@ export default function PortalPage() {
                 {notifOpen && (
                   <div className="notif-drop" id="notifDrop">
                     <div className="notif-head"><span>Notifications</span><button type="button" onClick={markAllRead}>Mark all read</button></div>
+                    {bellPortal.slice(0, 4).map((a) => (
+                      <div className="notif-item" key={'p' + a.id}>
+                        <strong>{a.title}</strong>
+                        <p>{a.body.slice(0, 120)}{a.body.length > 120 ? '…' : ''}</p>
+                        <span>{dstr(a.at)}</span>
+                      </div>
+                    ))}
                     {audienceAnns.length ? audienceAnns.slice(0, 8).map((a) => (
                       <div className="notif-item" key={a.id}>
                         <strong>{a.title}</strong>
                         <p>{a.body.slice(0, 120)}{a.body.length > 120 ? '…' : ''}</p>
                         <span>{dstr(a.at)}</span>
                       </div>
-                    )) : <div className="notif-item"><p>No notifications yet.</p></div>}
+                    )) : (bellPortal.length ? null : <div className="notif-item"><p>No notifications yet.</p></div>)}
                   </div>
                 )}
               </div>
@@ -1626,6 +2412,9 @@ export default function PortalPage() {
             <main id="portalPanels" className="content" key={view + ':' + dataVersion}>
               {renderView()}
             </main>
+            <p className="fine" style={{ padding: '0 20px 24px' }}>
+              How it works — <strong>demo mode:</strong> this portal runs in your browser (localStorage) with fictional demo accounts, so every flow can be tried today. <strong>Real mode:</strong> the same screens talk to the Laravel 10 API + MySQL backend in <span className="mono">frontend/docs/portal-api-spec.md</span> — real emailed passwords, real notifications, real payment records. No demo data, password or key is ever committed to the repo.
+            </p>
           </div>
         </div>
       )}

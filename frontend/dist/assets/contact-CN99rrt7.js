@@ -1,4 +1,4 @@
-import{u as i,j as e,c,L as o}from"./styles-DnmorG0F.js";import{R as s}from"./ui-BfTR9c3U.js";function l(a){a.preventDefault();const n=new FormData(a.target),r=encodeURIComponent("Traders Expo Johannesburg enquiry — "+n.get("interest")),t=encodeURIComponent("Name: "+n.get("name")+`
+import{u as i,j as e,c,L as o}from"./styles-FhtRvQ8D.js";import{R as s}from"./ui-LWBb2lTh.js";function l(a){a.preventDefault();const n=new FormData(a.target),r=encodeURIComponent("Traders Expo Johannesburg enquiry — "+n.get("interest")),t=encodeURIComponent("Name: "+n.get("name")+`
 Email: `+n.get("email")+`
 Interested in: `+n.get("interest")+`
 

@@ -4,11 +4,20 @@ import { SpeakerMarquee, SpeakersTeaser, SponsorsWall, MediaPartners } from '../
 import { useAssetBase } from '../lib/theme.jsx';
 
 const STATS = [
-  { end: 2, suffix: '', label: 'Days — 19–20 Feb 2027' },
-  { end: 4000, suffix: '+', label: 'Expected traders — Johannesburg 2027' },
-  { end: 18, suffix: '', label: 'Featured ProFX Speakers' },
-  { text: 'GWR', label: 'World Records™ Title Holder' },
+  { end: 2, suffix: '', label: 'Days — 19–20 Feb 2027', icon: 'calendar' },
+  { end: 4000, suffix: '+', label: 'Expected traders — Johannesburg 2027', icon: 'people' },
+  { end: 18, suffix: '', label: 'Featured ProFX Speakers', icon: 'mic' },
+  { text: 'GWR', label: 'World Records™ Title Holder', icon: 'award' },
 ];
+
+/* Line-style stat icons — 24×24, 2px stroke, brand green, drawn to match the
+   topbar phone/mail line icons. Same green reads on light and dark cards. */
+const STAT_ICONS = {
+  calendar: (<svg viewBox="0 0 24 24" fill="none" stroke="#00C853" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M8 3v4M16 3v4M3 10h18M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01" /></svg>),
+  people: (<svg viewBox="0 0 24 24" fill="none" stroke="#00C853" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5" /><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" /><circle cx="17" cy="9" r="2.5" /><path d="M15.5 14.3c2.7.4 4.8 2.2 4.8 4.7" /></svg>),
+  mic: (<svg viewBox="0 0 24 24" fill="none" stroke="#00C853" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6" /></svg>),
+  award: (<svg viewBox="0 0 24 24" fill="none" stroke="#00C853" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5" /><path d="M12 7.2l.7 1.5 1.6.2-1.2 1.1.3 1.6-1.4-.8-1.4.8.3-1.6L9.7 8.9l1.6-.2z" /><path d="M8.6 13.4 7 21l5-2.6L17 21l-1.6-7.6" /></svg>),
+};
 
 const EXP = [
   { img: 'img/profx/profx-21.webp', alt: 'Exhibition floor from above', h: 'Exhibitors', p: 'Brokers, fintech and trading tech — live on the floor.' },
@@ -60,13 +69,14 @@ export default function HomePage() {
               <a href="tickets.html" className="btn btn-primary btn-lg">Reserve Your Free Ticket</a>
               <a href="exhibit.html" className="btn btn-glass btn-lg">Become an Exhibitor</a>
             </div>
-            <Countdown />
             <p className="fine center" data-hero style={{ marginTop: '14px' }}>
               <a href="traders-expo-johannesburg.ics" download style={{ color: '#9aa3ad', textDecoration: 'underline' }}>Add to calendar (.ics)</a>
             </p>
           </div>
           <a className="scroll-cue" href="#experience" aria-label="Scroll down"><span></span></a>
         </section>
+
+        <Countdown />
 
         <SpeakerMarquee />
 
@@ -76,6 +86,7 @@ export default function HomePage() {
             <div className="stats-grid">
               {STATS.map((s, i) => (
                 <Reveal key={i} className="stat" delay={i * 0.08}>
+                  <span className="stat-icon">{STAT_ICONS[s.icon]}</span>
                   {s.text
                     ? <strong className="stat-tba">{s.text}</strong>
                     : <CountUp as="strong" end={s.end} suffix={s.suffix} />}
